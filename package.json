@@ -27,6 +27,9 @@
     },
     "scripts": {
         "pro1": "webpack-dev-server --config ./project1/webpack.config.js --inline --hot --content-base ./project1",
-        "pro2": "webpack-dev-server --config ./project2/webpack.config.js --inline --hot --content-base ./project2"
+        "pro2": "webpack-dev-server --config ./project2/webpack.config.js --inline --hot --content-base ./project2",
+        "pro2dev" : "webpack --config ./project2/webpack.config.js",
+        "pro3": "webpack-dev-server --config ./project3/webpack.config.js --inline --hot --content-base ./project3/page",
+        "pro3dev" : "webpack --config ./project3/webpack.config.js"
     }
 }
