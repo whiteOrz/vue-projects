@@ -4,7 +4,7 @@
 	<div id="prodcutIntr">
 		<div>悦享中华-【贵宾专享】高端医疗险</div>
 		<div style="margin-top:10px;color:#666;">民价的高端医疗险，高端私立医院、进口药都可报，终身累计最高可报1000万，意外、大病住院不再愁！</div>
-		<div style="margin-top:10px;">会员价  ￥1070元起</div>
+		<div style="margin-top:10px;">会员价  ￥{{price}}元起</div>
 		<div style="margin-top:10px;color:#666;">促销信息    4.1-4.30返还两倍积分</div>
 	</div>
 	<div style="padding:10px;border-bottom:1px solid #ccc;">热销爆款 超值低价 透明理赔</div>
@@ -16,28 +16,16 @@
 	</div>
 	<div id="config">
 		<div style="padding:10px;">保障责任</div>
-		<div style="display:-webkit-box;" class="bt bb">
-			<div class="col br" style="background:#ccc;">基本款</div>
-			<div class="col br">白金款</div>
-			<div class="col">钻石款</div>
+		<div id="typeSelect" style="display:-webkit-box;" class="bt bb">
+			<div class="col br" @click="setProdType(0,$event)">基本款</div>
+			<div class="col br" @click="setProdType(1,$event)">白金款</div>
+			<div class="col" @click="setProdType(2,$event)">钻石款</div>
 		</div>
-		<div class="bb">
-			<div class="row">
-				<div class="col3">房屋主体</div>
-				<div class="col1">50万</div>
-			</div>
-			<div class="row">
-				<div class="col3">室内附属设备</div>
-				<div class="col1">10万</div>
-			</div>
-			<div class="row">
-				<div class="col3">室内装潢</div>
-				<div class="col1">10万</div>
-			</div>
-			<div class="row">
-				<div class="col3">投保人室内意外</div>
-				<div class="col1">5万</div>
-			</div>
+		<div id="productInfo" class="bb">
+                <div class="row" v-for="item in list">
+                    <div class="col3">{{item.key}}</div>
+                    <div class="col1">{{item.price}}</div>
+                </div>
 		</div>
 	</div>
 	<div style="padding:10px;margin-top:10px;" class="bt">
@@ -56,18 +44,47 @@
 		<div style="float:right;color:#666;">></div>
 	</div>
 	<div class="row bt bb" style="margin-top:10px;">
-		<div class="col3 br">基本款：￥1070元起</div>
+		<div class="col3 br">基本款：￥{{price}}元起</div>
 		<div class="col1" @click="goBuy">立即投保</div>
 	</div>
 </template>
 
 <script>
+    import data from "../data/data";
+    import $ from "jquery";
+    
 	export default{
+        ready(){
+            var index = this.product.select;
+            $("#typeSelect").children().eq(index).css("background","#ccc");
+        },
+        data(){
+          return data;  
+        },
 		methods : {
+            setProdType(selectIndex,event){
+                var div = event.target;
+                $(div).siblings().css("background","#fff");
+                $(div).css("background","#ccc");
+                this.product.select = selectIndex;
+            },
 			goBuy () {
+                localStorage.setItem("data",JSON.stringify(this.$data));
 				location.href="order.html";
 			}
-		}
+		},
+        computed : {
+            price(){
+                var index = this.product.select;
+                return this.product.types[index].price;
+            },
+            list (){
+                var index = this.product.select;
+                var prod = this.product.types[index];                
+                var list = prod.contents;                
+                return list;
+            }
+        }
 	}	
 </script>
 
@@ -120,14 +137,14 @@
 	}
 
 	.col3{
-		-webkit-box-flex:3;
+		-webkit-box-flex:1;
 		padding:10px;
 	}
 
 	.col1{
-		-webkit-box-flex:1;
+		width:20%;
 		padding:10px;
 		text-align: center;
-
 	}
+    
 </style>

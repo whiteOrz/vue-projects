@@ -14,6 +14,7 @@
 
         "css-loader": "^0.23.0",
         "style-loader":"^0.13.0",
+        "json-loader": "^0.5.4",
         
         "vue-hot-reload-api": "^1.2.2",
         "vue-html-loader": "^1.0.0",
@@ -30,6 +31,7 @@
         "pro2": "webpack-dev-server --config ./project2/webpack.config.js --inline --hot --content-base ./project2",
         "pro2dev" : "webpack --config ./project2/webpack.config.js",
         "pro3": "webpack-dev-server --config ./project3/webpack.config.js --inline --hot --content-base ./project3/page",
-        "pro3dev" : "webpack --config ./project3/webpack.config.js"
+        "pro3dev" : "webpack --config ./project3/webpack.config.js",
+        "pro3build" : "webpack -p --config ./project3/webpack.config.js"
     }
 }
