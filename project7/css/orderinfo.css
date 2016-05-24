@@ -1,0 +1,22 @@
+*{padding:0;margin:0;outline:none;word-break:break-all;-webkit-tap-highlight-color:rgba(0,0,0,0);}
+html{font-size:62.5%;font-family:"microsoft yahei";color:#000;}
+body{font-size:12px;font-size:1.2rem;overflow-x:hidden;}
+ul,li{list-style:none;}
+mark{background:none;}
+table{border-collapse:collapse;border-spacing:0;}
+input,select,input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{ -webkit-appearance:none; margin:0; border:none; font-family:microsoft Yahei;}
+.clearfix{zoom:1;}
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden;}
+a{text-decoration:none;color:#000;}
+.fl{float:left;}
+.fr{float:right;}
+.tl{text-align:left;}
+.tr{text-align:right;}
+.tc{text-align:center;}
+.dn{display:none;}
+.c1{color:#FF5F2F;}
+.c2{color:#999;}
+.c3{color:#D51B04;}
+.tm10{margin-top:1rem;}
+.bg-g{background:#F1F1F1;}
+.bg-w{background:#fff;}

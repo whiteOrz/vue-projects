@@ -1,0 +1,69 @@
+*{padding:0;margin:0;outline:none;word-break:break-all;-webkit-tap-highlight-color:rgba(0,0,0,0);}
+html{font-size:62.5%;font-family:"microsoft yahei";color:#000;}
+body{font-size:12px;font-size:1.2rem;overflow-x:hidden;}
+ul,li{list-style:none;}
+mark{background:none;}
+table{border-collapse:collapse;border-spacing:0;}
+input,select,input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{ -webkit-appearance:none; margin:0; border:none; font-family:microsoft Yahei;}
+.clearfix{zoom:1;}
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden;}
+a{text-decoration:none;color:#000;}
+
+#container{display: box;display: -webkit-box;margin:4rem;}
+#productImg{width:30%;}
+#pc_detail{flex: 1;-webkit-box-flex:1;border:1px solid #ccc;padding:1rem;font-size:1rem;}
+
+.mt04{margin-top:0.4rem;}
+.productName{font-size: 1.2rem;}
+.pcProductPrice{border-bottom: 1px solid #ccc;padding:1rem 0;}
+.pcProductPrice > div {display: flex;display: -webkit-box;}
+.priceType,.activityTitle{width:6rem;display: block;color:#666;}
+.productPrice,.discountInfo{flex:1;-webkit-box-flex:1;display: block;}
+.pcConditionList{margin-top:1rem;}
+.pcCondition{display: flex;display: -webkit-box;}
+.conditionName{width:6rem;display: block;color:#666;}
+.conditionDescription{flex:1;-webkit-box-flex:1;display: block;}
+.pcPackageList{display: flex;display: -webkit-box;margin-top:1rem;}
+.componentTitle{width:6rem;color:#666;}
+.pcPackageContent{flex:1;-webkit-box-flex:1;}
+.packageNameList{display: flex;display: -webkit-box;}
+.pcPackageName{flex:1;-webkit-box-flex:1;text-align: center;border:1px solid #ccc;padding:0.2rem;}
+.pcPackageName:not(:first-child){margin-left:1.2rem;}
+.pcPackageName.active{background:rgb(255,132,51);color:#fff;}
+.packageList{margin-top:0.8rem;}
+.packageTitle{display: flex;display: -webkit-box;text-align: center;background:rgb(255,255,153);}
+.packageTitle > div:nth-child(1){flex:1;-webkit-box-flex:1;}
+.packageTitle > div:nth-child(2){width:30%;}
+.pcPackage{margin-top:0.2rem;display:none;}
+.pcPackage.active{display: block;}
+.pcLiability{display: flex;display: -webkit-box;text-align: center;}
+.liabilityName{flex:1;-webkit-box-flex:1;}
+.liabilityAmount{width:30%;}
+.pcPayment{display: flex;display: -webkit-box;text-align: center;margin:2rem 6rem 0 6rem;}
+.pcPayment > div {width:8rem;}
+.pcPayment > div:not(:first-child){margin-left: 2rem;}
+.quickBuy,.login{padding:0.2rem;background:rgb(255,132,51);color:#fff;}
+.payBtnExplan{font-size: 0.8rem;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and ( min-width: 320px){html{font-size:10px}}
+@media screen and ( min-width: 360px){html{font-size:11.25px}}
+@media screen and ( min-width: 375px){html{font-size:11.71875px}}
+@media screen and ( min-width: 384px){html{font-size:12px}}
+@media screen and ( min-width: 400px){html{font-size:12.5px}}
+@media screen and ( min-width: 414px){html{font-size:12.9375px}}
+@media screen and ( min-width: 424px){html{font-size:13.25px}}
+@media screen and ( min-width: 480px){html{font-size:15px}}
+@media screen and ( min-width: 540px){html{font-size:16.875px}}
+@media screen and ( min-width: 640px){html{font-size:20px}}

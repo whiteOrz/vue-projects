@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>产品详情</title>
+<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,target-densitydpi=medium-dpi">
+<meta name="format-detection" content="telephone=no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<link href="css/m_style.css" rel="stylesheet" type="text/css">
+</head>
+<body class="bg-g">
+<header class="header">
+	<a href="javascript:history.go(-1)" class="icon-back"></a>
+	<h2>填写订单信息</h2>
+	<span class="icon-menu"></span>
+</header>
+<section class="container">
+	<section class="tab2">
+		<ul class="tab-tit">
+			<li>快速购买</li>
+			<li>会员购买<br><span>免填写用户信息</span></li>
+		</ul>
+		<div class="tab-con tm10">
+			<article>
+				<div id="wap_inputs"></div>
+				<p class="checkment"><label><input type="checkbox" checked><em></em>我已阅读并认可<span class="c1">重要声明</span></label></p>
+				<p class="btn"><input type="button" value="确认无误,购买" class="btn2 wapInsure"></p>
+			</article>
+			<article>
+				<p class="txt">登录后投保即可获得积分奖励哦，超值礼品等你兑换~</p>
+				<div class="list loglist">
+					<ul class="item">
+						<li><span class="icon-log icon-log1"></span><input type="text" placeholder="用户名/邮箱/证件号/手机"></li>
+						<li><span class="icon-log icon-log2"></span><input type="text" placeholder="请填写密码"></li>
+						<li><span class="icon-log icon-log3"></span><input type="tel" placeholder="请填写验证码"><div class="code">8329</div></li>
+					</ul>
+				</div>
+				<p class="btn"><input type="button" value="登 录" class="btn-log"></p>
+				<p class="forget"><a href="#">忘记密码？</a></p>
+				<p class="btn"><a href="#" class="btn-reg">免费注册</a></p>
+			</article>
+		</div>
+	</section>
+</section>
+<script src="js/wap_orderinfo.js"></script>
+<script src="js/common.js"></script>
+<script>
+window.onload=function(){
+	product.tab('tab2');
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="jquery.min.js"></script>
+    <script src="demo.js"></script>
+</head>
+<body>
+    <div componentId="wapProductDesc">
+        <div>$!wapDetails.productName</div>
+        <div>$!wapDetails.productDescription</div>
+    </div>
+
+    <div componentId="wapProductPrice">
+        <div><span>$!wapDetails.priceType</span><span>$!wapDetails.productPrice</span></div>
+        <div><span>$!wapDetails.activityTitle</span><span>$!wapDetails.discountInfo</span></div>
+    </div>
+
+    <div componentId="wapIdentityList">
+        #foreach($wapIdentity in $identityList)
+        <div componentId="wapIdentity"><img src='$!wapIdentity.identityURL' /><span>$!wapIdentity.identityDescription</span></div>
+        #end
+    </div>
+
+    <div componentId="wapPackageList">
+        <div>$!wapDetails.componentTitle</div>
+        <div>
+            #foreach($wapPackageName in $packageNameList)
+            <div componentId="wapPackageName">$!wapPackageName.packageName</div>
+            #end
+        </div>
+        <div>
+            #foreach($wapPackage in $packageList)
+            <div componentId="wapPackage" packageId='$!wapPackage.packageId' packagePrice='$!wapPackage.packagePrice'>
+                #foreach($wapLiability in $packageLiabilityList)
+                    <div componentId="wapLiability">
+                        <div>
+                            <span>$!wapLiability.liabilityName</span>
+                            <span>$!wapLiability.liabilityAmount</span>
+                        </div>
+                        <div>$!wapLiability.liabilityDescription</div>
+                    </div>
+                #end
+            </div>
+            #end
+        </div>
+    </div>
+
+    <div componentId="wapConditionList">
+        <div>$!wapDetails.componentTitle</div>
+        #foreach($wapCondition in $conditions)
+            <div componentId="wapCondition">
+                <span>$!wapCondition.conditionName</span>
+                <span>$!wapCondition.conditionDescription</span>
+            </div>
+        #end
+    </div>
+
+
+    <script>
+        demoRun();
+    </script>
+</body>
+</html>

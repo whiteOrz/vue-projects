@@ -1,0 +1,252 @@
+*{padding:0;margin:0;outline:none;word-break:break-all;-webkit-tap-highlight-color:rgba(0,0,0,0);}
+html{font-size:62.5%;font-family:"microsoft yahei";color:#000;}
+body{font-size:12px;font-size:1.2rem;overflow-x:hidden;}
+ul,li{list-style:none;}
+mark{background:none;}
+table{border-collapse:collapse;border-spacing:0;}
+input,select,input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{ -webkit-appearance:none; margin:0; border:none; font-family:microsoft Yahei;}
+.clearfix{zoom:1;}
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden;}
+a{text-decoration:none;color:#000;}
+.fl{float:left;}
+.fr{float:right;}
+.tl{text-align:left;}
+.tr{text-align:right;}
+.tc{text-align:center;}
+.dn{display:none;}
+.c1{color:#FF5F2F;}
+.c2{color:#999;}
+.c3{color:#D51B04;}
+.tm10{margin-top:1rem;}
+.bg-g{background:#F1F1F1;}
+.bg-w{background:#fff;}
+
+.wapProductDesc{
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding: 1.2rem 0;
+    margin: 0 1rem;
+    border-bottom: 1px solid #ddd;
+    position: relative;
+}
+
+.productName{
+
+}
+
+
+.productDescription {
+    font-size: 1.2rem;
+    color: #999;
+    margin-top: 0.3rem;
+}
+
+.wapProductPrice {
+    padding: 1.2rem 0;
+    margin: 0 1rem;
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+}
+
+.priceType::after,.activityTitle::after{
+    content:"：";
+}
+
+.productPrice{
+    font-size: 1.8rem;
+    color: #FF5F2F;
+}
+.productPrice::before{
+    content: "￥";
+}
+
+.discountInfo{
+    color: #FF5F2F;
+}
+
+.wapIdentityList{
+    border-top: 1px solid #ddd;
+    padding: 1.2rem 1rem;
+    font-size: 1.2rem;
+    color: #999;
+    display: box;
+    display: -webkit-box;
+}
+
+.wapIdentity{
+    -webkit-box-flex : 1;
+    text-align: center;;
+}
+
+.componentTitle{
+    font-size: 1.2rem;
+    font-weight: 700;
+    line-height: 3.8rem;
+    text-indent: 1rem;
+    background:#F1F1F1;
+}
+
+.packageNameList{
+    display: -webkit-box;
+    border-top: 1px solid #ddd;
+    height: 4.4rem;
+    background: #fff;
+}
+
+.wapPackageName{
+    -webkit-box-flex: 1;
+    font-size: 1.2rem;
+    text-align: center;
+    line-height: 4.2rem;
+    position: relative;
+}
+
+.wapPackageName.active{
+    color: #FF5F2F;
+    border-bottom: 2px solid #FF5F2F;
+}
+
+.wapPackageName:not(:last-child){
+    border-right:1px solid #ddd;
+}
+
+.packageList{
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding-left: 1rem;
+    background: #fff;
+}
+
+.wapPackage{
+    display: none;
+}
+
+.wapPackage.active{
+    display: block;
+}
+
+.wapLiability{
+    min-height: 4.6rem;
+    padding: 0 1rem 0 0;
+    font-size: 1.2rem;
+    line-height: 4.6rem;
+}
+
+.wapLiability:not(:last-child){
+    border-bottom: 1px solid #ddd;
+}
+
+.liabilityAmount{
+    float: right;
+    color: #FF5F2F;
+}
+
+.liabilityAmount::after{
+    content: "万";
+}
+
+.liabilityDescription{
+    font-size: 1.2rem;
+    color: #666;
+    line-height: 1.8rem;
+    padding: 1rem 1rem 1rem 0;
+    border-top: 1px solid #ddd;
+    display: none;
+}
+
+.conditions{
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding-left: 1rem;
+}
+
+.wapCondition{
+    min-height: 4.6rem;
+    padding: 0 1rem 0 0;
+    font-size: 1.2rem;
+    line-height: 4.6rem;
+}
+
+.wapCondition:not(:last-child){
+    border-bottom: 1px solid #ddd;
+}
+
+.conditionDescription{
+    float: right;
+}
+
+.wapReturnMessage{
+    height:6rem;
+    background:#F1F1F1;
+}
+
+.wapPayment{
+    height: 4.5rem;
+    position: fixed;
+    border-top: 1px solid #ddd;
+    left: 0;
+    bottom: 0;
+    z-index: 999;
+    width: 100%;
+    display: -webkit-box;
+    background: #fff;
+}
+
+.payPrice{
+    -webkit-box-flex: 1;
+    font-size: 1.2rem;
+    text-align: center;
+    line-height: 4.5rem;
+}
+
+.service{
+    width: 5rem;
+    border-left: 1px solid #ddd;
+    text-align: center;
+    line-height: 4.5rem;
+}
+
+.payBtn{
+    width: 13.2rem;
+    text-align: center;
+    background: #D51B03;
+    color: #fff;
+    font: 1.6rem/4.5rem microsoft Yahei;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and ( min-width: 320px){html{font-size:10px}}
+@media screen and ( min-width: 360px){html{font-size:11.25px}}
+@media screen and ( min-width: 375px){html{font-size:11.71875px}}
+@media screen and ( min-width: 384px){html{font-size:12px}}
+@media screen and ( min-width: 400px){html{font-size:12.5px}}
+@media screen and ( min-width: 414px){html{font-size:12.9375px}}
+@media screen and ( min-width: 424px){html{font-size:13.25px}}
+@media screen and ( min-width: 480px){html{font-size:15px}}
+@media screen and ( min-width: 540px){html{font-size:16.875px}}
+@media screen and ( min-width: 640px){html{font-size:20px}}

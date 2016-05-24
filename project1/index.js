@@ -1,11 +1,5 @@
-import Vue from "vue";
-import insure from "./views/Insure";
-import tkHeader from "./components/Header";
+import $ from "jquery";
+var temp = require("./template/testD");
+$("body").append(temp);
 
-new Vue({
-    el: "body",
-    components: {
-        insure,
-        tkHeader
-    }
-});
+require("./util/test");

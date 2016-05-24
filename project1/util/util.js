@@ -49,6 +49,7 @@ export default () => {
                 aaa: "",
                 show: true
             }
-        ]
+        ],
+        components : ["testa","testb","testc"]
     };
 }

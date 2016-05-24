@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="wapProductDesc" componentId="wapProductDesc">
+        <div class="productName">$!data.wapProductDesc.productName</div>
+        <div class="productDescription">$!data.wapProductDesc.productDescription</div>
+    </div>
+
+    <div class="wapProductPrice" componentId="wapProductPrice">
+        <div><span class="priceType">$!data.wapProductPrice.priceType</span><span class="productPrice">$!data.wapProductPrice.productPrice</span></div>
+        <div><span class="activityTitle">$!data.wapProductPrice.activityTitle</span><span class="discountInfo">$!data.wapProductPrice.discountInfo</span></div>
+    </div>
+
+    <div class="wapIdentityList" componentId="wapIdentityList">
+        #foreach($wapIdentity in $data.wapIdentityList.identityList)
+        <div class="wapIdentity" componentId="wapIdentity"><img src="$!wapIdentity.identityURL" /><span>$!wapIdentity.identityDescription</span></div>
+        #end
+    </div>
+
+    <div componentId="wapPackageList">
+        <div class="componentTitle">$!data.wapPackageList.componentTitle</div>
+        <div class="packageNameList">
+            #foreach($wapPackageName in $data.wapPackageList.packageNameList)
+            <div class="wapPackageName" componentId="wapPackageName">$!wapPackageName.packageName</div>
+            #end
+        </div>
+        <div class="packageList">
+            #foreach($wapPackage in $data.wapPackageList.packageList)
+            <div class="wapPackage" componentId="wapPackage" packageId="$!wapPackage.packageId" packagePrice="$!wapPackage.packagePrice" onclick="returnMessage(this,['packageId','packagePrice']);">
+                #foreach($wapLiability in $wapPackage.packageLiabilityList)
+                <div class="wapLiability" componentId="wapLiability" liabilityId="$!wapLiability.liabilityId">
+                    <div>
+                        <span class="liabilityName">$!wapLiability.liabilityName</span>
+                        <span class="liabilityAmount">$!wapLiability.liabilityAmount</span>
+                    </div>
+                    <div class="liabilityDescription">$!wapLiability.liabilityDescription</div>
+                </div>
+                #end
+            </div>
+            #end
+        </div>
+    </div>
+
+    <div class="wapConditionList" componentId="wapConditionList">
+        <div class="componentTitle">$!data.wapConditionList.componentTitle</div>
+        <div class="conditions">
+            #foreach($wapCondition in $data.wapConditionList.conditions)
+            <div class="wapCondition" componentId="wapCondition">
+                <span class="conditionName">$!wapCondition.conditionName</span>
+                <span class="conditionDescription">$!wapCondition.conditionDescription</span>
+            </div>
+            #end
+        </div>
+    </div>
+
+    <div class="wapReturnMessage" componentId="wapReturnMessage">
+        #foreach($returnMessage in $data.wapReturnMessage.returnMessageList)
+            <input type="hidden" id="$!returnMessage.messageName" value=" /">
+        #end
+    </div>
+
+    <div class="wapPayment" componentId="wapPayment">
+        <div class="payPrice">基本款：50</div>
+        <div class="service">客服</div>
+        <div class="payBtn">立即投保</div>
+    </div>
+</body>
+
+</html>

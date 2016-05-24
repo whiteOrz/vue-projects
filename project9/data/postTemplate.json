@@ -1,0 +1,20 @@
+{
+    "channelId": "wap",
+    "details": {
+        "packageId": "001",
+        "packagePrice": "2",
+        "packageLiabilityList": [{
+            "liabilityId": "001001"
+        }, {
+            "liabilityId": "001002"
+        }]
+    },
+    "inputs": {
+        "applicantName": "",
+        "applicantId": "",
+        "applicantPhone": ""
+    },
+    "payment": {
+        "paywayId": ""
+    }
+}

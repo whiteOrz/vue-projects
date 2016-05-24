@@ -1,0 +1,17 @@
+{
+    "productId": "1702",
+    "channelId": "wap",
+    "payWayId": "71",
+    "applicant": {
+        "name": "测试",
+        "identifyType": "01",
+        "identifyNo": "432500199211210164",
+        "phoneNo": "13200132000"
+    },
+    "genericData": {
+        "processHandler": "property",
+        "amount": "100000",
+        "premiumSum": "9.9",
+        "startTime": "1491407999550"
+    }
+}

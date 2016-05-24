@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <app></app>
+    <div style="margin-top:20px;border:1px solid #ccc;padding:10px;">
+        <div style="display:-webkit-box;padding:10px;">
+            <div style="text-align:center;-webkit-box-flex:1;" onclick="show(0)">基本款</div>
+            <div style="text-align:center;-webkit-box-flex:1;" onclick="show(1)">白金款</div>
+        </div>
+        <div id="content">
+            <div style="border:1px solid #ccc;padding:10px;">
+                <div>意外身故11111</div>
+                <div>公共汽车、电车意外伤害1111111</div>
+            </div>
+            <div style="border:1px solid #ccc;display:none;padding:10px;">
+                <div>意外身故22222</div>
+                <div>公共汽车、电车意外伤害22222</div>
+            </div>
+        </div>
+    </div>
+    <script src="build.js"></script>
+
+    <script>
+        function show(index){
+            var div = document.getElementById("content");
+
+            var childrens = div.children;
+
+            for(var i=0;i<childrens.length;i++){
+                childrens[i].style.display="none";
+            }
+
+            childrens[index].style.display="block";
+        }
+    </script>
+</body>
+</html>

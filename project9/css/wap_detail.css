@@ -1,0 +1,161 @@
+#wap_details{
+    background:#fff;
+}
+.wapProductDesc {
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding: 1.2rem 0;
+    margin: 0 1rem;
+    border-bottom: 1px solid #ddd;
+    position: relative;
+}
+.productName {}
+.productDescription {
+    font-size: 1.2rem;
+    color: #999;
+    margin-top: 0.3rem;
+}
+.wapProductPrice {
+    padding: 1.2rem 0;
+    margin: 0 1rem;
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+}
+.priceType::after, .activityTitle::after {
+    content: "：";
+}
+.productPrice {
+    font-size: 1.8rem;
+    color: #FF5F2F;
+}
+.productPrice::before {
+    content: "￥";
+}
+.discountInfo {
+    color: #FF5F2F;
+}
+.wapIdentityList {
+    border-top: 1px solid #ddd;
+    padding: 1.2rem 1rem;
+    font-size: 1.2rem;
+    color: #999;
+    display: box;
+    display: -webkit-box;
+}
+.wapIdentity {
+    -webkit-box-flex: 1;
+    text-align: center;
+}
+.componentTitle {
+    font-size: 1.2rem;
+    font-weight: 700;
+    line-height: 3.8rem;
+    text-indent: 1rem;
+    background: #F1F1F1;
+}
+.packageNameList {
+    display: -webkit-box;
+    border-top: 1px solid #ddd;
+    height: 4.4rem;
+    background: #fff;
+}
+.wapPackageName {
+    -webkit-box-flex: 1;
+    font-size: 1.2rem;
+    text-align: center;
+    line-height: 4.2rem;
+    position: relative;
+}
+.wapPackageName.active {
+    color: #FF5F2F;
+    border-bottom: 2px solid #FF5F2F;
+}
+.wapPackageName:not(:last-child) {
+    border-right: 1px solid #ddd;
+}
+.packageList {
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding-left: 1rem;
+    background: #fff;
+}
+.wapPackage {
+    display: none;
+}
+.wapPackage.active {
+    display: block;
+}
+.wapLiability {
+    min-height: 4.6rem;
+    padding: 0 1rem 0 0;
+    font-size: 1.2rem;
+    line-height: 4.6rem;
+}
+.wapLiability:not(:last-child) {
+    border-bottom: 1px solid #ddd;
+}
+.liabilityAmount {
+    float: right;
+    color: #FF5F2F;
+}
+.liabilityAmount::after {
+    content: "万";
+}
+.liabilityDescription {
+    font-size: 1.2rem;
+    color: #666;
+    line-height: 1.8rem;
+    padding: 1rem 1rem 1rem 0;
+    border-top: 1px solid #ddd;
+    display: none;
+}
+.conditions {
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding-left: 1rem;
+}
+.wapCondition {
+    min-height: 4.6rem;
+    padding: 0 1rem 0 0;
+    font-size: 1.2rem;
+    line-height: 4.6rem;
+}
+.wapCondition:not(:last-child) {
+    border-bottom: 1px solid #ddd;
+}
+.conditionDescription {
+    float: right;
+}
+.wapReturnMessage {
+    background: #F1F1F1;
+}
+.wapPayment {
+    height: 4.5rem;
+    position: fixed;
+    border-top: 1px solid #ddd;
+    left: 0;
+    bottom: 0;
+    z-index: 999;
+    width: 100%;
+    display: -webkit-box;
+    background: #fff;
+}
+.payPrice {
+    -webkit-box-flex: 1;
+    font-size: 1.2rem;
+    text-align: center;
+    line-height: 4.5rem;
+}
+.service {
+    width: 5rem;
+    border-left: 1px solid #ddd;
+    text-align: center;
+    line-height: 4.5rem;
+}
+.payBtn {
+    width: 13.2rem;
+    text-align: center;
+    background: #D51B03;
+    color: #fff;
+    font: 1.6rem/4.5rem microsoft Yahei;
+}

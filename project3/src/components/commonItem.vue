@@ -1,7 +1,7 @@
 <template>
     <div class="row">
        <div class="col-left">{{app.label}}</div>
-       <div class="col-right"><input type="text" v-model="app.value"/></div>        
+       <div class="col-right"><input type="text" v-model="app.value"/></div>
     </div>
 </template>
 
@@ -22,7 +22,7 @@
     .col-right {
         -webkit-box-flex:1;
     }
-    
+
     input{
         width : 100%;
     }

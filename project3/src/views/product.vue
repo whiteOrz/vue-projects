@@ -17,15 +17,15 @@
 	<div id="config">
 		<div style="padding:10px;">保障责任</div>
 		<div id="typeSelect" style="display:-webkit-box;" class="bt bb">
-			<div class="col br" @click="setProdType(0,$event)">基本款</div>
-			<div class="col br" @click="setProdType(1,$event)">白金款</div>
-			<div class="col" @click="setProdType(2,$event)">钻石款</div>
+			<div class="col br" @click="setProdType(0)">基本款</div>
+			<div class="col br" @click="setProdType(1)">白金款</div>
+			<div class="col" @click="setProdType(2)">钻石款</div>
 		</div>
 		<div id="productInfo" class="bb">
-                <div class="row" v-for="item in list">
-                    <div class="col3">{{item.key}}</div>
-                    <div class="col1">{{item.price}}</div>
-                </div>
+        <div class="row" v-for="item in list">
+            <div class="col3">{{item.key}}</div>
+            <div class="col1">{{item.price}}</div>
+        </div>
 		</div>
 	</div>
 	<div style="padding:10px;margin-top:10px;" class="bt">
@@ -50,42 +50,42 @@
 </template>
 
 <script>
-    import data from "../data/data";
-    import $ from "jquery";
-    
+	import data from "../data/data";
+	import $ from "jquery";
+
 	export default{
-        ready(){
-            var index = this.product.select;
-            $("#typeSelect").children().eq(index).css("background","#ccc");
-        },
-        data(){
-          return data;  
-        },
+		ready(){
+			var index = this.product.select;
+			$("#typeSelect").children().eq(index).css("background","#ccc");
+		},
+		data(){
+			return data;
+		},
 		methods : {
-            setProdType(selectIndex,event){
-                var div = event.target;
-                $(div).siblings().css("background","#fff");
-                $(div).css("background","#ccc");
-                this.product.select = selectIndex;
-            },
-			goBuy () {
-                localStorage.setItem("data",JSON.stringify(this.$data));
+			setProdType(selectIndex){
+				var div = event.target;
+				$(div).siblings().css("background","#fff");
+				$(div).css("background","#ccc");
+				this.product.select = selectIndex;
+			},
+			goBuy(){
+        		localStorage.setItem("data",JSON.stringify(this.$data));
 				location.href="order.html";
 			}
 		},
-        computed : {
-            price(){
-                var index = this.product.select;
-                return this.product.types[index].price;
-            },
-            list (){
-                var index = this.product.select;
-                var prod = this.product.types[index];                
-                var list = prod.contents;                
-                return list;
-            }
-        }
-	}	
+	    computed : {
+	        price(){
+	            var index = this.product.select;
+	            return this.product.types[index].price;
+	        },
+	        list (){
+	            var index = this.product.select;
+	            var prod = this.product.types[index];
+	            var list = prod.contents;
+	            return list;
+	        }
+	    }
+	}
 </script>
 
 <style scoped>
@@ -146,5 +146,4 @@
 		padding:10px;
 		text-align: center;
 	}
-    
 </style>

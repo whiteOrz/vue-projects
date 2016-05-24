@@ -1,40 +1,45 @@
 <template>
-    <div style="margin-top:10px;">
-        <div v-for="app in applicant">
-            <tk-common-item :label="app.label" :aaa="app.aaa" v-if="app.show" track-by="$index"></tk-common-item>               
-        </div>
-        <div id="submit-btn">
-            <div @click="submit" :style="canSubmit">确认无误，购买</div>
-        </div>
+    <div style="margin-top:10px;" id="testContainer">
+        <component :is="realComponents.component1"></component>
+        <component :is="realComponents.component2"></component>
+        <component :is="realComponents.component3"></component>
+        <component :is="realComponents.component4"></component>
+        <component :is="realComponents.component5"></component>
+        <component :is="realComponents.component6"></component>
+        <component :is="realComponents.component7"></component>
+        <component :is="realComponents.component8"></component>
+        <component :is="realComponents.component9"></component>
+        <component :is="realComponents.component10"></component>
     </div>
 </template>
 
 <script>
-    import initData from "../util/util";
-    var data = initData();
-    
-    import TkCommonItem from "../components/CommonItem";
-    
+    import data from "../util/data";
+    console.log(data);
+
+    var components = data.components;
+    var realComponents={};
+    components.forEach(function(el,index){
+        var realComponent = require("../components/" + el);
+        realComponents["component" + (index+1)] =realComponent;
+    });
+    realComponents = {
+        "component1" : testb,
+        "component2" : testa
+    }
+    data.realComponents = realComponents;
+    console.log(data.realComponents);
+
     export default {
         data () {
             return data;
         },
-        components : {
-            TkCommonItem
-        },
-        methods : {
-            submit () {
-                alert(JSON.stringify(this.applicant));
-            }
-        },
-        computed : {
-            canSubmit () {
-                return {
-                    color : "#000"
-                }
-            }
-        }
+        components : realComponents
     }
+
+
+
+
 </script>
 
 
@@ -43,12 +48,12 @@
         margin-top:1em;
         padding:0.5em 1.5em;
     }
-    
+
     #submit-btn > div {
         padding :0.5em 1.5em;
         text-align: center;
         background: #d61b04;
         color:#fff;
     }
-    
+
 </style>

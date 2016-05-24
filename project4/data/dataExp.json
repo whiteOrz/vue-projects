@@ -1,0 +1,42 @@
+[{
+    "details": [{
+        "componentId": "001",
+        "productName": "xxx",
+        "productDescription": "xxxx"
+    }, {
+        "componentId": "002",
+        "productPrice": "xx",
+        "discountInfo": "xx"
+    }, {
+        "componentId": "003",
+        "identities": [{
+            "componentId": "0031",
+            "identityURL": "",
+            "identityDescription": ""
+        }]
+    }, {
+        "componentId": "001",
+        "componentTitle": "保障责任",
+        "packages": [{
+            "componentId": "001",
+            "packageId": "xxx",
+            "packageName": "xxx",
+            "packagePrice": "xxx",
+            "packageLiabilities": [{
+                "componentId": "001",
+                "liabilityId": "xx",
+                "liabilityName": "xx",
+                "liabilityAmount": "xx",
+                "liabilityDescription": "xx"
+            }]
+        }]
+    }, {
+        "componentId": "001",
+        "componentTitle": "保障说明",
+        "conditions": [{
+            "componentId": "001",
+            "conditionName": "xxx",
+            "conditionDescription": "xxx"
+        }]
+    }]
+}]

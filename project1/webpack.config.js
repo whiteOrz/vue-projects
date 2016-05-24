@@ -14,6 +14,14 @@ module.exports = {
                 test: /\.js$/,
                 loader: "babel",
                 exclude: /node_modules/
+            },
+            {
+                test : /\.json$/,
+                loader : "json"
+            },
+            {
+                test : /\.html$/,
+                loader : "html"
             }
         ]
     },
@@ -22,7 +30,6 @@ module.exports = {
         plugins: ["transform-runtime"]
     },
     resolve: {
-        extensions: ['', '.js', '.vue']
+        extensions: ['', '.js', '.vue','.json','.html']
     }
-
 }

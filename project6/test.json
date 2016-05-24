@@ -1,0 +1,82 @@
+{
+    "pcDetails": [{
+        "componentId": "pcProductDesc",
+        "productName": "喜&福临门",
+        "productDescription": "家庭财产综合保障计划，保房保钱更保命，宅在家里更安心！"
+    }, {
+        "componentId": "pcProductPrice",
+        "priceType": "会员价",
+        "productPrice": "1",
+        "discountInfo": "会员购买再送超值积分",
+        "activityTitle": "优惠信息"
+    }, {
+        "componentId": "pcConditionList",
+        "conditions": [{
+            "componentId": "pcCondition",
+            "conditionName": "投保年龄",
+            "conditionDescription": "18-65周岁（含）"
+        }, {
+            "componentId": "pcCondition",
+            "conditionName": "保多久",
+            "conditionDescription": "1年"
+        }]
+    }, {
+        "componentId": "pcPackageList",
+        "componentTitle": "保障责任",
+        "packageNameList": [{
+            "componentId": "pcPackageName",
+            "packageName": "喜临门"
+        }, {
+            "componentId": "pcPackageName",
+            "packageName": "福临门"
+        }],
+        "packageList": [{
+            "componentId": "pcPackage",
+            "packageId": "1702",
+            "packageName": "喜临门",
+            "packagePrice": "2",
+            "packageLiabilityList": [{
+                "componentId": "pcLiability",
+                "liabilityId": "001001",
+                "liabilityName": "房屋主体损失",
+                "liabilityAmount": "50万元",
+                "liabilityDescription": "因意外伤害事故直接导致被保险人在该意外伤害事故发生之日起180日内身故的，将按合同约定给付受益人意外身故保险金。"
+            }, {
+                "componentId": "pcLiability",
+                "liabilityId": "001002",
+                "liabilityName": "房屋附属设施损失",
+                "liabilityAmount": "20万元",
+                "liabilityDescription": "因意外伤害事故直接导致被保险人在该意外伤害事故发生之日起180日内身故的，将按合同约定给付受益人意外身故保险金。"
+            }]
+        }, {
+            "componentId": "pcPackage",
+            "packageId": "1702",
+            "packageName": "福临门",
+            "packagePrice": "100",
+            "packageLiabilities": [{
+                "componentId": "pcLiability",
+                "liabilityId": "002001",
+                "liabilityName": "房屋主体损失",
+                "liabilityAmount": "50万元",
+                "liabilityDescription": "因意外伤害事故直接导致被保险人在该意外伤害事故发生之日起180日内身故的，将按合同约定给付受益人意外身故保险金。"
+            }, {
+                "componentId": "pcLiability",
+                "liabilityId": "002002",
+                "liabilityName": "房屋附属设施损失",
+                "liabilityAmount": "20万元",
+                "liabilityDescription": "因意外伤害事故直接导致被保险人在该意外伤害事故发生之日起180日内身故的，将按合同约定给付受益人意外身故保险金。"
+            }]
+        }]
+    }, {
+        "componentId": "pcReturnMessage",
+        "returnMessageList": [{
+            "componentId": "returnMessage",
+            "messageName": "packageId"
+        }, {
+            "componentId": "returnMessage",
+            "messageName": "packagePrice"
+        }]
+    }, {
+        "componentId": "pcPayment"
+    }]
+}

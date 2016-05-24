@@ -3,8 +3,8 @@ import TkPay from "./views/pay";
 require("./css/reset");
 
 new Vue({
-	el : "body",
-	components : {
-		TkPay
-	}
+    el: "body",
+    components: {
+        TkPay
+    }
 });

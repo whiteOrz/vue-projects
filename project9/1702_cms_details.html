@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>产品详情</title>
+<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,target-densitydpi=medium-dpi">
+<meta name="format-detection" content="telephone=no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<link href="css/m_style.css" rel="stylesheet" type="text/css">
+<link href="css/wap_detail.css" rel="stylesheet" type="text/css">
+</head>
+<body class="bg-g">
+<header class="header">
+	<a href="javascript:history.go(-1)" class="icon-back"></a>
+	<h2><a href="index.html" class="active">基本信息</a><a href="detail.html">产品详情</a></h2>
+	<span class="icon-menu"></span>
+</header>
+<section class="container">
+	<section class="banner"><img src="images/banner.jpg"></section>
+	<div id="wap_details">
+
+	</div>
+	<h2 class="title">常见问题</h2>
+	<article class="list">
+		<ul class="item">
+			<li>
+				<dl>
+					<dt><span class="icon-ask"></span>意外伤害具体包括什么？<span class="icon-arr"></span></dt>
+					<dd>因乘坐保障责任中包含的交通工具导致的身故的保额应为交通工具责任中的身故保额+意外身故保额，比如购买钻石款后因乘坐火车导致意外身故则可赔偿60万+50万=110万。</dd>
+				</dl>
+			</li>
+			<li>
+				<dl>
+					<dt><span class="icon-ask"></span>因乘坐交通工具导致的意外身故应该如何赔偿？<span class="icon-arr"></span></dt>
+					<dd>因乘坐保障责任中包含的交通工具导致的身故的保额应为交通工具责任中的身故保额+意外身故保额，比如购买钻石款后因乘坐火车导致意外身故则可赔偿60万+50万=110万。</dd>
+				</dl>
+			</li>
+		</ul>
+	</article>
+	<article class="list tm10">
+		<ul class="item">
+			<li><a href="detail.html" class="link">查看产品详情<span class="icon-arr2"></span></a></li>
+		</ul>
+	</article>
+</section>
+<script src="js/common.js"></script>
+<script>
+var aDl=document.querySelectorAll('.list dt'); for(var i=0;i<aDl.length;i++){ product.showDl(aDl[i]); } product.tab( 'tab');
+</script>
+<script src="js/jquery.min.js"></script>
+<script src="js/wap_details.js"></script>
+</body>
+</html>
