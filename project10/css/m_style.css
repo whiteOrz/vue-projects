@@ -26,7 +26,7 @@ a{text-decoration:none;color:#000;}
 .icon-menu{ background:url(../images/menu.png) no-repeat; background-size:contain; width:2.65rem; height:2.2rem;}
 .icon-arr{ background:url(../images/arr2.png) no-repeat; background-size:contain; width:1.2rem; height:1.2rem;}
 .icon-arr2{ background:url(../images/arr.png) no-repeat; background-size:contain; width:1.2rem; height:1.2rem;}
-.icon-ask{ background:url(../images/ask.png) no-repeat; background-size:contain; width:1.2rem; height:1.2rem;}
+.icon-ask{ background:url(../images/ask.png) no-repeat; background-size:contain; width:1.6rem; height:1.6rem;}
 .icon-log1{ background:url(../images/log1.png) no-repeat; background-size:contain; width:1.6rem; height:1.6rem;}
 .icon-log2{ background:url(../images/log2.png) no-repeat; background-size:contain; width:1.6rem; height:1.6rem;}
 .icon-log3{ background:url(../images/log3.png) no-repeat; background-size:contain; width:1.6rem; height:1.6rem;}
@@ -57,21 +57,16 @@ a{text-decoration:none;color:#000;}
 .list dl dt{ height:4.6rem; font-size:1.2rem; font-weight:500; line-height:4.6rem; position:relative;}
 .list dl dt .num{ font-style:normal; color:#FF5F2F; position:absolute; right:0;}
 .list dl dt .icon-arr{ position:absolute; right:0; top:50%; margin-top:-0.6rem; transition:.3s;}
-.list dl dt .icon-ask{ display:inline-block; vertical-align:middle; margin:-0.3rem 0.8rem 0;}
+.list dl dt .icon-ask{ display:inline-block; vertical-align:middle; margin:-0.3rem 0.5rem 0;}
 .list dl dd{ font-size:1.2rem; color:#666; line-height:1.8rem; padding:1rem 1rem 1rem 0; display:none;}
 .list dl.active dt{ border-bottom:1px solid #ddd;}
 .list dl.active dt .icon-arr{ -webkit-transform:rotateX(180deg); transform:rotateX(180deg);}
 .list dl.active dd{ display:block;}
 .list select{ font-size:1.2rem;}
 .list .selarea .icon-arr2{ display:inline-block; vertical-align:middle; margin:-0.3rem 0 0 0.5rem;}
-.list li>h3{ font-size:1.2rem; font-weight:500; color:#666;}
+.list li>h3{ font-size:1.2rem; font-weight:500;}
 .list li>p{ -webkit-box-flex:1; text-align:right;}
 .list li>p input{ width:100%; text-align:right; font-size:1.2rem;}
-.list .audio li{ -webkit-box-pack:start;}
-.list .audio img{ width:3.15rem; display:block;}
-.list .audio .ico{ background:url(../images/audio_bg.gif) no-repeat; background-size:contain; width:13.2rem; height:3rem; display:block; margin-left:1rem; position:relative;}
-.list .audio .ico:after{ content:''; background:url(../images/audio_ico.gif) no-repeat; background-size:contain; width:1.2rem; height:1.7rem; position:absolute; left:1.7rem; top:50%; margin-top:-0.85rem;}
-.list .audio .ico.animate:after{ background:url(../images/audio_ico_on.gif) no-repeat; background-size:contain;}
 .loglist{ margin-bottom:2rem;}
 .loglist .item li{ -webkit-box-pack:inherit;}
 .loglist .icon-log{ display:block; margin-right:1rem;}
@@ -80,10 +75,10 @@ a{text-decoration:none;color:#000;}
 .detaillist{ padding:1rem;}
 .detaillist p{ font-size:1.2rem; line-height:2.2rem; display:-webkit-box;}
 .detaillist p span{ color:#666; display:block;}
-.paylist .item li{ position:relative; padding-left:3rem;}
+.paylist li{ position:relative;}
 .paylist li label{ display:block; width:100%;}
 .paylist li input[type=radio]{ display:none;}
-.paylist li span{ background:url(../images/radio.png) no-repeat; background-size:contain; width:2rem; height:2rem; position:absolute; left:0; top:50%; margin-top:-1rem;}
+.paylist li span{ background:url(../images/radio.png) no-repeat; background-size:contain; width:2rem; height:2rem; position:absolute; right:1rem; top:50%; margin-top:-1rem;}
 .paylist li input[type=radio]:checked+span{ background:url(../images/radioed.png) no-repeat; background-size:contain;}
 .paylist li:before{ content:''; width:3rem; height:3rem; display:inline-block; vertical-align:middle; margin:-0.3rem 0.5rem 0 0;}
 .paylist li:nth-child(1):before{ background:url(../images/pay1.png) no-repeat; background-size:contain;}
@@ -96,7 +91,7 @@ a{text-decoration:none;color:#000;}
 .intro h1{ font-size:1.5rem; font-weight:500; padding:1.2rem 0; margin:0 1rem; border-bottom:1px solid #ddd; position:relative;}
 .intro h1 em{ font-size:1.2rem; color:#999; font-style:normal; display:block; margin-top:0.3rem;}
 .intro h1 .icon-arr2{ position:absolute; right:0; top:1.5rem;}
-.intro .price{ padding:1.2rem 0; margin:0 1rem; font-size:1.2rem; line-height:2rem;}
+.intro .price{ padding:1.2rem 0; margin:0 1rem; font-size:1.2rem; line-height:1.8rem;}
 .intro .price mark{ font-size:1.8rem;}
 .intro .price .tag{ font-size:0.9rem; color:#fff; padding:0.1rem 0.3rem; background:#FF5F2F; border-radius:0.2rem; margin-left:1rem;}
 .intro .adv{ border-top:1px solid #ddd; padding:1.2rem 1rem; font-size:1.2rem; color:#999;}
@@ -150,14 +145,10 @@ a{text-decoration:none;color:#000;}
 .fixnav .btn-ser{ display:block; width:5rem; border-left:1px solid #ddd; text-align:center; padding-top:0.6rem;}
 .fixnav .btn-ser:before{ content:''; background:url(../images/ser.png) no-repeat; background-size:contain; width:1.9rem; height:1.9rem; display:block; margin:0 auto;}
 
-#mask{ width:100%; background:rgba(0,0,0,0.7); position:absolute; left:0; top:0; z-index:9996; display:none;}
-.dialogbox{ background:#fff; width:27rem; border-radius:1rem; position:fixed; z-index:9997; left:50%; top:50%; visibility:hidden; margin:-10rem 0 0 -13.5rem;}
-.dialogbox>article{ padding:1.5rem;}
-.dialogbox>article h2{ font-size:1.5rem; text-align:center; margin-bottom:1rem;}
-.dialogbox>article p{ font-size:1.2rem; color:#666; line-height:1.8rem;}
-.dialogbox .btnarea{ height:4.5rem; border-top:1px solid #ddd;}
-.dialogbox .btnarea input.cancel{ display:block; width:100%; height:100%; font:1.8rem/4.5rem microsoft Yahei; text-align:center; border:none; color:#2081F7; background:#fff; border-radius:0 0 1rem 1rem;}
-
+@-webkit-keyframes moveDown{
+	0%{ -webkit-transform:translateY(-2.5rem); opacity:0;}
+	100%{ -webkit-transform:translateY(2.5rem); opacity:1; visibility:visible;}
+}
 @keyframes moveDown{
 	0%{ transform:translateY(-2.5rem); opacity:0;}
 	100%{ transform:translateY(2.5rem); opacity:1; visibility:visible;}

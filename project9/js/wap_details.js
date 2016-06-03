@@ -1,63 +1,95 @@
-$(function(){
+var returnMessageObj = {
+    details: {}
+}
+var packageFactor = {
+    
+};
+
+$(function() {
+    returnMessageInit();
+    packageFactorInit();
     pageEventInit();
 });
 
-var returnMessageObj = {
-    details : {}
-}
-
-function pageEventInit(){
-    $(".wapPackageName:first").addClass("active");
-    $(".wapPackage:first").addClass("active");
-    $(".wapPackage").eq(0).click();
-
-    $(".wapPackageName").click(function(){
-        var index = $(this).index();
+function pageEventInit() {
+    $(".wapPackageName").click(function() {
         $(".wapPackageName").removeClass("active");
         $(this).addClass("active");
 
-        $(".wapPackage").hide();
+        packageFactor.wapPackageNameList = $(this).attr("packageNameIndex");
+        showPackage();
 
-        var wapPackage = $(".wapPackage").eq(index);
-        wapPackage.click();
-        wapPackage.show();
-
-        var price = wapPackage.attr("packagePrice");
-        $(".productPrice").html(price);
-        $(".payPrice").html($(this).html()+"："+price);
+        // var index = $(this).index();
+        // $(".wapPackage").hide();
+        //
+        // var wapPackage = $(".wapPackage").eq(index);
+        // wapPackage.show();
+        //
+        // var price = wapPackage.attr("packagePrice");
+        // $(".productPrice").html(price);
+        // $(".priceName").html($(this).html() + "：");
+        // $(".priceData").html("￥" + price);
+        // $(".scoreData").html(price);
     });
 
-    $(".wapLiability").click(function(){
-        $(this).find(".liabilityDescription").toggle();
+
+
+    $(".wapLiability").click(function() {
+        $(this).find(".liabilityDescription:not(:empty)").toggle();
     });
 
-    $(".payBtn").click(function(){
+    $(".payBtn").click(function() {
         var productId = getProductId() || "1702";
         returnMessageObj.details.packageId = productId;
-        sessionStorage.setItem("returnMessage",JSON.stringify(returnMessageObj));
-        sessionStorage.setItem("productId",productId);
+        sessionStorage.setItem("returnMessage", JSON.stringify(returnMessageObj));
+        sessionStorage.setItem("productId", productId);
         console.log(returnMessageObj);
-        location.href = "orderinfo.html";
+        //location.href = "orderinfo.html";
+    });
+
+    $(".wapPackageName:first").click();
+}
+
+function packageFactorInit() {
+    var wapPackage = $(".wapPackage:first");
+    var packageFactorList = JSON.parse(wapPackage.attr("packageFactorList"));
+    var factorValueList = JSON.parse(wapPackage.attr("packageIndex"));
+
+    for (var i = 0; i < packageFactorList.length; i++) {
+        packageFactor[packageFactorList[i]] = factorValueList[i];
+    }
+    console.log(packageFactor);
+}
+
+function showPackage() {
+    $(".wapPackage").hide();
+}
+
+function findPackage() {
+    var package = null;
+
+    $(".wapPackage").each(function(index, el) {
+        var wapPackage = $(el);
+        var packageFactorList = JSON.parse(wapPackage.attr("packageFactorList"));
+        var factorValueList = JSON.parse(wapPackage.attr("packageIndex"));
+
+
     });
 }
 
-function returnMessage(ent,returnKeyArr){
-    returnKeyArr.forEach(function(item){
-        var returnValue = $(ent).attr(item);
-        returnMessageObj.details[item] = returnValue;
-        returnMessageObj.details.packageLiabilityList = [];
 
-        $(ent).find(".wapLiability").each(function(){
-            returnMessageObj.details.packageLiabilityList.push({
-                "liabilityId" : $(this).attr("liabilityId") || "001"
-            });
-        });
+function returnMessageInit() {
+    var wapReturnMessage = $(".wapReturnMessage");
+    var messageList = wapReturnMessage.attr("returnMessage").split(",");
+    messageList.forEach(function(el) {
+        returnMessageObj.details[el] = "";
     });
+    console.log(returnMessageObj);
 }
 
-function getProductId(){
+function getProductId() {
     var href = location.href;
-    href = href.substr(href.lastIndexOf('/')+1);
-    href = href.substring(0,href.indexOf('_'));
+    href = href.substr(href.lastIndexOf('/') + 1);
+    href = href.substring(0, href.indexOf('_'));
     return href;
 }

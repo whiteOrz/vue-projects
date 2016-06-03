@@ -107,14 +107,14 @@
 	                dataType: "json"
 	            }).done(function (data) {
 	                console.log(returnMessage);
-	                var result = __webpack_require__(7);
+	                var result = __webpack_require__(8);
 	                $("body").append(result);
 	                $("#data1").html((0, _stringify2.default)(returnMessage));
 	                $("#data2").html((0, _stringify2.default)(data));
 	            }).fail(function () {
 	                alert("数据回传失败！");
 	                console.log(returnMessage);
-	                var result = __webpack_require__(7);
+	                var result = __webpack_require__(8);
 	                $("body").append(result);
 	                $("#data1").html((0, _stringify2.default)(returnMessage));
 	            });
@@ -9995,13 +9995,13 @@
 /***/ },
 /* 5 */,
 /* 6 */,
-/* 7 */
+/* 7 */,
+/* 8 */
 /***/ function(module, exports) {
 
 	module.exports = "<div style=\"width:100%;height:100%;position:fixed;left:0;top:0;background:#fff;z-index:999;\">\r\n    <div style=\"padding:1rem;\">\r\n        <div style=\"padding:0.4rem;border:1px solid #ccc;\">提交数据</div>\r\n        <div style=\"padding:0.4rem;\" id=\"data1\"></div>\r\n    </div>\r\n    <div style=\"padding:1rem;\">\r\n        <div style=\"padding:0.4rem;border:1px solid #ccc;\">核心返回数据</div>\r\n        <div style=\"padding:0.4rem;\" id=\"data2\"></div>\r\n    </div>\r\n</div>\r\n";
 
 /***/ },
-/* 8 */,
 /* 9 */,
 /* 10 */,
 /* 11 */,

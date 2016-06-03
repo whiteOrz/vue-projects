@@ -42,11 +42,41 @@
 /************************************************************************/
 /******/ ([
 /* 0 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	// import { aaa } from "./index2.js";
+	// import a from "./index2";
+
+	var aaa = __webpack_require__(1);
+
+	aaa.aaa();
+	aaa.default();
+
+	var div = document.getElementById("div1");
+	div.innerHTML = "div1";
+
+/***/ },
+/* 1 */
 /***/ function(module, exports) {
 
 	"use strict";
 
-	alert("success!");
+	Object.defineProperty(exports, "__esModule", {
+	   value: true
+	});
+
+	exports.default = function () {
+	   alert(1112);
+	};
+
+	function aaa() {
+	   var div = document.getElementById("div2");
+	   div.innerHTML = "div2";
+	};
+
+	exports.aaa = aaa;
 
 /***/ }
 /******/ ]);

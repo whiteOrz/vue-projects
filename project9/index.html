@@ -1,52 +1,150 @@
 <!doctype html>
 <html>
+
 <head>
-<meta charset="utf-8">
-<title>产品详情</title>
-<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,target-densitydpi=medium-dpi">
-<meta name="format-detection" content="telephone=no" />
-<meta name="apple-mobile-web-app-capable" content="yes" />
-<meta name="apple-mobile-web-app-status-bar-style" content="black" />
-<link href="css/m_style.css" rel="stylesheet" type="text/css">
-<link href="css/wap_detail.css" rel="stylesheet" type="text/css">
+	<meta charset="utf-8">
+	<title>产品详情</title>
+	<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,target-densitydpi=medium-dpi">
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<link href="css/m_style.css" rel="stylesheet" type="text/css">
+	<link href="css/wap_detail.css" rel="stylesheet" type="text/css">
 </head>
+
 <body class="bg-g">
-<header class="header">
-	<a href="javascript:history.go(-1)" class="icon-back"></a>
-	<h2><a href="index.html" class="active">基本信息</a><a href="detail.html">产品详情</a></h2>
-	<span class="icon-menu"></span>
-</header>
-<section class="container">
-	<section class="banner"><img src="images/banner.jpg"></section>
-	<div id="wap_details"></div>
-	<h2 class="title">常见问题</h2>
-	<article class="list">
-		<ul class="item">
-			<li>
-				<dl>
-					<dt><span class="icon-ask"></span>意外伤害具体包括什么？<span class="icon-arr"></span></dt>
-					<dd>因乘坐保障责任中包含的交通工具导致的身故的保额应为交通工具责任中的身故保额+意外身故保额，比如购买钻石款后因乘坐火车导致意外身故则可赔偿60万+50万=110万。</dd>
-				</dl>
-			</li>
-			<li>
-				<dl>
-					<dt><span class="icon-ask"></span>因乘坐交通工具导致的意外身故应该如何赔偿？<span class="icon-arr"></span></dt>
-					<dd>因乘坐保障责任中包含的交通工具导致的身故的保额应为交通工具责任中的身故保额+意外身故保额，比如购买钻石款后因乘坐火车导致意外身故则可赔偿60万+50万=110万。</dd>
-				</dl>
-			</li>
-		</ul>
-	</article>
-	<article class="list tm10">
-		<ul class="item">
-			<li><a href="detail.html" class="link">查看产品详情<span class="icon-arr2"></span></a></li>
-		</ul>
-	</article>
-</section>
-<script src="js/common.js"></script>
-<script>
-var aDl=document.querySelectorAll('.list dt'); for(var i=0;i<aDl.length;i++){ product.showDl(aDl[i]); } product.tab( 'tab');
-</script>
-<script src="js/jquery.min.js"></script>
-<script src="js/wap_details.js"></script>
+	<header class="header">
+		<a href="javascript:history.go(-1)" class="icon-back"></a>
+		<h2><a href="index.html" class="active">基本信息</a><a href="detail.html">产品详情</a></h2>
+		<span class="icon-menu"></span>
+	</header>
+	<section class="container">
+		<section class="banner"><img src="images/banner.jpg"></section>
+		<div id="wap_details">
+
+			<div class="wapProductDesc" componentId="wapProductDesc">
+				<div class="productName">全年综合意外保障</div>
+				<div class="productDescription">每天低至0.15元！大小意外全保，工作生活、居家旅行必备！</div>
+			</div>
+
+			<div class="wapProductPrice" componentId="wapProductPrice">
+				<div><span class="priceType">会员价</span><span class="productPrice">50</span></div>
+				<div><span class="activityTitle">促销信息</span><span class="discountInfo">4.1-4.30返还两倍积分</span></div>
+			</div>
+
+			<div class="wapIdentityList" componentId="wapIdentityList">
+				<div class="wapIdentity" componentId="wapIdentity"><img src="" /><span>透明理赔</span></div>
+				<div class="wapIdentity" componentId="wapIdentity"><img src="" /><span>超值低价</span></div>
+				<div class="wapIdentity" componentId="wapIdentity"><img src="" /><span>热销爆款</span></div>
+			</div>
+
+			<div class="wapAnalysis" componentId="wapAnalysis">
+				<div class="analysisLable">需求分析</div>
+				<div class="analysisDesc">我是否适合这款产品？</div>
+			</div>
+
+			<div componentId="wapPackageList">
+				<div class="componentTitle">保障责任</div>
+				<div class="packageNameList">
+					<div class="wapPackageName" componentId="wapPackageName" packageNameIndex="0">基本款</div>
+					<div class="wapPackageName" componentId="wapPackageName" packageNameIndex="1">白金款</div>
+					<div class="wapPackageName" componentId="wapPackageName" packageNameIndex="2">钻石款</div>
+				</div>
+				<div class="packageList">
+					<div class="wapPackage" componentId="wapPackage" packageId="001" packagePrice="45" packageFactorList=[ "wapPackageNameList"] packageIndex=[ "0"]>
+						<div class="wapLiability" componentId="wapLiability">
+							<div><span class="liabilityName">意外身故</span><span class="liabilityAmount">10</span></div>
+							<div class="liabilityDescription">被保险人遭受意外伤害事故（如跌倒、溺水、食物中毒），并自该事故发生之日起180日（含第180日）内因该事故为直接且单独原因导致被保险人身故的，保险人按保险单上载明的保险金额向意外身故保险金受益人给付意外身故保险金。</div>
+						</div>
+						<div class="wapLiability" componentId="wapLiability">
+							<div> <span class="liabilityName">公汽、电车、出租车、地铁意外身故、伤残</span> <span class="liabilityAmount">10</span> </div>
+							<div class="liabilityDescription"></div>
+						</div>
+					</div>
+					<div class="wapPackage" componentId="wapPackage" packageId="002" packagePrice="149">
+						<div class="wapLiability" componentId="wapLiability">
+							<div><span class="liabilityName">意外身故</span><span class="liabilityAmount">20</span></div>
+							<div class="liabilityDescription">被保险人遭受意外伤害事故（如跌倒、溺水、食物中毒），并自该事故发生之日起180日（含第180日）内因该事故为直接且单独原因导致被保险人身故的，保险人按保险单上载明的保险金额向意外身故保险金受益人给付意外身故保险金。</div>
+						</div>
+						<div class="wapLiability" componentId="wapLiability">
+							<div> <span class="liabilityName">意外残疾</span> <span class="liabilityAmount">2</span> </div>
+							<div class="liabilityDescription">被保险人遭受意外伤害事故（如跌倒、溺水、食物中毒），并自该事故发生之日起180日（含第180日）内因该事故为直接且单独原因导致被保险人发生《人身保险伤残评定标准及代码》所述伤残项目，根据本保险合同及该《伤残评定标准》规定的评定原则对被保险人伤残程度进行评定，并按评定结果所对应该《伤残评定标准》中规定的给付比例乘以保险单上载明的保险金额向意外伤残保险金受益人给付意外伤残保险金。</div>
+						</div>
+						<div class="wapLiability" componentId="wapLiability">
+							<div> <span class="liabilityName">意外医疗</span> <span class="liabilityAmount">1</span> </div>
+							<div class="liabilityDescription">被保险人因在中国境内遭受意外伤害事故（如跌倒、溺水、食物中毒），并因该事故直接导致被保险人需在二级及以上医院接受治疗的，对符合合同约定范围内发生的医疗费用，给付受益人意外医疗赔偿金（扣除100元免赔额）。</div>
+						</div>
+						<div class="wapLiability" componentId="wapLiability">
+							<div> <span class="liabilityName">公汽、电车、出租车、地铁意外身故、伤残</span> <span class="liabilityAmount">20</span> </div>
+							<div class="liabilityDescription"></div>
+						</div>
+					</div>
+
+					<div class="wapPackage" componentId="wapPackage" packageId="003" packagePrice="395">
+						<div class="wapLiability" componentId="wapLiability">
+							<div> <span class="liabilityName">意外身故</span> <span class="liabilityAmount">50</span> </div>
+							<div class="liabilityDescription">被保险人遭受意外伤害事故（如跌倒、溺水、食物中毒），并自该事故发生之日起180日（含第180日）内因该事故为直接且单独原因导致被保险人身故的，保险人按保险单上载明的保险金额向意外身故保险金受益人给付意外身故保险金。</div>
+						</div>
+						<div class="wapLiability" componentId="wapLiability">
+							<div> <span class="liabilityName">意外残疾</span> <span class="liabilityAmount">5</span> </div>
+							<div class="liabilityDescription">被保险人遭受意外伤害事故（如跌倒、溺水、食物中毒），并自该事故发生之日起180日（含第180日）内因该事故为直接且单独原因导致被保险人发生《人身保险伤残评定标准及代码》所述伤残项目，根据本保险合同及该《伤残评定标准》规定的评定原则对被保险人伤残程度进行评定，并按评定结果所对应该《伤残评定标准》中规定的给付比例乘以保险单上载明的保险金额向意外伤残保险金受益人给付意外伤残保险金。</div>
+						</div>
+						<div class="wapLiability" componentId="wapLiability">
+							<div> <span class="liabilityName">意外医疗</span> <span class="liabilityAmount">2</span> </div>
+							<div class="liabilityDescription">被保险人因在中国境内遭受意外伤害事故（如跌倒、溺水、食物中毒），并因该事故直接导致被保险人需在二级及以上医院接受治疗的，对符合合同约定范围内发生的医疗费用，给付受益人意外医疗赔偿金（扣除100元免赔额）。</div>
+						</div>
+						<div class="wapLiability" componentId="wapLiability">
+							<div> <span class="liabilityName">公汽、电车、出租车、地铁意外身故、伤残</span> <span class="liabilityAmount">50</span> </div>
+							<div class="liabilityDescription"></div>
+						</div>
+						<div class="wapLiability" componentId="wapLiability">
+							<div> <span class="liabilityName">火车意外身故、伤残</span> <span class="liabilityAmount">60</span> </div>
+							<div class="liabilityDescription"></div>
+						</div>
+						<div class="wapLiability" componentId="wapLiability">
+							<div> <span class="liabilityName">飞机意外身故、伤残</span> <span class="liabilityAmount">80</span> </div>
+							<div class="liabilityDescription"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="wapConditionList" componentId="wapConditionList">
+				<div class="componentTitle">保障说明</div>
+				<div class="conditions">
+					<div class="wapCondition" componentId="wapCondition"> <span class="conditionName">投保年龄</span> <span class="conditionDescription">18-65周岁</span> </div>
+					<div class="wapCondition" componentId="wapCondition"> <span class="conditionName">投保期间</span> <span class="conditionDescription">1年</span> </div>
+				</div>
+			</div>
+
+			<div componentId="wapIframe" class="wapIframe">
+				<iframe id="iframepage" src="template/test.html"></iframe>
+			</div>
+
+			<div class="wapProductDetails" componentId="wapProductDetails">
+				<div class="productDetailsContent">查看产品详情</div>
+				<div class="productDetailsUrl"></div>
+			</div>
+
+			<div class="wapReturnMessage" componentId="wapReturnMessage" returnMessage="packageId,packagePrice">
+			</div>
+
+			<div class="wapPayment" componentId="wapPayment">
+				<div class="payPrice">
+					<div>
+						<span class="priceName">基本款：</span>
+						<span class="priceData">￥50</span>
+					</div>
+					<div class="score">（返还积分 <span class="scoreData">50</span>）</div>
+				</div>
+				<div class="service">客服</div>
+				<div class="payBtn">立即投保</div>
+			</div>
+
+		</div>
+	</section>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/wap_details.js"></script>
 </body>
+
 </html>

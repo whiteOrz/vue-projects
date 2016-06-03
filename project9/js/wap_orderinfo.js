@@ -66,7 +66,7 @@
 	    console.log(data.data);
 	    pageInit(data.data);
 	}).fail(function () {
-	    var wap_inputs = __webpack_require__(5);
+	    var wap_inputs = __webpack_require__(6);
 	    pageInit(wap_inputs);
 	});
 
@@ -74,14 +74,14 @@
 	    var returnObj = [];
 	    wap_inputs.wapInputs.forEach(function (component) {
 	        var currentCompId = component.componentId;
-	        var template = __webpack_require__(6)("./" + currentCompId);
+	        var template = __webpack_require__(7)("./" + currentCompId);
 	        (0, _jquery2.default)("#wap_inputs").append(template);
 
 	        for (var key in component) {
 	            if (_jquery2.default.type(component[key]) == "array") {
 	                var arr = component[key];
 	                arr.forEach(function (input) {
-	                    var inputTemp = __webpack_require__(6)("./" + input.componentId);
+	                    var inputTemp = __webpack_require__(7)("./" + input.componentId);
 	                    inputTemp = inputTemp.replace("$lable", input.lable);
 	                    var inputObj = (0, _jquery2.default)(inputTemp);
 	                    inputObj.find("input").attr("id", input.id);
@@ -9992,7 +9992,8 @@
 
 
 /***/ },
-/* 5 */
+/* 5 */,
+/* 6 */
 /***/ function(module, exports) {
 
 	module.exports = {
@@ -10068,14 +10069,12 @@
 	};
 
 /***/ },
-/* 6 */
+/* 7 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var map = {
-		"./postResult": 7,
-		"./postResult.html": 7,
-		"./test": 8,
-		"./test.html": 8,
+		"./postResult": 8,
+		"./postResult.html": 8,
 		"./wapApplicantEmail": 9,
 		"./wapApplicantEmail.html": 9,
 		"./wapApplicantId": 10,
@@ -10118,20 +10117,14 @@
 	};
 	webpackContext.resolve = webpackContextResolve;
 	module.exports = webpackContext;
-	webpackContext.id = 6;
+	webpackContext.id = 7;
 
-
-/***/ },
-/* 7 */
-/***/ function(module, exports) {
-
-	module.exports = "<div style=\"width:100%;height:100%;position:fixed;left:0;top:0;background:#fff;z-index:999;\">\r\n    <div style=\"padding:1rem;\">\r\n        <div style=\"padding:0.4rem;border:1px solid #ccc;\">提交数据</div>\r\n        <div style=\"padding:0.4rem;\" id=\"data1\"></div>\r\n    </div>\r\n    <div style=\"padding:1rem;\">\r\n        <div style=\"padding:0.4rem;border:1px solid #ccc;\">核心返回数据</div>\r\n        <div style=\"padding:0.4rem;\" id=\"data2\"></div>\r\n    </div>\r\n</div>\r\n";
 
 /***/ },
 /* 8 */
 /***/ function(module, exports) {
 
-	module.exports = "<div class=\"list\">\r\n    <ul class=\"item\">\r\n        <li>\r\n            <h3>投保人</h3>\r\n            <p><input type=\"text\" placeholder=\"请输入姓名\"></p>\r\n        </li>\r\n        <li>\r\n            <h3 class=\"selarea\"><select><option>身份证</option></select><span class=\"icon-arr2\"></span></h3>\r\n            <p><input type=\"number\" placeholder=\"请输入证件号码\"></p>\r\n        </li>\r\n        <li>\r\n            <h3>手机号</h3>\r\n            <p><input type=\"tel\" placeholder=\"请输入手机号\"></p>\r\n        </li>\r\n        <li>\r\n            <h3>邮箱</h3>\r\n            <p><input type=\"text\" placeholder=\"用来接收电子单据，请正确填写\"></p>\r\n        </li>\r\n        <li>\r\n            <h3>职业类别</h3>\r\n            <p class=\"selarea\"><select class=\"c2\"><option>请选择</option></select><span class=\"icon-arr2\"></span></p>\r\n        </li>\r\n    </ul>\r\n</div>\r\n<div class=\"list tm10\">\r\n    <ul class=\"item\">\r\n        <li>\r\n            <h3>被保险人是投保人</h3>\r\n            <p class=\"selarea\"><select class=\"c2\"><option>本人</option></select><span class=\"icon-arr2\"></span></p>\r\n        </li>\r\n        <li>\r\n            <h3>被保险人姓名</h3>\r\n            <p><input type=\"text\" placeholder=\"请输入姓名\"></p>\r\n        </li>\r\n        <li>\r\n            <h3>身份证</h3>\r\n            <p><input type=\"number\" placeholder=\"请输入证件号码\"></p>\r\n        </li>\r\n    </ul>\r\n</div>\r\n\r\n<div class=\"list tm10\">\r\n    <ul class=\"item\">\r\n        <li>\r\n            <h3>受益人</h3>\r\n            <p><input type=\"text\" placeholder=\"法定受益人\"></p>\r\n        </li>\r\n    </ul>\r\n</div>\r\n";
+	module.exports = "<div style=\"width:100%;height:100%;position:fixed;left:0;top:0;background:#fff;z-index:999;\">\r\n    <div style=\"padding:1rem;\">\r\n        <div style=\"padding:0.4rem;border:1px solid #ccc;\">提交数据</div>\r\n        <div style=\"padding:0.4rem;\" id=\"data1\"></div>\r\n    </div>\r\n    <div style=\"padding:1rem;\">\r\n        <div style=\"padding:0.4rem;border:1px solid #ccc;\">核心返回数据</div>\r\n        <div style=\"padding:0.4rem;\" id=\"data2\"></div>\r\n    </div>\r\n</div>\r\n";
 
 /***/ },
 /* 9 */

@@ -1,15 +1,6 @@
 <template>
     <div style="margin-top:10px;" id="testContainer">
-        <component :is="realComponents.component1"></component>
-        <component :is="realComponents.component2"></component>
-        <component :is="realComponents.component3"></component>
-        <component :is="realComponents.component4"></component>
-        <component :is="realComponents.component5"></component>
-        <component :is="realComponents.component6"></component>
-        <component :is="realComponents.component7"></component>
-        <component :is="realComponents.component8"></component>
-        <component :is="realComponents.component9"></component>
-        <component :is="realComponents.component10"></component>
+        <Component1></Component>
     </div>
 </template>
 
@@ -21,12 +12,9 @@
     var realComponents={};
     components.forEach(function(el,index){
         var realComponent = require("../components/" + el);
-        realComponents["component" + (index+1)] =realComponent;
+        realComponents["Component" + (index+1)] =realComponent;
     });
-    realComponents = {
-        "component1" : testb,
-        "component2" : testa
-    }
+
     data.realComponents = realComponents;
     console.log(data.realComponents);
 

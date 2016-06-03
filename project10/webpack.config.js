@@ -1,14 +1,11 @@
 module.exports = {
-    entry: "./project1/index.js",
+    entry: "./project10/src/index.js",
     output: {
         path: __dirname,
-        filename: "build.js"
+        filename: "js/build.js"
     },
     module: {
         loaders: [{
-            test: /\.vue$/,
-            loader: "vue"
-        }, {
             test: /\.js$/,
             loader: "babel",
             exclude: /node_modules/
@@ -18,6 +15,9 @@ module.exports = {
         }, {
             test: /\.html$/,
             loader: "html"
+        }, {
+            test: /\.css$/,
+            loader: "style!css"
         }]
     },
     babel: {
@@ -25,6 +25,6 @@ module.exports = {
         plugins: ["transform-runtime"]
     },
     resolve: {
-        extensions: ['', '.js', '.vue', '.json', '.html']
+        extensions: ['', '.js', '.json', '.html', ".css"]
     }
 }

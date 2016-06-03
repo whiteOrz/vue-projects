@@ -13,9 +13,11 @@
         "babel-runtime": "^5.8.34",
 
         "css-loader": "^0.23.0",
-        "style-loader":"^0.13.0",
+        "style-loader": "^0.13.0",
         "json-loader": "^0.5.4",
-        
+        "file-loader": "^0.8.4",
+        "url-loader": "^0.5.6",
+
         "vue-hot-reload-api": "^1.2.2",
         "vue-html-loader": "^1.0.0",
         "vue-loader": "^7.2.0",
@@ -28,10 +30,20 @@
     },
     "scripts": {
         "pro1": "webpack-dev-server --config ./project1/webpack.config.js --inline --hot --content-base ./project1",
+        "pro1b": "webpack --config ./project1/webpack.config.js",
         "pro2": "webpack-dev-server --config ./project2/webpack.config.js --inline --hot --content-base ./project2",
-        "pro2dev" : "webpack --config ./project2/webpack.config.js",
+        "pro2dev": "webpack --config ./project2/webpack.config.js",
         "pro3": "webpack-dev-server --config ./project3/webpack.config.js --inline --hot --content-base ./project3/page",
-        "pro3dev" : "webpack --config ./project3/webpack.config.js",
-        "pro3build" : "webpack -p --config ./project3/webpack.config.js"
+        "pro3dev": "webpack --config ./project3/webpack.config.js",
+        "pro3build": "webpack -p --config ./project3/webpack.config.js",
+        "pro4": "webpack-dev-server --config ./project4/webpack.config.js --inline --hot --content-base ./project4",
+        "pro4dev": "webpack --config ./project4/webpack.config.js",
+        "pro5": "webpack-dev-server --config ./project5/webpack.config.js --inline --hot --content-base ./project5",
+        "pro7": "webpack-dev-server --config ./project7/webpack.config.js --inline --hot --content-base ./project7",
+        "pro7b": "webpack -p --config ./project7/webpack.config.js",
+        "pro8": "webpack-dev-server --config ./project8/webpack.config.js --inline --hot --content-base ./project8",
+        "pro8b": "webpack -p --config ./project8/webpack.config.js",
+        "pro9": "webpack --config ./project9/webpack.config.js",
+        "pro10": "webpack-dev-server --config ./project10/webpack.config.js --inline --hot --content-base ./project10"
     }
 }

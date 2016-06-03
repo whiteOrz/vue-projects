@@ -1,0 +1,59 @@
+{
+    "wapDetails": [{
+        "componentId": "wapProductDesc",
+        "productName": "",
+        "productDescription": ""
+    }, {
+        "componentId": "wapProductPrice",
+        "priceType": "",
+        "productPrice": "",
+        "discountInfo": "",
+        "activityTitle": ""
+    }, {
+        "componentId": "wapIdentityList",
+        "identityList": [{
+            "componentId": "wapIdentity",
+            "identityURL": "",
+            "identityDescription": ""
+        }]
+    }, {
+        "componentId": "wapPackageList",
+        "componentTitle": "",
+        "packageNameList": [{
+            "componentId": "wapPackageName",
+            "packageName": ""
+        }],
+        "packageList": [{
+            "componentId": "wapPackage",
+            "packageId": "001",
+            "packageName": "",
+            "packagePrice": "",
+            "packageLiabilityList": [{
+                "componentId": "wapLiability",
+                "liabilityId": "",
+                "liabilityName": "",
+                "liabilityAmount": "",
+                "liabilityDescription": ""
+            }]
+        }]
+    }, {
+        "componentId": "wapConditionList",
+        "componentTitle": "",
+        "conditions": [{
+            "componentId": "wapCondition",
+            "conditionName": "",
+            "conditionDescription": ""
+        }]
+    }, {
+        "componentId": "wapReturnMessage",
+        "returnMessageList": [{
+            "componentId": "returnMessage",
+            "messageName": "packageId"
+        }, {
+            "componentId": "returnMessage",
+            "messageName": "packagePrice"
+        }]
+    }, {
+        "componentId": "wapPayment"
+    }]
+}

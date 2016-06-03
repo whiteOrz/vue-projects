@@ -20,9 +20,9 @@ product.tab=function(tab){
 		aTabTit[i].addEventListener('click',function(){
 			for(var i=0;i<aTabTit.length;i++){
 				aTabTit[i].classList.remove('active');
-				aTabCon[i].style.display='none';	
+				aTabCon[i].style.display='none';
 			}
-			show(this.index);	
+			show(this.index);
 		},false);
 	}
 }
@@ -32,7 +32,7 @@ product.notice=function(){
 		onOff=true,
 		init=function(){
 			for(var i=0;i<aLi.length;i++){
-				if(i>2) aLi[i].style.display="none";	
+				if(i>2) aLi[i].style.display="none";
 			}
 		};
 	init();
@@ -47,44 +47,6 @@ product.notice=function(){
 			init();
 			this.classList.remove('cur');
 			this.innerHTML='点击查看更多<span class="icon-arr"></span>';
-		}
-		onOff=!onOff;
-	},false);
-}
-product.alertFn=function(boxClass){
-	var oRulebox=document.querySelector('.'+boxClass);
-	var oMark=document.querySelector('#mask');
-	var oBtnin=document.querySelectorAll('.list-dialog dt');
-	var oClose=oRulebox.querySelector('.cancel');
-	var oTxt=oRulebox.querySelector('p');
-	for(var i=0;i<oBtnin.length;i++){
-		oBtnin[i].addEventListener('click',alertBoxShow,false);
-	}
-	oClose.addEventListener('click',alertBoxHide,false);
-	function alertBoxShow(){
-		oTxt.innerHTML=this.dataset.dialog;
-		oRulebox.classList.add('moveDown');
-		oMark.style.height=document.body.scrollHeight+'px';
-		oMark.style.display='block';
-		document.body.style.overflowY='hidden';
-	}
-	function alertBoxHide(){
-		oRulebox.classList.remove('moveDown');
-		oMark.style.display='none';
-		document.body.style.overflowY='auto';
-	}
-}
-product.audio=function(){
-	var oAudio=document.querySelector('.audio audio');
-	var oBtn=document.querySelector('.audio span');
-	var onOff=true;
-	oBtn.addEventListener('click',function(){
-		if(onOff){
-			this.classList.add('animate');
-			oAudio.play();
-		}else{
-			this.classList.remove('animate');
-			oAudio.pause();
 		}
 		onOff=!onOff;
 	},false);

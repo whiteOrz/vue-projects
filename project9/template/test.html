@@ -1,49 +1,63 @@
-<div class="list">
-    <ul class="item">
-        <li>
-            <h3>投保人</h3>
-            <p><input type="text" placeholder="请输入姓名"></p>
-        </li>
-        <li>
-            <h3 class="selarea"><select><option>身份证</option></select><span class="icon-arr2"></span></h3>
-            <p><input type="number" placeholder="请输入证件号码"></p>
-        </li>
-        <li>
-            <h3>手机号</h3>
-            <p><input type="tel" placeholder="请输入手机号"></p>
-        </li>
-        <li>
-            <h3>邮箱</h3>
-            <p><input type="text" placeholder="用来接收电子单据，请正确填写"></p>
-        </li>
-        <li>
-            <h3>职业类别</h3>
-            <p class="selarea"><select class="c2"><option>请选择</option></select><span class="icon-arr2"></span></p>
-        </li>
-    </ul>
-</div>
-<div class="list tm10">
-    <ul class="item">
-        <li>
-            <h3>被保险人是投保人</h3>
-            <p class="selarea"><select class="c2"><option>本人</option></select><span class="icon-arr2"></span></p>
-        </li>
-        <li>
-            <h3>被保险人姓名</h3>
-            <p><input type="text" placeholder="请输入姓名"></p>
-        </li>
-        <li>
-            <h3>身份证</h3>
-            <p><input type="number" placeholder="请输入证件号码"></p>
-        </li>
-    </ul>
-</div>
+<!DOCTYPE html>
+<html lang="en">
 
-<div class="list tm10">
-    <ul class="item">
-        <li>
-            <h3>受益人</h3>
-            <p><input type="text" placeholder="法定受益人"></p>
-        </li>
-    </ul>
-</div>
+<head>
+    <meta charset="utf-8">
+    <title>产品详情</title>
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,target-densitydpi=medium-dpi">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <link href="../css/m_style.css" rel="stylesheet" type="text/css">
+    <link href="../css/wap_detail.css" rel="stylesheet" type="text/css">
+    <style>
+
+    </style>
+</head>
+
+<body class="bg-g">
+    <div class="productAudio">
+        <h2 class="title">产品经理1分钟讲保险</h2>
+        <article class="list">
+            <ul class="item audio">
+                <li><img src="../images/audio_per.gif"><span class="ico"></span>
+                    <audio src="../images/music.mp3"></audio>
+                </li>
+            </ul>
+        </article>
+    </div>
+
+    <div class="question">
+        <h2 class="title">常见问题</h2>
+        <article class="list listShow">
+            <ul class="item">
+                <li>
+                    <dl class="">
+                        <dt>Q: 意外伤害具体包括什么？<span class="icon-arr"></span></dt>
+                        <dd>因乘坐保障责任中包含的交通工具导致的身故的保额应为交通工具责任中的身故保额+意外身故保额，比如购买钻石款后因乘坐火车导致意外身故则可赔偿60万+50万=110万。</dd>
+                    </dl>
+                </li>
+                <li>
+                    <dl class="">
+                        <dt>Q: 因乘坐交通工具导致的意外身故应该如何赔偿？<span class="icon-arr"></span></dt>
+                        <dd>因乘坐保障责任中包含的交通工具导致的身故的保额应为交通工具责任中的身故保额+意外身故保额，比如购买钻石款后因乘坐火车导致意外身故则可赔偿60万+50万=110万。</dd>
+                    </dl>
+                </li>
+            </ul>
+        </article>
+    </div>
+    <script src="../js/common.js"></script>
+    <script>
+        window.onload = function() {
+            var aDl = document.querySelectorAll('.listShow dt');
+            for (var i = 0; i < aDl.length; i++) {
+                product.showDl(aDl[i]);
+            }
+            product.tab('tab');
+            product.alertFn('dialogbox');
+            product.audio();
+        }
+    </script>
+</body>
+
+</html>
