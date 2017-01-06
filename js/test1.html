@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+	<input type="text" id="t" value="11111">
+	<script>
+		var a = {};
+		Object.defineProperty(a,"b",{
+			get:function(){
+				return t.value;
+			},
+			set : function(value){
+				t.value = value;
+			}
+		});
+		a.b=100;
+	</script>
+
+	
+
+
+</body>
+</html>

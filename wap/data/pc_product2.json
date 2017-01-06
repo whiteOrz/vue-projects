@@ -1,0 +1,336 @@
+{
+    "pcDetails": [
+        {
+            "componentId": "pcProductDesc",
+            "productName": "少儿综合意外保障",
+            "productDesc": "每天低至0.12元起！大小意外全保，勇敢的少年生活必备神器！"
+        },
+        {
+            "componentId": "pcProductPrice",
+            "priceType": "会员价",
+            "productPrice": "100元"
+        },
+        {
+            "componentId": "pcRecentSales",
+            "recentSales": "100"
+        },
+        {
+            "componentId": "pcConditionList",
+            "componentTitle": "保障说明",
+            "conditionList": [
+                {
+                    "componentId": "pcCondition",
+                    "conditionName": "保障期限",
+                    "conditionBrief": "保障期限",
+                    "conditionDesc": "1年",
+                    "conditionUrl": ""
+                },
+                {
+                    "componentId": "pcCondition",
+                    "conditionName": "投保年龄",
+                    "conditionBrief": "投保年龄",
+                    "conditionDesc": "出生满30天-17周岁",
+                    "conditionUrl": ""
+                }
+            ]
+        },
+        {
+            "componentId": "pcPremiumFactor",
+            "componentTitle": "投保年龄",
+            "premiumFactorId": "insureAge",
+            "factorList": [
+                {
+                    "componentId": "pcInsureAge",
+                    "factorKey": "30天-9岁",
+                    "factorValue": 0
+                },
+                {
+                    "componentId": "pcInsureAge",
+                    "factorKey": "10-17岁",
+                    "factorValue": 1
+                }
+            ]
+        },
+        {
+            "componentId": "pcPlanNameList",
+            "componentTitle": "保障责任",
+            "planNameList": [
+                {
+                    "componentId": "pcPlanName",
+                    "planName": "基本款",
+                    "planNameIndex": 0
+                },
+                {
+                    "componentId": "pcPlanName",
+                    "planName": "白金款",
+                    "planNameIndex": 1
+                },
+                {
+                    "componentId": "pcPlanName",
+                    "planName": "钻石款",
+                    "planNameIndex": 2
+                }
+            ]
+        },
+        {
+            "componentId": "pcPlanList",
+            "planList": [
+                {
+                    "componentId": "pcPlan",
+                    "planId": "1108E101",
+                    "planIndex": "00",
+                    "planName": "基本款",
+                    "planPrice": "45",
+                    "planScore": "",
+                    "planLiabilityList": [
+                        {
+                            "componentId": "pcLiability",
+                            "liabilityId": "1108001",
+                            "liabilityName": "意外身故",
+                            "liabilityAmount": "10万",
+                            "liabilityDesc": "被保险人遭受意外伤害事故（如跌倒、溺水、食物中毒），并自该事故发生之日起180日（含第180日）内因该事故为直接且单独原因导致被保险人身故的，保险人按保险单上载明的保险金额向意外身故保险金受益人给付意外身故保险金。"
+                        },
+                        {
+                            "componentId": "pcLiability",
+                            "liabilityId": "1108002",
+                            "liabilityName": "意外残疾",
+                            "liabilityAmount": "1万",
+                            "liabilityDesc": "被保险人遭受意外伤害事故（如跌倒、溺水、食物中毒），并自该事故发生之日起180日（含第180日）内因该事故为直接且单独原因导致被保险人发生《人身保险伤残评定标准及代码》所述伤残项目，泰康在线根据本保险合同及该《伤残评定标准》规定的评定原则对被保险人伤残程度进行评定，并按评定结果所对应该《伤残评定标准》中规定的给付比例乘以保险单上载明的保险金额向意外伤残保险金受益人给付意外伤残保险金。"
+                        }
+                    ]
+                },
+                {
+                    "componentId": "pcPlan",
+                    "planId": "1108E104",
+                    "planIndex": "10",
+                    "planName": "基本款",
+                    "planPrice": "45",
+                    "planScore": "",
+                    "planLiabilityList": [
+                        {
+                            "componentId": "pcLiability",
+                            "liabilityId": "1108001",
+                            "liabilityName": "意外身故",
+                            "liabilityAmount": "10万",
+                            "liabilityDesc": "被保险人遭受意外伤害事故（如跌倒、溺水、食物中毒），并自该事故发生之日起180日（含第180日）内因该事故为直接且单独原因导致被保险人身故的，保险人按保险单上载明的保险金额向意外身故保险金受益人给付意外身故保险金。"
+                        },
+                        {
+                            "componentId": "pcLiability",
+                            "liabilityId": "1108002",
+                            "liabilityName": "意外残疾",
+                            "liabilityAmount": "1万",
+                            "liabilityDesc": "被保险人遭受意外伤害事故（如跌倒、溺水、食物中毒），并自该事故发生之日起180日（含第180日）内因该事故为直接且单独原因导致被保险人发生《人身保险伤残评定标准及代码》所述伤残项目，泰康在线根据本保险合同及该《伤残评定标准》规定的评定原则对被保险人伤残程度进行评定，并按评定结果所对应该《伤残评定标准》中规定的给付比例乘以保险单上载明的保险金额向意外伤残保险金受益人给付意外伤残保险金。"
+                        },
+                        {
+                            "componentId": "pcLiability",
+                            "liabilityId": "1108005，1108006，1108010",
+                            "liabilityName": "市内公共汽、电车、出租车、地铁意外身故、伤残",
+                            "liabilityAmount": "10万",
+                            "liabilityDesc": "被保险人在交通工具内遭受意外伤害事故，并自该事故发生之日起 180 日（含第 180\n\n日）内因该事故为直接且单独原因导致被保险人身故的，按保险单上载明的相应交通\n\n工具的保险金额向意外身故保险金受益人给付意外身故保险金。\n\n被保险人在交通工具内遭受意外伤害事故，并自该事故发生之日起 180 日（含第 180\n\n日）内因该事故为直接且单独原因导致被保险人发生《人身保险伤残评定标准及代码》\n\n所述伤残项目，泰康在线根据本保险合同及该《伤残评定标准》规定的评定原则对被保险人伤残程度进行评定，并按评定结果所对应该《伤残评定标准》中规定的给付比例乘以保险单上载明的相应交通工具的保险金额向意外伤残保险金受益人给付意外伤残保险金。"
+                        }
+                    ]
+                },
+                {
+                    "componentId": "pcPlan",
+                    "planId": "1108E102",
+                    "planIndex": "01",
+                    "planName": "白金款",
+                    "planPrice": "138",
+                    "planScore": "",
+                    "planLiabilityList": [
+                        {
+                            "componentId": "pcLiability",
+                            "liabilityId": "1108001",
+                            "liabilityName": "意外身故",
+                            "liabilityAmount": "20万",
+                            "liabilityDesc": "被保险人遭受意外伤害事故（如跌倒、溺水、食物中毒），并自该事故发生之日起180日（含第180日）内因该事故为直接且单独原因导致被保险人身故的，保险人按保险单上载明的保险金额向意外身故保险金受益人给付意外身故保险金。"
+                        },
+                        {
+                            "componentId": "pcLiability",
+                            "liabilityId": "1108002",
+                            "liabilityName": "意外残疾",
+                            "liabilityAmount": "2万",
+                            "liabilityDesc": "被保险人遭受意外伤害事故（如跌倒、溺水、食物中毒），并自该事故发生之日起180日（含第180日）内因该事故为直接且单独原因导致被保险人发生《人身保险伤残评定标准及代码》所述伤残项目，泰康在线根据本保险合同及该《伤残评定标准》规定的评定原则对被保险人伤残程度进行评定，并按评定结果所对应该《伤残评定标准》中规定的给付比例乘以保险单上载明的保险金额向意外伤残保险金受益人给付意外伤残保险金。"
+                        },
+                        {
+                            "componentId": "pcLiability",
+                            "liabilityId": "1108003",
+                            "liabilityName": "意外医疗",
+                            "liabilityAmount": "1万",
+                            "liabilityDesc": "被保险人因在中国境内遭受意外伤害事故（如跌倒、溺水、食物中毒），并因该事故直接导致被保险人需在二级及以上医院接受治疗的，对符合合同约定范围内发生的医疗费用，泰康在线给付受益人意外医疗赔偿金（扣除100元免赔额）。"
+                        },
+                        {
+                            "componentId": "pcLiability",
+                            "liabilityId": "1108009",
+                            "liabilityName": "飞机意外身故、伤残",
+                            "liabilityAmount": "30万",
+                            "liabilityDesc": "被保险人在交通工具内遭受意外伤害事故，并自该事故发生之日起 180 日（含第 180\n\n日）内因该事故为直接且单独原因导致被保险人身故的，按保险单上载明的相应交通\n\n工具的保险金额向意外身故保险金受益人给付意外身故保险金。\n\n被保险人在交通工具内遭受意外伤害事故，并自该事故发生之日起 180 日（含第 180\n\n日）内因该事故为直接且单独原因导致被保险人发生《人身保险伤残评定标准及代码》\n\n所述伤残项目，泰康在线根据本保险合同及该《伤残评定标准》规定的评定原则对被保险人伤残程度进行评定，并按评定结果所对应该《伤残评定标准》中规定的给付比例乘以保险单上载明的相应交通工具的保险金额向意外伤残保险金受益人给付意外伤残保险金。"
+                        }
+                    ]
+                },
+                {
+                    "componentId": "pcPlan",
+                    "planId": "1108E105",
+                    "planIndex": "11",
+                    "planName": "白金款",
+                    "planPrice": "129",
+                    "planScore": "",
+                    "planLiabilityList": [
+                        {
+                            "componentId": "pcLiability",
+                            "liabilityId": "1108001",
+                            "liabilityName": "意外身故",
+                            "liabilityAmount": "20万",
+                            "liabilityDesc": "被保险人遭受意外伤害事故（如跌倒、溺水、食物中毒），并自该事故发生之日起180日（含第180日）内因该事故为直接且单独原因导致被保险人身故的，保险人按保险单上载明的保险金额向意外身故保险金受益人给付意外身故保险金。"
+                        },
+                        {
+                            "componentId": "pcLiability",
+                            "liabilityId": "1108002",
+                            "liabilityName": "意外残疾",
+                            "liabilityAmount": "2万",
+                            "liabilityDesc": "被保险人遭受意外伤害事故（如跌倒、溺水、食物中毒），并自该事故发生之日起180日（含第180日）内因该事故为直接且单独原因导致被保险人发生《人身保险伤残评定标准及代码》所述伤残项目，泰康在线根据本保险合同及该《伤残评定标准》规定的评定原则对被保险人伤残程度进行评定，并按评定结果所对应该《伤残评定标准》中规定的给付比例乘以保险单上载明的保险金额向意外伤残保险金受益人给付意外伤残保险金。"
+                        },
+                        {
+                            "componentId": "pcLiability",
+                            "liabilityId": "1108003",
+                            "liabilityName": "意外医疗",
+                            "liabilityAmount": "1万",
+                            "liabilityDesc": "被保险人因在中国境内遭受意外伤害事故（如跌倒、溺水、食物中毒），并因该事故直接导致被保险人需在二级及以上医院接受治疗的，对符合合同约定范围内发生的医疗费用，泰康在线给付受益人意外医疗赔偿金（扣除100元免赔额）。"
+                        },
+                        {
+                            "componentId": "pcLiability",
+                            "liabilityId": "1108005，1108006，1108010",
+                            "liabilityName": "市内公共汽、电车、出租车、地铁意外身故、伤残",
+                            "liabilityAmount": "20万",
+                            "liabilityDesc": "被保险人在交通工具内遭受意外伤害事故，并自该事故发生之日起 180 日（含第 180\n\n日）内因该事故为直接且单独原因导致被保险人身故的，按保险单上载明的相应交通\n\n工具的保险金额向意外身故保险金受益人给付意外身故保险金。\n\n被保险人在交通工具内遭受意外伤害事故，并自该事故发生之日起 180 日（含第 180\n\n日）内因该事故为直接且单独原因导致被保险人发生《人身保险伤残评定标准及代码》\n\n所述伤残项目，泰康在线根据本保险合同及该《伤残评定标准》规定的评定原则对被保险人伤残程度进行评定，并按评定结果所对应该《伤残评定标准》中规定的给付比例乘以保险单上载明的相应交通工具的保险金额向意外伤残保险金受益人给付意外伤残保险金。"
+                        }
+                    ]
+                },
+                {
+                    "componentId": "pcPlan",
+                    "planId": "1108E103",
+                    "planIndex": "02",
+                    "planName": "钻石款",
+                    "planPrice": "215",
+                    "planScore": "",
+                    "planLiabilityList": [
+                        {
+                            "componentId": "pcLiability",
+                            "liabilityId": "1108001",
+                            "liabilityName": "意外身故",
+                            "liabilityAmount": "20万",
+                            "liabilityDesc": "被保险人遭受意外伤害事故（如跌倒、溺水、食物中毒），并自该事故发生之日起180日（含第180日）内因该事故为直接且单独原因导致被保险人身故的，保险人按保险单上载明的保险金额向意外身故保险金受益人给付意外身故保险金。"
+                        },
+                        {
+                            "componentId": "pcLiability",
+                            "liabilityId": "1108002",
+                            "liabilityName": "意外残疾",
+                            "liabilityAmount": "5万",
+                            "liabilityDesc": "被保险人遭受意外伤害事故（如跌倒、溺水、食物中毒），并自该事故发生之日起180日（含第180日）内因该事故为直接且单独原因导致被保险人发生《人身保险伤残评定标准及代码》所述伤残项目，泰康在线根据本保险合同及该《伤残评定标准》规定的评定原则对被保险人伤残程度进行评定，并按评定结果所对应该《伤残评定标准》中规定的给付比例乘以保险单上载明的保险金额向意外伤残保险金受益人给付意外伤残保险金。"
+                        },
+                        {
+                            "componentId": "pcLiability",
+                            "liabilityId": "1108003",
+                            "liabilityName": "意外医疗",
+                            "liabilityAmount": "2万",
+                            "liabilityDesc": "被保险人因在中国境内遭受意外伤害事故（如跌倒、溺水、食物中毒），并因该事故直接导致被保险人需在二级及以上医院接受治疗的，对符合合同约定范围内发生的医疗费用，泰康在线给付受益人意外医疗赔偿金（扣除100元免赔额）。"
+                        },
+                        {
+                            "componentId": "pcLiability",
+                            "liabilityId": "1108009",
+                            "liabilityName": "飞机意外身故、伤残",
+                            "liabilityAmount": "60万",
+                            "liabilityDesc": "被保险人在交通工具内遭受意外伤害事故，并自该事故发生之日起 180 日（含第 180日）内因该事故为直接且单独原因导致被保险人身故的，按保险单上载明的相应交通工具的保险金额向意外身故保险金受益人给付意外身故保险金。被保险人在交通工具内遭受意外伤害事故，并自该事故发生之日起 180 日（含第 180日）内因该事故为直接且单独原因导致被保险人发生《人身保险伤残评定标准及代码》所述伤残项目，泰康在线根据本保险合同及该《伤残评定标准》规定的评定原则对被保险人伤残程度进行评定，并按评定结果所对应该《伤残评定标准》中规定的给付比例乘以保险单上载明的相应交通工具的保险金额向意外伤残保险金受益人给付意外伤残保险金。"
+                        }
+                    ]
+                },
+                {
+                    "componentId": "pcPlan",
+                    "planId": "1108E106",
+                    "planIndex": "12",
+                    "planName": "钻石款",
+                    "planPrice": "325",
+                    "planScore": "",
+                    "planLiabilityList": [
+                        {
+                            "componentId": "pcLiability",
+                            "liabilityId": "1108001",
+                            "liabilityName": "意外身故",
+                            "liabilityAmount": "50万",
+                            "liabilityDesc": "被保险人遭受意外伤害事故（如跌倒、溺水、食物中毒），并自该事故发生之日起180日（含第180日）内因该事故为直接且单独原因导致被保险人身故的，保险人按保险单上载明的保险金额向意外身故保险金受益人给付意外身故保险金。"
+                        },
+                        {
+                            "componentId": "pcLiability",
+                            "liabilityId": "1108002",
+                            "liabilityName": "意外残疾",
+                            "liabilityAmount": "5万",
+                            "liabilityDesc": "被保险人遭受意外伤害事故（如跌倒、溺水、食物中毒），并自该事故发生之日起180日（含第180日）内因该事故为直接且单独原因导致被保险人发生《人身保险伤残评定标准及代码》所述伤残项目，泰康在线根据本保险合同及该《伤残评定标准》规定的评定原则对被保险人伤残程度进行评定，并按评定结果所对应该《伤残评定标准》中规定的给付比例乘以保险单上载明的保险金额向意外伤残保险金受益人给付意外伤残保险金。"
+                        },
+                        {
+                            "componentId": "pcLiability",
+                            "liabilityId": "1108003",
+                            "liabilityName": "意外医疗",
+                            "liabilityAmount": "2万",
+                            "liabilityDesc": "被保险人因在中国境内遭受意外伤害事故（如跌倒、溺水、食物中毒），并因该事故直接导致被保险人需在二级及以上医院接受治疗的，对符合合同约定范围内发生的医疗费用，泰康在线给付受益人意外医疗赔偿金（扣除100元免赔额）。"
+                        },
+                        {
+                            "componentId": "pcLiability",
+                            "liabilityId": "1108009",
+                            "liabilityName": "飞机意外身故、伤残",
+                            "liabilityAmount": "80万",
+                            "liabilityDesc": "被保险人在交通工具内遭受意外伤害事故，并自该事故发生之日起 180 日（含第 180日）内因该事故为直接且单独原因导致被保险人身故的，按保险单上载明的相应交通工具的保险金额向意外身故保险金受益人给付意外身故保险金。被保险人在交通工具内遭受意外伤害事故，并自该事故发生之日起 180 日（含第 180日）内因该事故为直接且单独原因导致被保险人发生《人身保险伤残评定标准及代码》所述伤残项目，泰康在线根据本保险合同及该《伤残评定标准》规定的评定原则对被保险人伤残程度进行评定，并按评定结果所对应该《伤残评定标准》中规定的给付比例乘以保险单上载明的相应交通工具的保险金额向意外伤残保险金受益人给付意外伤残保险金。"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "componentId": "pcReturnMessage",
+            "returnMessage": "planId,planPrice"
+        },
+        {
+            "componentId": "pcPayment",
+            "qrCodeUrl": ""
+        },
+        {
+            "componentId": "pcServiceList",
+            "componentTitle": "服务承诺",
+            "serviceList": [
+                {
+                    "componentId": "pcService",
+                    "serviceURL": "",
+                    "serviceDesc": "保证续保",
+                    "serviceKeyword": "保"
+                },
+                {
+                    "componentId": "pcService",
+                    "serviceURL": "",
+                    "serviceDesc": "极速生效",
+                    "serviceKeyword": "快"
+                },
+                {
+                    "componentId": "pcService",
+                    "serviceURL": "",
+                    "serviceDesc": "透明理赔",
+                    "serviceKeyword": "赔"
+                }
+            ]
+        },
+        {
+            "componentId": "pcPayStyleList",
+            "componentTitle": "支付方式",
+            "payStyleList": [
+                {
+                    "componentId": "pcPayStyle",
+                    "payStyleURL": "",
+                    "payStyleDesc": "支付宝"
+                },
+                {
+                    "componentId": "pcPayStyle",
+                    "payStyleURL": "",
+                    "payStyleDesc": "银联储蓄卡"
+                }
+            ]
+        }
+    ]
+}

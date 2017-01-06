@@ -1,0 +1,126 @@
+<div class="wapBanner" componentId="wapBanner">
+    <img src="$!data.wapBanner.bannerImgUrl" alt="banner" />
+</div>
+
+<div class="wapProductDesc" componentId="wapProductDesc">
+    <div class="productName">
+        <span>$!data.wapProductDesc.productName</span>
+        <img class="arrImg" src="images/arr.png"/>
+    </div>
+    <div class="productDescription">$!data.wapProductDesc.productDesc</div>
+    <div class="hideUrl">$!data.wapProductDesc.productInfoUrl</div>
+</div>
+
+<div class="wapProductPrice" componentId="wapProductPrice">
+    <div><span class="priceType">$!data.wapProductPrice.priceType</span><span class="productPrice">$!data.wapProductPrice.productPrice</span></div>
+</div>
+
+<div class="wapWeixinShareHidden" componentId="wapWeixinShareHidden">
+    <span class="shareTitle">$!data.wapWeixinShareHidden.shareTitle</span>
+    <span class="shareDesc">$!data.wapWeixinShareHidden.shareDesc</span>
+    <span class="shareImg">$!data.wapWeixinShareHidden.shareImg</span>
+</div>
+
+<div class="wapInsuredAgeRangeHidden" componentId="wapInsuredAgeRangeHidden">
+    <span class="minAge" age="$!data.wapInsuredAgeRangeHidden.min"></span>
+    <span class="maxAge" age="$!data.wapInsuredAgeRangeHidden.max"></span>
+</div>
+
+<div class="wapCalculateHidden" componentId="wapCalculateHidden"></div>
+
+<div class="wapDiscountInfoList" componentId="wapDiscountInfoList">
+    #foreach($wapDiscountInfo in $data.wapDiscountInfoList.discountInfoList)
+    <div class="wapDiscountInfo"><span class="discountTitle">$!wapDiscountInfo.discountTitle</span><span class="discountDesc">$!wapDiscountInfo.discountDesc</span></div>
+    #end
+</div>
+
+<div class="wapIdentityList" componentId="wapIdentityList">
+    #foreach($wapIdentity in $data.wapIdentityList.identityList)
+    <div class="wapIdentity" componentId="wapIdentity"><span class="wapIdentityItem">$!wapIdentity.identityDesc</span></div>
+    #end
+</div>
+
+<div class="wapInsureAudio" componentId="wapInsureAudio">
+    <h2 class="title">$!data.wapInsureAudio.componentTitle</h2>
+    <article class="list">
+        <ul class="item audio">
+            <li><img src="images/audio_per.gif"><span class="ico"></span>
+                <audio src="$!data.wapInsureAudio.audioUrl"></audio>
+            </li>
+        </ul>
+    </article>
+</div>
+
+<div class="$!data.wapPremiumFactor.premiumFactorId" componentId="wapPremiumFactor">
+    <article>
+        <h3>$!data.wapPremiumFactor.componentTitle</h3>
+        <p>
+            #foreach($wapFactor in $data.wapPremiumFactor.factorList)
+            <label factorIndex="$!wapFactor.factorValue">
+                <input type="radio" name="$!data.wapPremiumFactor.premiumFactorId" value="$!wapFactor.factorValue"><span>$!wapFactor.factorKey</span>
+            </label>
+            #end
+        </p>
+    </article>
+</div>
+
+<div class="wapPlanNameList" componentId="wapPlanNameList">
+    <div class="componentTitle">$!data.wapPlanNameList.componentTitle</div>
+    <div class="planNameList">
+        #foreach($wapPlanName in $data.wapPlanNameList.planNameList)
+        <div class="wapPlanName" componentId="wapPlanName" planNameIndex="$!wapPlanName.planNameIndex">$!wapPlanName.planName</div>
+        #end
+    </div>
+</div>
+
+<div class="planList" componentId="wapPlanList">
+    #foreach($wapPlan in $data.wapPlanList.planList)
+    <div class="wapPlan" componentId="wapPlan" planId="$!wapPlan.planId" planPrice="$!wapPlan.planPrice" planScore="$!wapPlan.planScore" planIndex="$!wapPlan.planIndex">
+        #foreach($wapLiability in $wapPlan.planLiabilityList)
+        <div class="wapLiability" componentId="wapLiability" liabilityId="$!wapLiability.liabilityId">
+            <div>
+                <span class="liabilityName">$!wapLiability.liabilityName</span>
+                <span class="liabilityAmount">$!wapLiability.liabilityAmount</span>
+            </div>
+            <div class="liabilityDescription">$!wapLiability.liabilityDesc</div>
+        </div>
+        #end
+    </div>
+    #end
+</div>
+
+<div class="wapConditionList" componentId="wapConditionList">
+    <div class="componentTitle">$!data.wapConditionList.componentTitle</div>
+    <div class="conditions">
+        #foreach($wapCondition in $data.wapConditionList.conditionList)
+        <div class="wapCondition" componentId="wapCondition">
+            <span class="conditionName">$!wapCondition.conditionBrief</span>
+            <span class="conditionDescription">$!wapCondition.conditionDesc</span>
+        </div>
+        #end
+    </div>
+</div>
+
+<div componentId="wapIframe" class="wapIframe">
+    <iframe id="iframepage" src="$!data.wapIframe.iframeUrl"></iframe>
+</div>
+
+<div class="wapProductDetails" componentId="wapProductDetails">
+    <div class="productDetailsContent">查看产品详情</div>
+    <div class="productDetailsUrl" onclick="location.href='$!data.wapProductDetails.productDetailsUrl';"></div>
+</div>
+
+<div class="wapReturnMessage" componentId="wapReturnMessage" returnMessage="$!data.wapReturnMessage.returnMessage">
+</div>
+
+<div class="wapPayment" componentId="wapPayment">
+    <div class="payPrice">
+        <div>
+            <span class="priceName">基本款：</span>
+            <span class="priceData">￥50</span>
+        </div>
+        <div class="score"></div>
+    </div>
+    <div class="service">客服</div>
+    <div class="payBtn" id="$!data.wapPayment.productId">立即投保</div>
+</div>

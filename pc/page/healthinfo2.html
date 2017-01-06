@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>健康告知</title>
+
+		<link rel="stylesheet" type="text/css" href="../src/css/insure.css" />
+
+	</head>
+
+	<body>
+		<!-- header start-->
+		<div id="header_widely">
+			<div id="header" class="clearfix">
+				<img class="logo" src="../src/image/tklogo.png" />
+				<img class="call" src="../src/image/call4.jpg" />
+			</div>
+		</div>
+		<!-- header end-->
+		<!--导航 star-->
+		<div class="nav">
+			<ul class="steps clearfix">
+				<li class="steps2 fl pos_rel">
+					<div class="line steps_current"></div>
+					<p class="t_red ">1.填写投保信息</p>
+					<img src="../src/image/circle.png" class="steps_img2" />
+				</li>
+				<li class="steps2 fl pos_rel">
+					<div class="line steps_current"></div>
+					<p class="t_red">2.健康告知</p>
+					<img src="../src/image/circle.png" class="steps_img2" />
+				</li>
+				<li class="steps2 fl pos_rel">
+					<div class="line steps_color"></div>
+					<p class="t_6">3.支付</p>
+					<img src="../src/image/circle02.png" class="steps_img2" />
+				</li>
+				<li class="steps2 fl pos_rel">
+					<div class="line steps_color"></div>
+					<p class="t_6">4.成功</p>
+					<img src="../src/image/circle02.png" class="steps_img2" />
+				</li>
+			</ul>
+		</div>
+		<!--导航 end-->
+		<div class="health_main" id="main">
+			<h1 class="insurd_tit"></h1>
+			<div class="heal_txt " id="content">
+				<h4>健康信息告知</h4>
+
+				<div class="health-con" >
+					<div class="health-title">请您确认您是否存在以下情况：</div>
+					<div id="health-con">
+
+					</div>
+				</div>
+				<div class="desc" id="desc" style="display:none">
+					<p class="descTit">请您对以上选择"是"的内容进行50~500字以内的简单描述</p>
+					<textarea class="descCon"></textarea>
+				</div>
+			</div>
+		</div>
+		<!-- 按钮代码-->
+		<div class="continue_expect clearfix">
+			<div class="order clearfix">
+				<div class="p1 fl">
+					<a class="" id="back" style="display: none;">返回上一步</a>
+
+				</div>
+				<div class="rowElem fr">
+					<input type="button" value="确认无误，下一步" id="check-form" />
+				</div>
+			</div>
+
+		</div>
+		<!-- 按钮代码-->
+		<!-- 底部代码-->
+		<div class="footer ">
+			<div class="footer-inner">
+				<p>泰康在线财产保险股份有限公司 版权所有Copyright © Tk.cn Insurance CO.,LTD. All Rights Reserved | 京ICP备09074081号-19</p>
+			</div>
+		</div>
+	</body>
+	
+	<script src="../src/js/jquery.min.js"></script>
+	<script src="../dist/siteUrl.js"></script>  
+	<script src="../src/js/json.js"></script>
+	<script src="../src/js/sessionStorage.js"></script>
+	
+	<script src="../src/js/jquery.cookie.js"></script>
+	<script src="http://cdnmaster.com/sitemaster/collect.js"></script>
+	<script src="../src/js/pushCode.js"></script>
+	<script src="../src/js/o_code.js"></script>
+	<script src="../src/js/tkTrack.js"></script>
+	<script src="../src/js/count.js"></script>
+	<script src="../dist/healthinfo_operation2.js"></script>
+	
+
+</html>

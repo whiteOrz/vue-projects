@@ -1,0 +1,1327 @@
+.wrapper{
+    width: 100%;
+    height: 100%;
+    /*position: relative;*/
+}
+.page{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+}
+.page1{
+    background: url("http://whzt.taikang.com/brazil/static/images/bg2.jpg") no-repeat center/cover;
+}
+.page1_txt{
+    width: 65%;
+    height: 18%;
+    position: absolute;
+    top: -20%;
+    left: 18%;
+}
+.page1_xin{
+    width: 54%;
+    height: 35.6%;
+    position: absolute;
+    top: 39%;
+    left: 23%;
+    -webkit-transform: scale(0);
+}
+.page2_xin{
+    width: 78%;
+    height: 90%;
+    position: absolute;
+    top: 20%;
+    left: 13%;
+    -webkit-transform: scale(0);
+}
+.page1_wen{
+    width: 71%;
+    height: 60.8%;
+    position: absolute;
+    top: -5%;
+    left: 2%;
+}
+.page1_wen2{
+    width: 30.4%;
+    height: 10%;
+    position: absolute;
+    top: 9%;
+    left: 3.4%;
+}
+.page1_btn{
+    width: 52%;
+    height: 12%;
+    position: absolute;
+    top: 10.5%;
+    left: 2.5%;
+    -webkit-transform: scale(0);
+}
+
+.page2{
+    background: url("http://whzt.taikang.com/brazil/static/images/bg3.jpg") no-repeat center/cover;
+}
+.page2_top{
+    width: 100%;
+    height: 21%;
+    background: url("http://whzt.taikang.com/brazil/static/images/top_bg.png") no-repeat center/contain;
+    background-size: 100% auto;
+    -webkit-box-sizing: border-box;
+    padding: 3% 0 0 7%;
+}
+.top_left{
+    width: 30%;
+}
+.left{
+
+}
+.step{
+    position: relative;
+    width: 100%;
+}
+.step_title{
+    color: #fbdf26;
+    font-size: 2.4rem;
+    margin-left: 34%;
+    font-weight: 900;
+}
+.step_img{
+    width: 34%;
+    height: auto;
+    position: absolute;
+    top: 33%;
+    left: 0%;
+}
+.num{
+    width: 87%;
+    height: 4rem;
+    background: #fff;
+    -webkit-box-shadow: 0 .1px .1px #61791c;
+    border-radius: 50px;
+    margin: 2% 22%;
+}
+.num p{
+    line-height: 3.8rem;
+    font-size: 2.2rem;
+    font-weight: 900;
+    color: #fa7702;
+    margin-left: 17%;
+}
+.top_left div.step:last-child{
+    margin-top: .3rem;
+}
+
+.awards{
+    width: 70%;
+    margin-top: .2rem;
+    text-align: center;
+}
+.awards img{
+    width: 29%;
+    height: auto;
+}
+.map{
+    width: 100%;
+}
+/*闆呭吀褰撳墠*/
+.yadian_click{
+	width: 19.4%;
+    height: 17.6%;
+	position: absolute;
+	top: 28%;
+	left: 10%;
+}
+.yadian{
+    background: url("http://whzt.taikang.com/brazil/static/images/ydz.png") no-repeat center;
+    background-size: 100% auto;
+}
+/*闆呭吀涓嬩竴绔�/
+.yadianw{
+    background: url("http://whzt.taikang.com/brazil/static/images/ydw.png") no-repeat center;
+    background-size: 75% auto;
+}
+/*闆呭吀瀹屾垚*/
+.yadianh{
+	top: 30%;
+    left: 10%;
+    background: url("http://whzt.taikang.com/brazil/static/images/yadian.png") no-repeat center;
+    background-size: 64% auto;
+}
+.yate_click{
+	width: 19.6%;
+    height: 20.4%;
+    position: absolute;
+    top: 18.5%;
+    left: 50%;
+}
+/*浜氱壒鍏板ぇ瀹屾垚*/
+.yate{
+    background: url("http://whzt.taikang.com/brazil/static/images/yd.png") no-repeat 100% 56%;
+    background-size: 100% auto;
+}
+/*浜氱壒鍏板ぇ褰撳墠*/
+.yaten{
+    background: url("http://whzt.taikang.com/brazil/static/images/yate.png") no-repeat center;
+    background-size: 100% auto;
+} 
+.beij_click{
+	width: 19.6%;
+	height: 20.4%;
+	position: absolute;
+    top: 38.5%;
+    left: 53%;
+}
+/*鍖椾含閿佷綇*/
+.beij{
+    background: url("http://whzt.taikang.com/brazil/static/images/icon8.png") no-repeat 100% 84%;
+    background-size: 78% auto;
+}
+/*鍖椾含涓嬩竴绔�/
+.beijn{
+    background: url("http://whzt.taikang.com/brazil/static/images/bj.png") no-repeat 100% 61%;
+    background-size: 74% auto;
+}
+/*鍖椾含鐜板湪*/
+.beijw{
+    background: url("http://whzt.taikang.com/brazil/static/images/bj3.png") no-repeat center;
+    background-size: 100% auto;
+}
+/*鍖椾含瀹屾垚*/
+.beijh{
+    background: url("http://whzt.taikang.com/brazil/static/images/bjw.png") no-repeat 100% 60%;
+    background-size: 67% auto;
+}
+.liyue_click{
+	width: 19.6%;
+	height: 20.4%;
+	position: absolute;
+    top: 48.5%;
+    left: 10%;
+}
+/*閲岀害閿佷綇*/
+.liyue{
+    background: url("http://whzt.taikang.com/brazil/static/images/icon8.png") no-repeat center;
+    background-size: 78% auto;
+}
+/*閲岀害涓嬩竴绔�/
+.liyuen{
+    background: url("http://whzt.taikang.com/brazil/static/images/lys.png") no-repeat center;
+    background-size: 78% auto;
+}
+/*閲岀害鐜板湪*/
+.liyuew{
+    background: url("http://whzt.taikang.com/brazil/static/images/ly2.png") no-repeat center;
+    background-size: 100% auto;
+}
+/*閲岀害瀹屾垚*/
+.liyueh{
+    background: url("http://whzt.taikang.com/brazil/static/images/ly.png") no-repeat center;
+    background-size: 67% auto;
+}
+.taik_click{
+	width: 19.6%;
+	height: 20.4%;
+	position: absolute;
+    top: 56.5%;
+    left: 51%;
+}
+/*娉板悍閿佷綇*/
+.taik{
+    background: url("http://whzt.taikang.com/brazil/static/images/icon8.png") no-repeat 0% 52%;
+    background-size: 78% auto;
+}
+/*娉板悍鐜板湪*/
+.taikw{
+    background: url("http://whzt.taikang.com/brazil/static/images/tk.png") no-repeat center;
+    background-size: 100% auto;
+}
+/*娉板悍涓嬩竴绔�/
+.taikn{
+    background: url("http://whzt.taikang.com/brazil/static/images/tk2.png") no-repeat .6rem .4rem;
+    background-size: 78% auto;
+}
+/*娉板悍瀹屾垚*/
+.taikh{
+    background: url("http://whzt.taikang.com/brazil/static/images/zd_tk.png") no-repeat .6rem .4rem;
+    background-size: 78% auto;
+}
+.jishi{
+    position: absolute;
+    top: 26%;
+    right: 5%;
+    width: 16%;
+    height: auto;
+}
+.help{
+    position: absolute;
+    top: 40%;
+    right: 5%;
+    width: 16%;
+    height: auto;
+}
+.xiaox{
+    position: absolute;
+    top: 54%;
+    right: 5%;
+    width: 16%;
+    height: auto;
+}
+
+.page2_bottom{
+    width: 100%;
+    height: 20%;
+    position: absolute;
+    bottom: 0%;
+    background: url("http://whzt.taikang.com/brazil/static/images/bottom_bg.png") no-repeat center bottom/contain;
+    background-size: 100% auto;
+}
+.picture{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    border: 1px solid #fff;
+}
+.page2_main{
+    width: 100%;
+}
+.main_left{
+    width: 50%;
+    /* -webkit-box-sizing: border-box;
+    padding-left: 10%; */
+    margin-top: 8%;
+}
+.page2_wen{
+    width: 35%;
+    height: auto;
+    margin-left: 23%;
+}
+.page2_wen2{
+    width: 50%;
+    height: auto;
+    margin-left: 29%;
+}
+.main_step{
+    margin-left: 16%;
+}
+.main_step p{
+    display: inline-block;
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: 900;
+}
+.shanxian{
+    width: 76%;
+    height: .9rem;
+    /*background: url("http://whzt.taikang.com/brazil/static/images/icon9.png") no-repeat left top;
+    background-size: .52rem auto;*/
+    margin-top: .1rem;
+}
+.shanxian img{
+    width: 6%;
+    height: auto;
+    position: absolute;
+   	top: 55%;
+    left: 1%;
+}
+.shanxian_main{
+    width: 95%;
+    height: 2rem;
+    background: rgba(255,255,255,.3);
+    border-radius: 8px;
+    margin-left: 10%;
+    -webkit-box-sizing: border-box;
+    padding-top: 3%;
+    margin-top: 3%;
+}
+.shan_pross{
+    width: 83%;
+    height: 46px;
+    background: rgba(255,255,255,.4);
+    border-radius: 5px;
+    margin-left: 13%;
+}
+.shan_pross_rad{border-radius: 8px !important;}
+.shan_pross_ju{
+    display: inline-block;
+    width: 0rem;
+    height: 46px;
+    background: rgba(191,244,88,1);
+    border-radius: 12px 0 0 12px;
+}
+.add_btn{
+    position: absolute;
+    width: 8%;
+    height: auto;
+}
+.go_power{
+   	top: 52%;
+    left: 41%;
+}
+.baodun{
+    width: 76%;
+    height: .9rem;
+    /*background: url("http://whzt.taikang.com/brazil/static/images/icon9.png") no-repeat left top;
+    background-size: .52rem auto;*/
+    margin-top: .1rem;
+}
+.baodun img{
+    width: 7%;
+    height: auto;
+    position: absolute;
+   	top: 55%;
+    left: 50%;
+}
+.baodun_main{
+    width: 95%;
+    height: 2rem;
+    background: rgba(255,255,255,.3);
+    border-radius: 8px;
+    margin-left: 10%;
+    -webkit-box-sizing: border-box;
+    padding-top: 3%;
+    margin-top: 3%;
+}
+.bao_pross{
+    width: 83%;
+    height: 46px;
+    background: rgba(255,255,255,.4);
+    border-radius: 5px;
+    margin-left: 13%;
+}
+.bao_pross_rad{ border-radius: 8px !important;}
+.bao_pross_ju{
+    display: inline-block;
+    width: 0rem;
+    height: 46px;
+    background: rgba(191,244,88,1);
+    border-radius: 8px;
+}
+.go_save{
+    top: 53%;
+    right: 1%;
+}
+.yate_layout{
+    position: absolute;
+    top: 0rem;
+    bottom: 0rem;
+    left: 0rem;
+    right: 0rem;
+    background: rgba(0,0,0,.6) url("http://whzt.taikang.com/brazil/static/images/cai_bg.png") no-repeat center/cover;
+}
+.layout_bg{
+    width: 10rem;
+    height: auto;
+    position: absolute;
+    top: 0rem;
+    left: 0rem;
+    bottom: 0rem;
+    right: 0rem;
+}
+.layout_close{
+    width: .64rem;
+    height: .64rem;
+    position: absolute;
+    top: .5rem;
+    right: .5rem;
+}
+/**淇敼涓紝鍙兘涓嶉渶瑕�*/
+/*.layout_one{
+
+}
+.layout_one img:nth-child(1){
+    width: 6.85333rem;
+    height: 1.93333rem;
+    position: absolute;
+    top: 4rem;
+    left: .5rem;
+    z-index: 2;
+}
+.layout_one img:nth-child(2){
+    width: 3.56rem;
+    height: 2.49333rem;
+    position: absolute;
+    top: 3.6rem;
+    right: 0rem;
+}
+.layout_two img:nth-child(1){
+    width: 4.84rem;
+    height: 2.41333rem;
+    position: absolute;
+    bottom: 3.6rem;
+    left: .3rem;
+}
+.layout_two img:nth-child(2){
+    width: 3.65333rem;
+    height: 2.96rem;
+    position: absolute;
+    bottom: 3.6rem;
+    left: .5rem;
+}*/
+
+/**鍩庡競**/
+.page3{
+    background: url("http://whzt.taikang.com/brazil/static/images/yadian.jpg") no-repeat center/cover;
+}
+.pages_click{
+    width: 20%;
+    height: auto;
+    position: absolute;
+    top: 22%;
+    right: 3%;
+}
+.page3_top{
+    padding: .2rem 0 0 .7rem;
+}
+.cai_click{
+    width: 7%;
+    height: auto;
+    position: absolute;
+    top: 77%;
+    right: 3%;
+    z-index: 3;
+}
+.yt_cai{
+    top: 61%;
+    right: 51%;
+}
+.yadian_txt{
+    width: 69%;
+    height: auto;
+    position: absolute;
+    top: 37%;
+    left: 20%;
+}
+.shangc_btn{
+    width: 47%;
+    height: auto;
+    position: absolute;
+    top: 72%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+}
+
+/*浜氱壒鍏板ぇ*/
+.page4{
+    background: url("http://whzt.taikang.com/brazil/static/images/bg6.jpg") no-repeat center/cover;
+}
+.page4_txt{
+    width: 69%;
+    height: auto;
+    position: absolute;
+    top: 35%;
+    left: 23%;
+}
+.page4_btn{
+    width: 47%;
+    height: auto;
+    position: absolute;
+    top: 67%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+}
+
+/*鍖椾含*/
+.page5{
+    background: url("http://whzt.taikang.com/brazil/static/images/bg8.jpg") no-repeat center/cover;
+}
+
+/*閲岀害*/
+.page6{
+    background: url("http://whzt.taikang.com/brazil/static/images/bg9.jpg") no-repeat center/cover;
+}
+.page6_txt{
+    left: 23%;
+}
+
+/*娉板悍*/
+.page7{
+    background: url("http://whzt.taikang.com/brazil/static/images/bg10.jpg") no-repeat center/cover;
+}
+.page7_txt{
+    top: 5.1rem;
+}
+
+/**messages 涓汉涓績**/
+.mess_wrapper{
+	width:100%;
+	height: 100%;
+    position: absolute;
+    top: 0rem;
+	left:0rem;
+    background: url("http://whzt.taikang.com/brazil/static/images/bg5.jpg") no-repeat center/cover;
+   
+}
+.mess_top{
+    text-align: center;
+}
+/* .mess_img{
+    top: 1.5rem;
+} */
+.mess_name{
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: #fff;
+}
+.mess_picture{
+    margin-top: 4rem;
+
+}
+.huzhu{
+    width: 25%;
+    position: absolute;
+    top: 5rem;
+    right: 0;
+}
+.mess_bottom{
+
+}
+.list_conter{
+    background: url("http://whzt.taikang.com/brazil/static/images/bbj2.png") no-repeat center/cover;
+    background-size: auto 100%;
+    padding-bottom: 1rem;
+}
+.list_conter .list:last-child{
+    padding: 0;
+    margin-top: 1rem;
+}
+.list{
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 6% 0 0rem;
+    margin-top: 3%;
+}
+.mess_pross{
+    width: 100%;
+    height: 4rem;
+    position: relative;
+}
+.mess_Pname{
+    width: 8%;
+    height: auto;
+    position: absolute;
+    top: 1.8rem;
+    left: 5%;
+}
+.power_name{
+    width: 20%;
+    position: absolute;
+    top: 0.4rem;
+    left: 20%;
+}
+.mess_power_press{
+    width: 58%;
+    position: absolute;
+    top: 1rem;
+    left: 8%;
+    background: rgba(0,0,0,.2);
+}
+.mess_pross_di,.mess_save_di{
+    width: 88%;
+    height: 65%;
+    position: absolute;
+    top: 18%;
+    left: 10%;
+    margin-left: 0rem;
+    background: rgba(255,255,255,1);
+}
+.mess_pross_ju{
+    display: block;
+    width: 0%;
+    height: 100%;
+    background: #bff458;
+    border-radius: 8px 0 0 8px;
+}
+.mess_save_ju{
+    display: block;
+    width: 0%;
+    height: 100%;
+    background: #ffa025;
+    border-radius: 8px 0 0 8px;
+}
+.mess_num{
+    top: 0;
+    position: absolute;
+    left: 39%;
+    text-align: right;
+    width: 37%;
+    font-size: 1.2rem;
+    font-weight: 900;
+    color: #296d55;
+}
+.go_top{
+    width: 18%;
+    position: absolute;
+    top: 1.5rem;
+    right: 2%;
+}
+.mess_pressImg{
+    width: 11%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: -0.4rem;
+    z-index: 3;
+}
+.mess_save_pressImg{
+    width: 12%;
+    height: auto;
+    left: -0.4rem;
+}
+.mess_txt{
+    width: 60%;
+    margin: 0 auto;
+    font-size: 0.8rem;
+    color: #1faf85;
+    line-height: 1rem;
+}
+[data-dpr="1"] .mess_txt{
+    font-size:13px
+}
+[data-dpr="2"] .mess_txt{
+    font-size:26px
+}
+[data-dpr="3"] .mess_txt{
+    font-size:39px
+}
+.colorG{
+    display: inline-block;
+    font-size: 1.4rem;
+    font-style: italic;
+    color: #ffa025;
+    -webkit-box-sizing: border-box;
+    padding: 0rem .1rem;
+}
+[data-dpr="1"] .colorG{
+    font-size:14px
+}
+[data-dpr="2"] .colorG{
+    font-size:28px
+}
+[data-dpr="3"] .colorG{
+    font-size:42px
+}
+.mess_pross_ju2{
+    background: #ffa025;
+}
+.mess_num_save{
+    color: #296d55;
+}
+.mess_step{
+    font-size: 0.6rem;
+    color: #2d8c74;
+    text-align: center;
+}
+[data-dpr="1"] .mess_step{
+    font-size:12px
+}
+[data-dpr="2"] .mess_step{
+    font-size:24px
+}
+[data-dpr="3"] .mess_step{
+    font-size:36px
+}
+.btn_mess{
+    display: block;
+    width: 52%;
+    height: auto;
+    margin: 1.2rem auto 0.2rem auto;
+}
+.jiang_bg{
+    background: url("http://whzt.taikang.com/brazil/static/images/bbj.png") no-repeat;
+    background-size: contain;
+    margin-top: 1rem;
+    position: relative;
+}
+.mess_pic{
+    width: 20%;
+    height: auto;
+    display: block;
+    margin: 0rem auto;
+}
+.my_j{
+    width: 24%;
+    height: auto;
+    display: block;
+    padding: 3% 0 0 4%;
+}
+
+/*鑳藉姏浜掑姪*/
+.biao{
+    width: 18%;
+    height: auto;
+    margin-top: 4%;
+}
+.power_txt{
+    width: 100%;
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: 900;
+    text-align: center;
+    color: #4bc19b;
+    /*margin-top: 1rem;*/
+}
+.power_txt12{
+	margin-top: 10%;
+}
+.nezhi{
+    display: inline-block;
+    font-size: 30px;
+    color: #ffa025;
+    margin-left: .5rem;
+}
+[data-dpr="1"] .nezhi{
+    font-size:15px
+}
+[data-dpr="2"] .nezhi{
+    font-size:30px
+}
+[data-dpr="3"] .nezhi{
+    font-size:45px
+}
+.power_txt2{
+    color: #1faf85;
+    font-size: 1.6rem;
+    font-weight: 900;
+    text-align: center;
+    margin-top: .3rem;
+}
+.shengbu{
+    display: inline-block;
+    font-size: 28px;
+    margin: 0rem .1rem;
+}
+.help_btn{
+    width: 47%;
+    height: auto;
+    display: block;
+    margin: 1rem auto .3rem;
+}
+.goj_btn{
+    width: 47%;
+    height: auto;
+    display: block;
+    margin: 5% auto;
+}
+.add_btn2{
+    width: 5.73333rem;
+    height: auto;
+    display: block;
+    margin: 1rem auto .3rem;
+}
+.safe_biao{
+    width: 3.50666rem;
+    height: auto;
+}
+.noTop{
+    margin-top: 5%;
+}
+.baibj{
+    width: 100%;
+    height: 100%;
+    background: url("http://whzt.taikang.com/brazil/static/images/bbj3.png") no-repeat center/cover;
+    background-size: auto 77%;
+}
+.safe_list{
+    /* width: 7.5rem;
+    margin-left: 1.25rem; */
+    width: 100%;
+}
+.power_bottom{
+
+}
+.power_top{
+	height: 20%;
+}
+.power_press_box{
+	
+}
+.quest{
+	top: 83%;
+}
+.power_name2{
+	top: 39%;
+}
+
+.safe_top{
+	height:20%;
+}
+
+/*鍒嗕韩*/
+.same_bg{
+    background: url("http://whzt.taikang.com/brazil/static/images/bg5.jpg") no-repeat center/cover;
+}
+
+.share_txt{
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    color: #1faf85;
+    font-size: 1rem;
+    font-weight: 700;
+    /*margin-top: 1rem;*/
+    /*letter-spacing: 5px;*/
+}
+.nopadding{
+	padding-top: 1rem;
+    margin-bottom: 0.6rem;
+}
+.colorO,.help_mian{
+    color: #faa635;
+    font-size: 1.8rem;
+    padding: 0rem 0.2rem;
+}
+.dashang{
+    width: 3.2rem;
+    height: auto;
+    display: block;
+    margin: 1rem auto;
+}
+@media screen and (max-device-width: 320px) {
+    .dashang{
+        margin: .2rem auto;
+    }
+}
+/*@media screen and (min-width: 319px) and (max-width: 375px){
+    .dashang{
+        margin: .5rem auto;
+    }
+}*/
+
+.give_btn,.get_btn,.play_btn{
+    width: 50%;
+    display: block;
+    margin: 1.2rem auto;
+}
+
+.yadian_help{
+    position: fixed;
+    top: 0rem;
+    bottom: 0rem;
+    left: 0rem;
+    right: 0rem;
+    background: rgba(0,0,0,.6);
+    z-index: 3;
+}
+.page3_kuang{
+    width: 82%;
+    height: auto;
+    position: absolute;
+    /* top: 15%; */
+    top: 9%;
+    left: 9%;
+}
+.page3_close{
+    width: 12%;
+    height: auto;
+    position: absolute;
+    top: 79%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+}
+.jiang_btn{
+    width: 4.22666rem;
+    height: auto;
+    position: absolute;
+    top: 9.6rem;
+    left: 3rem;
+}
+.page3_kuangbg{
+    width: 8.32rem;
+    height: auto;
+    position: absolute;
+    top: 4rem;
+    left: .9rem;
+}
+.pre_name{
+    width: 4rem;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: .1rem 0 .1rem #dcca92;
+    border: none;
+    -webkit-appearance: none;
+}
+.share_baibj{
+    background: url("http://whzt.taikang.com/brazil/static/images/bbj3.png") no-repeat;
+    background-size: 100% 100%;
+    padding: 1.2rem;
+    margin-top: 0rem;
+    margin-bottom: 1rem;
+}
+
+.zhan_top{
+    width: 10rem;
+    height: auto;
+    position: absolute;
+    top: 0rem;
+    left: 0rem;
+}
+.zhan_center{
+    width: 10rem;
+    height: auto;
+    position: absolute;
+    top: 3.47rem;
+    left: 0rem;
+}
+.zhan_bottom{
+    width: 10rem;
+    height: auto;
+    position: absolute;
+    top: 9.63rem;
+    left: 0rem;
+}
+
+/*姹傚姪淇℃伅*/
+.help_body{
+    background: url("http://whzt.taikang.com/brazil/static/images/bg.jpg") no-repeat center/cover;
+}
+.help_title{
+    width: 3.48rem;
+    height: auto;
+    display: block;
+    margin: 1rem auto;
+}
+#wrapper {
+    position:absolute;
+    z-index:1;
+    top:2.8rem;
+    bottom:0px;/*bottom:48px;*/
+    left:0;
+    width:100%;
+    background: -webkit-linear-gradient(left, rgba(255,255,255,0) 10%, rgba(255,255,255,.5) 50%, rgba(255,255,255,0) 90%);
+    overflow:auto;
+}
+#scroller {
+    position:relative;
+    /*	-webkit-touch-callout:none;*/
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+    float:left;
+    width:100%;
+    padding:0;
+}
+#scroller .list {
+    position:relative;
+    padding:0;
+    margin:0;
+    width:100%;
+    text-align:left;
+}
+.help_list{
+    position: relative;
+    height: 2rem;
+}
+.help_xian{
+    position: absolute;
+    top: 0rem;
+    width: 100%;
+    height: 1px;
+    -webkit-transform: translateY(-50%);
+    background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 50%, rgba(255,255,255,0) 100%);
+}
+.help_people{
+    position: absolute;
+    top: .5rem;
+    left: .5rem;
+    width: 1.16666rem;
+    height: 1.16666rem;
+    overflow: hidden;
+    background: #fff;
+    border-radius: 50%;
+}
+.help_people img{
+    width: 1.06666rem;
+    height: 1.06666rem;
+    position: absolute;
+    top: .05rem;
+    left: .05rem;
+}
+.help_txt{
+    width: 6rem;
+    height: 1.16666rem;
+    position: absolute;
+    top: .9rem;
+    left: 2rem;
+}
+.go_help{
+    width: 1.65333rem;
+    height: auto;
+    position: absolute;
+    top: .7rem;
+    left: 8rem;
+}
+
+
+/*鍚勭寮规*/
+
+.yeta_cai_box{
+	width: 89%;
+    height: 59%;
+    position: absolute;
+    top: 15%;
+    left: 6%;
+    background: url("http://whzt.taikang.com/brazil/static/images/luck.png") no-repeat center/cover;
+    background-size: 100% auto;
+}
+/* .yate_cai_img{
+	width: auto;
+	height: 5.8666rem;
+	position: absolute;  
+	top: 3rem;
+	left: 1rem;
+} */
+.yate_cai_img{
+	width: auto;
+    height: 53%;
+    margin-top: 20%;
+}
+.cai_power{
+    background: url("http://whzt.taikang.com/brazil/static/images/caid.png") no-repeat bottom/contain;
+}
+.cai_gife{
+    /* background: url("http://whzt.taikang.com/brazil/static/images/watch.png") no-repeat center/contain; */
+}
+.yate_cai_btn{
+	width: 47%;
+    height: auto;
+    position: absolute;
+    top: 64%;
+    left: 29%;
+}
+
+.hasjiang_layout,.safe_layout{
+	position: absolute;
+	top: 0rem;
+	bottom: 0rem;
+	left: 0rem;
+	right: 0rem;
+	background: rgba(0,0,0,.6);
+}
+.jiang_box{
+	width: 8.32rem;
+	height: 6.66666rem;
+	position: absolute;
+	top: 5rem;
+	left: .8rem;
+	background: url("http://whzt.taikang.com/brazil/static/images/hasj.png") no-repeat center/cover;
+	background-size: 8.32rem auto;
+}
+.jiang_box p,.safe_box p,.xinxi_box p{
+	    width: 100%;
+    font-size: 2.4rem;
+    color: #a66944;
+    margin-left: 5%;
+    margin-top: 20%;
+}
+[data-dpr="1"] .jiang_box p{
+    font-size:16px
+}
+[data-dpr="2"] .jiang_box p{
+    font-size:28px
+}
+[data-dpr="3"] .jiang_box p{
+    font-size:48px
+}
+.know_btn{
+	width: 4.22666rem;
+	height: auto;
+	position: absolute;
+	top: 5rem;
+    left: 2rem;
+}
+.safe_box{
+	width: 8.32rem;
+	height: 7.36rem;
+	position: absolute;
+	top: 5rem;
+	left: .8rem;
+	background: url("http://whzt.taikang.com/brazil/static/images/alert.png") no-repeat center/cover;
+	background-size: 8.32rem auto;
+}
+.safe_box p{
+	margin-top: 1.6rem;
+}
+.safe_box p.noTop,.xinxi_box p.noTop{
+	margin-top: 2%;
+}
+.safe_box p.qiquan{
+	font-size: 24px;
+}
+.safe_box p.giveup_txt,.xinxi_box p.giveup_txt{
+	color: #be8969;
+	font-size: 2rem;
+}
+.toup_btn{
+	width: 4.22666rem;
+	height: auto;
+	position: absolute;
+	top: 4rem;
+	left: 2rem;
+}
+.giveup_btn{
+	width: 4.22666rem;
+	height: auto;
+	position: absolute;
+	position: absolute;
+	top: 5.6rem;
+    left: 2rem;
+}
+.xinxi_layout{
+	position: absolute;
+	top: 0rem;
+	bottom: 0rem;
+	left: 0rem;
+	right: 0rem;
+	background: rgba(0,0,0,.6);
+}
+.xinxi_box{
+	width: 88%;
+    height: 53%;
+    position: absolute;
+    top: 15%;
+    left: 6%;
+    background: url("http://whzt.taikang.com/brazil/static/images/box.png") no-repeat center/cover;
+    background-size: 100% auto;
+}
+.xinxi_box p.hasTop{
+	margin-top: 5%;
+}
+.xinxi_box input{
+	width: 68%;
+    height: 5rem;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0px 5px 4px #cccdcd;
+    border: none;
+    -webkit-box-sizing: border-box;
+    margin-left: 3%;
+    padding: 0rem 3%;
+}
+.submit_btn{
+	width: 47%;
+    height: auto;
+    position: absolute;
+    top: 83%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+}
+
+.ly_cai{
+	top: 34%;
+    left: 2%;
+}
+.tk_top{
+	background: url(http://whzt.taikang.com/brazil/static/images/top_bg3.png) no-repeat center;
+	background-size: 100% auto;
+}
+.tk_layout{
+	position: absolute;
+	top: 0rem;
+	left: 0rem;
+	bottom: 0rem;
+	right: 0rem;
+	background: rgba(0,0,0,.6);
+}
+.tk_letter{
+	width: auto;
+    height: 33%;
+    position: absolute;
+    top: 29%;
+    left: 20%;
+}
+.tk_txt{
+	width: auto;
+    height: 4%;
+    position: absolute;
+    top: 66%;
+    left: 17%;
+}
+
+/*鏈�悗涓�皝淇�/
+.letter_wrapper{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	right: 0%;
+	bottom: 0%;
+	background: url("http://whzt.taikang.com/brazil/static/images/letter_bg2.jpg") no-repeat center/cover;
+}
+.letter_box{
+	width: 90%;
+	margin: 20% 5% 0;
+	background: url("http://whzt.taikang.com/brazil/static/imaes/xin.png") no-repeat center/contain
+}
+
+
+@media screen and ( max-device-height: 480px){
+	/*绔欑偣椤�/
+	/* .yaten{
+		top: 0rem;
+	} */
+	.yadianw,.yadianh{
+		top: 28.6%;
+	}
+	.beij{
+		top: 38%;
+	}
+	.liyue{
+		top: 51%;
+	}
+	.taik,.taikn{
+		top: 58%;
+	}
+	.shanxian_main,.baodun_main{
+		padding-top: 2%;
+	}
+	.page3_kuang{
+		top: 6%;
+	}
+	
+	.page2_top{
+		height: 22%;
+	}
+	.page2_bottom{
+		height: 23%;
+	}
+	.yeta_cai_box{
+		height: 68%;
+    	top: 8%;
+	}
+	.xinxi_box{
+		height: 59%;
+	}
+	
+	.page4_btn{
+		top:9.8rem;
+	}
+	.cai_click{
+		top: 73%;
+	}
+	
+	/*涓汉涓績椤�/
+	.mess_top{
+		height: 18%;
+	}
+	.mess_img{
+		top: .8rem;
+	}
+	.huzhu{
+		top: 11%;
+	}
+	.center_top{
+		height: 20%;
+	}
+	.mess_power_press{
+		top: 11%;
+	}
+	.mess_num{
+		top: -19%;
+	}
+}
+
+
+
+

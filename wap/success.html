@@ -1,0 +1,127 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>『支付成功』-泰康在线移动官网</title>
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,target-densitydpi=medium-dpi">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <link href="css/m_style.css" rel="stylesheet" type="text/css">
+    <style>
+        .finish {position: absolute;right: 1rem;top: 50%;margin-top: -1rem;font-size: 1.6rem;color: #FF5F2F;}
+    </style>
+</head>
+<body class="bg-g">
+    <header class="header" style="position:relative;">
+        <span></span>
+        <h2>支付成功</h2>
+        <span class="finish" onclick="gotoIndexPage()">完成</span>
+    </header>
+    <section class="container" style="padding-top:0;">
+        <article class="success">
+            <img src="images/tker_success.png">
+            <h3>付款成功！</h3>
+            <p>下载“泰康在线”App随时查询保单，
+                <br>还有更多优惠及服务</p>
+            <div class="btn"><a id="downloadBtn" href="http://m.tk.cn/promo/download/60672.apk" class="btn2">下载神器</a><a href="http://m.taikang.com" class="btn3">返回首页</a></div>
+        </article>
+        <h2 id="insureTitle" class="title">保单信息</h2>
+        <article id="insureInfo" class="list successlist">
+            <p id="productName"><span>保险名称：</span></p>
+            <p id="startDate"><span>生效日期：</span></p>
+            <p id="endDate"><span>终止日期：</span></p>
+            <p><span>实付款：</span>
+                <mark id="price">￥</mark>
+            </p>
+        </article>
+        <article id="showOrder" class="list" style="display:none;">
+            <ul class="item">
+                <li><a id="searchOrder" href="#" class="link">查看保单详情<span class="icon-arr2"></span></a></li>
+            </ul>
+        </article>
+    </section>
+    <script src="js/common.js"></script>
+    <script src="js/lstorage.js"></script>
+    <script src="http://m.tk.cn/js/reference.js"></script>
+    <script src="/product/wap/insure/js/tkTrack.js"></script>
+    <script>
+        window.onload = function() {
+            var price = getLocVal("price") || "";
+            var productName = getLocVal("productName") || "";
+            var insurePeriod = getLocVal("insurePeriod") || "365";
+            var orderId = getLocVal("orderId") || "";
+
+            try {
+                if (getLocVal("memberid")) {
+                    _smq.push(['custom', '支付', '成功_' + orderId, '财险_' + productName]);
+                    document.querySelector("#showOrder").style.display = "block";
+                    document.querySelector("#searchOrder").href = "http://" + location.host + "/mybaodan.html";
+                    setLocVal("baodanFrom", "success");
+                } else {
+                    _smq.push(['custom', '【免登录】支付', '成功_' + orderId, '财险_' + productName]);
+                }
+                TKTrack({
+                    "event": "支付成功",
+                    "subType": "财险_" + productName
+                });
+            } catch (e) {
+
+            }
+
+            if (productName == "") {
+                document.querySelector("#insureTitle").style.display = "none";
+                document.querySelector("#insureInfo").style.display = "none";
+            } else {
+                document.querySelector("#price").innerHTML = "￥" + price;
+                document.querySelector("#productName").innerHTML = "<span>保险名称：</span>" + productName;
+                document.querySelector("#startDate").innerHTML = "<span>生效日期：</span>" + getStartInsureDate() + "</p>";
+                document.querySelector("#endDate").innerHTML = "<span>终止日期：</span>" + getEndInsureDate(insurePeriod) + "，共" + insurePeriod + "天</p>";
+            }
+
+            var download = document.querySelector("#downloadBtn");
+            if (/(iPhone|iPad|iPod|iOS)/i.test(navigator.userAgent)) { //ios
+                download.href = "https://itunes.apple.com/cn/app/tai-kang-zai-xian/id909185021?mt=8";
+            } else if (/(Android)/i.test(navigator.userAgent)) { //android
+                download.href = "http://m.tk.cn/promo/download/60672.apk";
+            } else { //pc
+                download.style.display = "none";
+            };
+
+            var isInApp = getLocVal("isInApp");
+            if(isInApp == "1"){
+                document.querySelector(".header").style.display = "none";
+            }
+        }
+
+        function gotoIndexPage() {
+            location.href = "http://" + location.host;
+        }
+
+        function getStartInsureDate() {
+            var t = new Date();
+            t.setDate(t.getDate() + 1);
+            var year = t.getFullYear();
+            var mon = t.getMonth() + 1;
+            var dat = t.getDate();
+            return year + "-" + mon + "-" + dat;
+        }
+
+        function getEndInsureDate(period) {
+            var t = new Date();
+            t.setDate(t.getDate());
+
+            if (period == "365") {
+                t.setFullYear(t.getFullYear() + 1);
+            } else {
+                t.setDate(t.getDate() + parseInt(period));
+            }
+
+            var year = t.getFullYear();
+            var mon = t.getMonth() + 1;
+            var dat = t.getDate();
+            return year + "-" + mon + "-" + dat;
+        }
+    </script>
+</body>
+</html>

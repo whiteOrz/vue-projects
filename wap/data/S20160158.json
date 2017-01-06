@@ -1,0 +1,192 @@
+{
+    "wapDetails": [
+        {
+            "componentId": "wapBanner",
+            "bannerImgUrl": ""
+        },
+        {
+            "componentId": "wapProductDesc",
+            "productName": "成人重大疾病保险",
+            "productDesc": "针对成年人，全面覆盖42种常见重大疾病，网上直投，无需体检",
+            "productInfoUrl": ""
+        },
+        {
+            "componentId": "wapProductPrice",
+            "priceType": "价格",
+            "productPrice": "80"
+        },
+        {
+            "componentId": "wapInsuredAgeRangeHidden",
+            "min": "18",
+            "max": "65"
+        },
+        {
+            "componentId": "wapCalculateHidden",
+            "type" : "post",
+            "url" : ""
+        },
+        {
+            "componentId": "wapIdentityList",
+            "identityList": [
+                {
+                    "componentId": "wapIdentity",
+                    "identityURL": "images/adv1.png",
+                    "identityDesc": "透明理赔"
+                },
+                {
+                    "componentId": "wapIdentity",
+                    "identityURL": "images/adv2.png",
+                    "identityDesc": "超值低价"
+                },
+                {
+                    "componentId": "wapIdentity",
+                    "identityURL": "images/adv3.png",
+                    "identityDesc": "热销爆款"
+                }
+            ]
+        },
+        {
+            "componentId": "wapPremiumFactor",
+            "componentTitle": "被保人年龄",
+            "premiumFactorId": "insureAge",
+            "premiumFactorCode" : "age",
+            "premiumFactorType" : "tile",
+            "factorList": [
+                {
+                    "componentId": "wapInsureAge",
+                    "factorKey": "18-25周岁",
+                    "factorValue": "19"
+                },
+                {
+                    "componentId": "wapInsureAge",
+                    "factorKey": "26-30周岁",
+                    "factorValue": "27"
+                },
+                {
+                    "componentId": "wapInsureAge",
+                    "factorKey": "31-35周岁",
+                    "factorValue": "32"
+                },
+                {
+                    "componentId": "wapInsureAge",
+                    "factorKey": "36-40周岁",
+                    "factorValue": "37"
+                },
+                {
+                    "componentId": "wapInsureAge",
+                    "factorKey": "41-45周岁",
+                    "factorValue": "42"
+                },
+                {
+                    "componentId": "wapInsureAge",
+                    "factorKey": "46-50周岁",
+                    "factorValue": "47"
+                }
+            ]
+        },
+        {
+            "componentId": "wapPlanNameList",
+            "componentTitle": "保障责任",
+            "planNameList": [
+                {
+                    "componentId": "wapPlanName",
+                    "planName": " 基础款",
+                    "planNameIndex": 0
+                },
+                {
+                    "componentId": "wapPlanName",
+                    "planName": "白金款",
+                    "planNameIndex": 1
+                },
+                {
+                    "componentId": "wapPlanName",
+                    "planName": "钻石款",
+                    "planNameIndex": 2
+                }
+            ]
+        },
+        {
+            "componentId": "wapPlanList",
+            "planList": [
+                {
+                    "componentId": "wapPlan",
+                    "planId": "1007A101",
+                    "planIndex": "80",
+                    "planName": "基本款",
+                    "planPrice": "45",
+                    "planScore": "",
+                    "planLiabilityList": [
+                        {
+                            "componentId": "wapLiability",
+                            "liabilityId": "1007001",
+                            "liabilityName": "重大疾病保险金",
+                            "liabilityAmount": "10万",
+                            "liabilityDesc": "癌症、急性心肌梗塞、 脑中风后遗症、尿毒症、严重III度烧伤等42种常见重疾，一经确诊，立即赔付"
+                        }
+                    ]
+                },
+                {
+                    "componentId": "wapPlan",
+                    "planId": "1007A101",
+                    "planIndex": "1",
+                    "planName": "白金款",
+                    "planPrice": "45",
+                    "planScore": "",
+                    "planLiabilityList": [
+                        {
+                            "componentId": "wapLiability",
+                            "liabilityId": "1007001",
+                            "liabilityName": "重大疾病保险金",
+                            "liabilityAmount": "10万",
+                            "liabilityDesc": "癌症、急性心肌梗塞、 脑中风后遗症、尿毒症、严重III度烧伤等42种常见重疾，一经确诊，立即赔付"
+                        }
+                    ]
+                },
+                {
+                    "componentId": "wapPlan",
+                    "planId": "1007A101",
+                    "planIndex": "2",
+                    "planName": "钻石款",
+                    "planPrice": "138",
+                    "planScore": "",
+                    "planLiabilityList": [
+                        {
+                            "componentId": "wapLiability",
+                            "liabilityId": "1007001",
+                            "liabilityName": "重大疾病保险金",
+                            "liabilityAmount": "10万",
+                            "liabilityDesc": "癌症、急性心肌梗塞、 脑中风后遗症、尿毒症、严重III度烧伤等42种常见重疾，一经确诊，立即赔付"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "componentId": "wapConditionList",
+            "componentTitle": "保障说明",
+            "conditionList": [
+                {
+                    "componentId": "wapCondition",
+                    "conditionName": "保障期限",
+                    "conditionBrief": "保障期限",
+                    "conditionDesc": "1年",
+                    "conditionUrl": ""
+                },
+                {
+                    "componentId": "wapCondition",
+                    "conditionName": "投保年龄",
+                    "conditionBrief": "投保年龄",
+                    "conditionDesc": "18-65周岁",
+                    "conditionUrl": ""
+                }
+            ]
+        },
+        {
+            "componentId": "wapReturnMessage",
+            "returnMessage": "planId,planPrice"
+        },
+        {
+            "componentId": "wapPayment"
+        }
+    ]
+}

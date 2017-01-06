@@ -1,0 +1,336 @@
+{
+    "pcInputs": [
+        {
+            "componentId": "tkApplicantInfo",
+            "componentTitle": "投保人信息",
+            "applicantInfo": [
+                {
+                    "componentId": "tkApplicantName",
+                    "tkId": "applicantName",
+                    "tkLable": "姓名",
+                    "tkTip": "投保人姓名",
+                    "tkDesc": "请输入投保人姓名",
+                    "tkRequired": "true",
+                    "tkDefaultValue": "",
+                    "tkType": "",
+                    "tkOptions": ""
+                },
+                {
+                    "componentId": "tkApplicantId",
+                    "tkId": "applicantId",
+                    "tkLable": "证件号码",
+                    "tkTip": "投保人证件号码",
+                    "tkDesc": "请输入投保人证件号码",
+                    "tkRequired": "true",
+                    "tkDefaultValue": "",
+                    "tkType": "",
+                    "tkOptions": [
+						{
+							"key":"01",
+							"value":"身份证"
+						},
+						{
+							"key":"02",
+							"value":"护照"
+						},
+						{
+							"key":"03",
+							"value":"军官证"
+						},
+						{
+							"key":"05",
+							"value":"港台同胞证"
+						}				
+					]
+                },
+				
+				
+				{
+                    "componentId": "tkApplicantGender",
+                    "tkId": "applicantGender",
+                    "tkLable": "性别",
+                    "tkTip": "投保人性别",
+                    "tkDesc": "请输入投保人性别",
+                    "tkRequired": "false",
+                    "tkDefaultValue": "",
+                    "tkType": "",
+                    "tkOptions":[
+						{
+							"key":"0",
+							"value":"男"
+						},
+						{
+							"key":"1",
+							"value":"女"
+						}
+					]
+                },
+				{
+                    "componentId": "tkApplicantBirth",
+                    "tkId": "applicantBirth",
+                    "tkLable": "出生日期",
+                    "tkTip": "投保人出生日期",
+                    "tkDesc": "请输入投保人出生日期",
+                    "tkRequired": "false",
+                    "tkDefaultValue": "",
+                    "tkType": "",
+                    "tkOptions":""
+                },
+				
+				
+                {
+                    "componentId": "tkApplicantPhone",
+                    "tkId": "applicantPhone",
+                    "tkLable": "手机号",
+                    "tkTip": "投保人手机号",
+                    "tkDesc": "请输入投保人手机号",
+                    "tkRequired":" true",
+                    "tkDefaultValue": "",
+                    "tkType": "",
+                    "tkOptions": ""
+                },
+                {
+                    "componentId": "tkApplicantEmail",
+                    "tkId": "applicantEmail",
+                    "tkLable": "邮箱",
+                    "tkTip": "投保人邮箱",
+                    "tkDesc": "请输入投保人邮箱",
+                    "tkRequired": "true",
+                    "tkDefaultValue": "",
+                    "tkType": "",
+                    "tkOptions": ""
+                },
+				{
+                    "componentId": "tkApplicantAddress",
+                    "tkId": "applicantAddress",
+                    "tkLable": "投保地区",
+                    "tkTip": "投保地区",
+                    "tkDesc": "请输入投保地区",
+                    "tkRequired": "true",
+                    "tkDefaultValue": "",
+                    "tkType": "",
+                    "tkOptions": ""
+                },
+				{
+                    "componentId": "tkApplicantProfession",
+                    "tkId": "applicantProfession",
+                    "tkLable": "职业分类",
+                    "tkTip": "职业分类",
+                    "tkDesc": "请选择职业",
+                    "tkRequired": "true",
+                    "tkDefaultValue": "",
+                    "type": "",
+                    "options": ""
+                }
+            ]
+        },
+        {
+            "componentId": "tkInsuredInfo",
+            "componentTitle": "被保险人信息",
+            "insuredMyself": [
+                {
+                    "componentId": "tkInsuredMyself",
+                    "tkId": "insuredMyself",
+                    "tkLable": "同投保人",
+                    "tkTip": "",
+                    "tkDesc": "",
+                    "tkRequired": "false",
+                    "tkDefaultValue": "",
+                    "tkType": "",
+                    "tkOptions": ""
+                }
+            ],
+            "insuredInfo": [
+                {
+                    "componentId": "tkInsuredRelationship",
+                    "tkId": "insuredRelationship",
+                    "tkLable": "被保人是我的",
+                    "tkTip": "请选择",
+                    "tkDesc": "请选择被保人和投保人关系",
+                    "tkRequired": "true",
+                    "tkDefaultValue": "",
+                    "tkType": "",
+                    "tkOptions": [
+						{"key":"儿子","value":"儿子"},
+						{"key":"女儿","value":"女儿"}
+					]
+                },
+                {
+                    "componentId": "tkInsuredName",
+                    "tkId": "insuredName",
+                    "tkLable": "姓名",
+                    "tkTip": "被保险人姓名",
+                    "tkDesc": "请输入被保险人姓名",
+                    "tkRequired": "true",
+                    "tkDefaultValue": "",
+                    "tkType": "",
+                    "tkOptions": ""
+                },
+                {
+                    "componentId": "tkInsuredId",
+                    "tkId": "insuredId",
+                    "tkLable": "证件号码",
+                    "tkTip": "被保险人证件号码",
+                    "tkDesc": "请输入被保险人证件号码",
+                    "tkRequired": "true",
+                    "tkDefaultValue": "",
+                    "tkType": "",
+                    "tkOptions":[ 
+						{"key":"01","value":"身份证"},
+						{"key":"02","value":"护照"},
+						{"key":"03","value":"军官证"},
+						{"key":"05","value":"港台同胞证"},
+						{"key":"99","value":"出生日期"}
+					]
+                },
+				{
+                    "componentId": "tkInsuredGender",
+                    "tkId": "insuredGender",
+                    "tkLable": "性别",
+                    "tkTip": "被保险人性别",
+                    "tkDesc": "请输入被保险人性别",
+                    "tkRequired": "true",
+                    "tkDefaultValue": "",
+                    "tkType": "",
+                    "tkOptions": [
+						{"key":"0","value":"男"},
+						{"key":"1","value":"女"}
+					]
+                },
+				{
+                    "componentId": "tkInsuredBirth",
+                    "tkId": "insuredBirth",
+                    "tkLable": "出生日期",
+                    "tkTip": "被保险人出生日期",
+                    "tkDesc": "请输入被保险人出生日期",
+                    "tkRequired": "true",
+                    "tkDefaultValue": "",
+                    "tkType": "",
+                    "tkOptions":""
+                }
+			]
+        },
+        {
+            "componentId": "tkBeneficiaryInfo",
+            "componentTitle": "受益人信息",
+            "legalBeneficiary": [
+                {
+                    "componentId": "tkLegalBeneficiary",
+                    "tkId": "beneficiaryMyself",
+                    "tkLable": "法定受益人",
+                    "tkTip": "",
+                    "tkDesc": "",
+                    "tkRequired": "false",
+                    "tkDefaultValue": "",
+                    "tkType": "",
+                    "tkOptions": ""
+                }
+            ],
+            "beneficiaryInfo": [
+				{
+                    "componentId": "tkBeneficiaryRelationship",
+                    "tkId": "beneficiaryRelationship",
+                    "tkLable": "受益人是我的",
+                    "tkTip": "请选择",
+                    "tkDesc": "请选择受益人和投保人关系",
+                    "tkRequired": "true",
+                    "tkDefaultValue": "",
+                    "tkType": "",
+                    "tkOptions": [	
+						{"key":"妻子","value":"妻子"},
+						{"key":"丈夫","value":"丈夫"},
+						{"key":"儿子","value":"儿子"},
+						{"key":"女儿","value":"女儿"},
+						{"key":"父亲","value":"父亲"},
+						{"key":"母亲 ","value":"母亲"}
+					]
+                },
+				  {
+                    "componentId": "tkBeneficiaryName",
+                    "tkId": "beneficiaryName",
+                    "tkLable": "姓名",
+                    "tkTip": "受益人姓名",
+                    "tkDesc": "请输入受益人姓名",
+                    "tkRequired": "true",
+                    "tkDefaultValue": "",
+                    "tkType": "",
+                    "tkOptions": ""
+                },
+                {
+                    "componentId": "tkBeneficiaryId",
+                    "tkId": "beneficiaryId",
+                    "tkLable": "证件号码",
+                    "tkTip": "受益人证件号码",
+                    "tkDesc": "请输入受益人证件号码",
+                    "tkRequired": "true",
+                    "tkDefaultValue": "",
+                    "tkType": "",
+                    "tkOptions":[ 
+						{"key":"01","value":"身份证"},
+						{"key":"02","value":"护照"},
+						{"key":"03","value":"军官证"},
+						{"key":"05","value":"港台同胞证"},
+						{"key":"99","value":"出生日期"}	
+					]
+                },
+				{
+                    "componentId": "tkBeneficiaryGender",
+                    "tkId": "beneficiaryGender",
+                    "tkLable": "性别",
+                    "tkTip": "收益人性别",
+                    "tkDesc": "请输入受益人性别",
+                    "tkRequired": "false",
+                    "tkDefaultValue": "",
+                    "tkType": "",
+                    "tkOptions":[
+						{
+							"key":"0",
+							"value":"男"
+						},
+						{
+							"key":"1",
+							"value":"女"
+						}
+					]
+                },
+				{
+                    "componentId": "tkBeneficiaryBirth",
+                    "tkId": "beneficiaryBirth",
+                    "tkLable": "出生日期",
+                    "tkTip": "被受益人出生日期",
+                    "tkDesc": "请输入被收益人出生日期",
+                    "tkRequired": "true",
+                    "tkDefaultValue": "",
+                    "tkType": "",
+                    "tkOptions":""
+                },
+                {
+                    "componentId": "tkBeneficiaryPercent",
+                    "tkId": "beneficiaryPercent",
+                    "tkLable": "收益比例",
+                    "tkTip": "输入收益比例",
+                    "tkDesc": "输入收益比例",
+                    "tkRequired": "true",
+                    "tkDefaultValue": "",
+                    "tkType": "",
+                    "tkOptions":""
+                }
+				
+				
+				
+				
+				
+				
+				
+				
+			
+			
+			
+			]
+        },
+        {
+            "componentId": "tkTradeInfoList",
+            "componentTitle": "订单明细"
+        }
+    ]
+}

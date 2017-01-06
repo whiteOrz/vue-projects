@@ -1,0 +1,426 @@
+{
+    "wapDetails": [
+        {
+            "componentId": "wapProductDesc",
+            "productName": "少儿综合意外保障",
+            "productDesc": "少儿综合意外保障：每天低至0.12元起！大小意外全保，勇敢的少年生活必备神器！"
+        },
+        {
+            "componentId": "wapProductPrice",
+            "priceType": "会员价",
+            "productPrice": "50",
+            "discountInfo": "立减5元",
+            "activityTitle": "促销信息"
+        },
+        {
+            "componentId": "wapIdentityList",
+            "identityList": [
+                {
+                    "componentId": "wapIdentity",
+                    "identityURL": "",
+                    "identityDesc": "透明理赔"
+                },
+                {
+                    "componentId": "wapIdentity",
+                    "identityURL": "",
+                    "identityDesc": "超值低价"
+                },
+                {
+                    "componentId": "wapIdentity",
+                    "identityURL": "",
+                    "identityDesc": "热销爆款"
+                }
+            ]
+        },
+        {
+            "componentId": "wapAnalysis",
+            "analysisLable": "需求分析",
+            "analysisDesc": "我是否适合这款产品？",
+            "analysisLink": "h5.html"
+        },
+        {
+            "componentId": "wapPackageTitle",
+            "componentTitle": "保障责任",
+        },
+        {
+            "componentId": "wapInsureAgeRangeList",
+            "insureAgeRangeList": [
+                {
+                    "componentId": "wapInsureAgeRange",
+                    "insureAgeRange": "30天-9岁",
+                    "insureAgeRangeIndex": "0"
+                },
+                {
+                    "componentId": "wapInsureAgeRange",
+                    "insureAgeRange": "10-17岁",
+                    "insureAgeRangeIndex": "1"
+                }
+            ]
+        },
+        {
+            "componentId": "wapPackageNameList",
+            "packageNameList": [
+                {
+                    "componentId": "wapPackageName",
+                    "packageName": "基本款",
+                    "packageNameIndex": "0"
+                },
+                {
+                    "componentId": "wapPackageName",
+                    "packageName": "白金款",
+                    "packageNameIndex": "1"
+                },
+                {
+                    "componentId": "wapPackageName",
+                    "packageName": "钻石款",
+                    "packageNameIndex": "2"
+                }
+            ]
+        },
+        {
+            "componentId": "wapPackageList",
+            "packageList": [
+                {
+                    "componentId": "wapPackage",
+                    "packageId": "001",
+                    "packageFactorList": [
+                        "wapAgeRangeList",
+                        "wapPackageNameList"
+                    ],
+                    "packageIndex": [
+                        "0",
+                        "0"
+                    ],
+                    "packageName": "基本款",
+                    "packagePrice": "45",
+                    "packageScore": "45",
+                    "insureAgeRange": {
+                        "componentId": "wapInsureAgeRange",
+                        "insureAgeRangeLable": "投保年龄",
+                        "insureAgeRange": "出生满30天-9周岁"
+                    },
+                    "insurePeriod": {
+                        "componentId": "wapInsurePeriod",
+                        "insurePeriodLable": "投保期间",
+                        "insurePeriod": "1年"
+                    },
+                    "packageLiabilityList": [
+                        {
+                            "componentId": "wapLiability",
+                            "liabilityId": "1001",
+                            "liabilityName": "意外身故",
+                            "liabilityAmount": "10",
+                            "liabilityDesc": "被保险人遭受意外伤害事故（如跌倒、溺水、食物中毒），并自该事故发生之日起180日（含第180日）内因该事故为直接且单独原因导致被保险人身故的，保险人按保险单上载明的保险金额向意外身故保险金受益人给付意外身故保险金。"
+                        },
+                        {
+                            "componentId": "wapLiability",
+                            "liabilityId": "1002",
+                            "liabilityName": "意外残疾",
+                            "liabilityAmount": "1",
+                            "liabilityDesc": "被保险人遭受意外伤害事故（如跌倒、溺水、食物中毒），并自该事故发生之日起180日（含第180日）内因该事故为直接且单独原因导致被保险人发生《人身保险伤残评定标准及代码》所述伤残项目，根据本保险合同及该《伤残评定标准》规定的评定原则对被保险人伤残程度进行评定，并按评定结果所对应该《伤残评定标准》中规定的给付比例乘以保险单上载明的保险金额向意外伤残保险金受益人给付意外伤残保险金。"
+                        }
+                    ]
+                },
+                {
+                    "componentId": "wapPackage",
+                    "packageId": "002",
+                    "packageFactorList": [
+                        "wapInsureAgeRangeList",
+                        "wapPackageNameList"
+                    ],
+                    "packageIndex": [
+                        "0",
+                        "1"
+                    ],
+                    "packageName": "白金款",
+                    "packagePrice": "138",
+                    "packageScore": "138",
+                    "insureAgeRange": {
+                        "componentId": "wapInsureAgeRange",
+                        "insureAgeRangeLable": "投保年龄",
+                        "insureAgeRange": "出生满30天-9周岁"
+                    },
+                    "insurePeriod": {
+                        "componentId": "wapInsurePeriod",
+                        "insurePeriodLable": "投保期间",
+                        "insurePeriod": "1年"
+                    },
+                    "packageLiabilityList": [
+                        {
+                            "componentId": "wapLiability",
+                            "liabilityId": "1001",
+                            "liabilityName": "意外身故",
+                            "liabilityAmount": "20",
+                            "liabilityDesc": "被保险人遭受意外伤害事故（如跌倒、溺水、食物中毒），并自该事故发生之日起180日（含第180日）内因该事故为直接且单独原因导致被保险人身故的，保险人按保险单上载明的保险金额向意外身故保险金受益人给付意外身故保险金。"
+                        },
+                        {
+                            "componentId": "wapLiability",
+                            "liabilityId": "1002",
+                            "liabilityName": "意外残疾",
+                            "liabilityAmount": "2",
+                            "liabilityDesc": "被保险人遭受意外伤害事故（如跌倒、溺水、食物中毒），并自该事故发生之日起180日（含第180日）内因该事故为直接且单独原因导致被保险人发生《人身保险伤残评定标准及代码》所述伤残项目，根据本保险合同及该《伤残评定标准》规定的评定原则对被保险人伤残程度进行评定，并按评定结果所对应该《伤残评定标准》中规定的给付比例乘以保险单上载明的保险金额向意外伤残保险金受益人给付意外伤残保险金。"
+                        },
+                        {
+                            "componentId": "wapLiability",
+                            "liabilityId": "1003",
+                            "liabilityName": "意外医疗",
+                            "liabilityAmount": "1",
+                            "liabilityDesc": "被保险人因在中国境内遭受意外伤害事故（如跌倒、溺水、食物中毒），并因该事故直接导致被保险人需在二级及以上医院接受治疗的，对符合合同约定范围内发生的医疗费用，给付受益人意外医疗赔偿金（扣除100元免赔额）。"
+                        },
+                        {
+                            "componentId": "wapLiability",
+                            "liabilityId": "1004",
+                            "liabilityName": "飞机意外身故、伤残",
+                            "liabilityAmount": "30",
+                            "liabilityDesc": ""
+                        }
+                    ]
+                },
+                {
+                    "componentId": "wapPackage",
+                    "packageId": "003",
+                    "packageFactorList": [
+                        "wapInsureAgeRangeList",
+                        "wapPackageNameList"
+                    ],
+                    "packageIndex": [
+                        "0",
+                        "2"
+                    ],
+                    "packageName": "钻石款",
+                    "packagePrice": "325",
+                    "packageScore": "325",
+                    "insureAgeRange": {
+                        "componentId": "wapInsureAgeRange",
+                        "insureAgeRangeLable": "投保年龄",
+                        "insureAgeRange": "出生满30天-9周岁"
+                    },
+                    "insurePeriod": {
+                        "componentId": "wapInsurePeriod",
+                        "insurePeriodLable": "投保期间",
+                        "insurePeriod": "1年"
+                    },
+                    "packageLiabilityList": [
+                        {
+                            "componentId": "wapLiability",
+                            "liabilityId": "1001",
+                            "liabilityName": "意外身故",
+                            "liabilityAmount": "20",
+                            "liabilityDesc": "被保险人遭受意外伤害事故（如跌倒、溺水、食物中毒），并自该事故发生之日起180日（含第180日）内因该事故为直接且单独原因导致被保险人身故的，保险人按保险单上载明的保险金额向意外身故保险金受益人给付意外身故保险金。"
+                        },
+                        {
+                            "componentId": "wapLiability",
+                            "liabilityId": "1002",
+                            "liabilityName": "意外残疾",
+                            "liabilityAmount": "5",
+                            "liabilityDesc": "被保险人遭受意外伤害事故（如跌倒、溺水、食物中毒），并自该事故发生之日起180日（含第180日）内因该事故为直接且单独原因导致被保险人发生《人身保险伤残评定标准及代码》所述伤残项目，根据本保险合同及该《伤残评定标准》规定的评定原则对被保险人伤残程度进行评定，并按评定结果所对应该《伤残评定标准》中规定的给付比例乘以保险单上载明的保险金额向意外伤残保险金受益人给付意外伤残保险金。"
+                        },
+                        {
+                            "componentId": "wapLiability",
+                            "liabilityId": "1003",
+                            "liabilityName": "意外医疗",
+                            "liabilityAmount": "2",
+                            "liabilityDesc": "被保险人因在中国境内遭受意外伤害事故（如跌倒、溺水、食物中毒），并因该事故直接导致被保险人需在二级及以上医院接受治疗的，对符合合同约定范围内发生的医疗费用，给付受益人意外医疗赔偿金（扣除100元免赔额）。"
+                        },
+                        {
+                            "componentId": "wapLiability",
+                            "liabilityId": "1004",
+                            "liabilityName": "飞机意外身故、伤残",
+                            "liabilityAmount": "60",
+                            "liabilityDesc": ""
+                        }
+                    ]
+                },
+                {
+                    "componentId": "wapPackage",
+                    "packageId": "004",
+                    "packageFactorList": [
+                        "wapInsureAgeRangeList",
+                        "wapPackageNameList"
+                    ],
+                    "packageIndex": [
+                        "1",
+                        "0"
+                    ],
+                    "packageName": "基本款",
+                    "packagePrice": "45",
+                    "packageScore": "45",
+                    "insureAgeRange": {
+                        "componentId": "wapInsureAgeRange",
+                        "insureAgeRangeLable": "投保年龄",
+                        "insureAgeRange": "10-17周岁"
+                    },
+                    "insurePeriod": {
+                        "componentId": "wapInsurePeriod",
+                        "insurePeriodLable": "投保期间",
+                        "insurePeriod": "1年"
+                    },
+                    "packageLiabilityList": [
+                        {
+                            "componentId": "wapLiability",
+                            "liabilityId": "1001",
+                            "liabilityName": "意外身故",
+                            "liabilityAmount": "10",
+                            "liabilityDesc": "被保险人遭受意外伤害事故（如跌倒、溺水、食物中毒），并自该事故发生之日起180日（含第180日）内因该事故为直接且单独原因导致被保险人身故的，保险人按保险单上载明的保险金额向意外身故保险金受益人给付意外身故保险金。"
+                        },
+                        {
+                            "componentId": "wapLiability",
+                            "liabilityId": "1002",
+                            "liabilityName": "意外残疾",
+                            "liabilityAmount": "1",
+                            "liabilityDesc": "被保险人遭受意外伤害事故（如跌倒、溺水、食物中毒），并自该事故发生之日起180日（含第180日）内因该事故为直接且单独原因导致被保险人发生《人身保险伤残评定标准及代码》所述伤残项目，根据本保险合同及该《伤残评定标准》规定的评定原则对被保险人伤残程度进行评定，并按评定结果所对应该《伤残评定标准》中规定的给付比例乘以保险单上载明的保险金额向意外伤残保险金受益人给付意外伤残保险金。"
+                        },
+                        {
+                            "componentId": "wapLiability",
+                            "liabilityId": "1003",
+                            "liabilityName": "市内公共汽、电车+出租车+地铁意外伤害",
+                            "liabilityAmount": "10",
+                            "liabilityDesc": ""
+                        }
+                    ]
+                },
+                {
+                    "componentId": "wapPackage",
+                    "packageId": "005",
+                    "packageFactorList": [
+                        "wapInsureAgeRangeList",
+                        "wapPackageNameList"
+                    ],
+                    "packageIndex": [
+                        "1",
+                        "1"
+                    ],
+                    "packageName": "白金款",
+                    "packagePrice": "129",
+                    "packageScore": "129",
+                    "insureAgeRange": {
+                        "componentId": "wapInsureAgeRange",
+                        "insureAgeRangeLable": "投保年龄",
+                        "insureAgeRange": "10-17周岁"
+                    },
+                    "insurePeriod": {
+                        "componentId": "wapInsurePeriod",
+                        "insurePeriodLable": "投保期间",
+                        "insurePeriod": "1年"
+                    },
+                    "packageLiabilityList": [
+                        {
+                            "componentId": "wapLiability",
+                            "liabilityId": "1001",
+                            "liabilityName": "意外身故",
+                            "liabilityAmount": "20",
+                            "liabilityDesc": "被保险人遭受意外伤害事故（如跌倒、溺水、食物中毒），并自该事故发生之日起180日（含第180日）内因该事故为直接且单独原因导致被保险人身故的，保险人按保险单上载明的保险金额向意外身故保险金受益人给付意外身故保险金。"
+                        },
+                        {
+                            "componentId": "wapLiability",
+                            "liabilityId": "1002",
+                            "liabilityName": "意外残疾",
+                            "liabilityAmount": "2",
+                            "liabilityDesc": "被保险人遭受意外伤害事故（如跌倒、溺水、食物中毒），并自该事故发生之日起180日（含第180日）内因该事故为直接且单独原因导致被保险人发生《人身保险伤残评定标准及代码》所述伤残项目，根据本保险合同及该《伤残评定标准》规定的评定原则对被保险人伤残程度进行评定，并按评定结果所对应该《伤残评定标准》中规定的给付比例乘以保险单上载明的保险金额向意外伤残保险金受益人给付意外伤残保险金。"
+                        },
+                        {
+                            "componentId": "wapLiability",
+                            "liabilityId": "1003",
+                            "liabilityName": "意外医疗",
+                            "liabilityAmount": "1",
+                            "liabilityDesc": "被保险人因在中国境内遭受意外伤害事故（如跌倒、溺水、食物中毒），并因该事故直接导致被保险人需在二级及以上医院接受治疗的，对符合合同约定范围内发生的医疗费用，给付受益人意外医疗赔偿金（扣除100元免赔额）。"
+                        },
+                        {
+                            "componentId": "wapLiability",
+                            "liabilityId": "1004",
+                            "liabilityName": "市内公汽、电车+出租车+地铁意外身故、伤残",
+                            "liabilityAmount": "20",
+                            "liabilityDesc": ""
+                        }
+                    ]
+                },
+                {
+                    "componentId": "wapPackage",
+                    "packageId": "006",
+                    "packageFactorList": [
+                        "wapInsureAgeRangeList",
+                        "wapPackageNameList"
+                    ],
+                    "packageIndex": [
+                        "1",
+                        "2"
+                    ],
+                    "packageName": "钻石款",
+                    "packagePrice": "325",
+                    "packageScore": "325",
+                    "insureAgeRange": {
+                        "componentId": "wapInsureAgeRange",
+                        "insureAgeRangeLable": "投保年龄",
+                        "insureAgeRange": "10-17周岁"
+                    },
+                    "insurePeriod": {
+                        "componentId": "wapInsurePeriod",
+                        "insurePeriodLable": "投保期间",
+                        "insurePeriod": "1年"
+                    },
+                    "packageLiabilityList": [
+                        {
+                            "componentId": "wapLiability",
+                            "liabilityId": "1001",
+                            "liabilityName": "意外身故",
+                            "liabilityAmount": "50",
+                            "liabilityDesc": "被保险人遭受意外伤害事故（如跌倒、溺水、食物中毒），并自该事故发生之日起180日（含第180日）内因该事故为直接且单独原因导致被保险人身故的，保险人按保险单上载明的保险金额向意外身故保险金受益人给付意外身故保险金。"
+                        },
+                        {
+                            "componentId": "wapLiability",
+                            "liabilityId": "1002",
+                            "liabilityName": "意外残疾",
+                            "liabilityAmount": "5",
+                            "liabilityDesc": "被保险人遭受意外伤害事故（如跌倒、溺水、食物中毒），并自该事故发生之日起180日（含第180日）内因该事故为直接且单独原因导致被保险人发生《人身保险伤残评定标准及代码》所述伤残项目，根据本保险合同及该《伤残评定标准》规定的评定原则对被保险人伤残程度进行评定，并按评定结果所对应该《伤残评定标准》中规定的给付比例乘以保险单上载明的保险金额向意外伤残保险金受益人给付意外伤残保险金。"
+                        },
+                        {
+                            "componentId": "wapLiability",
+                            "liabilityId": "1003",
+                            "liabilityName": "意外医疗",
+                            "liabilityAmount": "2",
+                            "liabilityDesc": "被保险人因在中国境内遭受意外伤害事故（如跌倒、溺水、食物中毒），并因该事故直接导致被保险人需在二级及以上医院接受治疗的，对符合合同约定范围内发生的医疗费用，给付受益人意外医疗赔偿金（扣除100元免赔额）。"
+                        },
+                        {
+                            "componentId": "wapLiability",
+                            "liabilityId": "1004",
+                            "liabilityName": "飞机意外身故、伤残",
+                            "liabilityAmount": "80",
+                            "liabilityDesc": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "componentId": "wapConditionList",
+            "componentTitle": "保障说明",
+            "conditionList": [
+                {
+                    "componentId": "wapInsureAgeRange",
+                    "insureAgeRangeLable": "投保年龄",
+                    "insureAgeRange": ""
+                },
+                {
+                    "componentId": "wapInsurePeriod",
+                    "insurePeriodLable": "投保期间",
+                    "insurePeriod": ""
+                }
+            ]
+        },
+        {
+            "componentId": "wapIframe",
+            "iframeUrl": "aa.html"
+        },
+        {
+            "componentId": "wapProductDetails",
+            "productDetailsUrl": "bb.html"
+        },
+        {
+            "componentId": "wapReturnMessage",
+            "returnMessage": "packageId,packagePrice"
+        },
+        {
+            "componentId": "wapPayment"
+        }
+    ]
+}

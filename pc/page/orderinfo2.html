@@ -1,0 +1,286 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>个人信息</title>
+
+		<link rel="stylesheet" href="../src/css/insure.css" type="text/css" />
+
+	</head>
+
+	<body>
+		<!-- header start-->
+		<div id="header_widely">
+			<div id="header" class="clearfix">
+				<img class="logo" src="../src/image/tklogo.png" />
+				<img class="call" src="../src/image/call4.jpg" />
+			</div>
+		</div>
+		<!-- header end-->
+		<!--导航 star-->
+		<div class="nav">
+			<ul class="steps clearfix">
+				<li class="steps2 fl pos_rel">
+					<div class="line steps_current"></div>
+					<p class="t_red ">1.填写投保信息</p>
+					<img src="../src/image/circle.png" class="steps_img2" />
+				</li>
+				<li class="steps2 fl pos_rel">
+					<div class="line steps_color"></div>
+					<p class="t_6">2.健康告知</p>
+					<img src="../src/image/circle02.png" class="steps_img2" />
+				</li>
+				<li class="steps2 fl pos_rel">
+					<div class="line steps_color"></div>
+					<p class="t_6">3.支付</p>
+					<img src="../src/image/circle02.png" class="steps_img2" />
+				</li>
+				<li class="steps2 fl pos_rel">
+					<div class="line steps_color"></div>
+					<p class="t_6">4.成功</p>
+					<img src="../src/image/circle02.png" class="steps_img2" />
+				</li>
+			</ul>
+		</div>
+		<!--导航 end-->
+		<div class="main" id="main">
+			<h1 class="insurd_tit"></h1>
+			<!--投保人  start-->
+			<div class="applicant insure2_main">
+				<h4 class="pal_perInfo">投保人信息</h4>
+				<input type="hidden" id="applicantHealth" value="">
+			</div>
+			<!--投保人  end-->
+			<!--被保人  start-->
+			<div class="insured insure2_main">
+				<h4 class="pal_perInfo">被保人信息</h4>
+			</div>
+			<!--被保人  end-->
+			<!--受益人  start-->
+			<div class="beneficiary insure2_main">
+				<h4 class="pal_perInfo">受益人信息</h4>
+				<div id="ben_legal" id="ben_legal">
+					<p class="beneficiary-title">法定继承人范围是：第一顺序继承人为配偶、子女、父母；第二顺序继承人为兄弟姐妹、祖父母、外祖父母</p >
+				</div>
+				<div class="ben_desig" id="ben_desig">
+					<div class="ben_part" id="ben_part">
+						<div class="per_info clearfix" style="display:none">
+							<div class="per_info_con">
+								<input type="checkbox" name="" class="fl inpt_rad" >
+								<div  class="fl  mrgin_r30 perInfoName"></div>
+								<div  class="fl perInfoType">
+									<span class="perInfoTypeTxt"></span>/
+									<span class="perInfoCid"></span>
+									<input type="hidden" class="perInfoTypeValue" value=""/>
+								</div>
+								<div class="fl perInfoPercent">
+									收益比例：<input type="text" class=""/>%
+								</div>
+								
+								<div class="perInfoRelation " ></div>
+							</div>
+							<div class="per_info_tool" style="display: none;">
+								<a href="javascript:;" class="info_a modify_a">[修改]</a>
+								<a href="javascript:;" class="info_a del_a">[删除]</a>
+								<span class="btn_spa"></span>
+							</div>
+							
+						</div> 
+						 <div class="death_txt2  pos_rel ben_list clearfix">
+							<a class="del btn_style">删除</a>
+							
+							<div class="rowElem btn_save clearfix">
+								<a href="#" class="save">保存</a>
+								<a href="#" class="pay_link cancel">取消</a>
+							</div>
+						</div> 
+					</div>
+					<div class="rowElem  addwrap" componentId="">
+						<a class="" href="javascript:;" id="addBtn">+添加受益人</a>
+					</div>
+				</div>
+				<!--指定 end-->
+			</div>
+			<!--受益人  end-->
+			
+			<!--发票 start-->
+			<div class="invoice insure2_main" id="invoice">	
+				<!-- <h4 id="pal_perInfo"><input type="checkbox" id="inv_chk" class="inv_chk">发票寄送信息</h4>
+				<div id="inv_infor" class="inv_infor" componentId="tkOtherInvoice">
+					<div class="rowElem clearfix" id="tkInvoiceTitle" componentId="tkInvoiceTitle">
+						<label class="label1 "><span class="color_red">*</span>发票抬头：</label>
+						<input type="text" class="main_inpt4" id="">
+						<label class="label2 tip">保监会规定，发票抬头必须为投保人姓名</label>
+					</div>
+					<div class="rowElem clearfix" id="tkInvoiceName" componentId="tkInvoiceName">
+						<label class="label1 "><span class="color_red">*</span>收件人姓名：</label>
+						<input type="text" class="main_inpt4" id="">
+						<label class="label2 tip"></label>
+					</div>
+					<div class="rowElem clearfix" id="tkInvoiceArea"  componentId="tkInvoiceArea">
+						<label class="label1 "><span class="color_red">*</span>收件人地址：</label>
+						<select name="">
+							<option value=""></option>
+						</select>
+						<select name="">
+							<option value=""></option>
+						</select>
+						<input type="text" class="main_inpt4 w70" id="" placeholder="请输入门牌号"/>
+						<label class="label2 tip"></label>
+					</div>
+					<div class="rowElem clearfix" id="tkInvoicePhone"  componentId="tkInvoicePhone">
+						<label class="label1 "><span class="color_red">*</span>手机号码：</label>
+						<input type="text" class="main_inpt4" id="">
+						<label class="label2 tip"></label>
+					</div>
+					<div class="rowElem clearfix" id="tkOtherPolicy" componentId="tkOtherPolicy">
+						<label class="labelpolicy"><input type="checkbox"/>我要纸质保单</label>
+					</div>
+				</div> -->
+			</div>
+			<!--发票 end-->
+			
+			
+			<!--订单列表 start-->
+			<div class="assured ">
+				<h4 class="assured_h4">订单明细</h4>
+				<div class="detail_info">
+					<ul class="clearfix detail_tit">
+						<li class="fl width40 ">&nbsp;&nbsp;计划名称</li>
+						<li class="fl width15 ">价格（元）</li>
+						<li class="fl width10">数量</li>
+						<li class="fl width15">优惠</li>
+						<li class="fl width15">小计（元）</li>
+					</ul>
+
+					<ul class="clearfix">
+						<li class="fl width40 clearfix">
+							<img src="../src/image/img.png" class="fl img_sty">
+							<div class="pro_name">
+								<h5 id="orderProductName"></h5>
+								<span id="planDesc"></span>
+								<p>计划名称：<span id="planName"></span>
+									<br/> 投保年龄：<span id="productAge"></span>
+								</p>
+							</div>
+						</li>
+						<li class="fl width15 pad_top fs14">￥<span id="orderPrice"></span></li>
+						<li class="fl width10 pad_top fs14">1</li>
+						<li class="fl width15 pad_top fs14">无</li>
+						<li class="fl width15 price pad_top2">￥<span id="orderTotlePrice"></span></li>
+					</ul>
+
+				</div>
+
+			</div>
+			<!--订单列表 end-->
+			
+			<!--推荐人 start-->
+			<div class="recommend" id="recommend" >
+				<!--h5 class="tit_h5" id="recommTit">填写推荐人信息</h5>
+				<div class="integral clearfix" id="integral">
+				   <p class="fl integral_p">快告诉我们是谁推荐了您，送TA一份惊喜吧！</p>
+				   <div>
+					   <input type="text" class="fl int_inp3" placeholder="快快填写TA的手机号吧">
+					   <span class="btn_use fl">提交</span>
+					   <p class="col_red inte_p ">惊喜已到账且成功告知TA咯！</p>
+				   </div>
+				</div-->
+			</div>
+			<!--推荐人 end-->
+		</div>
+		<!--同意声明-->
+		<div class="sure cleafix">
+			<div class="sure-inner">
+				<input type="checkbox" id="agrChk" />
+				<label for="agrChk">我已阅读并同意</label>
+				<span class="statement" id="statement">投保声明</span>
+			</div>
+		</div>
+		<!-- 按钮代码-->
+		<div class="continue_expect clearfix">
+			<div class="order clearfix">
+				<div class="btn_left fl">
+					<div class="btn_step fl" id="back">上一步</div>
+					<div class="width50 fl">
+						<p class="p2">应交保费：</p>
+						<p class="p3">
+							<span>￥</span>
+							<font id="planPrice"></font>
+						</p>
+						<span class="btn_span" style="display: none;">可获积分：3500 分</span>
+					</div>
+				</div>
+				<div class="rowElem fr">
+					<input type="button" value="同意以上声明，下一步" id="check-form" />
+				</div>
+			</div>
+
+		</div>
+		<!-- 按钮代码-->
+
+		<!-- footer start-->
+		<div class="footer">
+			<div class="footer-inner">
+				<p>泰康在线财产保险股份有限公司 版权所有Copyright © Tk.cn Insurance CO.,LTD. All Rights Reserved | 京ICP备09074081号-19</p>
+			</div>
+
+		</div>
+		<!-- footer end-->
+		<!--声明提示框 start-->
+		<div id="agreeStatementMask" class="agreeStatementMask"></div>
+		<div id="agreeStatement" class="agreeStatement">
+			<div class="win_tit5">
+				<p>投保须知及声明</p>
+				<span class="statement-close" id="statement-close"></span>
+			</div>
+			<div class="p_group">
+				<p>一、投保须知</p>
+				<p>1、投保地区</p>
+				<p>本计划仅限在中国大陆有固定居住地的人士投保。</p>
+				<p>2.保单形式</p>
+				<p>网上投保为您提供电子保单，根据《中华人民共和国合同法》第十一条规定，数据电文是合法的合同表现形式，电子保单与纸质保单具有同等法律效力。您可以登录www.tk.cn自助查询对电子保单的真实性进行验证。</p>
+				<p>3.如实告知</p>
+				<p>您应如实填写投保信息，并就我们提出的询问据实告知,否则我们有权根据《中华人民共和国保险法》第十六条的规定解除保险合同且不承担赔偿责任：</p>
+				<p>（1）订立保险合同时，保险公司就保险标的或者被保险人的有关情况提出询问的，投保人应当如实告知。</p>
+				<p>（2）投保人故意或者因重大过失未履行前款规定的如实告知义务，足以影响保险公司决定是否同意承保或者提高保险费率 的，保险公司有权解除合同。</p>
+				<p>（3）投保人故意不履行如实告知义务的，保险公司对于合同解除前发生的保险事故，不承担赔偿责任，并不退还保险费。 </p>
+				<p>（4）投保人因重大过失未履行如实告知义务，对保险事故的发生有严重影响的，保险公司对于合同解除前发生的保险事故，不承担赔偿责任，但退还保险费。</p>
+				<p>4.信息变更</p>
+				<p>如果您的邮件地址、通信地址、邮编、联系电话发生变化，请与本公司客户服务电话40000-95522联系，办理变更事宜。</p>
+				<p>二、投保声明</p>
+				<p>1、本人已完整阅读并了解以上投保须知及投保险种的保险条款。</p>
+				<p>2、投保单中所填写的内容均属实，如有隐瞒或不实告知，你公司有权解除保险合同，对于合同解除前发生的任何事故，你公司可不承担任何责任。</p>
+				<p>3、本人已知晓本产品在网上投保申请日后次日零时即生效；</p>
+				<p>4、本人已知晓本产品仅可购买一份，多投超出部分无效。</p>
+				<p>5、本人同意你公司通过手机（包括手机短信）、E-mail适时提供保险信息服务。</p>
+			</div>
+			<div class="win_tit2"> <span class="winTitP" id="agreeStatement_close">阅读并同意以上声明</span> </div>
+		</div>
+		<!--声明提示框 end-->
+	</body>
+	<script src="../src/js/jquery.min.js"></script>
+	<script src="../dist/siteUrl.js"></script>
+	<script src="../src/js/json.js"></script>
+	<script src="../src/js/sessionStorage.js"></script>
+	<script src="../src/js/jquery.cookie.js"></script>
+	<script src="../src/js/jquery.base64.js"></script>
+	<script src="../src/js/layer/layer.js"></script>
+	
+
+	<script src="http://cdnmaster.com/sitemaster/collect.js"></script>
+	<script src="../src/js/pushCode.js"></script>
+	<script src="../src/js/o_code.js"></script>
+	<script src="../src/js/tkTrack.js"></script>
+	<script src="../src/js/count.js"></script>
+	<script src="../src/js/laydate/laydate.js"></script>
+	<script src="../src/js/birthdayControl.js"></script><!--日期控件-->
+	<script src="../src/plug/DatePicker/WdatePicker.js"></script>
+	<script src="../src/js/checkFn2.js"></script>
+	<script src="../src/js/phContaine2.js"></script>
+	<script src="../src/js/nationality.js"></script><!--国籍控件-->
+	<script src="../src/js/areaJson.js"></script>
+	<script src="../dist/orderinfo_operaton2.js"></script>
+
+</html>

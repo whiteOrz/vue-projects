@@ -1,0 +1,91 @@
+{
+    "pcDetails": [
+        {
+            "componentId": "pcProductDesc",
+            "productName": "全年综合意外保障",
+            "productDescription": "每天低至0.15元！大小意外全保，工作生活、居家旅行必备！"
+        },
+        {
+            "componentId": "pcProductPrice",
+            "priceType": "会员价",
+            "productPrice": "50",
+            "discountInfo": "会员购买再送超值积分",
+            "activityTitle": "优惠信息"
+        },
+        {
+            "componentId": "pcConditionList",
+            "conditions": [
+                {
+                    "componentId": "pcCondition",
+                    "conditionName": "投保年龄",
+                    "conditionDescription": "18-65周岁（含）"
+                },
+                {
+                    "componentId": "pcCondition",
+                    "conditionName": "保多久",
+                    "conditionDescription": "1年"
+                }
+            ]
+        },
+        {
+            "componentId": "pcPackageList",
+            "componentTitle": "保障责任",
+            "packageNameList": [
+                {
+                    "componentId": "pcPackageName",
+                    "packageName": "基本款"
+                },
+                {
+                    "componentId": "pcPackageName",
+                    "packageName": "白金款"
+                }
+            ],
+            "packageList": [
+                {
+                    "componentId": "pcPackage",
+                    "packageId": "xxx",
+                    "packageName": "基本款",
+                    "packagePrice": "50",
+                    "packageLiabilityList": [
+                        {
+                            "componentId": "pcLiability",
+                            "liabilityId": "xx",
+                            "liabilityName": "意外身故",
+                            "liabilityAmount": "10",
+                            "liabilityDescription": "因意外伤害事故直接导致被保险人在该意外伤害事故发生之日起180日内身故的，将按合同约定给付受益人意外身故保险金。"
+                        },
+                        {
+                            "componentId": "pcLiability",
+                            "liabilityId": "xx",
+                            "liabilityName": "公共汽车、电车意外伤害",
+                            "liabilityAmount": "10",
+                            "liabilityDescription": "因意外伤害事故直接导致被保险人在该意外伤害事故发生之日起180日内身故的，将按合同约定给付受益人意外身故保险金。"
+                        }
+                    ]
+                },
+                {
+                    "componentId": "pcPackage",
+                    "packageId": "xxx",
+                    "packageName": "白金款",
+                    "packagePrice": "100",
+                    "packageLiabilities": [
+                        {
+                            "componentId": "pcLiability",
+                            "liabilityId": "xx",
+                            "liabilityName": "意外身故",
+                            "liabilityAmount": "10",
+                            "liabilityDescription": "因意外伤害事故直接导致被保险人在该意外伤害事故发生之日起180日内身故的，将按合同约定给付受益人意外身故保险金。"
+                        },
+                        {
+                            "componentId": "pcLiability",
+                            "liabilityId": "xx",
+                            "liabilityName": "公共汽车、电车意外伤害",
+                            "liabilityAmount": "10",
+                            "liabilityDescription": "因意外伤害事故直接导致被保险人在该意外伤害事故发生之日起180日内身故的，将按合同约定给付受益人意外身故保险金。"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,100 @@
+body {
+    width: 100%;
+    padding-bottom: .8rem;
+    overflow-x: hidden
+}
+.fontSize28 {
+    font-size: .7rem
+}
+.txt_c {
+    text-align: center
+}
+.l {
+    float: left
+}
+.r {
+    float: right
+}
+.marginR12 {
+    margin-right: .3rem
+}
+.marginB42 {
+    margin-bottom: 1.05rem
+}
+.windowBox {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.7);
+    top: 0;
+    left: 0
+}
+.windowCont2 {
+    width: 14.4rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -7.2rem;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    padding: .75rem .5rem 1.3rem .5rem;
+    background-color: #222f40;
+    border-radius: 5px
+}
+.clearFix:after {
+    content: ".";
+    height: 0;
+    visibility: hidden;
+    display: block;
+    clear: both
+}
+.upMoney {
+    display: block;
+    box-sizing: border-box;
+    width: 4.15rem;
+    height: 1.4rem;
+    border-radius: 1.4rem;
+    border: 1px solid #01b786;
+    color: #01b786;
+    line-height: 1.35rem
+}.select {
+    background-color: #01b786;
+    color: #fff
+}
+.full {
+    display: block;
+    box-sizing: border-box;
+    width: 4.15rem;
+    height: 1.4rem;
+    border-radius: 1.4rem;
+    border: 1px solid #01b786;
+    line-height: 1.35rem;
+}
+.payMoney {
+    color: #ec6c00;
+    margin-bottom: 1.8rem
+}
+.moneyNum {
+    font-size: .8rem;
+    font-weight: bold
+}
+.btnCancelPay {
+    display: block;
+    box-sizing: border-box;
+    width: 5.55rem;
+    height: 1.65rem;
+    border-radius: 1.65rem;
+    border: 1px solid #ec6c00;
+    line-height: 1.6rem;
+    color: #ec6c00
+}
+.btnSurePay {
+    display: block;
+    box-sizing: border-box;
+    width: 5.55rem;
+    height: 1.65rem;
+    border-radius: 1.65rem;
+    background-color: #ec6c00;
+    line-height: 1.65rem;
+    color: #fff
+}

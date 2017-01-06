@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>试算信息</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/my_style.css">
+    <script src="js/jquery.min.js"></script>
+</head>
+<body>
+    <div><a class="color-00c fw7" href="#">《 返回产品列表</a></div>
+    <div class="mt1">
+        <a href="javascript:;">1.基本信息</a>->
+        <a class="color-00c fw7" href="javascript:;">2.试算信息</a>->
+        <a href="page3.html">3.投保流程</a>->
+        <a href="javascript:;">4.投保声明</a>->
+        <a href="javascript:;">5.支付方式</a>
+    </div>
+
+    <div id="content1" class="mt1 flex">
+        <div class="border-ccc fw7">套餐内容</div>
+        <div class="ml1 f1">
+            <div id="packageConfig">
+                <div class="textr table1">
+                    <a id="configBtn1" class="color-00c fw7" href="javascript:;">添加字段</a>
+                </div>
+                <div class="mt1 border-ccc table1">
+                    <div class="row">
+                        <div class="col2 fw7">字段名称</div>
+                        <div class="col3 fw7 border-left-ccc">数据字典</div>
+                    </div>
+                    <div id="configTable1"></div>
+                    <div id="dataExplame">
+                        <div class="row" data-type="">
+                            <div class="col2"></div>
+                            <div class="col3 border-left-ccc"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="packageContent" class="mt2">
+
+            </div>
+        </div>
+    </div>
+    <div id="content2" class="mt1 flex">
+        <div class="border-ccc fw7">保费定价</div>
+        <div class="ml1 f1">
+            <div>
+                <a id="createAllPlan" class="btn1">定价</a>
+            </div>
+            <div class="mt1 border-ccc table3" style="display:none;">
+                <div class="row">
+                    <div class="col fw7">套餐名称</div>
+                    <div class="col2 border-left-ccc fw7">投保年龄</div>
+                    <div class="col border-left-ccc fw7">保障期限</div>
+                    <div class="col border-left-ccc fw7">保费</div>
+                    <div class="col border-left-ccc fw7">积分</div>
+                    <div class="col2 border-left-ccc fw7 color-red">定额方案代码</div>
+                </div>
+                <div id="plansTable" class="plansTable">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mt5">
+        <a class="btn2" onclick="savaConfigData();">暂存</a>
+        <a class="btn2" onclick="goNext();">下一步</a>
+    </div>
+
+    <div id="dataConfig1" class="dataConfig1">
+        <input id="d1" type="checkbox" value="insureAge" />
+        <label for="d1">投保年龄</label>
+        <input id="d2" type="checkbox" class="ml5" value="insurePeriod" />
+        <label for="d2">保障期限</label>
+        <input id="d3" type="checkbox" class="ml5" value="insurePlan" />
+        <label for="d3">套餐</label>
+
+        <div class="mt5 textc">
+            <a class="btn3" onclick="setDataConfig1();">确定</a>
+            <a class="btn3 ml5" onclick="$('#dataConfig1').hide();">取消</a>
+        </div>
+    </div>
+
+    <div id="dataConfig2" class="dataConfig2">
+        <div class="title">输入选值（<span class="fw7 color-red">每行一个</span>）</div>
+        <textarea id="configInput"></textarea>
+        <div class="mt1 textc">
+            <a class="btn3" onclick="setDataConfig2();">确定</a>
+            <a class="btn3 ml5" onclick="$('#dataConfig2').hide();">取消</a>
+        </div>
+    </div>
+
+    <script>
+        var dataConfig = {};
+        $("#configBtn1").click(function() {
+            $("#dataConfig1").show();
+        });
+
+        function setDataConfig1() {
+            var arr = [];
+            $("#dataConfig1").find("input:checked").each(function() {
+                arr.push({
+                    "data": this.value,
+                    "label": $(this).next("label").text()
+                });
+            });
+
+            $("#configTable1").empty();
+            $("#dataExplame").hide();
+
+            if (!arr.length) {
+                $("#dataConfig1").hide();
+                $("#dataExplame").show();
+                return false;
+            }
+
+            $("#dataConfig1").hide();
+            $("#packageContent").empty();
+
+            var str = "";
+            for (var i = 0; i < arr.length; i++) {
+                var el = arr[i];
+                str += '<div class="row" data-type="' + el.data + '"><div class="col2">' + el.label + '</div><div class="col3 border-left-ccc plan"></div></div>';
+            }
+
+            $("#configTable1").html(str);
+            $(".plan").click(function(event) {
+                $("#dataConfig2").attr("data-type", $(this).parent().attr("data-type")).show();
+                var text = $(this).text();
+                text = text.replace(/,/g, "\n");
+                $("#configInput").val(text);
+            });
+        }
+
+        function setDataConfig2() {
+            var inputData = $("#configInput").val();
+            inputData = inputData.split("\n");
+            var map = {};
+            inputData = $.grep(inputData, function(el, i) {
+                return el && (map[el] ? false : map[el] = true);
+            });
+
+            console.log(inputData);
+
+            var dataType = $("#dataConfig2").attr("data-type");
+            $("#configTable1 .row[data-type=" + dataType + "] .plan").text(inputData);
+            $("#dataConfig2").hide();
+            $("#configInput").val("");
+
+            dataConfig[dataType] = inputData;
+            if (dataType == "insurePlan") {
+                ininInsurePlan(inputData);
+            }
+        }
+
+        function ininInsurePlan(planArr) {
+            var packageNameStr = '<div class="border-ccc row" style="width:30rem;">';
+            var packageListStr = '<div class="border-ccc table2" style="margin-top:2px;">';
+            packageListStr +=
+                '<div class="row bg-th">\
+                                <div class="col2 fw7">保障责任</div>\
+                                <div class="col4 border-left-ccc border-right-ccc fw7">责任说明</div>\
+                                <div class="col fw7">保额</div>\
+                                <div class="col border-left-ccc fw7">责任编码</div>\
+                            </div>';
+
+            var packageContent =
+                '<div class="row plantb">\
+                                      <div class="col2" contenteditable="true"></div>\
+                                      <div class="col4 border-left-ccc border-right-ccc" contenteditable="true"></div>\
+                                      <div class="col" contenteditable="true"></div>\
+                                      <div class="col border-left-ccc" contenteditable="true"></div>\
+                                      <div class="planItemControl"></div>\
+                                  </div>';
+
+            for (var i = 0; i < planArr.length; i++) {
+                packageNameStr += '<div class="planName col fw7 padding06 ' + (i > 0 ? 'border-left-ccc' : '') + '">' + planArr[i] + '</div>';
+                packageListStr += '<div id="plan' + i + '" class="planItem" plan="' + planArr[i] + '">' + packageContent + '</div>';
+            }
+            packageNameStr += "</div>";
+            packageListStr += "</div>";
+
+            $("#packageContent").html(packageNameStr + packageListStr);
+            $(".planItem").hide().eq(0).show();
+            $(".planName").click(function() {
+                $(".planName").removeClass("color-red");
+                $(this).addClass("color-red");
+                var plan = $(this).text();
+                $(".planItem").hide();
+                $(".planItem[plan=" + plan + "]").show();
+
+            }).eq(0).addClass("color-red");
+
+            $(".row").each(function(index1, el1) {
+                $(el1).find(".planItemControl").each(function(index2, el2) {
+                    var btn = '<a class="btn4 ml1 planItemAdd">+</a>';
+                    $(el2).html(btn);
+                });
+            });
+
+            $(".planItemAdd").click(addPlanRow);
+        }
+
+        function addPlanRow() {
+            var parent = $(this).parent().parent();
+
+            var packageContent =
+                '<div class="row plantb">\
+                                      <div class="col2" contenteditable="true"></div>\
+                                      <div class="col4 border-left-ccc border-right-ccc" contenteditable="true"></div>\
+                                      <div class="col" contenteditable="true"></div>\
+                                      <div class="col border-left-ccc" contenteditable="true"></div>\
+                                      <div class="planItemControl"></div>\
+                                  </div>';
+            var newRow = $(packageContent);
+            var btns = '<a class="btn4 ml1 planItemAdd">+</a><a class="btn4 ml1 planItemRemove">-</a>';
+            newRow.find(".planItemControl").css("right", "-8rem").html(btns);
+            parent.after(newRow);
+
+            newRow.find(".planItemAdd").click(addPlanRow);
+            newRow.find(".planItemRemove").click(function() {
+                $(this).parent().parent().remove();
+            });
+        }
+
+        $("#createAllPlan").click(function() {
+            var insureplanList = dataConfig.insurePlan || [""];
+            var insureAgeList = dataConfig.insureAge || [""];
+            var insurePeriodList = dataConfig.insurePeriod || [""];
+            var plans = [];
+
+            if (!dataConfig.insurePlan) {
+                alert("请设置套餐！");
+                return;
+            }
+
+            for (var i = 0; i < insureplanList.length; i++) {
+                var planName = insureplanList[i];
+                for (var j = 0; j < insureAgeList.length; j++) {
+                    var insureAge = insureAgeList[j];
+                    for (var k = 0; k < insurePeriodList.length; k++) {
+                        var insurePeriod = insurePeriodList[k];
+                        if (planName || insureAge || insurePeriod) {
+                            plans[plans.length] = {
+                                planName: planName,
+                                insureAge: insureAge,
+                                insurePeriod: insurePeriod
+                            };
+                        }
+                    }
+                }
+            }
+
+            if (!plans.length) {
+                return;
+            }
+
+            var planStr = '';
+            for (var i = 0; i < plans.length; i++) {
+                var p = plans[i];
+                planStr += '<div class="row">';
+                planStr += '<div class="col">' + (p.planName ? p.planName : ('套餐' + (i + 1))) + '</div>';
+                planStr += '<div class="col2 border-left-ccc"' + (p.insureAge ? '' : 'contenteditable="true"') + '>' + (p.insureAge ? p.insureAge : '') + '</div>';
+                planStr += '<div class="col border-left-ccc"' + (p.insurePeriod ? '' : 'contenteditable="true"') + '>' + (p.insurePeriod ? p.insurePeriod : '') + '</div>';
+                planStr += '<div class="col border-left-ccc" contenteditable="true"></div>';
+                planStr += '<div class="col border-left-ccc" contenteditable="true"></div>';
+                planStr += '<div class="col2 border-left-ccc" contenteditable="true"></div>';
+                planStr += '</div>';
+            }
+            $("#plansTable").html(planStr).parent().show();
+        });
+
+        function savaConfigData() {
+            //保存数据exp
+            // var obj = {
+            //     planConfig : {
+            //         insureAge : ["18-60周岁"],
+            //         insurePeriod : ["3天","7天","15天","30天","1年"],
+            //         insurePlan : [
+            //             {
+            //                 planName : "基本款",
+            //                 planContent : [
+            //                     {
+            //                         liabilityName: "意外身故",
+            //                         liabilityDesc : "意外身故",
+            //                         liabilityAmount : "10万"
+            //                     }
+            //                 ]
+            //             }
+            //         ]
+            //     },
+            //     planList : [
+            //         {
+            //             planName : "基本款",
+            //             insureAge : "18-60周岁",
+            //             insurePeriod : "3天",
+            //             planPrice : "10",
+            //             planCode : "1101a"
+            //         }
+            //     ]
+            // };
+            var obj = {};
+            obj.planConfig = {};
+            $.extend(true, obj.planConfig, dataConfig);
+            console.log(obj.planConfig);
+
+            if (obj.planConfig.insurePlan) {
+                for (var i = 0; i < obj.planConfig.insurePlan.length; i++) {
+                    var planName = obj.planConfig.insurePlan[i];
+                    var planContents = $("#plan" + i).find(".plantb");
+                    var planArr = [];
+                    planContents.each(function(index, el) {
+                        var content = {};
+                        var childs = $(el).children();
+                        content.liabilityName = childs.eq(0).text();
+                        content.liabilityDesc = childs.eq(1).text();
+                        content.liabilityAmount = childs.eq(2).text();
+                        content.liabilityId = childs.eq(3).text();
+                        planArr[planArr.length] = content;
+                    });
+
+                    obj.planConfig.insurePlan[i] = {
+                        planName: planName,
+                        planContent: planArr
+                    };
+                }
+            }
+
+            var planRows = $("#plansTable").find(".row");
+            var planList = [];
+            planRows.each(function(index, el) {
+                var childs = $(el).children();
+                planList[planList.length] = {
+                    planName: childs.eq(0).text(),
+                    insureAge: childs.eq(1).text(),
+                    insurePeriod: childs.eq(2).text(),
+                    planPrice: childs.eq(3).text(),
+                    planScore: childs.eq(4).text(),
+                    planCode: childs.eq(5).text()
+                };
+            });
+
+            if (planList.length) {
+                obj.planList = planList;
+            }
+            sessionStorage.setItem("page2Data", JSON.stringify(obj));
+            return planList.length ? obj : false;
+        }
+
+        $(function() {
+            var saveData = sessionStorage.getItem("page2Data");
+            if (!saveData) {
+                return;
+            }
+
+            saveData = JSON.parse(saveData);
+            var isAge = false;
+            var isPeriod = false;
+
+            if (saveData.planConfig) {
+                var config = saveData.planConfig;
+                var str = "";
+
+                if (config.insureAge) {
+                    isAge = true;
+                    str += '<div class="row" data-type="insureAge"><div class="col2">投保年龄</div><div class="col3 border-left-ccc plan">' + config.insureAge + '</div></div>';
+                    dataConfig.insureAge = config.insureAge;
+                }
+
+                if (config.insurePeriod) {
+                    isPeriod = true;
+                    str += '<div class="row" data-type="insurePeriod"><div class="col2">保障期限</div><div class="col3 border-left-ccc plan">' + config.insurePeriod + '</div></div>';
+                    dataConfig.insurePeriod = config.insurePeriod;
+                }
+
+                if (config.insurePlan && config.insurePlan.length) {
+                    var arr = [];
+                    for (var i = 0; i < config.insurePlan.length; i++) {
+                        arr[i] = config.insurePlan[i].planName;
+                    }
+                    str += '<div class="row" data-type="insurePlan"><div class="col2">套餐</div><div class="col3 border-left-ccc plan">' + arr + '</div></div>';
+                    dataConfig.insurePlan = arr;
+
+                    setDataTable2(config.insurePlan);
+                }
+
+                if (str) {
+                    $("#configTable1").html(str);
+                    $("#dataExplame").hide();
+
+                    $(".plan").click(function(event) {
+                        $("#dataConfig2").attr("data-type", $(this).parent().attr("data-type")).show();
+                    });
+                }
+            }
+
+            if (saveData.planList && saveData.planList.length) {
+                //$("#plansTable")
+                var planStr = '';
+                for (var i = 0; i < saveData.planList.length; i++) {
+                    var p = saveData.planList[i];
+
+                    //             planName : "基本款",
+                    //             insureAge : "18-60周岁",
+                    //             insurePeriod : "3天",
+                    //             planPrice : "10",
+                    //             planCode : "1101a"
+                    //             planScore : "100"
+
+                    planStr += '<div class="row">';
+                    planStr += '<div class="col">' + p.planName + '</div>';
+                    planStr += '<div class="col2 border-left-ccc"' + (isAge ? '' : 'contenteditable="true"') + '>' + p.insureAge + '</div>';
+                    planStr += '<div class="col border-left-ccc"' + (isPeriod ? '' : 'contenteditable="true"') + '>' + p.insurePeriod + '</div>';
+                    planStr += '<div class="col border-left-ccc" contenteditable="true">' + p.planPrice + '</div>';
+                    planStr += '<div class="col border-left-ccc" contenteditable="true">' + p.planScore + '</div>';
+                    planStr += '<div class="col2 border-left-ccc" contenteditable="true">' + p.planCode + '</div>';
+                    planStr += '</div>';
+                }
+                $("#plansTable").html(planStr).parent().show();
+            }
+        });
+
+        function setDataTable2(planArr) {
+            var packageNameStr = '<div class="border-ccc row" style="width:30rem;">';
+            var packageListStr = '<div class="border-ccc table2" style="margin-top:2px;">';
+            packageListStr +=
+                '<div class="row bg-th">\
+                                <div class="col2 fw7">保障责任</div>\
+                                <div class="col4 border-left-ccc border-right-ccc fw7">责任说明</div>\
+                                <div class="col fw7">保额</div>\
+                                <div class="col border-left-ccc fw7">责任编码</div>\
+                            </div>';
+
+            for (var i = 0; i < planArr.length; i++) {
+                packageNameStr += '<div class="planName col fw7 padding06 ' + (i > 0 ? 'border-left-ccc' : '') + '">' + planArr[i].planName + '</div>';
+                var subStr = '<div id="plan' + i + '" class="planItem" plan="' + planArr[i].planName + '">';
+
+                for (var j = 0; j < planArr[i].planContent.length; j++) {
+                    var obj = planArr[i].planContent[j];
+
+                    var controlStr = '<a class="btn4 ml1 planItemAdd">+</a>';
+                    var styleStr = "";
+                    if (j) {
+                        controlStr += '<a class="btn4 ml1 planItemRemove">-</a>';
+                        styleStr = 'style="right:-8rem"';
+                    }
+
+                    var packageContent = '<div class="row plantb">\
+                                              <div class="col2" contenteditable="true">' + obj.liabilityName +
+                        '</div>\
+                                              <div class="col4 border-left-ccc border-right-ccc" contenteditable="true">' + obj.liabilityDesc +
+                        '</div>\
+                                              <div class="col" contenteditable="true">' + obj.liabilityAmount +
+                        '</div>\
+                                              <div class="col border-left-ccc" contenteditable="true">' + obj.liabilityId + '</div>\
+                                              <div class="planItemControl" ' +
+                        styleStr + '>' +
+                        controlStr + '</div>\
+                                          </div>';
+
+                    subStr += packageContent;
+                }
+
+                subStr += '</div>';
+                packageListStr += subStr;
+            }
+            packageNameStr += "</div>";
+            packageListStr += "</div>";
+
+            $("#packageContent").html(packageNameStr + packageListStr);
+            $(".planItem").hide().eq(0).show();
+            $(".planName").click(function() {
+                $(".planName").removeClass("color-red");
+                $(this).addClass("color-red");
+                var plan = $(this).text();
+                $(".planItem").hide();
+                $(".planItem[plan=" + plan + "]").show();
+            }).eq(0).addClass("color-red");
+
+            $(".planItemAdd").click(addPlanRow);
+            $(".planItemRemove").click(function() {
+                $(this).parent().parent().remove();
+            });
+        }
+
+        function goNext() {
+            var obj = savaConfigData();
+            if (!obj) {
+                alert("没有生成套餐！");
+                return;
+            }
+
+            // var obj = {
+            //     planConfig : {
+            //         insureAge : ["18-60周岁"],
+            //         insurePeriod : ["3天","7天","15天","30天","1年"],
+            //         insurePlan : [
+            //             {
+            //                 planName : "基本款",
+            //                 planContent : [
+            //                     {
+            //                         liabilityName: "意外身故",
+            //                         liabilityDesc : "意外身故",
+            //                         liabilityAmount : "10万"
+            //                     }
+            //                 ]
+            //             }
+            //         ]
+            //     },
+            //     planList : [
+            //         {
+            //             planName : "基本款",
+            //             insureAge : "18-60周岁",
+            //             insurePeriod : "3天",
+            //             planPrice : "10",
+            //             planCode : "1101a"
+            //         }
+            //     ]
+            // };
+
+            var wapData = [];
+            var wechatData = [];
+
+            //wapInsureAgeList
+            var wapInsureAgeList = {
+                componentId: "wapPremiumFactor",
+                componentTitle: "投保年龄",
+                premiumFactorId: "insureAge",
+                factorList: []
+            };
+
+            var ageList = obj.planConfig.insureAge || [];
+            for (var i = 0; i < ageList.length; i++) {
+                wapInsureAgeList.factorList[i] = {
+                    "componentId": "wapInsureAge",
+                    "factorKey": ageList[i],
+                    "factorValue": i
+                };
+            }
+            if (ageList.length) {
+                wapData[wapData.length] = wapInsureAgeList;
+            }
+            console.log(wapInsureAgeList);
+
+            //wapInsurePeriodList
+            var wapInsurePeriodList = {
+                componentId: "wapPremiumFactor",
+                componentTitle: "投保期间",
+                premiumFactorId: "insurePeriod",
+                factorList: []
+            };
+            var periodList = obj.planConfig.insurePeriod || [];
+            for (var i = 0; i < periodList.length; i++) {
+                wapInsurePeriodList.factorList[i] = {
+                    "componentId": "wapInsurePeriod",
+                    "factorKey": periodList[i],
+                    "factorValue": i
+                };
+            }
+
+            if (periodList.length) {
+                wapData[wapData.length] = wapInsurePeriodList;
+            }
+            console.log(wapInsurePeriodList);
+
+            //wapPlanNameList
+            var wapPlanNameList = {
+                componentId: "wapPlanNameList",
+                componentTitle: "保障责任",
+                planNameList: []
+            };
+            var planConfigList = obj.planConfig.insurePlan;
+            var pNameArr = [];
+            for (var i = 0; i < planConfigList.length; i++) {
+                var name = planConfigList[i].planName;
+                wapPlanNameList.planNameList[i] = {
+                    "componentId": "wapPlanName",
+                    "planName": name,
+                    "planNameIndex": i
+                };
+                pNameArr[i] = name;
+            }
+            wapData[wapData.length] = wapPlanNameList;
+            wechatData[wechatData.length] = wapPlanNameList.planNameList;
+            console.log(wapPlanNameList);
+
+            //wapPlanList
+            var wapPlanList = {
+                componentId: "wapPlanList",
+                planList: []
+            };
+            var wechatPlanList = [];
+            for (var i = 0; i < obj.planList.length; i++) {
+                var planObj = obj.planList[i];
+                var age = planObj.insureAge;
+                var period = planObj.insurePeriod;
+                var name = planObj.planName;
+                var factor = getPlanFactorList(age, period, name);
+                wapPlanList.planList[i] = {
+                    "componentId": "wapPlan",
+                    "planId": planObj.planCode,
+                    "planIndex": factor.factorIndexList,
+                    "planName": planObj.planName,
+                    "planPrice": planObj.planPrice,
+                    "planScore": planObj.planScore,
+                    "planLiabilityList": getPlanLiabilityList(factor.planIndex)
+                };
+                wechatPlanList[i] = {
+                    "componentId": "wechatPlan",
+                    "planId": planObj.planCode,
+                    "planIndex": factor.factorIndexListWechat,
+                    "planName": planObj.planName,
+                    "planPrice": planObj.planPrice,
+                    "planScore": planObj.planScore,
+                    "planLiabilityList": getPlanLiabilityList(factor.planIndex)
+                }
+            }
+            wapData[wapData.length] = wapPlanList;
+            wechatData[wechatData.length] = wechatPlanList;
+            console.log(wapPlanList);
+
+            function getPlanLiabilityList(planIndex) {
+                var planConfig = planConfigList[planIndex];
+                var contents = planConfig.planContent;
+                var arr = [];
+
+                $.each(planConfig.planContent, function(index, el) {
+                    arr[index] = {
+                        "componentId": "wapLiability",
+                        "liabilityId": el.liabilityId,
+                        "liabilityName": el.liabilityName,
+                        "liabilityAmount": el.liabilityAmount,
+                        "liabilityDesc": el.liabilityDesc
+                    };
+                });
+                return arr;
+            }
+
+            function getPlanFactorList(age, period, name) {
+                var factorIndexStr = "";
+                var factorIndexStrWechat = "";
+                var planIndex = 0;
+
+                if (ageList.length && age) {
+                    factorIndexStrWechat = factorIndexStr = ""+ageList.indexOf(age);
+                }
+
+                if (periodList.length && period) {
+                    factorIndexStr += ""+periodList.indexOf(period);
+                }
+
+                if (pNameArr.length && name) {
+                    planIndex = pNameArr.indexOf(name);
+                    factorIndexStr += ""+planIndex;
+                    factorIndexStrWechat += ""+planIndex;
+                }
+
+                return {
+                    factorIndexList: factorIndexStr,
+                    factorIndexListWechat : factorIndexStrWechat,
+                    planIndex: planIndex
+                };
+            }
+
+            var details = sessionStorage.getItem("details") || "";
+            if (details) {
+                details = JSON.parse(details);
+                if (details.wapDetails) {
+                    for (var i = 0; i < wapData.length; i++) {
+                        details.wapDetails[details.wapDetails.length] = wapData[i];
+                    }
+                }
+
+                if (details.appDetails) {
+                    var appData = [];
+                    $.extend(true, appData, wapData);
+                    appData = JSON.stringify(appData);
+                    appData = appData.replace(/wap/g, "app");
+                    appData = JSON.parse(appData);
+                    for (var i = 0; i < appData.length; i++) {
+                        details.appDetails[details.appDetails.length] = appData[i];
+                    }
+                }
+
+                if (details.pcDetails) {
+                    var pcData = [];
+                    $.extend(true, pcData, wapData);
+                    pcData = JSON.stringify(pcData);
+                    pcData = pcData.replace(/wap/g, "pc");
+                    pcData = JSON.parse(pcData);
+                    for (var i = 0; i < pcData.length; i++) {
+                        details.pcDetails[details.pcDetails.length] = pcData[i];
+                    }
+                }
+
+                var condtionConfig = sessionStorage.getItem("condtionConfig") || "";
+                if (condtionConfig) {
+                    condtionConfig = JSON.parse(condtionConfig);
+                }
+
+                if (details.wechatEntity) {
+                    wechatData = JSON.stringify(wechatData);
+                    wechatData = wechatData.replace(/wap/g, "wechat");
+                    wechatData = JSON.parse(wechatData);
+
+                    details.wechatEntity.push({
+                        "componentId": "wechatPlanList",
+                        "componentTitle": "选择计划",
+                        "planNameList": wechatData[0],
+                        "planList": wechatData[1]
+                    });
+
+                    //保障说明
+                    condtionConfig.wechat && (details.wechatEntity.push(condtionConfig.wechat));
+
+                    //投保年龄
+                    var wechatInsureAge = JSON.stringify(wapInsureAgeList);
+                    wechatInsureAge = wechatInsureAge.replace(/wap/g, "wechat");
+                    wechatInsureAge = JSON.parse(wechatInsureAge);
+                    details.wechatEntity.push(wechatInsureAge);
+                }
+
+                if (details.cpsEntity) {
+                    wechatData = JSON.stringify(wechatData);
+                    wechatData = wechatData.replace(/wechat/g, "cps");
+                    wechatData = JSON.parse(wechatData);
+
+                    details.cpsEntity.push({
+                        "componentId": "cpsPlanList",
+                        "componentTitle": "选择计划",
+                        "planNameList": wechatData[0],
+                        "planList": wechatData[1]
+                    });
+
+                    //保障说明
+                    condtionConfig.cps && (details.cpsEntity.push(condtionConfig.cps));
+
+                    var cpsInsureAge = JSON.stringify(wapInsureAgeList);
+                    cpsInsureAge = cpsInsureAge.replace(/wap/g, "cps");
+                    cpsInsureAge = JSON.parse(cpsInsureAge);
+                    details.cpsEntity.push(cpsInsureAge);
+                }
+
+                sessionStorage.setItem("details", JSON.stringify(details));
+                console.log(details);
+
+                location.href = "inputsConfig.html";
+            }
+        }
+    </script>
+</body>
+</html>

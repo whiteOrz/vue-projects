@@ -1,0 +1,715 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="yes" name="apple-touch-fullscreen">
+<meta content="telephone=no,email=no" name="format-detection">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+<%-- <script src="http://whzt.taikang.com/brazil/static/js/flexible.debug.js"></script> --%>
+<link rel="stylesheet" type="text/css"
+	href="http://whzt.taikang.com/brazil/static/css/base.css">
+<link rel="stylesheet" type="text/css"
+	href="http://whzt.taikang.com/brazil/static/css/style.css">
+<link rel="stylesheet" type="text/css"
+	href="http://whzt.taikang.com/brazil/static/css/animate.css">
+<link rel="stylesheet" type="text/css"
+	href="http://whzt.taikang.com/brazil/static/css/main.css">
+	<style>
+		.layout1{
+			width: 100%;
+		    height: 100%;
+		    z-index: 10000;
+		    opacity: 1;
+		    position: absolute;
+		    display: -webkit-box;
+		    -webkit-box-orient: vertical;
+		    overflow: hidden;
+		}
+		.flexDiv{
+		    -webkit-box-flex: 1;
+		    background-color: rgba(0,0,0,.8);
+		    display: block;
+	    }
+	</style>
+<title>奔跑奥运，一路泰康！</title>
+</head>
+<body>
+	<div id="odiv" style="position:absolute;width:1rem;"></div>
+	<div class="layout hideDiv">
+		<div class="layout1 ">
+			<!--<img class="layout_bg" src="http://whzt.taikang.com/brazil/static/images/bg7.jpg"/>-->
+			<img class="zhan_top" class="layout_close"
+				src="http://whzt.taikang.com/brazil/static/images/zhan_top.jpg" />
+			<img class="zhan_center" class="layout_close"
+				src="http://whzt.taikang.com/brazil/static/images/zhan_center.jpg" />
+			<img class="zhan_bottom" class="layout_close"
+				src="http://whzt.taikang.com/brazil/static/images/zhan_bottom.jpg" />
+				<div class="flexDiv" style=""></div>
+			<img class="layout_close"
+				src="http://whzt.taikang.com/brazil/static/images/close.png" />
+		</div>
+	</div>
+
+	<!--loading-->
+	<div id="loadingDiv" class="loading">
+		<div class="main">
+			<div class="img">
+				<img src="http://whzt.taikang.com/brazil/static/images/loading2.png" />
+			</div>
+			<div class="loader-inner ball-pulse">
+				<div></div>
+				<div></div>
+				<div></div>
+			</div>
+		</div>
+	</div>
+
+	<div class="wrapper wrapper_posi">
+		<!--信封-->
+		<div class="page page1 hideDiv">
+			<div class="stage">
+				<img class="page1_xin" src="http://whzt.taikang.com/brazil/static/images/xin2.png" />
+				<img class="page1_txt" src="http://whzt.taikang.com/brazil/static/images/wen.png" />
+			</div>
+			<div class="stage2">
+				<img class="page2_xin" src="http://whzt.taikang.com/brazil/static/images/xin.png" />
+				<%-- <img class="page1_wen" src="http://whzt.taikang.com/brazil/static/images/jiang.png" /> --%>
+				<div class="page1_txt_box">
+					<h5>亲爱的<span class="user_name"></span></h5>
+					<p class="page1_txt_we">一场时空涡流，将你带回了20年前，此刻正在奥运赛场拼搏的小伙伴们邀请你一起为国家赢金牌，并找到 重返2016的方法。</p>
+					<p class="page1_txt_we">所幸这一年泰康诞生，你将获得一艘泰康赠与的时空飞船，带着金牌和大奖荣誉回归！</p>
+				</div>
+				<img class="page1_wen2" src="http://whzt.taikang.com/brazil/static/images/look.png" />
+				<img class="page1_btn" src="http://whzt.taikang.com/brazil/static/images/btn.png" />
+			</div>
+		</div>
+
+		<!--站点-->
+		<div class="page page2 hideDiv">
+			<div class="page2_top clearfix">
+				<div class="top_left fl">
+					<div class="step">
+						<p class="step_title">今日步数</p>
+						<img class="step_img"
+							src="http://whzt.taikang.com/brazil/static/images/icon4.png" />
+						<div class="num">
+							<p class="nums step_num">0</p>
+						</div>
+					</div>
+					<div class="step">
+						<p class="step_title">距下一站</p>
+						<img class="step_img"
+							src="http://whzt.taikang.com/brazil/static/images/icon4.png" />
+						<div class="num">
+							<p class="nums next_num">0</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="awards fl current_site">
+					<img src="http://whzt.taikang.com/brazil/static/images/jiang/E2.png" />
+					<img src="http://whzt.taikang.com/brazil/static/images/jiang/E3.png" />
+					<img src="http://whzt.taikang.com/brazil/static/images/jiang/T2.png" />
+				</div>
+			</div>
+
+			<div class="map">
+				<!--<img class="yadian" src="http://whzt.taikang.com/brazil/static/images/ydz.png"/>-->
+				<p class="yate_click yaten noC"></p>
+				<p class="yadian_click yadianw noC"></p>
+				<p class="beij_click beij  noC"></p>
+				<p class="liyue_click liyue noC"></p>
+				<p class="taik_click taik noC"></p>
+				<!--<img class="yadian" src="http://whzt.taikang.com/brazil/static/images/yate.png"/>
+			<img class="yadian" src="http://whzt.taikang.com/brazil/static/images/bj.png"/>
+			<img class="yadian" src="http://whzt.taikang.com/brazil/static/images/icon8.png"/>
+			<img class="yadian" src="http://whzt.taikang.com/brazil/static/images/icon8.png"/>-->
+				<img class="jishi"
+					src="http://whzt.taikang.com/brazil/static/images/jishi.png" /> <img
+					class="help"
+					src="http://whzt.taikang.com/brazil/static/images/help.png" /> <img
+					class="xiaox"
+					src="http://whzt.taikang.com/brazil/static/images/xiaox.png" />
+			</div>
+
+			<div class="page2_bottom">
+				<img class="picture" src="http://whzt.taikang.com/brazil/static/images/icon11.png" />
+				<div class="page2_main clearfix">
+					<div class="main_left power fl">
+						<img class="page2_wen"
+							src="http://whzt.taikang.com/brazil/static/images/power.png" />
+						<div class="main_step">
+							<p class="my_step jinb">0</p>
+							<p>/</p>
+							<p class="all_step">40000</p>
+						</div>
+						<div class="shanxian">
+							<img src="http://whzt.taikang.com/brazil/static/images/icon9.png" />
+							<div class="shanxian_main">
+								<p class="shan_pross">
+									<span class="shan_pross_ju"></span>
+								</p>
+							</div>
+						</div>
+						<img class="add_btn go_power"
+							src="http://whzt.taikang.com/brazil/static/images/btn6.png" />
+					</div>
+					<div class="main_left save fl">
+						<img class="page2_wen2"
+							src="http://whzt.taikang.com/brazil/static/images/save.png" />
+						<div class="main_step">
+							<p class="my_step anxi">0</p>
+							<p>/</p>
+							<p class="all_baoe">150000</p>
+						</div>
+						<div class="baodun">
+							<img src="http://whzt.taikang.com/brazil/static/images/icon10.png" />
+							<div class="baodun_main">
+								<p class="bao_pross">
+									<span class="bao_pross_ju"></span>
+								</p>
+							</div>
+						</div>
+						<img class="add_btn go_save"
+							src="http://whzt.taikang.com/brazil/static/images/btn6.png" />
+					</div>
+				</div>
+			</div>
+
+
+		</div>
+
+		<!--雅典-->
+		<div class="page page3 hideDiv">
+			<div class="page2_top page2_top clearfix">
+				<div class="top_left fl">
+					<div class="step">
+						<p class="step_title">今日步数</p>
+						<img class="step_img"
+							src="http://whzt.taikang.com/brazil/static/images/icon4.png" />
+						<div class="num">
+							<p class="nums step_num">2356</p>
+						</div>
+					</div>
+					<div class="step">
+						<p class="step_title">距下一站</p>
+						<img class="step_img"
+							src="http://whzt.taikang.com/brazil/static/images/icon4.png" />
+						<div class="num">
+							<p class="nums next_num">3333333</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="awards fl">
+					<img src="http://whzt.taikang.com/brazil/static/images/jiang/E2.png" />
+					<img src="http://whzt.taikang.com/brazil/static/images/jiang/T3.png" />
+				</div>
+			</div>
+			<%-- <img class="yadian_txt" src="<%=request.getContextPath() %>/static/images/yd_txt.png"/>
+		<img class="shangc_btn" src="<%=request.getContextPath() %>/static/images/sahngc.png"/>
+		<img class="pages_click" src="<%=request.getContextPath() %>/static/images/zhan.png"/>
+		<img class="cai_click yd_cai shan" src="<%=request.getContextPath() %>/static/images/cai.png"/> --%>
+			<img class="pages_click" src="http://whzt.taikang.com/brazil/static/images/zhan.png" />
+			<img class="page4_txt" src="http://whzt.taikang.com/brazil/static/images/wen5.png" />
+			<img class="page4_btn" src="http://whzt.taikang.com/brazil/static/images/jin_btn.png" />
+			<img class="cai_click yt_cai shan" src="http://whzt.taikang.com/brazil/static/images/cai.png" />
+			<div class="page2_bottom">
+				<img class="picture" src="http://whzt.taikang.com/brazil/static/images/icon11.png" />
+				<div class="page2_main clearfix">
+					<div class="main_left power fl">
+						<img class="page2_wen"
+							src="http://whzt.taikang.com/brazil/static/images/power.png" />
+						<div class="main_step">
+							<p class="my_step jinb">0</p>
+							<p>/</p>
+							<p class="all_step">40000</p>
+						</div>
+						<div class="shanxian">
+							<img src="http://whzt.taikang.com/brazil/static/images/icon9.png" />
+							<div class="shanxian_main">
+								<p class="shan_pross">
+									<span class="shan_pross_ju"></span>
+								</p>
+							</div>
+						</div>
+						<img class="add_btn go_power"
+							src="http://whzt.taikang.com/brazil/static/images/btn6.png" />
+					</div>
+					<div class="main_left save fl">
+						<img class="page2_wen2"
+							src="http://whzt.taikang.com/brazil/static/images/save.png" />
+						<div class="main_step">
+							<p class="my_step anxi">0</p>
+							<p>/</p>
+							<p class="all_baoe">150000</p>
+						</div>
+						<div class="baodun">
+							<img src="http://whzt.taikang.com/brazil/static/images/icon10.png" />
+							<div class="baodun_main">
+								<p class="bao_pross">
+									<span class="bao_pross_ju"></span>
+								</p>
+							</div>
+						</div>
+						<img class="add_btn go_save"
+							src="http://whzt.taikang.com/brazil/static/images/btn6.png" />
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--亚特兰大-->
+		<div class="page page4 hideDiv">
+			<div class="page2_top page2_top clearfix">
+				<div class="top_left fl">
+					<div class="step">
+						<p class="step_title">今日步数</p>
+						<img class="step_img"
+							src="http://whzt.taikang.com/brazil/static/images/icon4.png" />
+						<div class="num">
+							<p class="nums step_num">0</p>
+						</div>
+					</div>
+					<div class="step">
+						<p class="step_title">距下一站</p>
+						<img class="step_img"
+							src="http://whzt.taikang.com/brazil/static/images/icon4.png" />
+						<div class="num">
+							<p class="nums next_num">0</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="awards fl">
+					<img src="http://whzt.taikang.com/brazil/static/images/jiang/E2.png" />
+					<img src="http://whzt.taikang.com/brazil/static/images/jiang/E3.png" />
+					<img src="http://whzt.taikang.com/brazil/static/images/jiang/T2.png" />
+				</div>
+			</div>
+			<%-- <img class="pages_click" src="<%=request.getContextPath() %>/static/images/zhan.png"/>
+		<img class="page4_txt" src="<%=request.getContextPath() %>/static/images/wen5.png"/>
+		<img class="page4_btn" src="<%=request.getContextPath() %>/static/images/jin_btn.png"/>
+		<img class="cai_click yt_cai shan" src="<%=request.getContextPath() %>/static/images/cai.png"/> --%>
+			<img class="yadian_txt" src="http://whzt.taikang.com/brazil/static/images/yd_txt.png" />
+			<img class="shangc_btn" src="http://whzt.taikang.com/brazil/static/images/sahngc.png" />
+			<img class="pages_click" src="http://whzt.taikang.com/brazil/static/images/zhan.png" />
+			<img class="cai_click yd_cai shan" src="http://whzt.taikang.com/brazil/static/images/cai.png" />
+			<div class="page2_bottom">
+				<div class="person_img">
+					<img class="picture"
+						src="http://whzt.taikang.com/brazil/static/images/icon11.png" />
+				</div>
+				<div class="page2_main clearfix">
+					<div class="main_left power fl">
+						<img class="page2_wen"
+							src="http://whzt.taikang.com/brazil/static/images/power.png" />
+						<div class="main_step">
+							<p class="my_step jinb">0</p>
+							<p>/</p>
+							<p class="all_step">40000</p>
+						</div>
+						<div class="shanxian">
+							<img src="http://whzt.taikang.com/brazil/static/images/icon9.png" />
+							<div class="shanxian_main">
+								<p class="shan_pross">
+									<span class="shan_pross_ju"></span>
+								</p>
+							</div>
+						</div>
+						<img class="add_btn go_power"
+							src="http://whzt.taikang.com/brazil/static/images/btn6.png" />
+					</div>
+					<div class="main_left save fl">
+						<img class="page2_wen2"
+							src="http://whzt.taikang.com/brazil/static/images/save.png" />
+						<div class="main_step">
+							<p class="my_step anxi">1200</p>
+							<p>/</p>
+							<p class="all_baoe">150000</p>
+						</div>
+						<div class="baodun">
+							<img src="http://whzt.taikang.com/brazil/static/images/icon10.png" />
+							<div class="baodun_main">
+								<p class="bao_pross">
+									<span class="bao_pross_ju"></span>
+								</p>
+							</div>
+						</div>
+						<img class="add_btn go_save"
+							src="http://whzt.taikang.com/brazil/static/images/btn6.png" />
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--北京-->
+		<div class="page page5 hideDiv">
+			<div class="page2_top page2_top clearfix">
+				<div class="top_left fl">
+					<div class="step">
+						<p class="step_title">今日步数</p>
+						<img class="step_img"
+							src="http://whzt.taikang.com/brazil/static/images/icon4.png" />
+						<div class="num">
+							<p class="nums step_num">2356</p>
+						</div>
+					</div>
+					<div class="step">
+						<p class="step_title">距下一站</p>
+						<img class="step_img"
+							src="http://whzt.taikang.com/brazil/static/images/icon4.png" />
+						<div class="num">
+							<p class="nums next_num">3333333</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="awards fl">
+					<img src="http://whzt.taikang.com/brazil/static/images/jiang/T4.png" />
+					<img src="http://whzt.taikang.com/brazil/static/images/jiang/T5.png" />
+					<img src="http://whzt.taikang.com/brazil/static/images/jiang/T6.png" />
+				</div>
+			</div>
+			<img class="pages_click"
+				src="http://whzt.taikang.com/brazil/static/images/zhan.png" /> <img
+				class="page4_txt page5_txt"
+				src="http://whzt.taikang.com/brazil/static/images/wen6.png" /> <img
+				class="page4_btn page5_btn"
+				src="http://whzt.taikang.com/brazil/static/images/jin_btn.png" />
+			<div class="page2_bottom">
+				<div class="person_img">
+					<img class="picture"
+						src="http://whzt.taikang.com/brazil/static/images/icon11.png" />
+				</div>
+				<div class="page2_main clearfix">
+					<div class="main_left power fl">
+						<img class="page2_wen"
+							src="http://whzt.taikang.com/brazil/static/images/power.png" />
+						<div class="main_step">
+							<p class="my_step jinb">1200</p>
+							<p>/</p>
+							<p class="all_step">100000</p>
+						</div>
+						<div class="shanxian">
+							<img src="http://whzt.taikang.com/brazil/static/images/icon9.png" />
+							<div class="shanxian_main">
+								<p class="shan_pross">
+									<span class="shan_pross_ju"></span>
+								</p>
+							</div>
+						</div>
+						<img class="add_btn go_power"
+							src="http://whzt.taikang.com/brazil/static/images/btn6.png" />
+					</div>
+					<div class="main_left save fl">
+						<img class="page2_wen2"
+							src="http://whzt.taikang.com/brazil/static/images/save.png" />
+						<div class="main_step">
+							<p class="my_step anxi">1200</p>
+							<p>/</p>
+							<p class="all_baoe">150000</p>
+						</div>
+						<div class="baodun">
+							<img src="http://whzt.taikang.com/brazil/static/images/icon10.png" />
+							<div class="baodun_main">
+								<p class="bao_pross">
+									<span class="bao_pross_ju"></span>
+								</p>
+							</div>
+						</div>
+						<img class="add_btn go_save"
+							src="http://whzt.taikang.com/brazil/static/images/btn6.png" />
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--里约-->
+		<div class="page page6 hideDiv">
+			<div class="page2_top page2_top clearfix">
+				<div class="top_left fl">
+					<div class="step">
+						<p class="step_title">今日步数</p>
+						<img class="step_img"
+							src="http://whzt.taikang.com/brazil/static/images/icon4.png" />
+						<div class="num">
+							<p class="nums step_num">2356</p>
+						</div>
+					</div>
+					<div class="step">
+						<p class="step_title">距下一站</p>
+						<img class="step_img"
+							src="http://whzt.taikang.com/brazil/static/images/icon4.png" />
+						<div class="num">
+							<p class="nums next_num">3333333</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="awards fl">
+					<img src="http://whzt.taikang.com/brazil/static/images/jiang/T7.png" />
+					<img src="http://whzt.taikang.com/brazil/static/images/jiang/T8.png" />
+				</div>
+			</div>
+			<img class="pages_click" src="http://whzt.taikang.com/brazil/static/images/zhan.png" />
+			<img class="page4_txt page6_txt" src="http://whzt.taikang.com/brazil/static/images/wen7.png" />
+			<img class="page4_btn page6_btn" src="http://whzt.taikang.com/brazil/static/images/jin_btn.png" />
+			<img class="cai_click ly_cai shan" src="http://whzt.taikang.com/brazil/static/images/cai.png" />
+			<div class="page2_bottom">
+				<div class="person_img">
+					<img class="picture"
+						src="http://whzt.taikang.com/brazil/static/images/icon11.png" />
+				</div>
+				<div class="page2_main clearfix">
+					<div class="main_left power fl">
+						<img class="page2_wen"
+							src="http://whzt.taikang.com/brazil/static/images/power.png" />
+						<div class="main_step">
+							<p class="my_step jinb">1200</p>
+							<p>/</p>
+							<p class="all_step">100000</p>
+						</div>
+						<div class="shanxian">
+							<img src="http://whzt.taikang.com/brazil/static/images/icon9.png" />
+							<div class="shanxian_main">
+								<p class="shan_pross">
+									<span class="shan_pross_ju"></span>
+								</p>
+							</div>
+						</div>
+						<img class="add_btn go_power"
+							src="http://whzt.taikang.com/brazil/static/images/btn6.png" />
+					</div>
+					<div class="main_left save fl">
+						<img class="page2_wen2"
+							src="http://whzt.taikang.com/brazil/static/images/save.png" />
+						<div class="main_step">
+							<p class="my_step anxi">1200</p>
+							<p>/</p>
+							<p class="all_baoe">150000</p>
+						</div>
+						<div class="baodun">
+							<img src="http://whzt.taikang.com/brazil/static/images/icon10.png" />
+							<div class="baodun_main">
+								<p class="bao_pross">
+									<span class="bao_pross_ju"></span>
+								</p>
+							</div>
+						</div>
+						<img class="add_btn go_save"
+							src="http://whzt.taikang.com/brazil/static/images/btn6.png" />
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--泰康-->
+		<div class="page page7 hideDiv">
+			<div class="page2_top page2_top tk_top clearfix">
+				<div class="top_left fl">
+					<div class="step">
+						<p class="step_title">今日步数</p>
+						<img class="step_img"
+							src="http://whzt.taikang.com/brazil/static/images/icon4.png" />
+						<div class="num">
+							<p class="nums step_num">2356</p>
+						</div>
+					</div>
+					<div class="step">
+						<p class="step_title">距下一站</p>
+						<img class="step_img"
+							src="http://whzt.taikang.com/brazil/static/images/icon4.png" />
+						<div class="num">
+							<p class="nums next_num">3333333</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="awards fl">
+				</div>
+			</div>
+			<img class="pages_click" src="http://whzt.taikang.com/brazil/static/images/zhan.png" />
+			<img class="page4_txt page7_txt" src="http://whzt.taikang.com/brazil/static/images/wen8.png" />
+			<div class="page2_bottom">
+				<div class="person_img">
+					<img class="picture"
+						src="http://whzt.taikang.com/brazil/static/images/icon11.png" />
+				</div>
+				<div class="page2_main clearfix">
+					<div class="main_left power fl">
+						<img class="page2_wen"
+							src="http://whzt.taikang.com/brazil/static/images/power.png" />
+						<div class="main_step">
+							<p class="my_step jinb">1200</p>
+							<p>/</p>
+							<p class="all_step">100000</p>
+						</div>
+						<div class="shanxian">
+							<img src="http://whzt.taikang.com/brazil/static/images/icon9.png" />
+							<div class="shanxian_main">
+								<p class="shan_pross">
+									<span class="shan_pross_ju"></span>
+								</p>
+							</div>
+						</div>
+						<img class="add_btn go_power"
+							src="http://whzt.taikang.com/brazil/static/images/btn6.png" />
+					</div>
+					<div class="main_left save fl">
+						<img class="page2_wen2"
+							src="http://whzt.taikang.com/brazil/static/images/save.png" />
+						<div class="main_step">
+							<p class="my_step anxi">1200</p>
+							<p>/</p>
+							<p class="all_baoe">150000</p>
+						</div>
+						<div class="baodun">
+							<img src="http://whzt.taikang.com/brazil/static/images/icon10.png" />
+							<div class="baodun_main">
+								<p class="bao_pross">
+									<span class="bao_pross_ju"></span>
+								</p>
+							</div>
+						</div>
+						<img class="add_btn go_save"
+							src="http://whzt.taikang.com/brazil/static/images/btn6.png" />
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--<div class="layout2 hideDiv">
+		<img class="page3_kuang" src="http://whzt.taikang.com/brazil/static/images/kuang1.png">
+		<img class="page3_close" src="http://whzt.taikang.com/brazil/static/images/x2.png">
+	</div>-->
+
+	</div>
+
+
+	<!-- 彩蛋弹框 -->
+	<div class="yate_layout hideDiv">
+		<div class="yeta_cai_box">
+			<div class="yate_cai_img cai_power "></div><%-- <img class="yate_cai_img cai_power hideDiv" src="http://whzt.taikang.com/brazil/static/images/yate_cai.png" /> --%>
+			<div class="yate_cai_img cai_gife hideDiv"></div><%-- <img class="yate_cai_img cai_gife" src="http://whzt.taikang.com/brazil/static/images/watch.png" />  --%>
+		</div>
+		<img class="yate_cai_btn" src="http://whzt.taikang.com/brazil/static/images/lingj.png" />
+	</div>
+	<!--有无奖品-->
+	<div class="hasjiang_layout hideDiv">
+		<div class="jiang_box">
+			<p class="youjiang hideDiv">
+				经过<span class="tian_num">4</span>天狂奔，你是第<span class="lay_stepNum">7</span>名到<span class="zhandian">达亚特兰大</span>站可获得京东E卡一张。
+			</p>
+			<p class="wujiang hideDiv">
+				经过<span class="tian_num">4</span>天狂奔，你是第<span class="lay_stepNum">36</span>名到达<span class="zhandian">达亚特兰大</span>站！快快冲刺，奔向下一站大奖吧！
+			</p>
+			<img class="know_btn" src="http://whzt.taikang.com/brazil/static/images/know.png"/>
+		</div>
+	</div>
+	<!--安全系数-->
+	<div class="hasjiang_layout hideDiv">
+		<div class="safe_box">
+			<p class="youjiang">您的安全系数为0，是否提升领奖？</p>
+			<p class="wujiang noTop giveup_txt">(放弃将视为自动弃奖)</p>
+			<img class="toup_btn" src="http://whzt.taikang.com/brazil/static/images/toup.png"/>
+			<img class="giveup_btn" src="http://whzt.taikang.com/brazil/static/images/giveup.png"/>
+		</div>
+	</div>
+	<!--信息填写-->
+	<div class="xinxi_layout hideDiv">
+		<div class="xinxi_box xinxi_box_top xinxi_bgsize">
+			<p class="noTop hasTop martt2"><label>姓<span style="opacity: 0">哈</span>名</label><input type="text" class="xinxi_name"></p>
+			<p class="noTop hasTop martt1"><label>手机号</label><input type="tel" class="xinxi_phone" maxlength="11"></p>
+			<p class="noTop hasTop address hideDiv martt1"><label>住&nbsp;&nbsp;&nbsp;址</label><input type="tel" class="xinxi_address"></p>
+			<p class="wujiang noTop giveup_txt martt1">*请填写真实有效的信息，如若填错视为自动弃奖。</p>
+			<div style="position:relative">
+				<img class="submit_btn submit_btn1" src="http://whzt.taikang.com/brazil/static/images/tijiao.png"/>
+			</div>
+		</div>
+	</div>
+	<!--信息提交弹框-->
+	<div class="alert-tip right hide">
+		<h4>信息提交成功！</h4>
+		<p>中奖后30个工作日内，将由泰康工作人员联系您寄出奖品。</p>
+	</div>
+	<!--泰康信封蒙层-->
+	<div class="tk_layout hideDiv">
+		<div class="tk_box">
+			<img class="tk_letter" src="http://whzt.taikang.com/brazil/static/images/letter.png"/>
+			<img class="tk_txt" src="http://whzt.taikang.com/brazil/static/images/letter_txt.png"/>
+		</div>
+	</div>
+
+	<div id="aa"></div>
+     <div id="help" class="page hide">
+            <div class="container">
+                <div class="conDiv1" style="margin: 2rem 1rem 0;">
+                    <div class="del"></div>
+                    <div style="position:fixed;height:1rem;z-index: 1000;background:#000;"></div>
+                    <div class="ft1">活动帮助</div>
+                </div>
+                <div class="ft conDiv" style="">
+                    <div class="" style="overflow:scroll;">
+                        <div class="ub "><div class="dot"></div>活动时间：2016年8月1日-8月22日。</div>
+                        <div class="ub mart1"><div class="dot"></div>活动规则：</div>
+                        <div class="ub "><div class="dot opa"></div><div class="ub-f1">用户通过跑步积累能量值穿越站点，维护时光机安全系数将有机会赢取奖品。</div></div>
+                        <div class="ub mart1"><div class="dot"></div>能量值:</div>
+                        <div class="ub "><div class="dot opa"></div><div class="ub-f1">时光机穿越需使用【能量值】，当能量值存满即可穿越至下一站。用户可通过每日进入页面上传微信运动【步数】累计，1步=1能量值。若未进入页面，则当天步数无法计入能量值。</div></div>
+                        <div class="ub mart1"><div class="dot"></div>安全系数:</div>
+                        <div class="ub "><div class="dot opa"></div><div class="ub-f1">穿越过程时光机会产生损耗，需【安全系数】维护才能确保顺利到达。用户可通过购买微互助防癌险增加安全系数，每购买1元微互助可增加1000安全系数，最高可购买150元。</div></div>
+                        <div class="ub mart1"><div class="dot"></div>时光站：</div>
+                        <div class="ub "><div class="dot opa"></div><div class="ub-f1">游戏共分五个时光站，每到达一个站，将扣减穿越所需能量值，多余能量值可保留至下站。率先到达的用户有机会获得相应奖品。部分站点设有彩蛋和小游戏，找到彩蛋或通关小游戏将获得奖励。</div></div>
+                        <div class="ub mart1"><div class="dot"></div>互助集市：</div>
+                        <div class="ub "><div class="dot opa"></div><div class="ub-f1">用户可在互助集市与其他玩家进行交易。1000能量可交换1000安全系数。</div></div>
+                        <div class="ub "><div class="dot opa"></div><div class="ub-f1">邀请好友加保可获得安全系数，安全系数达标并最快到达时光站的玩家，将有机会获得大奖。</div></div>
+                        <div class="ub "><div class="dot"></div><div class="ub-f1">微互助防癌险是一款基于微信社交关系的互联网保险产品，更多详情欢迎咨询泰康在线公众号客服。</div></div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+</body>
+<script type="text/javascript" src="http://whzt.taikang.com/brazil/static/js/msg.js"></script>
+<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="http://whzt.taikang.com/brazil/static/js/zepto.min.js?v=1"></script>
+<script src="http://whzt.taikang.com/brazil/static/js/path.js?v=1"></script>
+<script src="http://whzt.taikang.com/brazil/static/js/common.js?v=1"></script>
+<script src="http://whzt.taikang.com/brazil/static/js/main.js?v=1"></script>
+<script src="http://whzt.taikang.com/brazil/static/js/landscape.js?v=1"></script>
+<script type="text/javascript" src="http://whzt.taikang.com/brazil/static/js/share.js"></script>
+<script type="text/javascript">
+	var path="http://whzt.taikang.com/brazil";
+//	alert('吴铮：${result.content}');
+	var result = "${result.errMsg}";
+	var code = "${result.code}";
+	var content = JSON.parse('${result.content}');
+// 	massage('${result.content}');
+
+	//content.sites=2;
+	//content.eggshow=1;
+	//content.passsites=1;//不穿越
+// 	content.login_flag=0;
+	setHeight();
+	var oDiv = document.getElementById("odiv");
+	var hei = oDiv.offsetWidth;
+	var hei1 = document.body.clientHeight;
+	setHeight();
+	window.onresize = function(){
+		setHeight()
+	}
+	function setHeight(){
+		var owrapper = $(".wrapper");
+		owrapper.css("height", (hei1/hei)+ "rem !important");
+		$(".page").css("height", (hei1/hei)+ "rem !important");
+		$(".xinxi_layout").css("height", (hei1/hei)+ "rem !important");
+
+	}
+	var title="奔跑奥运，一路泰康！";
+	var url = "https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx7fa037cc7dfabad5&redirect_uri=http://hw.weixin.qq.com/steprank/auth?appid=wxcd7143c00e5bb6f7&scope=snsapi_userinfo,snsapi_health_realtime&response_type=code&scope=snsapi_base&state=A1&connect_redirect=1#wechat_redirect";
+	var str="1996奥运百年，泰康诞生；2016泰康20岁，奔跑奥运，一路泰康！";
+</script>
+</html>

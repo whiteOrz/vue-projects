@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>试算信息</title>
+		<link rel="stylesheet" href="css/reset.css">
+
+		<link rel="stylesheet" href="css/calcuateConfig.css">
+		<script src="js/jquery.min.js"></script>
+		<script src="js/calcuateConfig.js"></script>
+	</head>
+
+	<body>
+		<div><a class="color-00c fw7" href="#">《 返回产品列表</a></div>
+		<div class="mt1">
+			<a href="javascript:;">1.基本信息</a>->
+			<a class="color-00c fw7" href="javascript:;">2.试算信息</a>->
+			<a href="page3.html">3.投保流程</a>->
+			<a href="javascript:;">4.投保声明</a>->
+			<a href="javascript:;">5.支付方式</a>
+		</div>
+		
+
+		<div id="content1" class="mt1 flex">
+			<div class="border-ccc fw7 w100">测算因子</div>
+			<div class="ml1 f1">
+				<div class="textr">
+					<a id="configBtn1" class="color-00c fw7" href="javascript:;">添加字段</a>
+				</div>
+				<table id="tableFactor" class="table">
+					<thead>
+						<tr>
+							<th class="w200">因子名称</th>
+							<th class="w250">code</th>
+							<th class="w250">value</th>
+							<th class="w100">操作</th>
+						</tr>
+
+					</thead>
+					<tbody>
+
+					</tbody>
+				</table>
+			</div>
+		</div>
+
+		<div id="content3" class="mt1 flex">
+			<div class="border-ccc fw7 w100">保障责任</div>
+			<div class="ml1 f1">
+				<div class="inputBox">
+				产品方案代码：
+				<input type="text" value="" placeholder="请输入方案代码" id="planId"/>
+				</div>
+				<table id="tableRespon" class="table">
+					<thead>
+						<tr>
+							<th class="w150">保障责任</th>
+							<th class="w250">责任说明</th>
+							<th class="w100">责任编码</th>
+							<th class="w100">保额 </th>
+							<th class="w200"></th>
+						</tr>
+
+					</thead>
+					<tbody>
+						<tr>
+							<td><input type="text" class="responName" placeholder="请输入保障责任名称"></td>
+							<td><textarea class="responExplain" placeholder="请输入责任说明"></textarea></td>
+							<td><input type="text" class="responCode" placeholder="请输入保障责任编码"></td>
+							<td><input type="text" class="responPrice" placeholder="请输入保障责任保额"></td>
+							<td>
+								<input type="button" value="添加" class="addBtn">
+								
+							</td>
+						</tr>
+					</tbody>
+				</table>
+
+			</div>
+		</div>
+		<div id="content2" class="mt1 flex">
+			<div class="border-ccc fw7 w100">套餐</div>
+			<div class="ml1 f1">
+				<div class="textr">
+					<a id="configBtn3" class="color-00c fw7" href="javascript:;">添加字段</a>
+				</div>
+				<table id="tablePackage" class="table">
+					<thead>
+						<tr>
+							<th class="w300">套餐名称</th>
+							
+							<th class="w500">value</th>
+						</tr>
+
+					</thead>
+					<tbody>
+						<tr>
+							<td>自定义</td>
+							
+							<td><input type="checkbox" id="custom"></td>
+						</tr>
+						
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div id="content4" class="mt1 flex">
+			<div class="border-ccc fw7 w100">因子与因子关系</div>
+			<div class="ml1 f1">
+				
+				<table id="tableInfFactor" class="table">
+					<thead>
+						<tr>
+							<th class="w150">影响因子</th>
+							<th class="w100">因子值</th>
+							<th class="w200">被影响因子</th>
+							
+							<th class="w150">影响方式</th>
+							<th class="w200"></th>
+						</tr>
+
+					</thead>
+					<tbody>
+						<tr>
+							<td class="factor" id="factor0"></td>
+							<td class="factorValue" id="factorValue0"></td>
+							<td class="beFactor" id="beFactor0"></td>
+							
+							<td class="beWay" id="beWay0">
+								<select><option >覆盖</option><option >隐藏</option></select>
+							</td>
+							<td><input type="button" value="添加" class="addBtn"></td>
+						</tr>
+						
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div id="content5" class="mt1 flex">
+			<div class="border-ccc fw7 w100">因子与保障责任关系</div>
+			<div class="ml1 f1">
+				
+				<table id="tableFactoRespon" class="table">
+					<thead>
+						<tr>
+							<th class="w200">影响因子</th>
+							<th class="w200">因子值</th>
+							<th class="w200">保障责任</th>
+							
+							<th class="w200"></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="factoResponName" id="factoResponName0"></td>
+							<td class="factoResponValue" id="factoResponValue0"></td>
+							<td class="factoRespon" id="factoRespon0"></td>
+							
+							<td><input type="button" value="添加" class="addBtn"/></td>
+						</tr>
+						
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div class="btnBox">
+			<input type="button" value="暂存" id="saveBtn">
+			<input type="button" value="下一步" class="ml2" id="nextBtn">
+		</div>
+		
+		
+		<!--测算因子弹出框 start-->
+		<div id="dataConfig1" class="dataConfig">
+			<div class="title">请选择测算因子</div>
+			<div id="factorBox" class="box">
+				<input id="d1" type="checkbox" value="insureAge" />
+				<label for="d1">投保年龄</label>
+				<input id="d2" type="checkbox" class="ml5" value="insurePeriod" />
+				<label for="d2">保障期限</label>
+				<input id="d3" type="checkbox" class="ml5" value="sex" />
+				<label for="d3">性别</label>
+				<input id="d4" type="checkbox" class="ml5" value="address" />
+				<label for="d4">地区</label>
+				<input id="d5" type="checkbox" class="ml5" value="profess" />
+				<label for="d5">职业</label>
+			</div>
+			<div class="mt5 textc">
+				<a class="btn3" id="dataConfig1_Ok">确定</a>
+				<a class="btn3 ml5" id="dataConfig1_Cancel">取消</a>
+			</div>
+		</div>
+		<!--测算因子弹出框 end-->
+
+		<!--测算因子数据字典弹出框 start-->
+		<div id="dataConfig2" class="dataConfig">
+			<div class="title">请输入因子值</div>
+			<table id="factorCon" class="table">
+				<thead>
+					<tr>
+						<th class="w150">factorKey</th>
+						<th class="w150">factorValue</th>
+						<th class="w100"></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><input type="text" placeholder="请输入" class="itemCode"></td>
+						<td><input type="text" placeholder="请输入" class="itemValue"></td>
+						<td><input type="button" value="添加"  class="addBtn"/></td>
+					</tr>
+				</tbody>
+				
+			</table>
+			
+			
+			
+			
+			<div class="mt1 textc">
+				<a class="btn3" id="dataConfig2_Ok">确定</a>
+				<a class="btn3 ml5" id="dataConfig2_Cancel" onclick="">取消</a>
+			</div>
+		</div>
+		<!--测算因子数据字典弹出框 end-->
+		
+		<!--添加套餐 start-->
+		<div id="dataConfig3" class="dataConfig">
+			<div class="title">添加套餐 输入选值（<span class="fw7 color-red">每行一个</span>）</div>
+			<textarea id="config3Input"></textarea>
+			<div class="mt1 textc">
+				<a class="btn3" id="dataConfig3_Ok">确定</a>
+				<a class="btn3 ml5" id="dataConfig3_Cancel" >取消</a>
+			</div>
+		</div>
+		<!--添加套餐 end-->
+		
+		
+		<!--套餐 数据字典start-->
+		<div id="dataConfig4" class="dataConfig">
+			<div class="title">请选择保障责任</div>
+			<table class="table" id="tableList">
+				<thead>
+					<tr>
+						<th class="w50"></th>
+						<th class="w200">责任</th>
+						<th class="w150">保额</th>
+					</tr>
+				</thead>
+				<tbody>
+					
+				</tbody>
+			</table>
+			<div class="mt1 textc">
+				<a class="btn3" id="dataConfig4_Ok">确定</a>
+				<a class="btn3 ml5" id="dataConfig4_Cancel" >取消</a>
+			</div>
+		</div>
+		<!--套餐数据字典 end-->
+		
+		<!--------------------------因子与因子关系 弹出框 start------------------------------------->
+		<!--因子与因子关系 影响因子 数据字典start-->
+		<div id="dataConfig5" class="dataConfig">
+			<div class="title">请选择影响因子</div>
+			<div id="factorList"></div>
+			<div class="mt1 textc">
+				<a class="btn3" id="dataConfig5_Ok">确定</a>
+				<a class="btn3 ml5" id="dataConfig5_Cancel" >取消</a>
+			</div>
+		</div>
+		<!--因子与因子关系 影响因子 数据字典end-->
+		
+		<!--因子与因子关系 因子值  数据字典start-->
+		<div id="dataConfig6" class="dataConfig">
+			<div class="title">请选择影响因子值</div>
+			<div id="factorValueList"></div>
+			<div class="mt1 textc">
+				<a class="btn3" id="dataConfig6_Ok">确定</a>
+				<a class="btn3 ml5" id="dataConfig6_Cancel" >取消</a>
+			</div>
+		</div>
+		<!--因子与因子关系 因子值 数据字典end-->
+		
+		
+		<!--因子与因子关系 被影响因子  数据字典start-->
+		<div id="dataConfig7" class="dataConfig">
+			<div class="title">请被选择影响因子</div>
+			<div id="befactorList" class="box"></div>
+			<div class="title">请被选择影响因子值</div>
+			<div id="befactorValueList" class="box"></div>
+			<div class="mt1 textc">
+				<a class="btn3" id="dataConfig7_Ok">确定</a>
+				<a class="btn3 ml5" id="dataConfig7_Cancel" >取消</a>
+			</div>
+		</div>
+		<!--因子与因子关系 被影响因子 数据字典end-->
+		
+		
+		
+		<!--------------------------因子与因子关系 弹出框 end------------------------------------->
+		
+		
+		
+		
+		
+		<!--------------------------因子与保障责任关系 弹出框 start------------------------------------->
+		<!--被影响因子 start-->
+		<div id="dataConfig9" class="dataConfig">
+			<div class="title">请选择影响因子</div>
+			<div id="factorResponList"></div>
+			<div class="mt1 textc">
+				<a class="btn3" id="dataConfig9_Ok">确定</a>
+				<a class="btn3 ml5" id="dataConfig9_Cancel" >取消</a>
+			</div>
+		</div>
+		<!--被影响因子 end-->
+		
+		<!--被影响因子值 start-->
+		<div id="dataConfig10" class="dataConfig">
+			<div class="title">请选择影响因子值</div>
+			<div id="factorResponValueList"></div>
+			<div class="mt1 textc">
+				<a class="btn3" id="dataConfig10_Ok">确定</a>
+				<a class="btn3 ml5" id="dataConfig10_Cancel" >取消</a>
+			</div>
+		</div>
+		<!--被影响因子值 end-->
+		<!--保障责任 start-->
+		<div id="dataConfig11" class="dataConfig">
+			<div class="title">请选择保障责任</div>
+			<div id="initfactorResponList" class="box"></div>
+			<div class="title">请选择保额</div>
+			<div id="initfactorResponPriceList" class="box"></div>
+			<div class="mt1 textc">
+				<a class="btn3" id="dataConfig11_Ok">确定</a>
+				<a class="btn3 ml5" id="dataConfig11_Cancel" >取消</a>
+			</div>
+		</div>
+		<!--被影响因子值 end-->
+		
+		<!--------------------------因子与保障责任关系 弹出框 end------------------------------------->
+	</body>
+
+</html>

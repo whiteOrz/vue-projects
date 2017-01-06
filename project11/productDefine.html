@@ -1,0 +1,1792 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="css/reset.css" type="text/css" rel="stylesheet" />
+    <link href="css/product.css" type="text/css" rel="stylesheet" />
+    <script src="js/jquery.min.js"></script>
+    <script src="js/DatePicker/WdatePicker.js"></script>
+</head>
+
+<body style="padding:10px;">
+    <p class="back">《返回产品列表</p>
+    <div class="nav">
+        1.基本信息-> 2.试算信息->3.投保流程-> 4.投保声明-> 5.支付方式
+    </div>
+    <div class="pub" id="platform">
+        <span>发布平台</span>
+        <input type="checkbox" class="chk" data-type="pc" value="pc" id="pcCheckBox">
+        <label for="pcCheckBox">pc</label>
+        <input type="checkbox" class="chk" data-type="wap" value="wap" id="wapCheckBox" />
+        <label for="wapCheckBox">wap</label>
+        <input type="checkbox" class="chk" data-type="app" value="app" id="appCheckBox" />
+        <label for="appCheckBox">app</label>
+        <input type="checkbox" class="chk" data-type="wechat" value="wechat" id="wechatCheckBox" />
+        <label for="wechatCheckBox">wechat</label>
+        <input type="checkbox" class="chk" data-type="cps" value="cps" id="cpsCheckBox" />
+        <label for="cpsCheckBox">cps</label>
+    </div>
+    <div class="category">
+        <span>产品分类</span>
+        <select id="productCatalog">
+            <!-- <option>请选择</option>
+            <option>理财险</option>
+            <option>财产险</option>
+            <option>健康险</option>
+            <option>意外险</option> -->
+        </select>
+        <select id="productSubCatalog">
+            <!-- <option>请选择</option>
+            <option>综合意外</option>
+            <option>交通意外</option>
+            <option>旅游意外</option> -->
+        </select>
+    </div>
+    <div class="field clearfix">
+        <div class="field-title" style="height:158px">通用字段</div>
+        <div class="field-list">
+            <p class="subtitle">基本信息</p>
+            <table class="table">
+                <tr>
+                    <td class="bg-blue"><span class="c-red">产品编号</span></td>
+                    <td>
+                        <input type="text" placeholder="请输入产品编号" class="edit-ipt pro-id">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="bg-blue"><span class="c-red">产品标题</span></td>
+                    <td>
+                        <input type="text" placeholder="请输入产品标题" class="edit-ipt pro-name">
+                    </td>
+                </tr>
+                <tr class="hide">
+                    <td class="bg-blue">投保年龄</td>
+                    <td>
+                        <input type="text" placeholder="请输入投保年龄" class="edit-ipt pro-age">
+                    </td>
+                </tr>
+                <tr class="hide">
+                    <td class="bg-blue">投保期间</td>
+                    <td>
+                        <input type="text" placeholder="请输入投保期间" class="edit-ipt pro-time">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="bg-blue c-red">产品特色描述</td>
+                    <td>
+                        <input type="text" placeholder="请输入产品特色描述" class="edit-ipt pro-desc">
+                    </td>
+                </tr>
+                <tr class="hide">
+                    <td class="bg-blue">特色标签</td>
+                    <td>
+                        <input type="text" placeholder="请输入产品特色标签" class="edit-ipt pro-label">
+                    </td>
+                </tr>
+                <tr class="hide">
+                    <td class="bg-blue">保障内容简介</td>
+                    <td>
+                        <input type="text" placeholder="请输入产品保障内容简介" class="edit-ipt pro-guarantee-desc">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="bg-blue c-red">价格描述</td>
+                    <td>
+                        <input type="text" placeholder="请输入价格描述" value="会员价" class="edit-ipt pro-price-type">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="bg-blue c-red">投保人最小年龄</td>
+                    <td>
+                        <input type="text" placeholder="请输入投保人最小年龄" value="18" class="edit-ipt pro-minAge">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="bg-blue c-red">投保人最大年龄</td>
+                    <td>
+                        <input type="text" placeholder="请输入投保人最大年龄，默认65" value="" class="edit-ipt pro-maxAge">
+                    </td>
+                </tr>
+                <tr class="hide">
+                    <td class="bg-blue">最低价格</td>
+                    <td>
+                        <input type="text" placeholder="请输入产品最低价格" class="edit-ipt pro-price-low">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="bg-blue c-red">保费测算</td>
+                    <td>
+                        <input type="radio" id="calc1" name="calculate" class="calculate" value="1">
+                        <label for="calc1">是</label>
+                        <input type="radio" id="calc2" name="calculate" class="calculate" value="0" checked="checked">
+                        <label for="calc2">否</label>
+                    </td>
+                </tr>
+
+                <tr class="hide">
+                    <td class="bg-blue">销量</td>
+                    <td>
+                        <input type="text" placeholder="请输入产品销量" class="edit-ipt pro-sales">
+                    </td>
+                </tr>
+                <tr class="hide">
+                    <td class="bg-blue">产品库存</td>
+                    <td>
+                        <input type="text" placeholder="请输入产品库存" class="edit-ipt pro-inventory">
+                    </td>
+                </tr>
+            </table>
+            <p class="subtitle mt1 hide">属性标签</p>
+            <table class="table hide">
+                <tr>
+                    <td class="bg-blue">消费类型</td>
+                    <td class="label pro-consu-type" data-type="type"></td>
+                </tr>
+                <tr>
+                    <td class="bg-blue">特殊保障</td>
+                    <td class="label pro-safeguard" data-type="safeguard">少儿门诊,私家车意外,重疾保障</td>
+                </tr>
+                <tr>
+                    <td class="bg-blue">保障期限</td>
+                    <td class="label pro-time-guarantee" data-type="time" class="">短期,1年,长期</td>
+                </tr>
+                <tr>
+                    <td class="bg-blue">针对人群</td>
+                    <td class="label pro-range" data-type="range">商务人士</td>
+                </tr>
+                <tr>
+                    <td class="bg-blue">价格</td>
+                    <td class="label pro-price" data-type="price">100元以下,100元-300元,300元-800元</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="field clearfix pc" data-type="pc" style="display: none;">
+        <div class="field-title" style="height:366px;">PC个性化字段</div>
+        <div class="field-list">
+            <table class="table">
+                <tr>
+                    <td class="bg-blue c-red">健康告知</td>
+                    <td>
+                        <input type="radio" id="pcheal1" name="pcHealth" class="pcHealth" value="1" checked="checked">
+                        <label for="pcheal1">有健康告知</label>
+                        <input type="radio" id="pcheal2" name="pcHealth" class="pcHealth" value="0">
+                        <label for="pcheal2">无健康告知</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="bg-blue c-red">上架时间</td>
+                    <td>
+                        <input type="text" placeholder="请输入产品上架时间" class="edit-ipt Wdate pcTimeOn" onClick="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'})">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="bg-blue c-red">下架时间</td>
+                    <td>
+                        <input type="text" placeholder="请输入产品下架时间" class="edit-ipt Wdate pcTimeOff" onClick="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'})">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="bg-blue">服务承诺</td>
+                    <td id="pcServiceConfig" class="label pc-pro-payment" data-type="service">保证续保,极速生效,透明理赔</td>
+                </tr>
+                <tr>
+                    <td class="bg-blue">支付方式</td>
+                    <td id="pcPayConfig" class="label pc-pro-payment" data-type="payment">支付宝,银联储蓄卡</td>
+                </tr>
+                <tr>
+                    <td class="bg-blue">近期销量</td>
+                    <td>
+                        <input type="text" placeholder="请输入近期销量" class="edit-ipt pc-pro-saleCount">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="bg-blue">手机购买二维码</td>
+                    <td class="">
+                        <input type="text" placeholder="请输入二维码图片" class="edit-ipt pc-pro-phone">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="bg-blue">订单头图链接</td>
+                    <td class="">
+                        <input type="text" placeholder="请输入订单头图链接" class="edit-ipt pc-order-img">
+                    </td>
+                </tr>
+            </table>
+            <div>
+                <p class="subtitle mt1">优惠信息</p>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <td class="bg-blue">标题</td>
+                            <td class="bg-blue">描述</td>
+                            <td class="bg-blue">链接</td>
+                        </tr>
+                    </thead>
+                    <tbody id="pcActivityTable">
+                        <tr>
+                            <td>
+                                <input type="text" placeholder="请输入促销标题" class="edit-ipt pc-sales-name">
+                            </td>
+                            <td>
+                                <input type="text" placeholder="请输入促销描述" class="edit-ipt  pc-sales-desc">
+                            </td>
+                            <td>
+                                <input type="text" placeholder="请输入促销链接" class="edit-ipt  pc-sales-link">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="mt06" style="text-align:right">
+                    <button type="button" class="tbtn activityAdd" platform="pc">+</button>
+                    <button type="button" class="tbtn activityRemove" platform="pc">-</button>
+                </div>
+            </div>
+
+            <div>
+                <p class="subtitle mt1">保障说明</p>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <td class="bg-blue c-red">标题</td>
+                            <td class="bg-blue">描述</td>
+                            <td class="bg-blue">链接</td>
+                        </tr>
+                    </thead>
+                    <tbody id="pcConditionTable">
+                        <tr>
+                            <td>
+                                <input type="text" placeholder="请输入标题" class="edit-ipt" />
+                            </td>
+                            <td>
+                                <input type="text" placeholder="请输入描述" class="edit-ipt" />
+                            </td>
+                            <td>
+                                <input type="text" placeholder="请输入链接" class="edit-ipt" />
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="mt06" style="text-align:right">
+                    <button type="button" class="tbtn condAdd" platform="pc">+</button>
+                    <button type="button" class="tbtn condRemove" platform="pc">-</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="field clearfix wap" data-type="wap" style="display: none;">
+        <div class="field-title" style="height:436px;">wap个性化字段</div>
+        <div class="field-list">
+            <table class="table">
+                <tr>
+                    <td class="bg-blue c-red">健康告知</td>
+                    <td>
+                        <input type="radio" id="wapheal1" name="wapHealth" class="wapHealth" value="1" checked="checked">
+                        <label for="wapheal1">有健康告知</label>
+                        <input type="radio" id="wapheal2" name="wapHealth" class="wapHealth" value="0">
+                        <label for="wapheal2">无健康告知</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="bg-blue c-red">上架时间</td>
+                    <td>
+                        <input type="text" placeholder="请输入产品上架时间" class="edit-ipt Wdate wapTimeOn" onClick="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'})">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="bg-blue c-red">下架时间</td>
+                    <td>
+                        <input type="text" placeholder="请输入产品下架时间" class="edit-ipt Wdate wapTimeOff" onClick="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'})">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="bg-blue">特色标签</td>
+                    <td data-type="sepLabel" class="label wap-pro-label">透明理赔,超值低价,热销爆款</td>
+                </tr>
+                <tr>
+                    <td class="bg-blue">产品头图链接</td>
+                    <td class="">
+                        <input type="text" placeholder="请输入产品头图链接" class="edit-ipt wap-pro-image">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="bg-blue">产品详情链接</td>
+                    <td class="">
+                        <input type="text" placeholder="请输入产品详情链接" class="edit-ipt wap-pro-url">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="bg-blue">产品语音文件链接</td>
+                    <td class="">
+                        <input type="text" placeholder="请输入产品语音文件链接" class="edit-ipt wap-pro-audio">
+                    </td>
+                </tr>
+            </table>
+
+            <div>
+                <p class="subtitle mt1">优惠信息</p>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <td class="bg-blue">标题</td>
+                            <td class="bg-blue">描述</td>
+                            <td class="bg-blue">链接</td>
+                        </tr>
+                    </thead>
+                    <tbody id="wapActivityTable">
+                        <tr>
+                            <td>
+                                <input type="text" placeholder="请输入促销标题" class="edit-ipt wap-sales-name">
+                            </td>
+                            <td>
+                                <input type="text" placeholder="请输入促销描述" class="edit-ipt  wap-sales-desc">
+                            </td>
+                            <td>
+                                <input type="text" placeholder="请输入促销链接" class="edit-ipt  wap-sales-link">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="mt06" style="text-align:right">
+                    <button type="button" class="tbtn activityAdd" platform="wap">+</button>
+                    <button type="button" class="tbtn activityRemove" platform="wap">-</button>
+                </div>
+            </div>
+
+            <div>
+                <p class="subtitle mt1">保障说明</p>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <td class="bg-blue c-red">标题</td>
+                            <td class="bg-blue">描述</td>
+                            <td class="bg-blue">链接</td>
+                        </tr>
+                    </thead>
+                    <tbody id="wapConditionTable">
+                        <tr>
+                            <td>
+                                <input type="text" placeholder="请输入标题" class="edit-ipt" />
+                            </td>
+                            <td>
+                                <input type="text" placeholder="请输入描述" class="edit-ipt" />
+                            </td>
+                            <td>
+                                <input type="text" placeholder="请输入链接" class="edit-ipt" />
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="mt06" style="text-align:right">
+                    <button type="button" class="tbtn condAdd" platform="wap">+</button>
+                    <button type="button" class="tbtn condRemove" platform="wap">-</button>
+                </div>
+            </div>
+
+            <div>
+                <p class="subtitle mt1">微信分享</p>
+                <table class="table">
+                    <tr>
+                        <td class="bg-blue">分享标题</td>
+                        <td>
+                            <input type="text" placeholder="请输入分享标题" class="edit-ipt wap-share-title" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="bg-blue">分享内容</td>
+                        <td>
+                            <input type="text" placeholder="请输入分享内容" class="edit-ipt wap-share-desc" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="bg-blue">分享头图</td>
+                        <td>
+                            <input type="text" placeholder="请输入分享头图连接" class="edit-ipt wap-share-img" />
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="field clearfix app" data-type="app" style="display:none;">
+        <div class="field-title" style="height:633px">APP个性化字段</div>
+        <div class="field-list">
+            <table class="table">
+                <tr>
+                    <td class="bg-blue c-red">健康告知</td>
+                    <td>
+                        <input type="radio" id="appheal1" name="appHealth" class="appHealth" value="1" checked="checked">
+                        <label for="appheal1">有健康告知</label>
+                        <input type="radio" id="appheal2" name="appHealth" class="appHealth" value="0">
+                        <label for="appheal2">无健康告知</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="bg-blue c-red">上架时间</td>
+                    <td>
+                        <input type="text" placeholder="请输入产品上架时间" class="edit-ipt Wdate appTimeOn" onClick="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'})">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="bg-blue c-red">下架时间</td>
+                    <td>
+                        <input type="text" placeholder="请输入产品下架时间" class="edit-ipt Wdate appTimeOff" onClick="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'})">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="bg-blue">产品详情页链接</td>
+                    <td>
+                        <input type="text" placeholder="产品详情页链接" class="edit-ipt app-pro-details">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="bg-blue">产品语音文件链接</td>
+                    <td>
+                        <input type="text" placeholder="请输入语音文件链接" class="edit-ipt app-pro-audio">
+                    </td>
+                </tr>
+            </table>
+
+            <div class="mt1">
+                <p class="subtitle">保障说明</p>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <td class="bg-blue c-red">标题</td>
+                            <td class="bg-blue">描述</td>
+                            <td class="bg-blue">链接</td>
+                        </tr>
+                    </thead>
+                    <tbody id="appLinkTable">
+                        <tr>
+                            <td>
+                                <input type="text" placeholder="请输入标题" class="edit-ipt" value="需求分析链接" />
+                            </td>
+                            <td>
+                                <input type="text" placeholder="请输入描述" class="edit-ipt" />
+                            </td>
+                            <td>
+                                <input type="text" placeholder="请输入链接" class="edit-ipt" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="text" placeholder="请输入标题" class="edit-ipt" value="常见问题链接" />
+                            </td>
+                            <td>
+                                <input type="text" placeholder="请输入描述" class="edit-ipt" />
+                            </td>
+                            <td>
+                                <input type="text" placeholder="请输入链接" class="edit-ipt" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="text" placeholder="请输入标题" class="edit-ipt" value="产品详情链接" />
+                            </td>
+                            <td>
+                                <input type="text" placeholder="请输入描述" class="edit-ipt" />
+                            </td>
+                            <td>
+                                <input type="text" placeholder="请输入链接" class="edit-ipt" />
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="mt06" style="text-align:right">
+                    <button type="button" class="tbtn linkdAdd" platform="app">+</button>
+                    <button type="button" class="tbtn linkRemove" platform="app">-</button>
+                </div>
+            </div>
+
+            <div>
+                <p class="subtitle mt1">优惠信息</p>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <td class="bg-blue">标题</td>
+                            <td class="bg-blue">描述</td>
+                            <td class="bg-blue">链接</td>
+                        </tr>
+                    </thead>
+                    <tbody id="appActivityTable">
+                        <tr>
+                            <td>
+                                <input type="text" placeholder="请输入促销标题" class="edit-ipt app-sales-name">
+                            </td>
+                            <td>
+                                <input type="text" placeholder="请输入促销描述" class="edit-ipt  app-sales-desc">
+                            </td>
+                            <td>
+                                <input type="text" placeholder="请输入促销链接" class="edit-ipt  app-sales-link">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="mt06" style="text-align:right">
+                    <button type="button" class="tbtn activityAdd" platform="app">+</button>
+                    <button type="button" class="tbtn activityRemove" platform="app">-</button>
+                </div>
+            </div>
+
+            <div class="mt1">
+                <p class="subtitle">保障说明</p>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <td class="bg-blue c-red">标题</td>
+                            <td class="bg-blue">描述</td>
+                            <td class="bg-blue">链接</td>
+                        </tr>
+                    </thead>
+                    <tbody id="appConditionTable">
+                        <tr>
+                            <td>
+                                <input type="text" placeholder="请输入标题" class="edit-ipt" />
+                            </td>
+                            <td>
+                                <input type="text" placeholder="请输入描述" class="edit-ipt" />
+                            </td>
+                            <td>
+                                <input type="text" placeholder="请输入链接" class="edit-ipt" />
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="mt06" style="text-align:right">
+                    <button type="button" class="tbtn condAdd" platform="app">+</button>
+                    <button type="button" class="tbtn condRemove" platform="app">-</button>
+                </div>
+            </div>
+
+            <div class="mt1">
+                <p class="subtitle">分享设置</p>
+                <table class="table">
+                    <tr>
+                        <td class="bg-blue">分享标题</td>
+                        <td>
+                            <input type="text" placeholder="请输入分享标题" class="edit-ipt app-share-title" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="bg-blue">分享内容</td>
+                        <td>
+                            <input type="text" placeholder="请输入分享内容" class="edit-ipt app-share-desc" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="bg-blue">brief</td>
+                        <td>
+                            <input type="text" placeholder="" class="edit-ipt app-share-intentbrief" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="bg-blue">desc</td>
+                        <td>
+                            <input type="text" placeholder="" class="edit-ipt app-share-intentdesc" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="bg-blue">result</td>
+                        <td>
+                            <input type="text" placeholder="" class="edit-ipt app-share-intentresult" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="bg-blue">title</td>
+                        <td>
+                            <input type="text" placeholder="" class="edit-ipt app-share-intenttitle" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="bg-blue">分享图片</td>
+                        <td>
+                            <input type="text" placeholder="请输入分享图片连接" class="edit-ipt app-share-img" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="bg-blue">分享连接</td>
+                        <td>
+                            <input type="text" placeholder="请输入分享连接" class="edit-ipt app-share-url" />
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="field clearfix wechat" data-type="wechat" style="display: none;">
+        <div class="field-title" style="height:189px">微信个性化字段</div>
+        <div class="field-list">
+            <table class="table">
+                <tr>
+                    <td class="bg-blue c-red">健康告知</td>
+                    <td>
+                        <input type="radio" id="wechatheal1" name="wechatHealth" class="wechatHealth" value="1" checked="checked">
+                        <label for="wechatheal1">有健康告知</label>
+                        <input type="radio" id="wechatheal2" name="wechatHealth" class="wechatHealth" value="0">
+                        <label for="wechatheal2">无健康告知</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="bg-blue c-red">上架时间</td>
+                    <td>
+                        <input type="text" placeholder="请输入产品上架时间" class="edit-ipt Wdate wechatTimeOn" onClick="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'})">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="bg-blue c-red">下架时间</td>
+                    <td>
+                        <input type="text" placeholder="请输入产品下架时间" class="edit-ipt Wdate wechatTimeOff" onClick="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'})">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="bg-blue">产品头图链接</td>
+                    <td class="">
+                        <input type="text" placeholder="请输入产品头图链接" class="edit-ipt wechat-pro-image">
+                    </td>
+                </tr>
+                <!-- <tr>
+					<td class="bg-blue">产品条款链接</td>
+					<td>
+						<input type="text" placeholder="请输入产品条款链接" class="edit-ipt wechat-clause-link">
+					</td>
+				</tr>
+				<tr>
+					<td class="bg-blue">投保须知链接</td>
+					<td>
+						<input type="text" placeholder="请输入投保须知链接" class="edit-ipt wechat-notice-link">
+					</td>
+				</tr> -->
+            </table>
+            <div>
+                <p class="subtitle mt1">保障说明</p>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <td class="bg-blue c-red">标题</td>
+                            <td class="bg-blue">描述</td>
+                            <td class="bg-blue">链接</td>
+                        </tr>
+                    </thead>
+                    <tbody id="wechatConditionTable">
+                        <tr>
+                            <td>
+                                <input type="text" placeholder="请输入标题" class="edit-ipt" />
+                            </td>
+                            <td>
+                                <input type="text" placeholder="请输入描述" class="edit-ipt" />
+                            </td>
+                            <td>
+                                <input type="text" placeholder="请输入链接" class="edit-ipt" />
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="mt06" style="text-align:right">
+                    <button type="button" class="tbtn condAdd" platform="wechat">+</button>
+                    <button type="button" class="tbtn condRemove" platform="wechat">-</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="field clearfix cps" data-type="cps" style="display: none;">
+        <div class="field-title" style="height:189px">cps个性化字段</div>
+        <div class="field-list">
+            <table class="table">
+                <tr>
+                    <td class="bg-blue c-red">健康告知</td>
+                    <td>
+                        <input type="radio" id="cpsheal1" name="cpsHealth" class="cpsHealth" value="1" checked="checked">
+                        <label for="cpsheal1">有健康告知</label>
+                        <input type="radio" id="cpsheal2" name="cpsHealth" class="cpsHealth" value="0">
+                        <label for="cpsheal2">无健康告知</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="bg-blue c-red">上架时间</td>
+                    <td>
+                        <input type="text" placeholder="请输入产品上架时间" class="edit-ipt Wdate cpsTimeOn" onClick="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'})">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="bg-blue c-red">下架时间</td>
+                    <td>
+                        <input type="text" placeholder="请输入产品下架时间" class="edit-ipt Wdate cpsTimeOff" onClick="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'})">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="bg-blue">产品头图链接</td>
+                    <td class="">
+                        <input type="text" placeholder="请输入产品头图链接" class="edit-ipt cps-pro-image">
+                    </td>
+                </tr>
+                <!-- <tr>
+					<td class="bg-blue">产品条款链接</td>
+					<td>
+						<input type="text" placeholder="请输入产品条款链接" class="edit-ipt cps-clause-link">
+					</td>
+				</tr>
+				<tr>
+					<td class="bg-blue">投保须知链接</td>
+					<td>
+						<input type="text" placeholder="请输入投保须知链接" class="edit-ipt cps-notice-link">
+					</td>
+				</tr> -->
+            </table>
+            <div>
+                <p class="subtitle mt1">保障说明</p>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <td class="bg-blue c-red">标题</td>
+                            <td class="bg-blue">描述</td>
+                            <td class="bg-blue">链接</td>
+                        </tr>
+                    </thead>
+                    <tbody id="cpsConditionTable">
+                        <tr>
+                            <td>
+                                <input type="text" placeholder="请输入标题" class="edit-ipt" />
+                            </td>
+                            <td>
+                                <input type="text" placeholder="请输入描述" class="edit-ipt" />
+                            </td>
+                            <td>
+                                <input type="text" placeholder="请输入链接" class="edit-ipt" />
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="mt06" style="text-align:right">
+                    <button type="button" class="tbtn condAdd" platform="cps">+</button>
+                    <button type="button" class="tbtn condRemove" platform="cps">-</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="btn-box">
+        <input type="button" value="暂存" class="btn btn-save" id="btn-save" />
+        <input type="button" value="下一步" class="btn btn-next" id="btn-next" />
+    </div>
+
+    <!--数据字典弹框-->
+    <div class="box" id="confirm" style="display:none;">
+        <div class="boxContainer">
+            <div class="inner" id="con"></div>
+            <div class="btn-box">
+                <input type="button" value="确定" class="ok-btn" id="ok-btn" />
+                <input type="button" value="取消" class="cancel-btn" id="cancel-btn" />
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    var attrDefaultObj = {
+        "type": [{
+            "key": "00",
+            "value": "消费型"
+        }, {
+            "key": "01",
+            "value": "返回型"
+        }],
+        "safeguard": [{
+            "key": "00",
+            "value": "少儿门诊"
+        }, {
+            "key": "01",
+            "value": "私家车意外"
+        }, {
+            "key": "02",
+            "value": "重疾保障"
+        }],
+        "time": [{
+            "key": "00",
+            "value": "短期"
+        }, {
+            "key": "01",
+            "value": "1年"
+        }, {
+            "key": "02",
+            "value": "长期"
+        }],
+        "range": [{
+            "key": "00",
+            "value": "商务人士"
+        }],
+        "price": [{
+            "key": "00",
+            "value": "100元以下"
+        }, {
+            "key": "01",
+            "value": "100元-300元"
+        }, {
+            "key": "02",
+            "value": "100元-300元"
+        }],
+        "payment": [{
+            "key": "00",
+            "value": "支付宝"
+        }, {
+            "key": "01",
+            "value": "信用卡"
+        }, {
+            "key": "02",
+            "value": "储蓄卡"
+        }, {
+            "key": "03",
+            "value": "快钱"
+        }, {
+            "key": "04",
+            "value": "财付通"
+        }],
+        "sepLabel": [{
+            "key": "00",
+            "value": "透明理赔"
+        }, {
+            "key": "01",
+            "value": "超值低价"
+        }, {
+            "key": "02",
+            "value": "热销爆款"
+        }],
+        "service": [{
+            "key": "保",
+            "value": "保证续保"
+        }, {
+            "key": "快",
+            "value": "极速生效"
+        }, {
+            "key": "赔",
+            "value": "透明理赔"
+        }, {
+            "key": "预",
+            "value": "预约专家"
+        }],
+        findServiceKey: function(value) {
+            for (var i = 0; i < this.service.length; i++) {
+                if (this.service[i].value == value) {
+                    return this.service[i].key;
+                }
+            }
+        }
+    };
+
+    function createConfirm(type) {
+        var str = "";
+        var options = attrDefaultObj[type];
+
+        for (var i = 0; i < options.length; i++) {
+            var key = options[i].key;
+            var val = options[i].value;
+            str += '<input type="checkbox" value="' + key + '" class="chk" id="c' + i + '"/><label for="c' + i + '">' + val + '</label>'
+        }
+
+        $("#con").html(str);
+        $("#con").attr("data-type", type);
+
+        var target = $(".label[data-type=" + type + "]");
+        var content = target.text();
+        if (content) {
+            content = content.split(/,|，/g);
+
+            $.each(content, function(index, el) {
+                var label = $("#con label:contains('" + el + "')");
+                label.prev().attr("checked", true);
+            });
+        }
+    }
+
+    var productCatalog = [{
+        "name": "意外险",
+        "code": "01",
+        "sublist": [{
+            "name": "综合意外",
+            "code": "0101"
+        }, {
+            "name": "交通意外",
+            "code": "0102"
+        }, {
+            "name": "航空意外",
+            "code": "0103"
+        }]
+    }, {
+        "name": "健康险",
+        "code": "02",
+        "sublist": [{
+            "name": "重大疾病",
+            "code": "0201"
+        }, {
+            "name": "住院医疗",
+            "code": "0202"
+        }, {
+            "name": "门诊报销",
+            "code": "0203"
+        }]
+    }, {
+        "name": "旅游",
+        "code": "03",
+        "sublist": [{
+            "name": "国内旅游",
+            "code": "0301"
+        }, {
+            "name": "境外旅游",
+            "code": "0302"
+        }, {
+            "name": "申根签证",
+            "code": "0303"
+        }]
+    }];
+
+    var returnMessage = {
+        "pc": false,
+        "app": false,
+        "wap": false,
+        "wechat": false,
+        "cps": false
+    };
+
+    var channelIds = {
+        "pc": "3",
+        "wap": "53686",
+        "wechat": "60185",
+        "cps": "60185",
+        "app": {
+            "android": "53685",
+            "ios": "54325"
+        }
+    }
+
+    var productId;
+    var isCalculate;
+
+    function initProductCatalog() {
+        var options = "";
+        for (var i = 0; i < productCatalog.length; i++) {
+            var cata = productCatalog[i];
+            var selected = "";
+            if (i == 0) {
+                selected = "selected"
+            }
+            options += "<option value=" + cata.code + " " + selected + ">" + cata.name + "</option>";
+        }
+        $("#productCatalog").html(options);
+
+        var firstCatalog = productCatalog[0];
+        setSubProductCatalog(firstCatalog);
+
+        $("#productCatalog").change(function(event) {
+            for (var j = 0; j < productCatalog.length; j++) {
+                if (productCatalog[j].code == this.value) {
+                    setSubProductCatalog(productCatalog[j]);
+                }
+            }
+        });
+    }
+
+    function setSubProductCatalog(catalog) {
+        var subOptions = "";
+        for (var i = 0; i < catalog.sublist.length; i++) {
+            var sub = catalog.sublist[i];
+            var selected = "";
+            if (i == 0) {
+                selected = "selected"
+            }
+            subOptions += "<option value=" + sub.code + " " + selected + ">" + sub.name + "</option>";
+        }
+        $("#productSubCatalog").html(subOptions);
+    }
+
+    $(function() {
+        initProductCatalog();
+
+        //点击不同的类型显示不同类型的配置
+        $("#platform .chk").change(function(event) {
+            returnMessage[this.value] = this.checked;
+            $("." + this.value).toggle();
+        });
+
+        initSaveData();
+
+        //显示弹出框
+        $(".label").click(function() {
+            var l = ($(window).width() - $("#confirm").width()) / 2,
+                t = ($(window).height() - $("#confirm").height()) / 2;
+
+            var type = $(this).attr("data-type");
+            createConfirm(type);
+            $("#confirm").show();
+        });
+
+        //点击确定 关闭弹框
+        $("#ok-btn").click(function() {
+            var type = $("#con").attr("data-type");
+            var inputs = $("#con").find("input:checked");
+
+            var arr = [];
+            inputs.each(function(index, el) {
+                arr[index] = $(el).next().text();
+            });
+
+            var target = $(".label[data-type=" + type + "]");
+            target.text(arr);
+
+            $("#confirm").hide();
+        });
+
+        //点击取消 关闭弹框
+        $("#cancel-btn").click(function() {
+            $("#confirm").hide();
+        });
+
+        $(".condAdd").click(addCondtionRow);
+        $(".condRemove").click(removeCondtionRow);
+
+        $(".linkdAdd").click(addLinkRow);
+        $(".linkdRemove").click(removeLinkRow);
+
+        $(".activityAdd").click(addActivityRow);
+        $(".activityRemove").click(removeActivityRow);
+
+        //点击暂存
+        $("#btn-save").click(savePageData);
+
+        //点击下一步
+        $("#btn-next").click(function() {
+            var chk = $("#platform input:checked");
+            if (chk.length == 0) {
+                alert("请选择发布平台");
+                return;
+            }
+
+            if ($(".pro-minAge").val() == "") {
+                alert("请输入投保人最小年龄");
+                return;
+            }
+
+            productId = $(".pro-id").val();
+            sessionStorage.setItem("productId", productId);
+
+            isCalculate = document.getElementById("calc1").checked;
+            sessionStorage.setItem("isCalculate", isCalculate);
+
+            savePageData();
+
+            var details = {}
+            returnMessage.pc && (details.pcDetails = getPcDetails());
+            returnMessage.wap && (details.wapDetails = getWapDetails());
+            returnMessage.app && (details.appDetails = getAppDetails());
+            returnMessage.wechat && (details.wechatEntity = getWechatDetails());
+            returnMessage.cps && (details.cpsEntity = getCPSDetails());
+            sessionStorage.setItem("details", JSON.stringify(details));
+
+            saveHealthConfig();
+            saveCondtionConfig();
+            uploadProductData();
+        });
+    });
+
+    function addActivityRow() {
+        var template =
+            '<tr><td><input type="text" placeholder="请输入促销标题" class="edit-ipt pc-sales-name"/></td>\
+						 <td><input type="text" placeholder="请输入促销描述" class="edit-ipt pc-sales-desc" /></td>\
+						 <td><input type="text" placeholder="请输入促销链接" class="edit-ipt pc-sales-link" /></td></tr>';
+        var platForm = $(this).attr("platForm");
+        $("#" + platForm + "ActivityTable").append(template);
+
+        //field-list
+        $("." + platForm + " .field-title").height($("." + platForm + " .field-list").height());
+    }
+
+    function removeActivityRow() {
+        var platForm = $(this).attr("platForm");
+        $("#" + platForm + "ActivityTable").find('tr').last().remove();
+        $("." + platForm + " .field-title").height($("." + platForm + " .field-list").height());
+    }
+
+    function addLinkRow() {
+        var template =
+            '<tr><td><input type="text" placeholder="请输入标题" class="edit-ipt" /></td>\
+		                 <td><input type="text" placeholder="请输入描述" class="edit-ipt" /></td>\
+						 <td><input type="text" placeholder="请输入链接" class="edit-ipt" /></td></tr>';
+        var platForm = $(this).attr("platForm");
+        $("#" + platForm + "LinkTable").append(template);
+
+        //field-list
+        $("." + platForm + " .field-title").height($("." + platForm + " .field-list").height());
+    }
+
+    function removeLinkRow() {
+        var platForm = $(this).attr("platForm");
+        $("#" + platForm + "LinkTable").find('tr').last().remove();
+        $("." + platForm + " .field-title").height($("." + platForm + " .field-list").height());
+    }
+
+    function saveCondtionConfig() {
+        var condtionConfig = {};
+        returnMessage.wap && (condtionConfig.wap = getCondtionConfig("wap"));
+        returnMessage.app && (condtionConfig.app = getCondtionConfig("app"));
+        returnMessage.wechat && (condtionConfig.wechat = getCondtionConfig("wechat"));
+        returnMessage.cps && (condtionConfig.cps = getCondtionConfig("cps"));
+
+        console.log(condtionConfig);
+        sessionStorage.setItem("condtionConfig", JSON.stringify(condtionConfig));
+    }
+
+    function getCondtionConfig(platForm) {
+        var conditionList = [];
+        var rows = $("#" + platForm + "ConditionTable").find("tr");
+
+        rows.each(function(index, el) {
+            var cols = $(el).children();
+
+            conditionList[index] = {
+                "componentId": platForm + "Condition",
+                "conditionName": cols.eq(0).find("input").val(),
+                "conditionBrief": cols.eq(0).find("input").val(),
+                "conditionDesc": cols.eq(1).find("input").val(),
+                "conditionUrl": cols.eq(2).find("input").val()
+            };
+        });
+
+        var config = {
+            "componentId": platForm + "ConditionList",
+            "componentTitle": "保障说明",
+            "conditionList": conditionList
+        };
+
+        return config;
+    }
+
+    function saveHealthConfig() {
+        //保存健康告知的信息 pcheal1 appheal1 wapheal1 wechatheal1
+        var healthConfig = {
+            "pc": document.getElementById("pcheal1").checked,
+            "wap": document.getElementById("wapheal1").checked,
+            "app": document.getElementById("appheal1").checked,
+            "wechat": document.getElementById("wechatheal1").checked,
+            "cps": document.getElementById("cpsheal1").checked
+        };
+        sessionStorage.setItem("healthConfig", JSON.stringify(healthConfig));
+    }
+
+    function uploadProductData() {
+        var sendMessage = {
+            "productId": productId, //"产品编码",
+            "productName": $(".pro-name").val(), //"产品名字",
+            "productDesc": $(".pro-desc").val(), //"产品特色描述",
+            "productCatalogId": $("#productSubCatalog").val(), // "产品类别编码",
+            "productCode": "1108", //"对应的核心产品编码",
+            "remark": $(".pro-name").val(), //"备注描述",
+            "salesStatus": "1", //"是否在售，0：否  1：是",
+            "issueAge": $(".pro-age").val(), //"投保年龄",
+            "insurancePeriod": $(".pro-time").val(), // "保险期间",
+            "insuranceBrief": $(".pro-guarantee-desc").val(), // "保障内容简介",
+            "minCost": $(".pro-price-low").val(), //"最低价格",
+            "salesVolume": $(".pro-sales").val(), // "销量",
+            "productInventory": $(".pro-inventory").val(), //"产品库存",
+            "typeTag": $(".pro-consu-type").text(), //"消费类型",
+            "specialTag": $(".pro-safeguard").text(), //"特殊保障",
+            "periodTag": $(".pro-time-guarantee").text(), //"保障期限",
+            "applicableTag": $(".pro-range").text(), //"针对人群",
+            "priceTag": $(".pro-price").text(), //,"价格",
+            "detailsImg": "", //"详情图片",
+            "payways": "", //"支付方式",
+            "qrcodeImg": "", //"手机购买更便捷(二维码图片地址)"
+            "channel": getChannelData(productId)
+        };
+
+        $.ajax({
+            type: "post",
+            url: "http://insure.test.hera.tk.cn/hera_center/rest/product/v1/definition/",
+            data: JSON.stringify(sendMessage),
+            dataType: "json"
+        }).done(function(data) {
+            if (data.code == "0") {
+                goNext();
+            } else {
+                alert(data.message);
+            }
+        }).fail(function() {
+            alert('failed');
+        });
+    }
+
+    function goNext(){
+        if(isCalculate){
+            location.href = "calcuateConfig.html";
+        }else{
+            location.href = "productConfig.html";
+        }
+    }
+
+    function getChannelData(productId) {
+        var channel = [];
+        var wechatAndcps = returnMessage.wechat && returnMessage.cps;
+
+        for (var key in returnMessage) {
+            var channelId = channelIds[key];
+            if (returnMessage[key]) {
+                if (wechatAndcps && (key == "cps")) {
+                    continue;
+                }
+
+                if (key == "app") {
+                    channel.push(channelData(key, channelId.ios, productId));
+                    channel.push(channelData(key, channelId.android, productId));
+                } else {
+                    channel.push(channelData(key, channelId, productId));
+                }
+            }
+        }
+
+        function channelData(platForm, channelId, productId) {
+            return {
+                "productId": productId,
+                "channelId": channelId,
+                "healthinfoStatus": document.getElementById(platForm + "heal1").checked ? "1" : "0",
+                "onlineTime": $("." + platForm + "TimeOn").val(),
+                "offlineTime": $("." + platForm + "TimeOff").val()
+            };
+        }
+        return channel;
+    }
+
+    function addCondtionRow() {
+        var template =
+            '<tr><td><input type="text" placeholder="请输入标题" class="edit-ipt" /></td>\
+		                 <td><input type="text" placeholder="请输入描述" class="edit-ipt" /></td>\
+						 <td><input type="text" placeholder="请输入链接" class="edit-ipt" /></td></tr>';
+        var platForm = $(this).attr("platForm");
+        $("#" + platForm + "ConditionTable").append(template);
+
+        //field-list
+        $("." + platForm + " .field-title").height($("." + platForm + " .field-list").height());
+    }
+
+    function removeCondtionRow() {
+        var platForm = $(this).attr("platForm");
+        $("#" + platForm + "ConditionTable").find('tr').last().remove();
+        $("." + platForm + " .field-title").height($("." + platForm + " .field-list").height());
+    }
+
+    function getPcDetails() {
+        var pcDetails = [];
+
+        //产品描述
+        pcDetails.push({
+            "componentId": "pcProductDesc",
+            "productName": $(".pro-name").val(),
+            "productDesc": $(".pro-desc").val()
+        });
+
+        //产品价格
+        pcDetails.push({
+            "componentId": "pcProductPrice",
+            "priceType": $(".pro-price-type").val(),
+            "productPrice": $(".pro-price").text()
+        });
+
+        //投保人年龄
+        pcDetails.push({
+            "componentId": "pcInsuredAgeRangeHidden",
+            "min": $(".pro-minAge").val(),
+            "max": $(".pro-maxAge").val() ? $(".pro-maxAge").val() : "65"
+        });
+
+        //是否是保费测算
+        if (isCalculate) {
+            pcDetails.push({
+                "componentId": "pcCalculateHidden",
+                "type": "post",
+                "url": ""
+            });
+        }
+
+        //优惠信息
+        var discount = {
+            "componentId": "pcDiscountInfoList",
+            "componentTitle": "优惠信息",
+            "discountInfoList": []
+        };
+
+        $("#pcActivityTable tr").each(function(index, el) {
+            var cols = $(el).children();
+            var title = cols.eq(0).find("input").val();
+            var desc = cols.eq(1).find("input").val();
+            var url = cols.eq(2).find("input").val();
+            if (title && desc) {
+                discount.discountInfoList.push({
+                    "componentId": "pcDiscountInfo",
+                    "discountTitle": title,
+                    "discountDesc": desc,
+                    "discountURL": url
+                });
+            }
+        });
+        if (discount.discountInfoList.length) {
+            pcDetails.push(discount);
+        }
+
+        //近期销量
+        pcDetails.push({
+            "componentId": "pcRecentSales",
+            "componentTitle": "近期销量",
+            "recentSales": $(".pc-pro-saleCount").val()
+        });
+
+        //订单头图
+        // pcDetails.push({
+        //     "componentId": "pcOrderImg",
+        //     "orderImgUrl": $(".aaa").val()
+        // });
+
+        //保障说明
+        pcDetails.push(getCondtionConfig("pc"));
+
+        //保存在sessionStorage中，在最后再追加到报文中
+
+        //产品购买二维码图片
+        var qrCode = $(".pc-pro-phone").val();
+
+        //服务承诺
+        var pcServiceList = {
+            "componentId": "pcServiceList",
+            "componentTitle": "服务承诺",
+            "serviceList": []
+        };
+
+        var services = $("#pcServiceConfig").text().split(",");
+        $.each(services, function(index, el) {
+            if (el) {
+                var key = attrDefaultObj.findServiceKey(el);
+                pcServiceList.serviceList.push({
+                    "componentId": "pcService",
+                    "serviceURL": "",
+                    "serviceDesc": el,
+                    "serviceKeyword": key
+                });
+            }
+        });
+
+        //支付方式
+        var pcPayStyleList = {
+            "componentId": "pcPayStyleList",
+            "componentTitle": "支付方式",
+            "payStyleList": []
+        };
+
+        var pays = $("#pcPayConfig").text().split(",");
+        $.each(pays, function(index, el) {
+            pcPayStyleList.payStyleList.push({
+                "componentId": "pcPayStyle",
+                "payStyleURL": "",
+                "payStyleDesc": el
+            });
+        });
+
+        var pcDetailsSave = {
+            qrCode: qrCode,
+            pcServiceList: pcServiceList,
+            pcPayStyleList: pcPayStyleList
+        }
+
+        sessionStorage.setItem("pcDetailsSave", JSON.stringify(pcDetailsSave));
+        return pcDetails;
+    }
+
+    function getWapDetails() {
+        var identity = $(".wap-pro-label").text().split(",");
+
+        //优惠信息
+        var discount = {
+            "componentId": "wapDiscountInfoList",
+            "componentTitle": "优惠信息",
+            "discountInfoList": []
+        };
+
+        $("#wapActivityTable tr").each(function(index, el) {
+            var cols = $(el).children();
+            var title = cols.eq(0).find("input").val();
+            var desc = cols.eq(1).find("input").val();
+            var url = cols.eq(2).find("input").val();
+            if (title && desc) {
+                discount.discountInfoList.push({
+                    "componentId": "wapDiscountInfo",
+                    "discountTitle": title,
+                    "discountDesc": desc,
+                    "discountURL": url
+                });
+            }
+        });
+
+        var wapDetails = [{
+            "componentId": "wapBanner",
+            "bannerImgUrl": $(".wap-pro-image").val() ? $(".wap-pro-image").val() : "/product/wap/insure/images/products/" + productId + ".jpg"
+        }, {
+            "componentId": "wapProductDesc",
+            "productName": $(".pro-name").val(),
+            "productDesc": $(".pro-desc").val(),
+            "productInfoUrl": $(".wap-pro-url").val() ? $(".wap-pro-url").val() : "/product/" + productId + "/wap/presentation/" + productId + "_details.html"
+        }, {
+            "componentId": "wapProductPrice",
+            "priceType": $(".pro-price-type").val(),
+            "productPrice": $(".pro-price").text()
+        }, {
+            "componentId": "wapInsuredAgeRangeHidden",
+            "min": $(".pro-minAge").val(),
+            "max": $(".pro-maxAge").val() ? $(".pro-maxAge").val() : "65"
+        }];
+
+        //是否是保费测算
+        if (isCalculate) {
+            wapDetails.push({
+                "componentId": "wapCalculateHidden",
+                "type": "post",
+                "url": ""
+            });
+        }
+
+        if (discount.discountInfoList.length) {
+            wapDetails.push(discount);
+        }
+
+        wapDetails.push({
+            "componentId": "wapIdentityList",
+            "identityList": [{
+                "componentId": "wapIdentity",
+                "identityURL": "images/adv1.png",
+                "identityDesc": identity[0]
+            }, {
+                "componentId": "wapIdentity",
+                "identityURL": "images/adv2.png",
+                "identityDesc": identity[1]
+            }, {
+                "componentId": "wapIdentity",
+                "identityURL": "images/adv3.png",
+                "identityDesc": identity[2]
+            }]
+        });
+
+        //微信分享
+        wapDetails.push({
+            "componentId": "wapWeixinShareHidden",
+            "shareTitle": $(".wap-share-title").val(),
+            "shareDesc": $(".wap-share-desc").val(),
+            "shareImg": $(".wap-share-img").val() ? $(".wap-share-img").val() : "/product/wap/insure/images/weixinshare/" + productId + ".jpg"
+        });
+
+        // var audioUrl = $(".wap-pro-audio").val();
+        // if (audioUrl) {
+        //     wapDetails.push({
+        //         "componentId": "wapInsureAudio",
+        //         "componentTitle": "产品经理1分钟讲保险",
+        //         "insureAudioUrl": audioUrl
+        //     });
+        // }
+
+        return wapDetails;
+    }
+
+    function getAppDetails() {
+        var identity = $(".wap-pro-label").text().split(",");
+        //优惠信息
+        var discount = {
+            "componentId": "appDiscountInfoList",
+            "componentTitle": "优惠信息",
+            "discountInfoList": []
+        };
+
+        $("#appActivityTable tr").each(function(index, el) {
+            var cols = $(el).children();
+            var title = cols.eq(0).find("input").val();
+            var desc = cols.eq(1).find("input").val();
+            var url = cols.eq(2).find("input").val();
+            if (title && desc) {
+                discount.discountInfoList.push({
+                    "componentId": "appDiscountInfo",
+                    "discountTitle": title,
+                    "discountDesc": desc,
+                    "discountURL": url
+                });
+            }
+        });
+
+        var appDetails = [{
+            "componentId": "appBanner",
+            "bannerImgUrl": $(".wap-pro-image").val()
+        }, {
+            "componentId": "appProductDesc",
+            "productName": $(".pro-name").val(),
+            "productDesc": $(".pro-desc").val(),
+            "productInfoUrl": $(".app-pro-details").val() ? $(".app-pro-details").val() : "http://ecuat.taikang.com/product/" + productId + "/wap/presentation/" + productId + "_details.html"
+        }, {
+            "componentId": "appProductPrice",
+            "priceType": $(".pro-price-type").val(),
+            "productPrice": $(".pro-price").text()
+        }, {
+            "componentId": "appInsuredAgeRangeHidden",
+            "type": "next",
+            "min": $(".pro-minAge").val(),
+            "max": $(".pro-maxAge").val() ? $(".pro-maxAge").val() : "65"
+        }];
+
+        //是否是保费测算
+        if (isCalculate) {
+            appDetails.push({
+                "componentId": "appCalculateHidden",
+                "type": "post",
+                "url": ""
+            });
+        }
+
+        //分享设置
+        appDetails.push({
+            "componentId": "appShareIntent",
+            "shareIntent": {
+                "desc": $(".app-share-desc").val(),
+                "name": $(".app-share-title").val(),
+                "intentInfo": {
+                    "brief": $(".app-share-intentbrief").val(),
+                    "desc": $(".app-share-intentdesc").val(),
+                    "result": $(".app-share-intentresult").val(),
+                    "title": $(".app-share-intenttitle").val()
+                },
+                "shareImgUrl": $(".app-share-img").val(),
+                "url": $(".app-share-url").val()
+            }
+        });
+
+        if (discount.discountInfoList.length) {
+            appDetails.push(discount);
+        }
+
+        appDetails.push({
+            "componentId": "appIdentityList",
+            "identityList": [{
+                "componentId": "appIdentity",
+                "identityURL": "",
+                "identityDesc": identity[0]
+            }, {
+                "componentId": "appIdentity",
+                "identityURL": "",
+                "identityDesc": identity[1]
+            }, {
+                "componentId": "appIdentity",
+                "identityURL": "",
+                "identityDesc": identity[2]
+            }]
+        });
+
+        // var audioUrl = $(".app-pro-audio").val();
+        // if (audioUrl) {
+        //     appDetails.push({
+        //         "componentId": "appInsureAudio",
+        //         "componentTitle": "产品经理1分钟讲保险",
+        //         "insureAudioUrl": audioUrl
+        //     });
+        // }
+
+        var appLinkObj = {
+            list: []
+        };
+
+        $(".appLinkTable tr").each(function(index, el) {
+            var cols = $(el).children();
+            appLinkObj.list[index] = {
+                "componentId": "appLinkItem",
+                "itemName": cols.eq(0).find("input").val(),
+                "itemBrief": cols.eq(1).find("input").val(),
+                "Url": cols.eq(2).find("input").val()
+            };
+        });
+
+        sessionStorage.setItem("appLink", JSON.stringify(appLinkObj));
+
+        return appDetails;
+    }
+
+    function getWechatDetails() {
+        var wechatEntity = [{
+            "componentId": "wechatBanner",
+            "bannerImgUrl": $(".wechat-pro-image").val()
+        }, {
+            "componentId": "wechatProductDesc",
+            "productName": $(".pro-name").val(),
+            "productDesc": $(".pro-desc").val()
+        }, {
+            "componentId": "wechatInsuredAgeRangeHidden",
+            "min": $(".pro-minAge").val(),
+            "max": $(".pro-maxAge").val() ? $(".pro-maxAge").val() : "65"
+        }];
+
+        //是否是保费测算
+        if (isCalculate) {
+            wechatEntity.push({
+                "componentId": "wechatCalculateHidden",
+                "type": "post",
+                "url": ""
+            });
+        }
+
+        var wechatLink = {
+            "componentId": "wechatProductInfo",
+            "componentTitle": "产品条款、投保须知",
+            "show": false,
+            "productInfo": [{
+                "componentId": "wechatProductTerm",
+                "productTermLable": "产品条款",
+                "productTerm": $(".wechat-clause-link").val()
+            }, {
+                "componentId": "wechatProductNotice",
+                "productNoticeLable": "投保须知",
+                "productNotice": $(".wechat-notice-link").val()
+            }]
+        }
+
+        sessionStorage.setItem("wechatLink", JSON.stringify(wechatLink));
+        return wechatEntity;
+    }
+
+    function getCPSDetails() {
+        var cpsEntity = [{
+            "componentId": "cpsBanner",
+            "bannerImgUrl": $(".cps-pro-image").val()
+        }, {
+            "componentId": "cpsInsuredAgeRangeHidden",
+            "min": $(".pro-minAge").val(),
+            "max": $(".pro-maxAge").val() ? $(".pro-maxAge").val() : "65"
+        }];
+
+        //是否是保费测算
+        if (isCalculate) {
+            cpsEntity.push({
+                "componentId": "cpsCalculateHidden",
+                "type": "post",
+                "url": ""
+            });
+        }
+
+        var cpsLink = {
+            "componentId": "cpsProductInfo",
+            "componentTitle": "产品条款、投保须知",
+            "show": false,
+            "productInfo": [{
+                "componentId": "cpsProductTerm",
+                "productTermLable": "产品条款",
+                "productTerm": $(".cps-clause-link").val()
+            }, {
+                "componentId": "cpsProductNotice",
+                "productNoticeLable": "投保须知",
+                "productNotice": $(".cps-notice-link").val()
+            }]
+        }
+        sessionStorage.setItem("cpsLink", JSON.stringify(cpsLink));
+
+        return cpsEntity;
+    }
+
+    function initSaveData() {
+        //读取sessionStorage关于产品配置的信息
+        var getProductMessage = JSON.parse(sessionStorage.getItem("returnProductMessage")) || {};
+        if (!$.isEmptyObject(getProductMessage)) {
+            $(".pro-id").val(getProductMessage.product_id); //产品编号
+            $(".pro-name").val(getProductMessage.product_name); //产品标题
+
+            $(".pro-age").val(getProductMessage.product_age); //投保年龄
+            $(".pro-time").val(getProductMessage.product_time); //投保期间
+            $(".pro-desc").val(getProductMessage.product_desc); //产品特色描述
+            $(".pro-label").val(getProductMessage.product_label); //特色标签
+            $(".pro-guarantee-desc").val(getProductMessage.product_guarantee_desc); //保障内容简介
+            $(".pro-price-low").val(getProductMessage.product_price_low); //最低价格
+            $(".pro-sales").val(getProductMessage.product_sales); //销量
+            $(".pro-inventory").val(getProductMessage.product_inventory); //产品库存
+
+            $(".pro-consu-type").text(getProductMessage.product_consu_type); //消费类型
+            $(".pro-safeguard").text(getProductMessage.product_safeguard); //特殊保障
+            $(".pro-time-guarantee").text(getProductMessage.product_time_guarantee); //保障期限
+            $(".pro-range").text(getProductMessage.product_range); //针对人群
+            $(".pro-price").text(getProductMessage.product_price); //价格
+
+            $(".pc-pro-image").val(getProductMessage.pc_product_image); //pc图片详情
+            //$(".pc-pro-payment").text(getProductMessage.pc_product_payment); //pc手机支付
+            $(".pc-pro-phone").val(getProductMessage.pc_product_phone); //pc手机购买
+            $(".pc-sales-name").val(getProductMessage.pc_product_phone); //促销信息 标题
+            $(".pc-sales-desc").val(getProductMessage.pc_sales_desc); //促销信息 描述
+            $(".pc-sales-link").val(getProductMessage.pc_sales_link); //促销信息 链接
+
+            $(".label wap-pro-label").text(getProductMessage.wap_product_label); //wap特色标签
+            $(".wap-pro-image").val(getProductMessage.wap_product_image); //wap图片
+            $(".wap-sales-name").val(getProductMessage.wap_sales_name); //促销信息 标题
+            $(".wap-sales-desc").val(getProductMessage.wap_sales_desc); //促销信息 描述
+            $(".wap-sales-link").val(getProductMessage.wap_sales_link); //促销信息 链接
+
+            $(".wechat-pro-image").val(getProductMessage.wechat_product_image);
+            $(".wechat-clause-link").val(getProductMessage.wechat_clause_link); //微信产品条款链接
+            $(".wechat-notice-link").val(getProductMessage.wechat_notice_link); //微信投保须知链接
+        }
+
+        var platSlected = JSON.parse(sessionStorage.getItem("returnMessage")) || {};
+        if (!$.isEmptyObject(platSlected)) {
+            $.each(platSlected, function(index, el) {
+                if (el) {
+                    $(".chk[value=" + index + "]")[0].checked = el;
+                    $(".chk[value=" + index + "]").change();
+                }
+            });
+        }
+    }
+
+    function savePageData() {
+        var returnProductMessage = {
+            "product_id": $(".pro-id").val(), //产品编号
+            "product_name": $(".pro-name").val(), //产品标题
+            "product_age": $(".pro-age").val(), //投保年龄
+            "product_time": $(".pro-time").val(), //投保期间
+            "product_desc": $(".pro-desc").val(), //产品特色描述
+            "product_label": $(".pro-label").val(), //特色标签
+            "product_guarantee_desc": $(".pro-guarantee-desc").val(), //保障内容简介
+            "product_price_low": $(".pro-price-low").val(), //最低价格
+            "product_sales": $(".pro-sales").val(), //销量
+            "product_time_on": "", //上架时间
+            "product_time_off": "", //下架时间
+            "product_healthy": 0, //健康告知
+            "product_inventory": $(".pro-inventory").val(), //产品库存
+
+            "product_consu_type": $(".pro-consu-type").text(), //消费类型
+            "product_safeguard": $(".pro-safeguard").text(), //特殊保障
+            "product_time_guarantee": $(".pro-time-guarantee").text(), //保障期限
+            "product_range": $(".pro-range").text(), //针对人群
+            "product_price": $(".pro-price").text(), //价格
+
+            "pc_product_image": $(".pc-pro-image").val(), //pc图片详情
+            "pc_product_payment": $(".pc-pro-payment").text(), //pc手机支付
+            "pc_product_phone": $(".pc-pro-phone").val(), //pc手机购买
+            "pc_sales_name": $(".pc-sales-name").val(), //促销信息 标题
+            "pc_sales_desc": $(".pc-sales-desc").val(), //促销信息 描述
+            "pc_sales_link": $(".pc-sales-link").val(), //促销信息 链接
+
+            "wap_product_label": $(".label wap-pro-label").text(), //wap特色标签
+            "wap_product_image": $(".wap-pro-image").val(), //wap图片
+            "wap_sales_name": $(".wap-sales-name").val(), //促销信息 标题
+            "wap_sales_desc": $(".wap-sales-desc").val(), //促销信息 描述
+            "wap_sales_link": $(".wap-sales-link").val(), //促销信息 链接
+
+            "wechat_product_image": $(".wechat-pro-image").val(),
+            "wechat_clause_link": $(".wechat-clause-link").val(), //微信产品条款链接
+            "wechat_notice_link": $(".wechat-notice-link").val() //微信投保须知链接,
+        };
+
+        sessionStorage.setItem("returnProductMessage", JSON.stringify(returnProductMessage));
+        sessionStorage.setItem("returnMessage", JSON.stringify(returnMessage));
+    }
+</script>
+
+</html>

@@ -1,0 +1,432 @@
+*{ margin: 0;padding:0;}
+.clearfix:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+.clearfix {
+	zoom: 1;
+}
+
+#container {
+	height: auto;
+	box-sizing: border-box;
+	display: table;
+	content: '.';
+	font-family: "微软雅黑";
+	color: #333;
+	position: relative;
+}
+
+#pc_detail {
+	width: 657px;
+	padding-bottom: 12px;
+	border-left: 1px #eeeff1 solid;
+}
+
+.productName,
+.productDescription {
+	width: 624px;
+	padding-left: 7px;
+	position: relative;
+	box-sizing: border-box;
+	color: #333;
+}
+
+.productName {
+	margin-top: 10px;
+	margin-left: 18px;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.productDescription {
+	margin-left: 18px;
+	font-size: 12px;
+	margin-top: 10px;
+	padding-bottom: 20px;
+	border-bottom: 1px dashed #d7d7d7;
+}
+
+.pcProductPrice {
+	width: 624px;
+	margin-left: 18px;
+	padding-left: 7px;
+	padding-top:15px;
+	color: #333;
+	box-sizing: border-box;
+}
+
+.pcProductPrice div:after {
+	display: block;
+	content: "";
+	clear: both;
+}
+
+.priceType,
+.activityTitle {
+	width: 65px;
+	height: 32px;
+	font-size: 12px;
+	padding-right: 15px;
+	float: left;
+	line-height: 32px;
+}
+
+.productPrice,
+.discountInfo {
+	width: 524px;
+	font-size: 12px;
+	color: #333;
+	float: left;
+	height: 32px;
+	line-height: 32px;
+}
+
+.priceData {
+	color: #ff6600;
+	font-size: 26px;
+	font-weight: bold;
+}
+
+.pcDiscountInfoList,
+.insureAge,
+.insurePeriod,
+.pcInsureAgeRangeList,
+.pcInsurePeriodList,
+.pcPackageNameList,
+.pcPackageList,
+.pcServiceList,
+.pcPayStyleList {
+	margin-top: 5px;
+	margin-left: 18px;
+	padding-left: 7px;
+	color: #333;
+	box-sizing: border-box;
+	
+}
+
+.pcDiscountInfoList {
+	padding-bottom: 20px;
+	border-bottom: 1px dashed #d7d7d7;
+}
+
+.pcPackageList {
+	margin-top: 15px;
+}
+
+/*.pcDiscountInfoList:after,
+.pcDiscountInfoList div:after,
+.insureAge:after,
+.insureAge div:after,
+.insurePeriod:after,
+.insurePeriod div:after,
+.pcPackageNameList:after,
+.pcPackageNameList div:after,
+.pcPackageList:after,
+.pcPackageList div:after,
+.pcServiceList:after,
+.pcServiceList div:after,
+.pcPayStyleList:after,
+.pcPayStyleList div:after {
+	display: block;
+	content: "";
+	clear: both;
+}*/
+
+.discountInfoTitle,
+.componentTitle {
+	width: 65px;
+	height: 32px;
+	font-size: 12px;
+	padding-right: 15px;
+	float: left;
+	line-height: 32px;
+}
+
+.discountInfoList,
+.insureAgeList,
+.packageNameList,
+.insurePeriodList,
+.pcPackageContent,
+.serviceList,
+.payStyleList {
+	width: 524px;
+	font-size: 12px;
+	color: #999;
+	float: left;
+	display: table;
+	content: '.';
+	position: relative;
+	height: 32px;
+}
+
+.pcPackageContent {
+	width: 375px;
+	
+	border: 1px solid #ff5400;
+	position: relative;
+	padding: 10px;
+	height: auto;
+}
+.triangle-p {
+	width: 19px;
+    height: 12px;
+    display: block;
+    position: absolute;
+    
+    top: -11px;
+    top:-10px\9;
+    top:-10px\0;
+    top:-10px\9\0;
+    *top:-10px;
+    -top:-10px;
+}
+
+
+.insureAge .item,
+.insurePeriod .insureAgeList .insurePeriod,
+.pcPackageName {
+	min-width: 80px;
+	height: 26px;
+	border: 1px #cecece solid;
+	text-align: center;
+	line-height: 26px;
+	float: left;
+	cursor: pointer;
+	color: #333;
+	margin: 5px 9px 0 0;
+	padding-left: 0px;
+	font-size: 12px;
+	position: relative;
+}
+
+.pcPackageName {
+	min-width: 126px;
+}
+
+.insureAge .insureAgeList .insureAge.active,
+.insurePeriod .insureAgeList .insurePeriod.active,
+.pcPackageName.active {
+	color: #ff6600;
+	border: 1px solid #ff5500;
+	background: url("../image/current.png") no-repeat right bottom;
+}
+
+.packageTitle {
+	
+	/*text-align: center;*/
+	height: 30px;
+	line-height: 30px;
+}
+
+.packageTitle div:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+.packageTitle div {
+	width: 12%;
+	color: #ff992b;
+	text-align: center;
+	float: left;
+}
+
+.packageTitle div:first-child {
+	width: 80%;
+	text-align: left;
+}
+
+.pcPackage {
+	display: none;
+	/*height:30px;*/
+	line-height: 30px;
+}
+
+.pcPackage.active {
+	display: block;
+}
+
+.pcLiability {
+	position: relative;
+}
+
+.liabilityName {
+	width: 80%;
+	float: left;
+}
+
+.liabilityAmount {
+	float: left;
+	width: 12%;
+	text-align: center;
+}
+
+.liabilityDesc {
+	display: none;
+}
+
+.liabilityImg {
+	display: block;
+	width: 15px;
+	height: 15px;
+	float: left;
+	cursor: pointer;
+	margin-top: 7px;
+	background: url(../image/mark.png) no-repeat;
+}
+
+.pcPayment {
+	text-align: center;
+	margin: 30px 0 0 105px;
+	overflow: hidden;
+}
+
+.pcPayment>div:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+.pcPayment> div {
+	/*width: 8rem;*/
+	float: left;
+}
+
+.pcPayment> div:not(:first-child) {
+	/*margin-left: 2rem;*/
+}
+
+.quickBuy,
+.login {
+	text-align: center;
+	font-family: '微软雅黑';
+	font-size: 18px;
+}
+
+.quickBuy {
+	width: 185px;
+	line-height: 45px;
+	cursor: pointer;
+	height: 45px;
+	border: 1px #ff992b solid;
+	color: #ff5500;
+	margin-right: 27px;
+}
+
+.login {
+	width: 187px;
+	line-height: 47px;
+	height: 47px;
+	cursor: pointer;
+	background: #ff5500;
+	color: #fff;
+}
+
+.payBtnExplan {
+	margin: 10px 0;
+	font-size: 12px;
+}
+
+.payQRCode {
+	margin-left: 10px;
+	cursor: pointer;
+}
+
+.payQRCode span {
+	font-size: 12px;
+	color: #333;
+	display: inline-block;
+	padding-top: 14px;
+}
+
+.payQRCode img {
+	width: 25px;
+	height: 25px;
+	margin-left: 10px;
+}
+
+.ewm {
+	width: 118px;
+	height: 118px;
+	position: absolute;
+	z-index: 998;
+	border: 1px solid #ccc;
+	background: #fff;
+}
+
+.discountInfoList div {
+	margin: 8px 0;
+}
+
+.discountTitle {
+	
+	text-align: center;
+	background: #ff5500;
+	color: #fff;
+	margin-right: 10px;
+}
+
+.discountDesc {
+	
+	color: #ff5400;
+}
+
+.pcServiceList {
+	padding-top: 10px;
+	border-top: 1px #d7d7d7 dashed;
+}
+
+.pcService,
+.pcPayStyle {
+	float: left;
+	margin-right: 15px;
+	line-height: 32px;
+}
+
+.serviceKeyword {
+	padding: 1px 2px;
+	background: #A87D6B;
+	color: #fff;
+}
+
+.details-mask {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	left: 0;
+	top: 0;
+	background: #0d0d0d;
+	opacity: 0.5;
+}
+
+.container {
+	width: 398px;
+	border:1px solid #cecece;
+	position: absolute;
+	background: #fff;
+	font-size: 12px;
+	box-shadow: 0 0 8px #999;
+}
+.container  .title{
+	line-height: 44px;
+	padding-left:20px;
+	border-bottom:1px solid #ccc;
+}
+.details-close {
+	display: block;
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	right: 20px;
+	top: 15px;
+	cursor: pointer;
+	background: url(../image/wxClose.png) no-repeat;
+}
+
+.con {
+	line-height: 30px;
+	padding:0 20px 20px 20px;
+}

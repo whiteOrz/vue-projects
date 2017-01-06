@@ -1,0 +1,14 @@
+var market_refurbishURL="refurbishdata";
+var toPub="toPub";
+var addWechatInsure="../market/addWechatInsure";
+var addInsure="../market/addPending";
+var signature="http://wechat.wei.taikang.com/wechat_hera_v4/rest/platform/wx/signiture";
+var toHelpmessages="toHelpmessages";
+var toGetPayOrder="toGetPayOrder";
+var getEgg="EggsfindConreller";
+var postMessages="PrizeSaveConreller";
+var newJoinWechat="newJoinWechat";
+var toDonation="../userinfo/toDonation";
+var gameStep="../userto/StepSaveConreller";//游戏成功
+var getpre="../PatAmountRate/getPayAmountRate";
+var postPower="shuttle";//跳站点传参

@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/my_style.css" />
+	<link href="css/reset.css" type="text/css" rel="stylesheet" />
+	<link href="css/product.css" type="text/css" rel="stylesheet" />
+	<link href="js/umeditor/themes/default/css/umeditor.css" type="text/css" rel="stylesheet">
+	<script src="js/jquery.min.js"></script>
+	<script src="js/DatePicker/WdatePicker.js"></script>
+	<script src="js/jquery.base64.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/umeditor/umeditor.config.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/umeditor/umeditor.min.js"></script>
+	<script type="text/javascript" src="js/umeditor/lang/zh-cn/zh-cn.js"></script>
+	<style type="text/css">
+		body,
+		html {
+			height: 100%;
+			overflow: auto;
+		}
+
+		.notice_terms {
+			width: 100%;
+			height: auto;
+		}
+
+		.pc,
+		.wap,
+		.app,
+		.wechat,
+		.cps {
+			display: none;
+			margin-left: 10%;
+			width: 50%;
+		}
+
+		.active {
+			background: #FF5F2F;
+		}
+
+		.alert_box {
+			display: none;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			left: 0;
+			top: 0;
+			opacity: 0.5;
+			background: #000;
+			z-index: 1000;
+		}
+
+		.alert_content {
+			display: none;
+			width: 400px;
+			height: 300px;
+			position: absolute;
+			left: 40%;
+			top: 50%;
+			margin-top: -150px;
+			background: #fff;
+			z-index: 1100;
+		}
+
+		.alert_content div {
+			width: 100%;
+			text-align: center;
+			line-height: 30px;
+		}
+
+		.config-again {
+			position: absolute;
+			bottom: 30px;
+			text-align: center;
+			width: 100%;
+			height: 30px;
+			background: #ec6c00;
+			line-height: 30px;
+			border: 1px solid #000;
+		}
+
+		.next-page {
+			position: absolute;
+			bottom: 0;
+			text-align: center;
+			width: 100%;
+			height: 30px;
+			background: #ccc;
+			line-height: 30px;
+		}
+	</style>
+</head>
+<body>
+	<div><a class="color-00c fw7" href="#">《 返回产品列表</a></div>
+	<div class="mt1">
+		<a href="javascript:;">1.基本信息</a>->
+		<a href="page2.html">2.试算信息</a>->
+		<a href="javascript:;">3.投保流程</a>->
+		<a class="color-00c fw7" href="javascript:;">4.投保声明</a>->
+		<a href="javascript:;">5.支付方式</a>
+	</div>
+
+	<div class="border-ccc row mt06" style="width:30rem; ">
+		<div class="col padding06 tab">pc</div>
+		<div class="col border-left-ccc padding06 tab">wap</div>
+		<div class="col border-left-ccc padding06 tab">app</div>
+		<div class="col border-left-ccc padding06 tab">wechat</div>
+		<div class="col border-left-ccc padding06 tab">cps</div>
+	</div>
+	<div class="notice_terms">
+		<div class="pc">
+			<p class="subtitle mt1 c-red">pc的投保须知</p>
+			<script type="text/plain" id="pcNotice" style="width:850px;height:20rem;">
+			</script>
+		</div>
+		<div class="wap">
+
+			<p class="subtitle mt1 c-red">wap的投保须知</p>
+			<script type="text/plain" id="wapNotice" style="width:850px;height:20rem;">
+			</script>
+		</div>
+		<div class="app">
+
+			<p class="subtitle mt1 c-red">app的投保须知</p>
+			<script type="text/plain" id="appNotice" style="width:850px;height:20rem;">
+			</script>
+		</div>
+		<div class="wechat">
+
+			<div>
+				<p class="subtitle mt1">wechat的产品条款</p>
+
+				<div id="wechatTermsTable" style="border:1px solid #ccc;padding:5px;">
+					<div class="termsRow">
+						<span>产品条款名称：</span>
+						<input type="text" class="termsName" />
+						<script type="text/plain" id="wechatTerms1" style="width:840px;height:20rem;">
+						</script>
+					</div>
+				</div>
+
+				<div class="mt06" style="text-align:right;margin: 0 auto;">
+					<button type="button" class="tbtn termsAdd" platform="wechat">+</button>
+					<button type="button" class="tbtn termsRemove" platform="wechat">-</button>
+				</div>
+			</div>
+			<div>
+				<p class="subtitle mt1 c-red">wechat的投保须知</p>
+				<script type="text/plain" id="wechatNotice" style="width:850px;height:20rem;">
+				</script>
+			</div>
+		</div>
+		<div class="cps">
+
+			<div>
+				<p class="subtitle mt1">cps的产品条款</p>
+				<div id="cpsTermsTable" style="border:1px solid #ccc;padding:5px;">
+					<div class="termsRow">
+						<span>产品条款名称：</span>
+						<input type="text" class="termsName" />
+						<script type="text/plain" id="cpsTerms1" style="width:840px;height:20rem;">
+						</script>
+					</div>
+				</div>
+				<div class="mt06" style="text-align:right;">
+					<button type="button" class="tbtn termsAdd" platform="cps">+</button>
+					<button type="button" class="tbtn termsRemove" platform="cps">-</button>
+				</div>
+			</div>
+			<div>
+				<p class="subtitle mt1 c-red">cps的投保须知</p>
+				<script type="text/plain" id="cpsNotice" style="width:850px;height:20rem;">
+				</script>
+			</div>
+		</div>
+	</div>
+	<div class="btn-box">
+		<input type="button" value="暂存" class="btn btn-save" id="btn-save" />
+		<input type="button" value="下一步" class="btn btn-next" id="btn-next" />
+	</div>
+	<div class="alert_box">
+
+	</div>
+	<div class="alert_content">
+		<div class="content_text"></div>
+		<div class="config-again">返回重新配置</div>
+		<div class="next-page">下一页</div>
+	</div>
+</body>
+<script type="text/javascript">
+	UM.getEditor('pcNotice');
+	UM.getEditor('wapNotice');
+	UM.getEditor('appNotice');
+	UM.getEditor('wechatNotice');
+	UM.getEditor('cpsNotice');
+	var wechatTermsEditors = ["wechatTerms1"];
+	UM.getEditor('wechatTerms1');
+	var cpsTermsEditors = ["cpsTerms1"];
+	UM.getEditor('cpsTerms1');
+	$.base64.utf8encode = true;
+	var wechatTermsId = 2;
+	var cpsTermsId = 2;
+
+	$(window).load(function() {
+		ready()
+		$(".termsAdd").click(addTermsRow);
+		$(".tab").click(tab);
+		$("#btn-next").click(uploadNoticeAndTerms);
+		$(".termsRemove").click(removeTermsRow)
+		$(".next-page").click(function() {
+			location.href = "paymentConfig.html";
+		});
+		$(".config-again").click(closebox)
+	})
+
+	function ready() {
+		var list = sessionStorage.getItem("returnMessage");
+		var oList = JSON.parse(list);
+		for (var item in oList) {
+			if (!oList[item]) {
+				$((".tab:contains(" + item + ")")).remove();
+				$("." + item).remove();
+			}
+		}
+		$(".tab").eq(0).addClass("active")
+		var ind = $(".tab").eq(0).text();
+		$(".notice_terms").children(("." + ind)).show();
+	}
+
+	function alertbox(el) {
+		$(".content_text").empty();
+		$(".alert_box").show();
+		$(".content_text").append(el);
+		$(".alert_content").show();
+	}
+
+	function closebox() {
+		$(".alert_box").hide()
+		$(".alert_content").hide()
+	}
+
+	function tab() {
+		$(this).addClass("active").siblings().removeClass("active");
+		$(".notice_terms>div").css("display", "none");
+		var text = $(this).text();
+		$(".notice_terms").children(("." + text)).show();
+		if ($("#" + text + "Notice").text().replace(/\s/g, "0") == 0) {
+			var first_Notice = $(".edui-body-container").eq(0).html();
+			$("#" + text + "Notice").html(first_Notice);
+		}
+		if (text == "cps") {
+			var len = $(".wechat .edui-editor-body").length - $(".cps .edui-editor-body").length;
+			for (var i = 0; i < len; i++) {
+				addTermsRow();
+			}
+			$(".cps .edui-editor-body").each(function(index, item) {
+				if ($(item).children(".edui-body-container").text().replace(/\s/g, "0") == 0) {
+					var wechat_terms = $(".wechat .edui-body-container").eq(index).html();
+					var wechat_terms_title = $(".wechat .termsName").eq(index).val();
+					$(item).children(".edui-body-container").html(wechat_terms);
+					$(".cps .termsName").eq(index).val(wechat_terms_title);
+				}
+			})
+		}
+	}
+
+	function uploadNoticeAndTerms() {
+		var ajax_flags = false;
+		var oDiv = $("<div></div>");
+		$(".edui-editor-body").each(function(index, item) {
+			if ($(item).children(".edui-body-container").text().replace(/\s/g, "0") == 0) {
+				oDiv.append($("<div style = \"color:red;\">" + $(item).children(".edui-body-container").attr("id") + "投保须知没有配置</div>"));
+				ajax_flags = true;
+			}
+		})
+
+		var list = sessionStorage.getItem("returnMessage");
+		var productId = sessionStorage.getItem("productId");
+		var returnMessage = JSON.parse(list) || {};
+
+
+		for (var key in returnMessage) {
+			if (!returnMessage[key]) {
+				continue;
+			}
+			var text = UM.getEditor(key + "Notice").getContent();
+			var obj = {};
+			obj[key + "Notice"] = $.base64.btoa(text);
+			var url = "http://insure.test.hera.tk.cn/hera_center/rest/product/v1/metadata/" + productId + "/" + key + "/notice";
+			$.ajax({
+				type: "post",
+				url: url,
+				async: false,
+				data: JSON.stringify(obj),
+				dataType: "json"
+			}).done(function(data) {
+				if (data.code == "0") {
+
+					oDiv.append($("<div style = \"color:red;\">" + key + "投保须知没有配置</div>"))
+				} else {
+					oDiv.append($("<div>" + data.message + "</div>"))
+				}
+			}).fail(function() {
+				oDiv.append($("<div>" + key + "投保须知上传失败</div>"))
+			});
+		}
+
+		if (returnMessage.wechat) {
+			var termsDiv = $("#wechatTermsTable .termsRow");
+			var obj = {
+				wechatTerms: []
+			};
+
+			termsDiv.each(function(index, el) {
+				var name = $(el).find(".termsName").val();
+				var content = UM.getEditor(wechatTermsEditors[index]).getContent();
+				if (name && content) {
+					obj.wechatTerms.push({
+						title: $.base64.btoa(name),
+						content: $.base64.btoa(content)
+					});
+				}
+			});
+
+			var url = "http://insure.test.hera.tk.cn/hera_center/rest/product/v1/metadata/" + productId + "/wechat/terms";
+			$.ajax({
+				type: "post",
+				url: url,
+				async: false,
+				data: JSON.stringify(obj),
+				dataType: "json"
+			}).done(function(data) {
+				if (data.code == "0") {
+
+					oDiv.append($("<div>wechat产品条款上传成功</div>"))
+				} else {
+					oDiv.append($("<div>" + data.message + "</div>"))
+				}
+			}).fail(function() {
+				oDiv.append($("<div>wechat产品条款上传失败</div>"))
+			});
+		}
+
+		if (returnMessage.cps) {
+			var termsDiv = $("#cpsTermsTable .termsRow");
+			var obj = {
+				cpsTerms: []
+			};
+
+			termsDiv.each(function(index, el) {
+				var name = $(el).find(".termsName").val();
+				var content = UM.getEditor(cpsTermsEditors[index]).getContent();
+
+				if (name && content) {
+					obj.cpsTerms.push({
+						title: $.base64.btoa(name),
+						content: $.base64.btoa(content)
+					});
+				}
+			});
+
+			var url = "http://insure.test.hera.tk.cn/hera_center/rest/product/v1/metadata/" + productId + "/cps/terms";
+			$.ajax({
+					type: "post",
+					url: url,
+					async: false,
+					data: JSON.stringify(obj),
+					dataType: "json"
+				}).done(function(data) {
+					if (data.code == "0") {
+						oDiv.append($("<div>cps产品条款上传成功</div>"))
+					} else {
+						oDiv.append($("<div>" + data.message + "</div>"))
+					}
+				}).fail(function() {
+					oDiv.append($("<div>cps产品条款上传失败</div>"))
+				});
+		}
+		alertbox(oDiv);
+	}
+
+	function addTermsRow() {
+		var platForm = $(this).attr("platForm") || "cps";
+
+		var id = "";
+		if (platForm == "wechat") {
+			id = "wechatTerms" + (wechatTermsId++);
+		} else {
+			id = "cpsTerms" + (cpsTermsId++);
+		}
+
+		var template = '<div class="termsRow"><span>产品条款名称：</span><input type="text" class="termsName" /><script type="text/plain" id="' + id + '" style="width:840px;height:20rem;"></div>';
+
+		$("#" + platForm + "TermsTable").append(template);
+
+		if (platForm == "wechat") {
+			wechatTermsEditors.push(id);
+		} else {
+			cpsTermsEditors.push(id);
+		}
+
+		UM.getEditor(id);
+
+		//field-list
+		$("." + platForm + " .field-title").height($("." + platForm + " .field-list").height());
+	}
+
+	function removeTermsRow() {
+		var platForm = $(this).attr("platForm");
+		if ($("#" + platForm + "TermsTable").find('.termsRow').length == 1) {
+			return false;
+		}
+
+		$("#" + platForm + "TermsTable").find(".termsRow").last().remove();
+
+
+		if (platForm == "wechat") {
+			wechatTermsEditors.length = wechatTermsEditors.length - 1;
+		} else {
+			cpsTermsEditors.length = cpsTermsEditors.length - 1;
+		}
+
+		$("." + platForm + " .field-title").height($("." + platForm + " .field-list").height());
+	}
+</script>
+</html>

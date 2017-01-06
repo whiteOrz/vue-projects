@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../js/vue_2.js"></script>
+</head>
+
+<body>
+    <div id="app" bb="a">
+        {{a}}
+        <input type="text" v-model="a" v-bind:aa="a" />
+        <input type="button" value="记录" @click="showTime" />
+        <ul>
+            <li v-for="t in timelist">{{t}}</li>
+        </ul>
+    </div>
+    <script>
+    var vm = new Vue({
+        el: "#app",
+        data: function() {
+
+            var obj = {
+                a: this.getTimeString((new Date()))
+            };
+            obj.timelist = [];
+
+            var _this = this;
+            setInterval(function() {
+                obj.a = _this.getTimeString((new Date()));
+            }, 1000);
+
+
+            return obj;
+        },
+        methods: {
+            showTime() {
+                this.timelist.push(this.a);
+            },
+            getTimeString(t){
+            	return t.getHours() + ":" + t.getMinutes() + ":" + t.getSeconds();
+            }
+        }
+    });
+    </script>
+</body>
+
+</html>

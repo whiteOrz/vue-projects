@@ -1,0 +1,25 @@
+/* CSS Document */
+@charset "utf-8";
+.fl{ float:left;}
+.fr{ float:right;}
+ul{ margin: 0; padding: 0;}
+li { list-style: none;}
+.clearfix:after { content: ''; display: block; clear: both;}
+
+.tabspace{ display:none;width:410px;padding:10px;border:#bdbdbd solid 1px;z-index:10001;position:absolute;top:37px;left:90px;background-color:rgb(252, 247, 247); font-size: 12px; font-family: '微软雅黑';}
+#diquClose { position: absolute; width: 20px; height: 20px; line-height: 20px; text-align: center; right: 5px; top: 5px; cursor: pointer;}
+.tabtitle{height:28px; line-height:28px;border-bottom:#cccccc solid 2px;}
+.tabtitle ul { height: 30px;}
+.tabtitle li{float:left; padding:0px 12px;height:28px; cursor:pointer;  line-height: 28px;}
+.tabtitle li.curr{border-bottom:#fe4b08 solid 2px;color:#fe4b08;}
+
+.area_wrap div{ width: 40px; color:#fe4b08; height: 24px; line-height: 24px;}
+.area_wrap ul{ width: 350px; }
+.tabcontent li{ float:left; width:60px; text-align:center; cursor: pointer; color:#333333; height: 24px; line-height: 24px; margin-right: 6px;}
+.tabcontent li:hover{background: #ff4f01;color:#fff;}
+.tabcontent #city_area {
+    padding-top: 5px;
+}
+
+.city{ display:none;padding:8px 0px 0px 15px;}
+.closespace{color:#999; padding:0px 0px 5px 6px;}

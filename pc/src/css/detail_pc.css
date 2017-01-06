@@ -1,0 +1,73 @@
+#container{height:auto;font-family:"微软雅黑";color:#333}
+#pc_detail{width:657px;padding-bottom:12px}
+.pcProductDesc{width:624px;margin-left:18px;padding-bottom:20px;border-bottom:1px dashed #d7d7d7}
+.productName,.productDescription{padding-left:7px;position:relative;color:#333}
+.productName{margin-top:10px;font-size:18px;font-weight:bold}
+.productDescription{font-size:12px;margin-top:10px}
+.pcProductPrice{width:624px;margin-left:18px;padding-left:7px;padding-top:15px;color:#333}
+.pcRecentSales{width:624px;margin-left:18px;padding-left:7px;padding-bottom:15px;border-bottom:1px dashed #d7d7d7}
+.recentSales{width:524px;font-size:12px;color:#333;float:left;height:32px;line-height:32px}
+.priceType,.activityTitle{width:65px;height:32px;font-size:12px;padding-right:15px;float:left;line-height:32px}
+.productPrice{font-size:12px;color:#333;float:left;height:32px;line-height:32px}
+.priceSaleType{width:65px;height:32px;font-size:12px;padding-right:15px;float:left;line-height:32px}
+.productSalePrice span{color:#333;font-weight:normal;font-size:14px;text-decoration:line-through;line-height:32px}
+.discountInfo{width:524px;font-size:12px;color:#333;float:left;height:32px;line-height:32px}
+.priceData{color:#ff6600;font-size:26px;font-weight:bold}
+.pcDiscountInfoList,.insureAge,.insurePeriod,.pcInsureAgeRangeList,.pcInsurePeriodList,.pcPackageNameList,.pcPackageList,.pcServiceList,.pcPayStyleList,.insurePerson,.insureLiability,.insureSum,.insureChildGender,.insureChildBirth,.insureRelationship,.insureGender,.insureBirth,.insureArea,.insurePayWay,.insurePayFrequency,.insurePhone{margin-top:5px;margin-left:18px;padding-left:7px;color:#333}
+.pcPackageList{margin-top:15px}
+.discountInfoTitle,.componentTitle{width:65px;height:32px;font-size:12px;padding-right:15px;float:left;line-height:32px}
+.discountInfoList,.insureAgeList,.packageNameList,.insurePeriodList,.pcPackageContent,.serviceList,.payStyleList,.iptChildBirth,.buyAmount,.iptArea,.iptPhone{width:524px;font-size:12px;color:#999;float:left;display:table;content:'.';position:relative;height:32px}
+.buyAmount,.iptChildBirth,.iptArea,.iptPhone{margin-top:5px}
+.buyAmount p{float:left;line-height:25px;color:#333;margin-left:5px}
+.buyAmount p.margin-l{margin-left:20px}
+.buyReduce,.buyAdd{float:left;width:26px;height:26px;border:1px solid #ccc;line-height:26px;padding:0;vertical-align:top;overflow:hidden;text-align:center;background-color:#ededed;overflow:hidden;color:#3C3C3C;cursor:pointer}
+.insureAgeList input[type=radio]{display:none}
+.buyNum{float:left;width:80px;height:24px;border:1px solid #ccc;border-left:none;border-right:none;font-size:12px;line-height:26px;text-align:center;color:#666;outline:0;background:#FFF}
+.iptBirth input[type=text],.iptChildBirth input[type=text],.iptArea input[type=text],.iptPhone input[type=text]{width:265px;height:26px;border:1px solid #ccc;font-size:12px;line-height:26px;outline:0;padding-left:5px;background:#FFF}
+.packageNameList,.insureAgeList{height:auto}
+.pcPackageContent{width:380px;border:1px dotted #ccc;position:relative;padding:10px;height:auto}
+.triangle-p{width:19px;height:12px;display:block;position:absolute;top:-11px;top:-10px\9;top:-10px\0;top:-10px\9\0;*top:-10px;-top:-10px}
+.insureGender .insureAgeList .insureGender,.insureLiability .insureAgeList .insureLiability,.insurePayFrequency .insureAgeList .insurePayFrequency,.insurePayWay .insureAgeList .insurePayWay,.insureBirth .insureAgeList .insureBirth,.insureRelationship .insureAgeList .insureRelationship,.insureChildGender .insureAgeList .insureChildGender,.insurePerson .insureAgeList .insurePerson,.insureAge .insureAge,.insurePeriod .insureAgeList .insurePeriod,.pcPackageName,.insurePeriodMessage{min-width:80px;height:26px;border:1px #cecece solid;text-align:center;line-height:26px;float:left;cursor:pointer;color:#333;margin:5px 9px 0 0;padding-left:0px;font-size:12px;position:relative}
+.insureAge .insureAge.w110{min-width:110px;width:110px}
+.insureBirth .insureAgeList .insureBirth{border:none}
+.insurePerson .insureAgeList .insurePerson{min-width:130px}
+.insureLiability .insureAgeList .insureLiability{min-width:150px}
+.insurePeriodMessage{border:none}
+.pcPackageName{min-width:126px}
+.point{position:absolute;bottom:-5px;left:64px}
+.insureGender .insureAgeList .insureGender.active,.insureLiability .insureAgeList .insureLiability.active,.insurePayFrequency .insureAgeList .insurePayFrequency.active,.insurePayWay .insureAgeList .insurePayWay.active,.insureBirth .insureAgeList .insureBirth.active,.insureRelationship .insureAgeList .insureRelationship.active,.insureChildGender .insureAgeList .insureChildGender.active,.insurePerson .insureAgeList .insurePerson.active,.insureAge .insureAgeList .insureAge.active,.insurePeriod .insureAgeList .insurePeriod.active,.pcPackageName.active{color:#ff6600;border:1px solid #ff5500;background:url("../image/current.png") no-repeat right bottom}
+.packageTitle{height:30px;line-height:30px}
+.packageTitle div:after{content:"";display:block;clear:both}
+.packageTitle div{width:12%;color:#ff992b;text-align:center;float:left}
+.pcPackage{display:none;line-height:30px}
+.pcPackage.active{display:block}
+.pcLiability{position:relative;border-bottom:1px dotted #ccc}
+.liabilityName{float:left}
+.liabilityAmount{float:right;margin-right:40px;text-align:center}
+.liabilityDesc{display:none}
+.liabilityImg{display:block;width:15px;height:15px;cursor:pointer;margin-top:7px;background:url(../image/mark.png) no-repeat;position:absolute;right:15px}
+.pcPayment{text-align:center;margin:30px 0 0 105px;overflow:hidden}
+.paymentbtn,.payQRCode{float:left}
+.quickBuy,.login{text-align:center;font-family:'微软雅黑';font-size:18px}
+.quickBuy{width:185px;line-height:45px;cursor:pointer;height:45px;border:1px #ff992b solid;color:#ff5500;margin-right:27px}
+.login{width:187px;line-height:47px;height:47px;cursor:pointer;background:#ff5500;color:#fff}
+.payBtnExplan{width:187px;margin:10px 0;font-size:12px;text-align:center}
+.payQRCode{margin-left:10px;cursor:pointer}
+.payQRCode span{font-size:12px;color:#333;display:inline-block;padding-top:14px}
+.payQRCode img{width:20px;height:20px;vertical-align:middle;margin-left:5px}
+.ewm{width:148px;height:148px;position:absolute;z-index:998;border:1px solid #ccc;background:#fff}
+.discountInfoList div{margin:8px 0;color:#333}
+.discountTitle{text-align:center;background:#ff5500;color:#fff;margin-right:10px}
+.discountDesc{color:#ff5400;padding-right:10px}
+.discountLink{color:blue;text-decoration:underline}
+.pcServiceList{padding-top:10px;border-top:1px #d7d7d7 dashed}
+.pcService,.pcPayStyle{float:left;margin-right:15px;line-height:32px}
+.serviceKeyword{padding:1px 2px;background:#A87D6B;color:#fff}
+.details-mask{width:100%;height:100%;position:fixed;left:0;top:0;background:#0d0d0d;opacity:0.5}
+.container{width:438px;border:1px solid #cecece;position:absolute;background:#fff;font-size:12px;box-shadow:0 0 8px #999;border-radius:5px}
+.container .title{line-height:44px;padding-left:15px;border-bottom:1px solid #ccc}
+.details-close{display:block;width:20px;height:20px;position:absolute;right:20px;top:15px;cursor:pointer;background:url(../image/wxClose.png) no-repeat}
+.con{line-height:25px;padding:0 15px 10px 15px}
+.pcInsuredAgeRange{display:none}
+.pcCalculate,.pcCalculateHidden{display:none}
+.payBtnGrey{background:grey;color:#fff;}

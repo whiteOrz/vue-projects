@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="utf-8">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <script src="js/flexible.debug.js"></script>
+    <link rel="apple-touch-icon" href="favicon.png">
+    <link rel="Shortcut Icon" href="favicon.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="css/base.css">
+    <link rel="stylesheet" type="text/css" href="css/game.css">
+    <title>奔跑吧巴西</title>
+</head>
+<body>
+<div class="game_wrapper game2_wrapper">
+    <img class="zhongb hideDiv" src="images/sj/d_jb.png"/>
+    <img class="game2_zhong hideDiv" src="images/sj/j.png"/>
+    <img class="game2_start hideDiv" src="images/sj/sjw_shou.png"/>
+    <img class="game2_ing hideDiv" src="images/sj/sj_shou.png"/>
+    <img class="game2_end help hideDiv" src="images/sj/sj_shou_wj.png"/>
+    <p class="dott hideDiv"></p>
+    <div class="layout ">
+        <div class="help_main">
+            <img class="role_title" src="images/jz/bsgz.png"/>
+            <div class="role_txt">
+                <p>玩家左右移动弓箭，瞄准箭靶进行发射，每位玩家共有3次射箭机会，射中即可获得相应奖励。</p>
+            </div>
+            <img class="start_btn" src="images/jz/ks.png"/>
+        </div>
+    </div>
+    <div class="layout2 hideDiv">
+        <div class="help_main fail">
+            <div class="game1_img">
+                <img class="picture" src="images/icon11.png">
+            </div>
+            <img class="game1_sorry" src="images/jz/sorry.png"/>
+            <p class="chose_txt has_once">您还有一次机会哦~</p>
+            <p class="chose_txt no_chose hideDiv">您两次机会已经用完了！</p>
+            <img class="once_btn" src="images/jz/yx_zlyc.png"/>
+        </div>
+    </div>
+</div>
+</body>
+<script type="text/javascript" src="js/zepto.min.js"></script>
+<script type="text/javascript">
+window.onload = function(){
+    document.addEventListener("touchmove",function(e){
+        e.preventDefault();
+    });
+    $("body").on("tap",".start_btn",function(){
+        $(".layout").addClass("hideDiv");
+        $(".zhongb").removeClass("hideDiv");
+        //$(".game2_zhong").removeClass("hideDiv");
+        $(".game2_start").removeClass("hideDiv");
+
+        var page = { x:0, y:0 };
+        $("body").on("touchstart",function(e){
+            page.x = e.changedTouches[0].pageX;
+            page.y = e.changedTouches[0].pageY;
+            $(".game2_start").addClass("hideDiv");
+            $(".game2_ing").removeClass("hideDiv");
+        });
+        var left2,top2;
+        $("body").on("touchmove",function(e){
+            var pageX = e.changedTouches[0].pageX-page.x;
+            var pageY = e.changedTouches[0].pageY-page.y;
+            $(".game2_ing").css({"left":(4+pageX/500)+"rem","bottom":Math.min(0,(-.3-pageY/500))+"rem"});
+            left2 = $(".game2_ing").css("left"),
+            top2 = $(".game2_ing").css("top");
+        });
+        $("body").on("touchend touchcancle",function(){
+            $(".game2_ing").addClass("hideDiv");
+            $(".game2_end").removeClass("hideDiv").css({"top":top2,"left":left2});
+            $(".dott").removeClass("hideDiv");
+            var top = (Math.random()*(200-100)+100)/75,
+                left = (Math.random()*(200-100)+100)/75;
+            $(".game2_zhong").css({"top":top+"rem","left":left+"rem"}).removeClass("hideDiv");
+            $("body").off("touchstart touchmove touchend");
+
+            if( top>1.7 && top<3.2 ){
+                if(left<2.4 && left>0.8){
+                    alert("成功2")//成功
+                }else{
+                    alert("失败1")//失败
+                }
+            }else{
+                alert("失败")//失败
+            }
+        });
+    });
+
+}
+</script>
+</html>

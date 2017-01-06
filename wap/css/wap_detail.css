@@ -1,0 +1,173 @@
+*{padding:0;margin:0;outline:none;word-break:break-all;-webkit-tap-highlight-color:rgba(0,0,0,0);}
+html{font-size:62.5%;font-family:"microsoft yahei";color:#000;}
+body{font-size:12px;font-size:1.2rem;overflow-x:hidden;}
+ul,li{list-style:none;}
+mark{background:none;}
+table{border-collapse:collapse;border-spacing:0;}
+input,select,input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{ -webkit-appearance:none; margin:0; border:none; font-family:microsoft Yahei;}
+.clearfix{zoom:1;}
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden;}
+a{text-decoration:none;color:#000;}
+.fl{float:left;}
+.fr{float:right;}
+.tl{text-align:left;}
+.tr{text-align:right;}
+.tc{text-align:center;}
+.dn{display:none;}
+.c0{color:#000;}
+.c1{color:#FF5F2F;}
+.c2{color:#999;}
+.c3{color:#D51B04;}
+.tm10{margin-top:1rem;}
+.bg-g{background:#F1F1F1;}
+.bg-w{background:#fff;}
+.h100{height:100%;}
+.lockBody{overflow: hiddenposition:relative;}
+
+#wap_details {background: #f1f1f1;}
+.container {padding-bottom: 5rem;}
+.wapBanner img {width: 100%;display: block;}
+.arrImg {width: 1.2rem;height: 1.2rem;float: right}
+.hideUrl {display: none;}
+.wapProductDesc {font-size: 1.5rem;font-weight: 500;padding: 1.2rem 1rem 0 1rem;background: #fff;}
+.wapProductDesc > div{padding-bottom: 1.2rem;border-bottom: 1px solid #ddd;position: relative;}
+.productDescription {font-size: 1.2rem;color: #999;margin-top: 0.3rem;}
+.wapProductPrice {padding: 1.2rem 1rem;font-size: 1.2rem;line-height: 1.8rem;background: #fff;}
+.priceType::after, .activityTitle::after, .discountTitle::after {content: "：";}
+.productPrice {font-size: 1.8rem;color: #FF5F2F;}
+.productPrice::before {content: "￥";}
+.wapInsuredAgeRange,.wapInsuredAgeRangeHidden{display: none;}
+.priceTag{line-height: 2rem;display: inline-block;color: #fff;padding: 0.1rem 0.3rem;background: #FF5F2F;border-radius: 0.2rem;margin-left: 1rem;}
+.wapDiscountInfoList {padding: 0 1rem 1.2rem 1rem;font-size: 1.2rem;line-height: 1.8rem;background: #fff;}
+.discountDesc {color: #FF5F2F;}
+.discountInfo {color: #FF5F2F;}
+.wapIdentityList {border-top: 1px solid #ddd;border-bottom: 1px solid #ddd;padding: 1.2rem 1rem;font-size: 1.2rem;color: #999;display: box;display: -webkit-box;background: #fff;}
+.wapIdentity {-webkit-box-flex: 1;text-align: center;}
+.wapIdentityItem {line-height: 1.55rem;display: inline-block;}
+.wapIdentity:nth-of-type(1) .wapIdentityItem{background: url(../images/identity_good.png) no-repeat;background-size: 1.55rem 1.55rem;padding-left:2rem;}
+.wapIdentity:nth-of-type(2) .wapIdentityItem{background: url(../images/identity_low.png) no-repeat;background-size: 1.55rem 1.55rem;padding-left:2rem;}
+.wapIdentity:nth-of-type(3) .wapIdentityItem{background: url(../images/identity_fire.png) no-repeat;background-size: 1.55rem 1.55rem;padding-left:2rem;}
+.wapIdentityItem_adv4{line-height: 1.55rem;display: inline-block;background: url(../images/adv4.png) no-repeat;background-size: 1.55rem 1.55rem;padding-left:1.8rem;}
+
+.wapAnalysis {border-top: 1px solid #ddd;border-bottom: 1px solid #ddd;padding-left: 1rem;background: #fff;margin-top: 1rem;min-height: 4.6rem;font-size: 1.2rem;display: -webkit-box;-webkit-box-align: center;-webkit-box-pack: justify;line-height: 2rem;}
+.analysisLable {font-size: 1.2rem;font-weight: 500;color: #666;}
+.analysisDesc {-webkit-box-flex: 1;text-align: right;color: #FF5F2F;padding-right: 1rem;}
+.componentTitle {font-size: 1.2rem;font-weight: 700;line-height: 3rem;text-indent: 1rem;background: #F1F1F1;padding-top: 0.8rem;}
+.planNameList {display: -webkit-box;border-top: 1px solid #ddd;height: 4.4rem;background: #fff;}
+.wapPlanName {-webkit-box-flex: 1;font-size: 1.2rem;text-align: center;line-height: 4.2rem;position: relative;}
+.wapPlanName.active {color: #FF5F2F;border-bottom: 2px solid #FF5F2F;}
+.wapPlanName.active::after {content: '';border-width: 3px;border-style: solid;border-color: #FF5F2F transparent transparent transparent;font-size: 0;line-height: 0;position: absolute;left: 50%;bottom: -8px;margin-left: -3px;}
+.wapPlanName:not(:last-child) {border-right: 1px solid #ddd;}
+.planList {border-top: 1px solid #ddd;border-bottom: 1px solid #ddd;padding-left: 1rem;background: #fff;}
+.wapPlan {display: none;}
+.wapPlan.active {display: block;}
+.wapLiability {min-height: 4.6rem;padding: 0 1rem 0 0;font-size: 1.2rem;line-height: 4.6rem;}
+.wapLiability:not(:last-child) {border-bottom: 1px solid #ddd;}
+.liabilityName::after {content: '';width: 1.2rem;height: 1.2rem;display: inline-block;background: url(../images/ask.png) no-repeat;background-size: contain;margin: -0.3rem 0.6rem 0;vertical-align: middle;}
+.liabilityAmount {float: right;color: #FF5F2F;}
+.liabilityDescription {font-size: 1.2rem;color: #666;line-height: 1.8rem;padding: 1rem 1rem 1rem 0;border-top: 1px solid #ddd;display: none;}
+.conditions {border-top: 1px solid #ddd;border-bottom: 1px solid #ddd;padding-left: 1rem;background: #fff;}
+.wapCondition {min-height: 4.6rem;padding: 0 1rem 0 0;font-size: 1.2rem;line-height: 4.6rem;text-align: left;}
+.wapCondition:not(:last-child) {border-bottom: 1px solid #ddd;}
+.conditionDescription {float: right;}
+.wapReturnMessage {background: #F1F1F1;}
+.wapPayment {height: 4.5rem;position: fixed;border-top: 1px solid #ddd;left: 0;bottom: 0;z-index: 999;width: 100%;display: -webkit-box;background: #fff;-webkit-box-align: center;-webkit-box-pack: center;}
+.payPrice {-webkit-box-flex: 1;font-size: 1.2rem;text-align: center;}
+.priceData {font-size: 1.6rem;color: #D51B04;}
+.score {font-size: 0.9rem;color: #999;}
+.service {width: 5rem;border-left: 1px solid #ddd;text-align: center;}
+.service::before {content: '';background: url(../images/ser.png) no-repeat;background-size: contain;width: 1.9rem;height: 1.9rem;display: block;margin: 0 auto;}
+.payBtn {width: 13.2rem;text-align: center;background: #D51B03;color: #fff;font: 1.6rem/4.5rem microsoft Yahei;cursor:pointer;}
+.wapProductDetails {border-top: 1px solid #ddd;border-bottom: 1px solid #ddd;padding-left: 1rem;background: #fff;margin-top: 1rem;min-height: 4.6rem;font-size: 1.2rem;display: -webkit-box;-webkit-box-align: center;-webkit-box-pack: justify;line-height: 2rem;}
+.productDetailsContent {font-size: 1.2rem;font-weight: 500;}
+.wapIframe {height: 20rem;}
+.wapIframe iframe {width: 100%;height: 20rem;border: none;}
+.wapPlanHide,.wapWeixinShare,.wapCalculate {display: none;}
+.wapCalculateHidden,.wapCalculateHidden,.wapWeixinShareHidden {display: none;}
+
+.insureAge{margin-top:1rem;border-top: 1px solid #ddd;border-bottom: 1px solid #ddd;padding-left: 1rem;background: #fff;}
+.insureAge article{min-height: 4.6rem;padding: 0 1rem 0 0;font-size: 1.2rem;display: -webkit-box;-webkit-box-align: center;-webkit-box-pack: justify;line-height: 2rem;}
+.insureAge h3{font-size: 1.2rem;font-weight: 500;color: #666;}
+.insureAge p{-webkit-box-flex: 1;text-align: right;}
+.insureAge p input[type=radio]{ display:none;}
+.insureAge p label{ margin:0;}
+.insureAge p span{ min-width:7rem; padding:0 0.4rem; height:2.6rem; line-height:2.6rem; text-align:center; font-size:1.2rem; display:inline-block; box-sizing:border-box; border:1px solid #ddd; position:relative;}
+.insureAge p input[type=radio]:checked+span{ border-color:#D7210B;}
+.insureAge p input[type=radio]:checked+span:after{ content:''; background:url(../images/checked2.png) no-repeat; background-size:contain; width:1.25rem; height:1.25rem; position:absolute; right:0; bottom:0;}
+
+.insurePeriod{margin-top:1rem;border-top: 1px solid #ddd;border-bottom: 1px solid #ddd;padding-left: 1rem;background: #fff;}
+.insurePeriod article{min-height: 4.6rem;padding: 0 1rem 0 0;font-size: 1.2rem;display: -webkit-box;-webkit-box-align: center;-webkit-box-pack: justify;line-height: 2rem;}
+.insurePeriod h3{font-size: 1.2rem;font-weight: 500;color: #666;}
+.insurePeriod p{-webkit-box-flex: 1;text-align: right; }
+.insurePeriod p input[type=radio]{ display:none;}
+.insurePeriod p label{ margin:0 0.5rem;}
+.insurePeriod p span{ min-width:7rem; padding:0 0.4rem; height:2.6rem; line-height:2.6rem; text-align:center; font-size:1.2rem; display:inline-block; box-sizing:border-box; border:1px solid #ddd; position:relative;}
+.insurePeriod p input[type=radio]:checked+span{ border-color:#D7210B;}
+.insurePeriod p input[type=radio]:checked+span:after{ content:''; background:url(../images/checked2.png) no-repeat; background-size:contain; width:1.25rem; height:1.25rem; position:absolute; right:0; bottom:0;}
+
+.premiumFactor{margin-top:1rem;border-top: 1px solid #ddd;border-bottom: 1px solid #ddd;padding-left: 1rem;background: #fff;}
+.premiumFactor article{min-height: 4.6rem;padding: 0 1rem 0 0;font-size: 1.2rem;display: -webkit-box;-webkit-box-align: center;-webkit-box-pack: justify;line-height: 2rem;}
+.premiumFactor h3{font-size: 1.2rem;font-weight: 500;color: #666;}
+.premiumFactor p{-webkit-box-flex: 1;text-align: right; padding: 0.8rem 0;line-height: 3rem;}
+.premiumFactor p input[type=radio]{ display:none;}
+.premiumFactor p label{ margin-left:0.2rem;}
+.premiumFactor p span{ min-width:4rem; padding:0 0.6rem; height:2.6rem; line-height:2.6rem; text-align:center; font-size:1.2rem; display:inline-block; box-sizing:border-box; border:1px solid #ddd; position:relative;}
+.premiumFactor p input[type=radio]:checked+span{ border-color:#D7210B;}
+.premiumFactor p input[type=radio]:checked+span:after{ content:''; background:url(../images/checked2.png) no-repeat; background-size:contain; width:1.25rem; height:1.25rem; position:absolute; right:0; bottom:0;}
+
+.liabilityMasker{width:100%;height:100%;position:fixed;left:0;top:0;z-index:1001;background:rgba(0,0,0,0.7);}
+.liabilityBox{width:90%;position:absolute;left:50%;top:50%;-webkit-transform:translate(-50%,-50%);background: #fff;border-radius: 1rem;}
+.liabilityBox article{padding:0 1.5rem 1.5rem 1.5rem;max-height: 20rem;overflow-y: auto;}
+.liabilityBox h2{font-size: 1.5rem;text-align: center;margin: 1rem 0;}
+.liabilityBox p{font-size: 1.2rem;color: #666;line-height: 1.8rem;}
+.liabilityBtnArea{height: 4.5rem;border-top: 1px solid #ddd;}
+.liabilityBtnArea input{display: block;width: 100%;height: 100%;font: 1.8rem/4.5rem microsoft Yahei;text-align: center;border: none;color: #2081F7;background: #fff;border-radius: 0 0 1rem 1rem;}
+.ldown{ }
+
+.wapPlanHelp{background: #fff;padding: 1.2rem;font-size: 1.2rem;text-align:center;border-bottom: 1px solid #ddd;color: rgb(56,121,217);}
+
+.leaveMasker{width:100%;height:100%;position:fixed;left:0;top:0;z-index:1001;background:rgba(0,0,0,0.7);}
+.alertBox{width:85%;position: absolute;left: 50%;top:50%;-webkit-transform:translate(-50%,-50%);background: #fff;border-radius: 1rem;overflow: hidden;font-family: "黑体";}
+.alertBoxContent{padding: 1rem;}
+.alertBoxContent h2{text-align: center;font-weight: 500;font-size: 1.6rem;margin-bottom: 1rem;}
+.alertBoxContent p{font-weight: 500;font-size:1.4rem;line-height: 2rem;}
+.alertBoxBtn{height: 4rem;background: #fff;text-align: center;font-size: 1.6rem;line-height: 4rem;color: #2081F7; border-top: 1px solid #ddd;}
+
+.wapCalculateShow{margin-top: 1rem;border-top: 1px solid #ddd;border-bottom: 1px solid #ddd;padding-left: 1rem;background: #fff;min-height: 4.6rem;font-size: 1.2rem;display: -webkit-box;-webkit-box-align: center;-webkit-box-pack: justify;line-height: 2rem;}
+.wapCalculateShow h3{font-size: 1.2rem;font-weight: 500;color: #666;}
+.wapCalculateShow p{-webkit-box-flex: 1;text-align: right;color: #FF5F2F;padding-right:1rem;}
+.wapCalculateShow img{width:1.2rem;height: 1.2rem;float:right;margin-top: 0.4rem}
+.premiumFactor .arr{width:1.2rem;height: 1.2rem;float:right;margin-top: 0.8rem;margin-left:0.5rem;}
+.premiumFactor .premiumInput{width: 80%;text-align: right;font-size: 1.2rem;}
+.premiumFactor .premiumSelect{font-size: 1.2rem;color: #999;}
+
+.wapCalculatePop{width: 100%;height:100%; position: fixed;left:0;top:0;background: rgba(0,0,0,0.7);z-index: 990;}
+.wapCalculateContainer{width: 100%;position: absolute;bottom:-30rem;left:0; background: #fff;}
+.wapCalculateHeader h2{font-size: 1.2rem;line-height: 3.5rem;font-weight: 500;text-indent: 1rem;}
+.wapCalculateHeader .close{background: url(../images/close2.png) no-repeat;background-size: contain;width: 2.5rem;height: 2.5rem;position: absolute;right: 0.8rem;top: -2.5rem;}
+.wapCalculateContent {height: 25rem;overflow-y: auto;border-top: 1px solid #ccc;border-bottom: 1px solid #ccc;}
+.wapCalculateContent .premiumFactor{margin-top: 0;border:0;}
+.wapCalculateContent .premiumFactor:not(:first-of-type) article{ border-top: 1px solid #ccc;}
+
+.wapInsureAudio article{border-top: 1px solid #ddd;border-bottom: 1px solid #ddd;background: #fff;padding:1rem 0 1rem 1rem;font-size: 1.2rem;display: -webkit-box;-webkit-box-align: center;-webkit-box-pack: start;}
+.wapInsureAudio .audioHeader{width: 3.15rem;display: block;}
+.wapInsureAudio .ico{background: url(../images/audio_bg.gif) no-repeat;background-size: contain;width: 13.2rem;height: 3rem;display: block;margin-left: 1rem;position: relative;}
+.wapInsureAudio .audioPlay{width: 1.2rem;height: 1.7rem;position: absolute;left: 1.7rem;top: 50%;margin-top: -0.85rem;}
+
+.wapIdentityMasker{width: 100%;height:100%; position: fixed;left:0;top:0;background: rgba(0,0,0,0.7);z-index: 990;}
+.wapIdentityContent{width: 100%;position: absolute;bottom:-30rem;left:0; background: #fff;padding:1rem 0;}
+.wapIdentityContent div{padding:1rem 3rem 2rem;}
+.wapIdentityContent .close{background: url(../images/close2.png) no-repeat;background-size: contain;width: 2.5rem;height: 2.5rem;position: absolute;right: 0.8rem;top: -2.5rem;}
+.wapIdentityContent h3{font-size: 1.2rem;font-weight: 500;color: #ff6600;margin: 1rem 0 0.3rem 0;}
+.wapIdentityContent h3::before{ content: '';background: url(../images/adv4.png) no-repeat;background-size: contain;width: 1.55rem;height: 1.55rem;display: inline-block;vertical-align: middle;margin: -0.3rem 0.5rem 0 0;}
+
+@media screen and ( min-width: 320px){html{font-size:10px}}
+@media screen and ( min-width: 360px){html{font-size:11.25px}}
+@media screen and ( min-width: 375px){html{font-size:11.71875px}}
+@media screen and ( min-width: 384px){html{font-size:12px}}
+@media screen and ( min-width: 400px){html{font-size:12.5px}}
+@media screen and ( min-width: 414px){html{font-size:12.9375px}}
+@media screen and ( min-width: 424px){html{font-size:13.25px}}
+@media screen and ( min-width: 480px){html{font-size:15px}}
+@media screen and ( min-width: 540px){html{font-size:16.875px}}
+@media screen and ( min-width: 640px){html{font-size:20px}}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    <link type="text/css" rel="stylesheet" href="css/base.css">
+    <link type="text/css" rel="stylesheet" href="css/pay.css">
+    <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="js/pay.js"></script>
+    <title></title>
+</head>
+<body>
+    <form id="myform" class="myform" method="" action="">
+        <div class="row">
+            <span class="jz right">姓 名：</span>
+            <input type="text" name="name" id="name" class="content">
+        </div>
+        <div class="row">
+            <span class="jz1 right">身 份 证：</span>
+            <input type="text" name="card" id="card" class="content">
+        </div>
+        <div class="row row1">
+            <span class="jz1 right">手 机 号：</span>
+            <input type="text" name="tel" id="tel" class="content">
+        </div>
+        <div class="row">
+            <span class="right">支付金额：</span>
+            <select class="content" id="select">
+                <option value="0">1元保1000元</option>
+                <option value="1">10元保1万元</option>
+                <option value="2">20元保2万元</option>
+                <option value="3">50元保5万元</option>
+                <option value="4">100元保10万元</option>
+                <option value="5">150元保15万元</option>
+            </select>
+            <!--<span class="content pay" id="pay">请选择支付金额<span class="down fr" id="arrow">∨</span></span>-->
+            <!--<div class="select" id="select">
+                <a>1元保1000元</a>
+                <a>10元保1万元</a>
+                <a>20元保2万元</a>
+                <a>50元保5万元</a>
+                <a>100元保10万元</a>
+                <a>150元保15万元</a>
+            </div>-->
+        </div>
+        <div class="row">
+            <span class="right">保障金额：</span>
+            <span class="content money" id="money">1,000元</span>
+        </div>
+        <div class="row">
+            <span class="right">保障期间：</span>
+            <span class="content" id="time"></span>
+        </div>
+        <div class="row">
+            <span class="right">保障责任：</span>
+            <span class="duty">乳腺癌、肺癌、子宫癌、胃癌、肝癌、食道癌等所有常见癌症，免责除外</span>
+        </div>
+        <div class="row3">
+            <input type="checkbox" name="read" class="read" id="read">
+            <span class="agree">我已阅读并同意<a href="javascript:void(0);">《健康告知》</a><a href="javascript:void(0);">《产品条款》</a></span>
+        </div>
+    </form>
+    <div class="btn" id="button">
+        <img src="images/pay_btn.png" width="100%">
+    </div>
+</body>
+</html>

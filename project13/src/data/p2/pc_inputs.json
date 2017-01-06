@@ -1,0 +1,161 @@
+{
+    "pcInputs": [
+        {
+            "componentId": "pcApplicantInfo",
+            "componentTitle": "投保人信息",
+            "applicantInfo": [
+                {
+                    "componentId": "pcApplicantName",
+                    "id": "applicantName",
+                    "lable": "姓名",
+                    "tip": "投保人姓名",
+                    "description": "请输入投保人姓名",
+                    "required": "true",
+                    "defaultValue": "",
+                    "type": "",
+                    "options": ""
+                },
+                {
+                    "componentId": "pcApplicantId",
+                    "id": "applicantId",
+                    "lable": "证件号码",
+                    "tip": "投保人证件号码",
+                    "description": "请输入投保人证件号码",
+                    "required": "true",
+                    "defaultValue": "",
+                    "type": "",
+                    "options": ""
+                },
+                {
+                    "componentId": "pcApplicantPhone",
+                    "id": "applicantPhone",
+                    "lable": "手机号",
+                    "tip": "投保人手机号",
+                    "description": "请输入投保人手机号",
+                    "required": "true",
+                    "defaultValue": "",
+                    "type": "",
+                    "options": ""
+                },
+                {
+                    "componentId": "pcApplicantAddress",
+                    "id": "applicantAddress",
+                    "lable": "房屋地址",
+                    "tip": "投保房屋地址",
+                    "description": "请输入投保房屋地址",
+                    "required": "true",
+                    "defaultValue": "",
+                    "type": "",
+                    "options": ""
+                },
+                {
+                    "componentId": "pcApplicantEmail",
+                    "id": "applicantEmail",
+                    "lable": "邮箱",
+                    "tip": "投保人邮箱",
+                    "description": "请输入投保人邮箱",
+                    "required": "true",
+                    "defaultValue": "",
+                    "type": "",
+                    "options": ""
+                }
+            ]
+        },
+        {
+            "componentId": "pcInsuredInfo",
+            "componentTitle": "被保险人信息",
+            "insuredMyself": [
+                {
+                    "componentId": "pcInsuredMyself",
+                    "id": "insuredMyself",
+                    "lable": "同投保人",
+                    "tip": "",
+                    "description": "",
+                    "required": "false",
+                    "defaultValue": "",
+                    "type": "",
+                    "options": ""
+                }
+            ],
+            "insuredInfo": [
+                {
+                    "componentId": "pcInsuredRelationship",
+                    "id": "insuredRelationship",
+                    "lable": "被保人是我的",
+                    "tip": "请选择",
+                    "description": "请选择被保人和投保人关系",
+                    "required": "true",
+                    "defaultValue": "",
+                    "type": "",
+                    "options": ""
+                },
+                {
+                    "componentId": "pcInsuredName",
+                    "id": "insuredName",
+                    "lable": "姓名",
+                    "tip": "被保险人姓名",
+                    "description": "请输入被保险人姓名",
+                    "required": "true",
+                    "defaultValue": "",
+                    "type": "",
+                    "options": ""
+                },
+                {
+                    "componentId": "pcInsuredId",
+                    "id": "insuredId",
+                    "lable": "证件号码",
+                    "tip": "被保险人证件号码",
+                    "description": "请输入被保险人证件号码",
+                    "required": "true",
+                    "defaultValue": "",
+                    "type": "",
+                    "options": ""
+                },
+                {
+                    "componentId": "pcInsuredPhone",
+                    "id": "insuredPhone",
+                    "lable": "手机号",
+                    "tip": "被保险人手机号",
+                    "description": "请输入被保险人手机号",
+                    "required": "true",
+                    "defaultValue": "",
+                    "type": "",
+                    "options": ""
+                },
+                {
+                    "componentId": "pcInsuredEmail",
+                    "id": "insuredEmail",
+                    "lable": "邮箱",
+                    "tip": "被保险人邮箱",
+                    "description": "请输入被保险人邮箱",
+                    "required": "true",
+                    "defaultValue": "",
+                    "type": "",
+                    "options": ""
+                }
+            ]
+        },
+        {
+            "componentId": "pcBeneficiaryInfo",
+            "componentTitle": "受益人信息",
+            "legalBeneficiary": [
+                {
+                    "componentId": "pcLegalBeneficiary",
+                    "id": "beneficiaryMyself",
+                    "lable": "法定受益人",
+                    "tip": "",
+                    "description": "",
+                    "required": "false",
+                    "defaultValue": "",
+                    "type": "",
+                    "options": ""
+                }
+            ],
+            "beneficiaryInfo": []
+        },
+        {
+            "componentId": "pcTradeInfoList",
+            "componentTitle": "订单明细"
+        }
+    ]
+}

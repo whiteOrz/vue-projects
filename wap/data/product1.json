@@ -1,0 +1,34 @@
+{
+    "applicationToken": "",
+    "processHandler": "property",
+    "checkCode": "",
+    "inputs": {
+        "applicantInfo": {
+            "applicantName": "",
+            "applicantIdType": "",
+            "applicantId": "",
+            "applicantGender": "",
+            "applicantBirth": "",
+            "applicantPhone": "",
+            "applicantEmail": "",
+            "applicantAddress": "",
+            "applicantProvince": "",
+            "applicantCity": "",
+            "applicantProfession": ""
+        },
+        "insuredInfo": [
+            {
+                "insuredRelationship": "01",
+                "insuredName": "",
+                "insuredIdType": "",
+                "insuredId": "",
+                "insuredGender": "",
+                "insuredBirth": "",
+                "insuredPhone": "",
+                "insuredEmail": "",
+                "beneficiaryLegal": true,
+                "beneficiaryInfo": []
+            }
+        ]
+    }
+}

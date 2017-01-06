@@ -1,0 +1,267 @@
+{
+    "pcDetails": [
+        {
+            "componentId": "pcProductDesc",
+            "productName": "全年综合意外保障",
+            "productDesc": "每天低至0.15元！大小意外全保，工作生活、居家旅行必备！"
+        },
+        {
+            "componentId": "pcProductPrice",
+            "priceType": "会员价",
+            "productPrice": "50",
+            "discountInfo": "4.1-4.30返还两倍积分",
+            "activityTitle": "促销信息"
+        },
+        {
+            "componentId": "pcInsureAgeRangeList",
+            "componentTitle": "投保年龄",
+            "insureAgeRangeList": [
+                {
+                    "componentId": "pcInsureAgeRange",
+                    "insureAgeRange": "30天-9岁",
+                    "insureAgeRangeIndex": "0"
+                },
+                {
+                    "componentId": "pcInsureAgeRange",
+                    "insureAgeRange": "10-17岁",
+                    "insureAgeRangeIndex": "1"
+                }
+            ]
+        },
+        {
+            "componentId": "pcInsurePeriodList",
+            "componentTitle": "保多久",
+            "insurePeriodList": [
+                {
+                    "componentId": "pcInsurePeriod",
+                    "insurePeriod": "30天-9岁",
+                    "insurePeriodIndex": "0"
+                },
+                {
+                    "componentId": "pcInsurePeriod",
+                    "insurePeriod": "10-17岁",
+                    "insurePeriodIndex": "1"
+                }
+            ]
+        },
+        {
+            "componentId": "pcPackageNameList",
+            "componentTitle": "套餐分类",
+            "packageNameList": [
+                {
+                    "componentId": "pcPackageName",
+                    "packageName": "基本款",
+                    "packageNameIndex": "0"
+                },
+                {
+                    "componentId": "pcPackageName",
+                    "packageName": "白金款",
+                    "packageNameIndex": "1"
+                },
+                {
+                    "componentId": "pcPackageName",
+                    "packageName": "钻石款",
+                    "packageNameIndex": "2"
+                }
+            ]
+        },
+        {
+            "componentId": "pcPackageList",
+            "packageList": [
+                {
+                    "componentId": "pcPackage",
+                    "packageId": "001",
+                    "packageFactorList": [
+                        "pcAgeRangeList",
+                        "pcPackageNameList"
+                    ],
+                    "packageIndex": [
+                        "0",
+                        "0"
+                    ],
+                    "packageName": "基本款",
+                    "packagePrice": "50",
+                    "packageScore": "51",
+                    "packageLiabilityList": [
+                        {
+                            "componentId": "pcLiability",
+                            "liabilityId": "001",
+                            "liabilityName": "意外身故",
+                            "liabilityAmount": "10",
+                            "liabilityDesc": "因意外伤害事故直接导致被保险人在该意外伤害事故发生之日起180日内身故的，将按合同约定给付受益人意外身故保险金。"
+                        },
+                        {
+                            "componentId": "pcLiability",
+                            "liabilityId": "002",
+                            "liabilityName": "公共汽车、电车意外伤害",
+                            "liabilityAmount": "10",
+                            "liabilityDesc": "因意外伤害事故直接导致被保险人在该意外伤害事故发生之日起180日内身故的，将按合同约定给付受益人意外身故保险金。"
+                        }
+                    ]
+                },
+                {
+                    "componentId": "pcPackage",
+                    "packageId": "001",
+                    "packageFactorList": [
+                        "pcAgeRangeList",
+                        "pcPackageNameList"
+                    ],
+                    "packageIndex": [
+                        "0",
+                        "1"
+                    ],
+                    "packageName": "白金款",
+                    "packagePrice": "150",
+                    "packageScore": "151",
+                    "packageLiabilityList": [
+                        {
+                            "componentId": "pcLiability",
+                            "liabilityId": "001",
+                            "liabilityName": "意外身故",
+                            "liabilityAmount": "10",
+                            "liabilityDesc": "因意外伤害事故直接导致被保险人在该意外伤害事故发生之日起180日内身故的，将按合同约定给付受益人意外身故保险金。"
+                        },
+                        {
+                            "componentId": "pcLiability",
+                            "liabilityId": "002",
+                            "liabilityName": "公共汽车、电车意外伤害",
+                            "liabilityAmount": "10",
+                            "liabilityDesc": "因意外伤害事故直接导致被保险人在该意外伤害事故发生之日起180日内身故的，将按合同约定给付受益人意外身故保险金。"
+                        }
+                    ]
+                },
+                {
+                    "componentId": "pcPackage",
+                    "packageId": "001",
+                    "packageFactorList": [
+                        "pcAgeRangeList",
+                        "pcPackageNameList"
+                    ],
+                    "packageIndex": [
+                        "0",
+                        "2"
+                    ],
+                    "packageName": "钻石款",
+                    "packagePrice": "250",
+                    "packageScore": "251",
+                    "packageLiabilityList": [
+                        {
+                            "componentId": "pcLiability",
+                            "liabilityId": "001",
+                            "liabilityName": "意外身故",
+                            "liabilityAmount": "10",
+                            "liabilityDesc": "因意外伤害事故直接导致被保险人在该意外伤害事故发生之日起180日内身故的，将按合同约定给付受益人意外身故保险金。"
+                        },
+                        {
+                            "componentId": "pcLiability",
+                            "liabilityId": "002",
+                            "liabilityName": "公共汽车、电车意外伤害",
+                            "liabilityAmount": "10",
+                            "liabilityDesc": "因意外伤害事故直接导致被保险人在该意外伤害事故发生之日起180日内身故的，将按合同约定给付受益人意外身故保险金。"
+                        }
+                    ]
+                },
+                {
+                    "componentId": "pcPackage",
+                    "packageId": "001",
+                    "packageFactorList": [
+                        "pcAgeRangeList",
+                        "pcPackageNameList"
+                    ],
+                    "packageIndex": [
+                        "1",
+                        "0"
+                    ],
+                    "packageName": "基本款",
+                    "packagePrice": "100",
+                    "packageScore": "101",
+                    "packageLiabilityList": [
+                        {
+                            "componentId": "pcLiability",
+                            "liabilityId": "001",
+                            "liabilityName": "意外身故",
+                            "liabilityAmount": "10",
+                            "liabilityDesc": "因意外伤害事故直接导致被保险人在该意外伤害事故发生之日起180日内身故的，将按合同约定给付受益人意外身故保险金。"
+                        },
+                        {
+                            "componentId": "pcLiability",
+                            "liabilityId": "002",
+                            "liabilityName": "公共汽车、电车意外伤害",
+                            "liabilityAmount": "10",
+                            "liabilityDesc": "因意外伤害事故直接导致被保险人在该意外伤害事故发生之日起180日内身故的，将按合同约定给付受益人意外身故保险金。"
+                        }
+                    ]
+                },
+                {
+                    "componentId": "pcPackage",
+                    "packageId": "001",
+                    "packageFactorList": [
+                        "pcAgeRangeList",
+                        "pcPackageNameList"
+                    ],
+                    "packageIndex": [
+                        "1",
+                        "2"
+                    ],
+                    "packageName": "白金款",
+                    "packagePrice": "200",
+                    "packageScore": "201",
+                    "packageLiabilityList": [
+                        {
+                            "componentId": "pcLiability",
+                            "liabilityId": "001",
+                            "liabilityName": "意外身故",
+                            "liabilityAmount": "10",
+                            "liabilityDesc": "因意外伤害事故直接导致被保险人在该意外伤害事故发生之日起180日内身故的，将按合同约定给付受益人意外身故保险金。"
+                        },
+                        {
+                            "componentId": "pcLiability",
+                            "liabilityId": "002",
+                            "liabilityName": "公共汽车、电车意外伤害",
+                            "liabilityAmount": "10",
+                            "liabilityDesc": "因意外伤害事故直接导致被保险人在该意外伤害事故发生之日起180日内身故的，将按合同约定给付受益人意外身故保险金。"
+                        }
+                    ]
+                },
+                {
+                    "componentId": "pcPackage",
+                    "packageId": "001",
+                    "packageFactorList": [
+                        "pcAgeRangeList",
+                        "pcPackageNameList"
+                    ],
+                    "packageIndex": [
+                        "1",
+                        "2"
+                    ],
+                    "packageName": "钻石款",
+                    "packagePrice": "300",
+                    "packageScore": "301",
+                    "packageLiabilityList": [
+                        {
+                            "componentId": "pcLiability",
+                            "liabilityId": "001",
+                            "liabilityName": "意外身故",
+                            "liabilityAmount": "10",
+                            "liabilityDesc": "因意外伤害事故直接导致被保险人在该意外伤害事故发生之日起180日内身故的，将按合同约定给付受益人意外身故保险金。"
+                        },
+                        {
+                            "componentId": "pcLiability",
+                            "liabilityId": "002",
+                            "liabilityName": "公共汽车、电车意外伤害",
+                            "liabilityAmount": "10",
+                            "liabilityDesc": "因意外伤害事故直接导致被保险人在该意外伤害事故发生之日起180日内身故的，将按合同约定给付受益人意外身故保险金。"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "componentId": "pcReturnMessage",
+            "returnMessage": ""
+        },
+        {
+            "componentId": "pcPayment"
+        }
+    ]
+}

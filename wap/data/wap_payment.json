@@ -1,0 +1,57 @@
+{
+    "wapPayment": [
+        {
+            "componentId": "tkTradeDetailList",
+            "tradeDetailList": [
+                {
+                    "componentId": "tkTradeDetail",
+                    "detailKey": "保险名称",
+                    "detailValue": "$productName"
+                },
+                {
+                    "componentId": "tkTradeDetail",
+                    "detailKey": "生效日期",
+                    "detailValue": "$startTime"
+                },
+                {
+                    "componentId": "tkTradeDetail",
+                    "detailKey": "终止日期",
+                    "detailValue": "$endTime"
+                },
+                {
+                    "componentId": "tkTradeDetail",
+                    "detailKey": "投保人",
+                    "detailValue": "$applicantName"
+                },
+                {
+                    "componentId": "tkTradeDetail",
+                    "detailKey": "被保险人",
+                    "detailValue": "$insuredName"
+                }
+            ]
+        },
+        {
+            "componentId": "tkPaymentList",
+            "paymentList": [
+                {
+                    "componentId": "tkPayment",
+                    "paywayId": "32",
+                    "paymentImgURL": "",
+                    "paymentDesc": "支付宝"
+                },
+                {
+                    "componentId": "tkPayment",
+                    "paywayId": "71",
+                    "paymentImgURL": "",
+                    "paymentDesc": "微信"
+                },
+                {
+                    "componentId": "tkPayment",
+                    "paywayId": "72",
+                    "paymentImgURL": "",
+                    "paymentDesc": "微信wap"
+                }
+            ]
+        }
+    ]
+}

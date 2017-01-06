@@ -1,0 +1,751 @@
+{
+    "pcDetails": [
+        {
+            "componentId": "pcProductDesc",
+            "productName": "综合意外保障",
+            "productDesc": "每天低至0.12元起！大小意外全保，工作生活、居家旅行必备！"
+        },
+        {
+            "componentId": "pcProductPrice",
+            "priceType": "会员价",
+            "productPrice": "50",
+            "discountInfo": "会员购买再送超值积分",
+            "activityTitle": "优惠信息"
+        },
+        {
+            "componentId": "pcInsureAgeList",
+            "componentTitle": "投保年龄",
+            "insureAgeList": [
+                {
+                    "componentId": "pcInsureAgeRange",
+                    "insureAge": "18-65周岁",
+                    "insureAgeIndex": "0"
+                }
+            ]
+        },
+        {
+            "componentId": "pcInsurePeriodList",
+            "componentTitle": "保多久",
+            "insurePeriodList": [
+                {
+                    "componentId": "pcInsurePeriod",
+                    "insurePeriod": "3天",
+                    "insurePeriodIndex": "0"
+                },
+                {
+                    "componentId": "pcInsurePeriod",
+                    "insurePeriod": "7天",
+                    "insurePeriodIndex": "1"
+                },
+                {
+                    "componentId": "pcInsurePeriod",
+                    "insurePeriod": "15天",
+                    "insurePeriodIndex": "2"
+                },
+                {
+                    "componentId": "pcInsurePeriod",
+                    "insurePeriod": "30天",
+                    "insurePeriodIndex": "3"
+                },
+                {
+                    "componentId": "pcInsurePeriod",
+                    "insurePeriod": "1年",
+                    "insurePeriodIndex": "4"
+                }
+            ]
+        },
+        {
+            "componentId": "pcPlanNameList",
+            "componentTitle": "套餐分类",
+            "planNameList": [
+                {
+                    "componentId": "pcPlanName",
+                    "planName": "基本款",
+                    "planNameIndex": "0"
+                },
+                {
+                    "componentId": "pcPlanName",
+                    "planName": "白金款",
+                    "planNameIndex": "1"
+                },
+                {
+                    "componentId": "pcPlanName",
+                    "planName": "钻石款",
+                    "planNameIndex": "2"
+                }
+            ]
+        },
+        {
+            "componentId": "pcPlanList",
+            "planList": [
+                {
+                    "componentId": "pcPlan",
+                    "planId": "001",
+                    "planPrice": "3.6",
+                    "planScore": "10",
+                    "planFactorList": [
+                        "pcInsurePeriodList",
+                        "pcPlanNameList"
+                    ],
+                    "planIndex": [
+                        "0",
+                        "0"
+                    ],
+                    "planLiabilityList": [
+                        {
+                            "componentId": "pcLiability",
+                            "liabilityId": "1001",
+                            "liabilityName": "意外身故",
+                            "liabilityAmount": "10",
+                            "liabilityDesc": ""
+                        },
+                        {
+                            "componentId": "pcLiability",
+                            "liabilityId": "1002",
+                            "liabilityName": "公汽、电车、出租车、地铁意外身故、伤残",
+                            "liabilityAmount": "10",
+                            "liabilityDesc": ""
+                        }
+                    ]
+                },
+                {
+                    "componentId": "pcPlan",
+                    "planId": "002",
+                    "planPrice": "12",
+                    "planScore": "10",
+                    "planFactorList": [
+                        "pcInsurePeriodList",
+                        "pcPlanNameList"
+                    ],
+                    "planIndex": [
+                        "0",
+                        "1"
+                    ],
+                    "planLiabilityList": [
+                        {
+                            "componentId": "pcLiability",
+                            "liabilityId": "1001",
+                            "liabilityName": "意外身故",
+                            "liabilityAmount": "20",
+                            "liabilityDesc": ""
+                        },
+                        {
+                            "componentId": "pcLiability",
+                            "liabilityId": "1002",
+                            "liabilityName": "意外残疾",
+                            "liabilityAmount": "2",
+                            "liabilityDesc": ""
+                        },
+                        {
+                            "componentId": "pcLiability",
+                            "liabilityId": "1003",
+                            "liabilityName": "意外医疗",
+                            "liabilityAmount": "1",
+                            "liabilityDesc": ""
+                        },
+                        {
+                            "componentId": "pcLiability",
+                            "liabilityId": "1004",
+                            "liabilityName": "公汽、电车、出租车、地铁意外身故、伤残",
+                            "liabilityAmount": "20",
+                            "liabilityDesc": ""
+                        }
+                    ]
+                },
+                {
+                    "componentId": "pcPlan",
+                    "planId": "003",
+                    "planPrice": "31.6",
+                    "planScore": "10",
+                    "planFactorList": [
+                        "pcInsurePeriodList",
+                        "pcPlanNameList"
+                    ],
+                    "planIndex": [
+                        "0",
+                        "2"
+                    ],
+                    "planLiabilityList": [
+                        {
+                            "componentId": "pcLiability",
+                            "liabilityId": "1001",
+                            "liabilityName": "意外身故",
+                            "liabilityAmount": "50",
+                            "liabilityDesc": ""
+                        },
+                        {
+                            "componentId": "pcLiability",
+                            "liabilityId": "1002",
+                            "liabilityName": "意外残疾",
+                            "liabilityAmount": "5",
+                            "liabilityDesc": ""
+                        },
+                        {
+                            "componentId": "pcLiability",
+                            "liabilityId": "1003",
+                            "liabilityName": "意外医疗",
+                            "liabilityAmount": "2",
+                            "liabilityDesc": ""
+                        },
+                        {
+                            "componentId": "pcLiability",
+                            "liabilityId": "1004",
+                            "liabilityName": "公汽、电车、出租车、地铁意外身故、伤残",
+                            "liabilityAmount": "50",
+                            "liabilityDesc": ""
+                        },
+                        {
+                            "componentId": "pcLiability",
+                            "liabilityId": "1005",
+                            "liabilityName": "火车意外身故、伤残",
+                            "liabilityAmount": "60",
+                            "liabilityDesc": ""
+                        },
+                        {
+                            "componentId": "pcLiability",
+                            "liabilityId": "1006",
+                            "liabilityName": "飞机意外身故、伤残",
+                            "liabilityAmount": "80",
+                            "liabilityDesc": ""
+                        }
+                    ]
+                },
+                {
+                    "componentId": "pcPlan",
+                    "planId": "004",
+                    "planPrice": "4",
+                    "planScore": "10",
+                    "planFactorList": [
+                        "pcInsurePeriodList",
+                        "pcPlanNameList"
+                    ],
+                    "planIndex": [
+                        "1",
+                        "0"
+                    ],
+                    "planLiabilityList": [
+                        {
+                            "componentId": "pcLiability",
+                            "liabilityId": "1001",
+                            "liabilityName": "意外身故",
+                            "liabilityAmount": "10",
+                            "liabilityDesc": ""
+                        },
+                        {
+                            "componentId": "pcLiability",
+                            "liabilityId": "1002",
+                            "liabilityName": "公汽、电车、出租车、地铁意外身故、伤残",
+                            "liabilityAmount": "10",
+                            "liabilityDesc": ""
+                        }
+                    ]
+                },
+                {
+                    "componentId": "pcPlan",
+                    "planId": "005",
+                    "planPrice": "12.5",
+                    "planScore": "10",
+                    "planFactorList": [
+                        "pcInsurePeriodList",
+                        "pcPlanNameList"
+                    ],
+                    "planIndex": [
+                        "1",
+                        "1"
+                    ],
+                    "planLiabilityList": [
+                        {
+                            "componentId": "pcLiability",
+                            "liabilityId": "1001",
+                            "liabilityName": "意外身故",
+                            "liabilityAmount": "20",
+                            "liabilityDesc": ""
+                        },
+                        {
+                            "componentId": "pcLiability",
+                            "liabilityId": "1002",
+                            "liabilityName": "意外残疾",
+                            "liabilityAmount": "2",
+                            "liabilityDesc": ""
+                        },
+                        {
+                            "componentId": "pcLiability",
+                            "liabilityId": "1003",
+                            "liabilityName": "意外医疗",
+                            "liabilityAmount": "1",
+                            "liabilityDesc": ""
+                        },
+                        {
+                            "componentId": "pcLiability",
+                            "liabilityId": "1004",
+                            "liabilityName": "公汽、电车、出租车、地铁意外身故、伤残",
+                            "liabilityAmount": "20",
+                            "liabilityDesc": ""
+                        }
+                    ]
+                },
+                {
+                    "componentId": "pcPlan",
+                    "planId": "006",
+                    "planPrice": "32",
+                    "planScore": "10",
+                    "planFactorList": [
+                        "pcInsurePeriodList",
+                        "pcPlanNameList"
+                    ],
+                    "planIndex": [
+                        "1",
+                        "2"
+                    ],
+                    "planLiabilityList": [
+                        {
+                            "componentId": "pcLiability",
+                            "liabilityId": "1001",
+                            "liabilityName": "意外身故",
+                            "liabilityAmount": "50",
+                            "liabilityDesc": ""
+                        },
+                        {
+                            "componentId": "pcLiability",
+                            "liabilityId": "1002",
+                            "liabilityName": "意外残疾",
+                            "liabilityAmount": "5",
+                            "liabilityDesc": ""
+                        },
+                        {
+                            "componentId": "pcLiability",
+                            "liabilityId": "1003",
+                            "liabilityName": "意外医疗",
+                            "liabilityAmount": "2",
+                            "liabilityDesc": ""
+                        },
+                        {
+                            "componentId": "pcLiability",
+                            "liabilityId": "1004",
+                            "liabilityName": "公汽、电车、出租车、地铁意外身故、伤残",
+                            "liabilityAmount": "50",
+                            "liabilityDesc": ""
+                        },
+                        {
+                            "componentId": "pcLiability",
+                            "liabilityId": "1005",
+                            "liabilityName": "火车意外身故、伤残",
+                            "liabilityAmount": "60",
+                            "liabilityDesc": ""
+                        },
+                        {
+                            "componentId": "pcLiability",
+                            "liabilityId": "1006",
+                            "liabilityName": "飞机意外身故、伤残",
+                            "liabilityAmount": "80",
+                            "liabilityDesc": ""
+                        }
+                    ]
+                },
+                {
+                    "componentId": "pcPlan",
+                    "planId": "007",
+                    "planPrice": "5.5",
+                    "planScore": "10",
+                    "planFactorList": [
+                        "pcInsurePeriodList",
+                        "pcPlanNameList"
+                    ],
+                    "planIndex": [
+                        "2",
+                        "0"
+                    ],
+                    "planLiabilityList": [
+                        {
+                            "componentId": "pcLiability",
+                            "liabilityId": "1001",
+                            "liabilityName": "意外身故",
+                            "liabilityAmount": "10",
+                            "liabilityDesc": ""
+                        },
+                        {
+                            "componentId": "pcLiability",
+                            "liabilityId": "1002",
+                            "liabilityName": "公汽、电车、出租车、地铁意外身故、伤残",
+                            "liabilityAmount": "10",
+                            "liabilityDesc": ""
+                        }
+                    ]
+                },
+                {
+                    "componentId": "pcPlan",
+                    "planId": "008",
+                    "planPrice": "18",
+                    "planScore": "10",
+                    "planFactorList": [
+                        "pcInsurePeriodList",
+                        "pcPlanNameList"
+                    ],
+                    "planIndex": [
+                        "2",
+                        "1"
+                    ],
+                    "planLiabilityList": [
+                        {
+                            "componentId": "pcLiability",
+                            "liabilityId": "1001",
+                            "liabilityName": "意外身故",
+                            "liabilityAmount": "20",
+                            "liabilityDesc": ""
+                        },
+                        {
+                            "componentId": "pcLiability",
+                            "liabilityId": "1002",
+                            "liabilityName": "意外残疾",
+                            "liabilityAmount": "2",
+                            "liabilityDesc": ""
+                        },
+                        {
+                            "componentId": "pcLiability",
+                            "liabilityId": "1003",
+                            "liabilityName": "意外医疗",
+                            "liabilityAmount": "1",
+                            "liabilityDesc": ""
+                        },
+                        {
+                            "componentId": "pcLiability",
+                            "liabilityId": "1004",
+                            "liabilityName": "公汽、电车、出租车、地铁意外身故、伤残",
+                            "liabilityAmount": "20",
+                            "liabilityDesc": ""
+                        }
+                    ]
+                },
+                {
+                    "componentId": "pcPlan",
+                    "planId": "009",
+                    "planPrice": "47.5",
+                    "planScore": "10",
+                    "planFactorList": [
+                        "pcInsurePeriodList",
+                        "pcPlanNameList"
+                    ],
+                    "planIndex": [
+                        "2",
+                        "2"
+                    ],
+                    "planLiabilityList": [
+                        {
+                            "componentId": "pcLiability",
+                            "liabilityId": "1001",
+                            "liabilityName": "意外身故",
+                            "liabilityAmount": "50",
+                            "liabilityDesc": ""
+                        },
+                        {
+                            "componentId": "pcLiability",
+                            "liabilityId": "1002",
+                            "liabilityName": "意外残疾",
+                            "liabilityAmount": "5",
+                            "liabilityDesc": ""
+                        },
+                        {
+                            "componentId": "pcLiability",
+                            "liabilityId": "1003",
+                            "liabilityName": "意外医疗",
+                            "liabilityAmount": "2",
+                            "liabilityDesc": ""
+                        },
+                        {
+                            "componentId": "pcLiability",
+                            "liabilityId": "1004",
+                            "liabilityName": "公汽、电车、出租车、地铁意外身故、伤残",
+                            "liabilityAmount": "50",
+                            "liabilityDesc": ""
+                        },
+                        {
+                            "componentId": "pcLiability",
+                            "liabilityId": "1005",
+                            "liabilityName": "火车意外身故、伤残",
+                            "liabilityAmount": "60",
+                            "liabilityDesc": ""
+                        },
+                        {
+                            "componentId": "pcLiability",
+                            "liabilityId": "1006",
+                            "liabilityName": "飞机意外身故、伤残",
+                            "liabilityAmount": "80",
+                            "liabilityDesc": ""
+                        }
+                    ]
+                },
+                {
+                    "componentId": "pcPlan",
+                    "planId": "0010",
+                    "planPrice": "11",
+                    "planScore": "10",
+                    "planFactorList": [
+                        "pcInsurePeriodList",
+                        "pcPlanNameList"
+                    ],
+                    "planIndex": [
+                        "3",
+                        "0"
+                    ],
+                    "planLiabilityList": [
+                        {
+                            "componentId": "pcLiability",
+                            "liabilityId": "1001",
+                            "liabilityName": "意外身故",
+                            "liabilityAmount": "10",
+                            "liabilityDesc": ""
+                        },
+                        {
+                            "componentId": "pcLiability",
+                            "liabilityId": "1002",
+                            "liabilityName": "公汽、电车、出租车、地铁意外身故、伤残",
+                            "liabilityAmount": "10",
+                            "liabilityDesc": ""
+                        }
+                    ]
+                },
+                {
+                    "componentId": "pcPlan",
+                    "planId": "0011",
+                    "planPrice": "37",
+                    "planScore": "10",
+                    "planFactorList": [
+                        "pcInsurePeriodList",
+                        "pcPlanNameList"
+                    ],
+                    "planIndex": [
+                        "3",
+                        "1"
+                    ],
+                    "planLiabilityList": [
+                        {
+                            "componentId": "pcLiability",
+                            "liabilityId": "1001",
+                            "liabilityName": "意外身故",
+                            "liabilityAmount": "20",
+                            "liabilityDesc": ""
+                        },
+                        {
+                            "componentId": "pcLiability",
+                            "liabilityId": "1002",
+                            "liabilityName": "意外残疾",
+                            "liabilityAmount": "2",
+                            "liabilityDesc": ""
+                        },
+                        {
+                            "componentId": "pcLiability",
+                            "liabilityId": "1003",
+                            "liabilityName": "意外医疗",
+                            "liabilityAmount": "1",
+                            "liabilityDesc": ""
+                        },
+                        {
+                            "componentId": "pcLiability",
+                            "liabilityId": "1004",
+                            "liabilityName": "公汽、电车、出租车、地铁意外身故、伤残",
+                            "liabilityAmount": "20",
+                            "liabilityDesc": ""
+                        }
+                    ]
+                },
+                {
+                    "componentId": "pcPlan",
+                    "planId": "0012",
+                    "planPrice": "99",
+                    "planScore": "10",
+                    "planFactorList": [
+                        "pcInsurePeriodList",
+                        "pcPlanNameList"
+                    ],
+                    "planIndex": [
+                        "3",
+                        "2"
+                    ],
+                    "planLiabilityList": [
+                        {
+                            "componentId": "pcLiability",
+                            "liabilityId": "1001",
+                            "liabilityName": "意外身故",
+                            "liabilityAmount": "50",
+                            "liabilityDesc": ""
+                        },
+                        {
+                            "componentId": "pcLiability",
+                            "liabilityId": "1002",
+                            "liabilityName": "意外残疾",
+                            "liabilityAmount": "5",
+                            "liabilityDesc": ""
+                        },
+                        {
+                            "componentId": "pcLiability",
+                            "liabilityId": "1003",
+                            "liabilityName": "意外医疗",
+                            "liabilityAmount": "2",
+                            "liabilityDesc": ""
+                        },
+                        {
+                            "componentId": "pcLiability",
+                            "liabilityId": "1004",
+                            "liabilityName": "公汽、电车、出租车、地铁意外身故、伤残",
+                            "liabilityAmount": "50",
+                            "liabilityDesc": ""
+                        },
+                        {
+                            "componentId": "pcLiability",
+                            "liabilityId": "1005",
+                            "liabilityName": "火车意外身故、伤残",
+                            "liabilityAmount": "60",
+                            "liabilityDesc": ""
+                        },
+                        {
+                            "componentId": "pcLiability",
+                            "liabilityId": "1006",
+                            "liabilityName": "飞机意外身故、伤残",
+                            "liabilityAmount": "80",
+                            "liabilityDesc": ""
+                        }
+                    ]
+                },
+                {
+                    "componentId": "pcPlan",
+                    "planId": "0013",
+                    "planPrice": "45",
+                    "planScore": "10",
+                    "planFactorList": [
+                        "pcInsurePeriodList",
+                        "pcPlanNameList"
+                    ],
+                    "planIndex": [
+                        "4",
+                        "0"
+                    ],
+                    "planLiabilityList": [
+                        {
+                            "componentId": "pcLiability",
+                            "liabilityId": "1001",
+                            "liabilityName": "意外身故",
+                            "liabilityAmount": "10",
+                            "liabilityDesc": ""
+                        },
+                        {
+                            "componentId": "pcLiability",
+                            "liabilityId": "1002",
+                            "liabilityName": "公汽、电车、出租车、地铁意外身故、伤残",
+                            "liabilityAmount": "10",
+                            "liabilityDesc": ""
+                        }
+                    ]
+                },
+                {
+                    "componentId": "pcPlan",
+                    "planId": "0014",
+                    "planPrice": "149",
+                    "planScore": "10",
+                    "planFactorList": [
+                        "pcInsurePeriodList",
+                        "pcPlanNameList"
+                    ],
+                    "planIndex": [
+                        "4",
+                        "1"
+                    ],
+                    "planLiabilityList": [
+                        {
+                            "componentId": "pcLiability",
+                            "liabilityId": "1001",
+                            "liabilityName": "意外身故",
+                            "liabilityAmount": "20",
+                            "liabilityDesc": ""
+                        },
+                        {
+                            "componentId": "pcLiability",
+                            "liabilityId": "1002",
+                            "liabilityName": "意外残疾",
+                            "liabilityAmount": "2",
+                            "liabilityDesc": ""
+                        },
+                        {
+                            "componentId": "pcLiability",
+                            "liabilityId": "1003",
+                            "liabilityName": "意外医疗",
+                            "liabilityAmount": "1",
+                            "liabilityDesc": ""
+                        },
+                        {
+                            "componentId": "pcLiability",
+                            "liabilityId": "1004",
+                            "liabilityName": "公汽、电车、出租车、地铁意外身故、伤残",
+                            "liabilityAmount": "20",
+                            "liabilityDesc": ""
+                        }
+                    ]
+                },
+                {
+                    "componentId": "pcPlan",
+                    "planId": "0015",
+                    "planPrice": "395",
+                    "planScore": "10",
+                    "planFactorList": [
+                        "pcInsurePeriodList",
+                        "pcPlanNameList"
+                    ],
+                    "planIndex": [
+                        "4",
+                        "2"
+                    ],
+                    "planLiabilityList": [
+                        {
+                            "componentId": "pcLiability",
+                            "liabilityId": "1001",
+                            "liabilityName": "意外身故",
+                            "liabilityAmount": "50",
+                            "liabilityDesc": ""
+                        },
+                        {
+                            "componentId": "pcLiability",
+                            "liabilityId": "1002",
+                            "liabilityName": "意外残疾",
+                            "liabilityAmount": "5",
+                            "liabilityDesc": ""
+                        },
+                        {
+                            "componentId": "pcLiability",
+                            "liabilityId": "1003",
+                            "liabilityName": "意外医疗",
+                            "liabilityAmount": "2",
+                            "liabilityDesc": ""
+                        },
+                        {
+                            "componentId": "pcLiability",
+                            "liabilityId": "1004",
+                            "liabilityName": "公汽、电车、出租车、地铁意外身故、伤残",
+                            "liabilityAmount": "50",
+                            "liabilityDesc": ""
+                        },
+                        {
+                            "componentId": "pcLiability",
+                            "liabilityId": "1005",
+                            "liabilityName": "火车意外身故、伤残",
+                            "liabilityAmount": "60",
+                            "liabilityDesc": ""
+                        },
+                        {
+                            "componentId": "pcLiability",
+                            "liabilityId": "1006",
+                            "liabilityName": "飞机意外身故、伤残",
+                            "liabilityAmount": "80",
+                            "liabilityDesc": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "componentId": "pcReturnMessage",
+            "returnMessage": "planId,planPrice"
+        },
+        {
+            "componentId": "pcPayment"
+        }
+    ]
+}

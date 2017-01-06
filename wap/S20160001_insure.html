@@ -1,0 +1,357 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>产品详情</title>
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,target-densitydpi=medium-dpi">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <link href="css/wap_detail.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/dialog.min.css">
+    <link rel="stylesheet" href="css/mobile-select-area.css">
+</head>
+<body class="bg-g">
+    <section class="container1" style="padding-bottom:5rem;">
+        <div class="wapBanner" componentId="wapBanner"><img src="images/products/S20160001.jpg" alt="banner" /></div>
+        <div class="wapProductDesc" componentId="wapProductDesc">
+            <div>
+                <div class="productName"><span>e康D款重大疾病保险</span><img class="arrImg" src="images/arr.png" /></div>
+                <div class="productDescription">最高可赔付75万，满期一次性给付全部保费*130%；70种大病+6种特定疾病+30种轻症，大病/意外/身故都保障。</div>
+                <div class="hideUrl">/product/S20160001/wap/presentation/S20160001_details.html</div>
+            </div>
+        </div>
+        <div class="wapProductPrice" componentId="wapProductPrice">
+            <div><span class="priceType">会员价</span><span class="productPrice">80</span><span style="color: #FF5F2F;">/月起</span><span class="priceTag">手机专享价</span></div>
+        </div>
+        <div class="wapDiscountInfoList" componentid="wapDiscountInfoList">
+            <div class="wapDiscountInfo">
+                <span class="discountTitle">促销消息</span>
+                <span class="discountDesc" style="text-decoration:underline">点击领取优惠</span>
+            </div>
+        </div>
+        <div class="wapInsuredAgeRangeHidden" componentId="wapInsuredAgeRangeHidden"><span id="minAge" age="18"></span><span id="maxAge" age="55"></span></div>
+        <div class="wapIdentityList" componentId="wapIdentityList">
+            <div class="wapIdentity" componentId="wapIdentity"><span class="wapIdentityItem_adv4">全新升级</span></div>
+            <div class="wapIdentity" componentId="wapIdentity"><span class="wapIdentityItem_adv4">返还保费</span></div>
+            <div class="wapIdentity" componentId="wapIdentity"><span class="wapIdentityItem_adv4">保单贷款</span></div>
+            <div class="wapIdentity" componentId="wapIdentity"><span class="wapIdentityItem_adv4">在线理赔</span></div>
+            <img style="width:1.2rem;height:1.2rem;margin-top:0.2rem;" src="images/arr.png" />
+        </div>
+        <div class="wapInsureAudio" componentId="wapInsureAudio">
+            <div class="componentTitle">产品经理1分钟讲保险</div>
+            <article>
+                <img class="audioHeader" src="images/audio_per.gif"><span class="ico"><img class="audioPlay" src="images/audio_ico.gif"></span>
+                <audio src="images/music.mp3"></audio>
+            </article>
+        </div>
+        <div class="wapCalculate wapCalculateShow" componentId="wapCalculateHidden" pop="true">
+            <h3>保费测算</h3>
+            <p>点击进行测算？<img src="images/arr.png" /></p>
+        </div>
+        <div class="wapCalculatePop" style="display:none;">
+            <div class="wapCalculateContainer">
+                <div class="wapCalculateHeader">
+                    <h2>保费测算</h2>
+                    <a class="close"></a>
+                </div>
+                <div class="wapCalculateContent">
+                </div>
+            </div>
+        </div>
+        <div class="insurePerson premiumFactor" componentId="wapPremiumFactor" premiumFactorName="insuredRelationship" type="ins">
+            <article>
+                <h3>为谁投保</h3>
+                <p>
+                    <label factorIndex="01">
+                        <input type="radio" name="insurePerson" value="01" checked><span>为自己</span></label>
+                    <label factorIndex="40">
+                        <input type="radio" name="insurePerson" value="40"><span>为子女(<18周岁)</span></label>
+                </p>
+            </article>
+        </div>
+        <div class="insureLiability premiumFactor" componentId="wapPremiumFactor" premiumDataType="date" premiumFactorName="">
+            <article>
+                <h3>投保人保费豁免责任</h3>
+                <p>
+                    <select class="premiumSelect" name="insureLiability">
+                        <option value="2981,2982,2983" selected="selected">包含</option>
+                        <option value="2981,2982">不包含</option>
+                    </select>
+                    <input class="insureLiabilityBox" name="insureLiability1" value="2981,2982,2983" />
+                    <input class="insureLiabilityBox" name="insureLiability0" value="2981,2982" />
+                    <img class="arr" src="images/arr.png" />
+                </p>
+            </article>
+        </div>
+        <div class="insureChildBirth premiumFactor" componentId="wapPremiumFactor" premiumDataType="childDate" premiumFactorName="insuredBirth" type="ins" max="0,0,30" min="18,0,0">
+            <article>
+                <h3>子女生日</h3>
+                <p>
+                    <input type="text" value="" class="premiumInput" name="insureChildBirth" placeholder="请选择" readonly="readonly" />
+                    <img class="arr" src="images/arr.png" />
+                </p>
+            </article>
+        </div>
+        <div class="insureChildGender premiumFactor" componentId="wapPremiumFactor" premiumFactorName="insuredGender" type="ins">
+            <article>
+                <h3>子女性别</h3>
+                <p>
+                    <select class="premiumSelect" name="insureChildGender">
+                        <option value="-1">请选择</option>
+                        <option value="1">男</option>
+                        <option value="2">女</option>
+                    </select>
+                    <img class="arr" src="images/arr.png" />
+                </p>
+            </article>
+        </div>
+        <div class="insureRelationship premiumFactor" componentId="wapPremiumFactor" premiumFactorName="applicantGender" type="app">
+            <article>
+                <h3>我是子女的</h3>
+                <p>
+                    <label factorIndex="1">
+                        <input type="radio" name="insureRelationship" value="1"><span>爸爸</span></label>
+                    <label factorIndex="2">
+                        <input type="radio" name="insureRelationship" value="2"><span>妈妈</span></label>
+                </p>
+            </article>
+        </div>
+        <div class="insureBirth premiumFactor" componentId="wapPremiumFactor" premiumDataType="date" premiumFactorName="applicantBirth" type="app" max="18,0,0" min="55,0,0">
+            <article>
+                <h3>我的生日</h3>
+                <p>
+                    <input type="text" value="" class="premiumInput date" name="insureBirth" placeholder="请选择" readonly="readonly" />
+                    <img class="arr" src="images/arr.png" />
+                </p>
+            </article>
+        </div>
+        <div class="insureGender premiumFactor" componentId="wapPremiumFactor" premiumFactorName="applicantGender" type="app">
+            <article>
+                <h3>性别</h3>
+                <p>
+                    <select class="premiumSelect" name="insureGender">
+                        <option value="-1">请选择</option>
+                        <option value="1">男</option>
+                        <option value="2">女</option>
+                    </select>
+                    <img class="arr" src="images/arr.png" />
+                </p>
+            </article>
+        </div>
+        <div class="iptArea premiumFactor" componentId="wapPremiumFactor" premiumDataType="area" premiumFactorName="applicantArea" type="app">
+            <article>
+                <h3>居住地区</h3>
+                <p>
+                    <input type="text" value="" class="premiumInput applicantArea" name="iptArea" placeholder="请选择" readonly="readonly" />
+                    <img class="arr" src="images/arr.png" />
+                </p>
+            </article>
+        </div>
+        <div class="insureSum premiumFactor" componentId="wapPremiumFactor" premiumFactorName="" empty="true">
+            <article>
+                <h3>保额(万元)</h3>
+                <p>
+                    <input type="number" class="premiumInput" name="insureSum" placeholder="请输入1-30间的整数" min="1" max="30">
+                </p>
+            </article>
+        </div>
+        <div class="insurePeriod premiumFactor" componentId="wapPremiumFactor" premiumFactorName="insurePeriod" empty="true">
+            <article>
+                <h3>保障期限</h3>
+                <p>
+                    <label factorIndex="30">
+                        <input type="radio" name="insurePeriod" value="Y30"><span>30年</span></label>
+                    <label factorIndex="75">
+                        <input type="radio" name="insurePeriod" value="A75"><span>至75周岁</span></label>
+                </p>
+            </article>
+        </div>
+        <div class="insurePayWay premiumFactor" componentId="wapPremiumFactor" premiumFactorName="payPeriod" empty="true">
+            <article>
+                <h3>交费方式</h3>
+                <p>
+                    <label factorIndex="0">
+                        <input type="radio" name="insurePayWay" value="SP"><span>一次性缴纳</span></label>
+                    <label factorIndex="5">
+                        <input type="radio" name="insurePayWay" value="Y5"><span>5年交</span></label>
+                    <label factorIndex="10">
+                        <input type="radio" name="insurePayWay" value="Y10"><span>10年交</span></label>
+                    <label factorIndex="15">
+                        <input type="radio" name="insurePayWay" value="Y15"><span>15年交</span></label>
+                    <label factorIndex="20">
+                        <input type="radio" name="insurePayWay" value="Y20"><span>20年交</span></label>
+                </p>
+            </article>
+        </div>
+        <div class="insurePayFrequency premiumFactor" componentId="wapPremiumFactor" premiumFactorName="payType" empty="true">
+            <article>
+                <h3>交费频率</h3>
+                <p>
+                    <label factorIndex="y">
+                        <input type="radio" name="insurePayFrequency" value="Y"><span>年交</span></label>
+                    <label factorIndex="m">
+                        <input type="radio" name="insurePayFrequency" value="M"><span>月交</span></label>
+                </p>
+            </article>
+        </div>
+        <div class="wapPlanNameList" componentId="wapPlanNameList">
+            <div class="componentTitle">保障责任</div>
+            <div class="planNameList">
+                <div class="wapPlanName" componentId="wapPlanName" planNameIndex="0">保费</div>
+            </div>
+        </div>
+        <div class="planList" componentId="wapPlanList">
+            <div class="wapPlan" componentId="wapPlan" planId="1017" planPrice="54.00" planScore="" planIndex="0">
+                <div class="wapLiability" componentId="wapLiability" liabilityId="1108001">
+                    <div><span class="liabilityName">身故保险金</span><span class="liabilityAmount">最高30万</span></div>
+                    <div class="liabilityDescription"></div>
+                </div>
+                <div class="wapLiability" componentId="wapLiability" liabilityId="1108001">
+                    <div><span class="liabilityName">生存保险金</span><span class="liabilityAmount">所交保费 x 130%</span></div>
+                    <div class="liabilityDescription"></div>
+                </div>
+                <div class="wapLiability" componentId="wapLiability" liabilityId="1108001">
+                    <div><span class="liabilityName">轻症疾病保险金</span><span class="liabilityAmount">每次最高9万</span></div>
+                    <div class="liabilityDescription"></div>
+                </div>
+                <div class="wapLiability" componentId="wapLiability" liabilityId="1108001">
+                    <div><span class="liabilityName">重大疾病保险金</span><span class="liabilityAmount">最高30万</span></div>
+                    <div class="liabilityDescription"></div>
+                </div>
+                <div class="wapLiability" componentId="wapLiability" liabilityId="1108001">
+                    <div><span class="liabilityName">轻症疾病豁免保费</span><span class="liabilityAmount">免交剩余未交保费</span></div>
+                    <div class="liabilityDescription"></div>
+                </div>
+                <div class="wapLiability" componentId="wapLiability" liabilityId="1108001">
+                    <div><span class="liabilityName">特定重大疾病额外给付</span><span class="liabilityAmount">最高15万</span></div>
+                    <div class="liabilityDescription"></div>
+                </div>
+                <div class="wapLiability" componentId="wapLiability" liabilityId="1108001">
+                    <div><span class="liabilityName">重大疾病康复金</span><span class="liabilityAmount">最高3万</span></div>
+                    <div class="liabilityDescription"></div>
+                </div>
+                <div class="wapLiability" componentId="wapLiability" liabilityId="1108001">
+                    <div><span class="liabilityName">子女保费豁免</span><span class="liabilityAmount">免交剩余未交保费</span></div>
+                    <div class="liabilityDescription"></div>
+                </div>
+            </div>
+        </div>
+        <div class="wapPlanHelp" componentId="wapPlanHelp">看不懂保障责任？看这里！</div>
+        <div class="wapConditionList" componentId="wapConditionList">
+            <div class="componentTitle">保障说明</div>
+            <div class="conditions">
+                <div class="wapCondition" componentId="wapCondition"><span class="conditionName">保障期限</span><span class="conditionDescription">最高可保至75周岁</span></div>
+                <div class="wapCondition" componentId="wapCondition"><span class="conditionName">投保年龄</span><span class="conditionDescription">出生满30天且出院-55周岁（含）</span></div>
+            </div>
+        </div>
+        <div class="wapReturnMessage" componentId="wapReturnMessage" returnMessage="planId,planPrice"></div>
+        <div class="wapPayment" componentId="wapPayment">
+            <div class="payPrice">
+                <div><span class="priceName">基本款：</span><span class="priceData">￥50</span></div>
+                <div class="score"></div>
+            </div>
+            <div class="service">客服</div>
+            <div class="payBtn" id="S20160001">立即投保</div>
+        </div>
+    </section>
+    <div id="liabilityMasker" class="liabilityMasker" style="display:none;">
+        <div class="liabilityBox">
+            <h2>保障责任说明</h2>
+            <article>
+                <p class="liabilityContent"></p>
+            </article>
+            <div class="liabilityBtnArea">
+                <input type="button" value="我知道了" class="cancel">
+            </div>
+        </div>
+    </div>
+    <div id="alertBoxMasker" class="leaveMasker" style="display:none;opacity:0;">
+        <div class="alertBox">
+            <div class="alertBoxContent" style="text-align:center;">
+                <h2>温馨提示</h2>
+                <p></p>
+            </div>
+            <div class="alertBoxBtn">我知道了</div>
+        </div>
+    </div>
+    <div class="wapIdentityMasker" style="display:none;">
+        <div class="wapIdentityContent">
+            <a class="close"></a>
+            <div>
+                <h3>全新升级</h3>
+                <p>文字介绍文字介绍文字介绍文字介绍</p>
+                <h3>返还保费</h3>
+                <p>文字介绍文字介绍文字介绍文字介绍</p>
+                <h3>保单贷款</h3>
+                <p>文字介绍文字介绍文字介绍文字介绍</p>
+                <h3>在线理赔</h3>
+                <p>文字介绍文字介绍文字介绍文字介绍</p>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/dialog.js"></script>
+    <script src="js/mobile-select-area.js"></script>
+    <script src="js/mobile-select-date.js"></script>
+    <script src="js/wap_details2.js"></script>
+    <script src="js/wap_weixin.js"></script>
+    <script src="js/lifeArea.js"></script>
+    <script src="js/calculateJSON.js"></script>
+    <script src="js/calculate.js"></script>
+    <script>
+    if ($(".wapCalculate").attr("pop") == "true") {
+        $(".wapCalculateContent").append($("[componentId=wapPremiumFactor]"));
+
+        $(".wapCalculate p").click(function(event) {
+            $(".wapCalculatePop").show();
+            $(".wapCalculateContainer").animate({
+                "bottom": "4.5rem"
+            }, 400);
+        });
+
+        $(".wapCalculateHeader .close").click(function(event) {
+            $(".wapCalculateContainer").animate({
+                "bottom": "-30rem"
+            }, 400, function() {
+                $(".wapCalculatePop").hide();
+            });
+        });
+    }
+
+    $(".wapIdentityList").click(function() {
+        $(".wapIdentityMasker").show();
+        $(".wapIdentityContent").animate({
+            "bottom": "4.5rem"
+        }, 400);
+    });
+
+    $(".wapIdentityContent .close").click(function(event) {
+        $(".wapIdentityContent").animate({
+            "bottom": "-30rem"
+        }, 400, function() {
+            $(".wapIdentityMasker").hide();
+        });
+    });
+
+    if ($(".wapInsureAudio").length) {
+        var oAudio = document.querySelector('.wapInsureAudio audio');
+        var oBtn = document.querySelector('.wapInsureAudio span');
+        var onOff = true;
+        oBtn.addEventListener('click', function() {
+            if (onOff) {
+                $(".audioPlay").attr("src", "images/audio_ico_on.gif")
+                oAudio.play();
+            } else {
+                $(".audioPlay").attr("src", "images/audio_ico.gif")
+                oAudio.pause();
+            }
+            onOff = !onOff;
+        }, false);
+        oAudio.addEventListener('ended', function() {
+            $(".audioPlay").attr("src", "images/audio_ico.gif")
+        }, false);
+    }
+    </script>
+</body>
+</html>

@@ -23,88 +23,317 @@
 		<div id="wap_details">
 
 			<div class="wapProductDesc" componentId="wapProductDesc">
-				<div class="productName">全年综合意外保障</div>
-				<div class="productDescription">每天低至0.15元！大小意外全保，工作生活、居家旅行必备！</div>
+				<div class="productName">少儿综合意外保障</div>
+				<div class="productDescription">少儿综合意外保障：每天低至0.12元起！大小意外全保，勇敢的少年生活必备神器！</div>
 			</div>
-
 			<div class="wapProductPrice" componentId="wapProductPrice">
 				<div><span class="priceType">会员价</span><span class="productPrice">50</span></div>
-				<div><span class="activityTitle">促销信息</span><span class="discountInfo">4.1-4.30返还两倍积分</span></div>
+				<div><span class="activityTitle">促销信息</span><span class="discountInfo">立减5元</span></div>
 			</div>
-
 			<div class="wapIdentityList" componentId="wapIdentityList">
 				<div class="wapIdentity" componentId="wapIdentity"><img src="" /><span>透明理赔</span></div>
 				<div class="wapIdentity" componentId="wapIdentity"><img src="" /><span>超值低价</span></div>
 				<div class="wapIdentity" componentId="wapIdentity"><img src="" /><span>热销爆款</span></div>
 			</div>
-
-			<div class="wapAnalysis" componentId="wapAnalysis">
-				<div class="analysisLable">需求分析</div>
-				<div class="analysisDesc">我是否适合这款产品？</div>
+			<div class="wapInsureAudio" componentId="wapInsureAudio">
+				<h2 class="title">产品经理1分钟讲保险</h2>
+				<article class="list">
+					<ul class="item audio">
+						<li><img src="images/audio_per.gif"><span class="ico"></span>
+							<audio src="images/music.mp3"></audio>
+						</li>
+					</ul>
+				</article>
+			</div>
+			<div class="wapInsureAgeList" componentId="wapInsureAgeList">
+				<article class="list timelist tm10">
+					<ul class="item">
+						<li>
+							<h3>投保年龄</h3>
+							<p>
+								<label componentId="wapInsureAge" insureAgeIndex="0">
+									<input type="radio" name="age" value="3" checked><span>30天-9岁</span>
+								</label>
+								<label componentId="wapInsureAge" insureAgeIndex="1">
+									<input type="radio" name="age" value="7"><span>10-17岁</span>
+								</label>
+							</p>
+						</li>
+					</ul>
+				</article>
+			</div>
+			<div class="wapInsurePeriodList" componentId="wapInsurePeriodList">
+				<article class="list timelist tm10">
+					<ul class="item">
+						<li>
+							<h3>保障期限</h3>
+							<p>
+								<label componentId="wapInsurePeriod" insurePeriodIndex="0">
+									<input type="radio" name="period" value="3" checked><span>3天</span>
+								</label>
+								<label componentId="wapInsurePeriod" insurePeriodIndex="1">
+									<input type="radio" name="period" value="7"><span>7天</span>
+								</label>
+							</p>
+						</li>
+					</ul>
+				</article>
+			</div>
+			<div class="wapPlanNameList" componentId="wapPlanNameList">
+				<div class="componentTitle">保障责任</div>
+				<div class="planNameList">
+					<div class="wapPlanName" componentId="wapPlanName" planNameIndex="0">基本款</div>
+					<div class="wapPlanName" componentId="wapPlanName" planNameIndex="1">白金款</div>
+					<div class="wapPlanName" componentId="wapPlanName" planNameIndex="2">钻石款</div>
+				</div>
 			</div>
 
-			<div componentId="wapPackageList">
-				<div class="componentTitle">保障责任</div>
-				<div class="packageNameList">
-					<div class="wapPackageName" componentId="wapPackageName" packageNameIndex="0">基本款</div>
-					<div class="wapPackageName" componentId="wapPackageName" packageNameIndex="1">白金款</div>
-					<div class="wapPackageName" componentId="wapPackageName" packageNameIndex="2">钻石款</div>
+			<div class="planList" componentId="wapPlanList">
+				<div class="wapPlan" componentId="wapPlan" planId="001" planPrice="45" planScore="45" planFactorList=["wapInsureAgeList","wapInsurePeriodList","wapPlanNameList"] planIndex=["0","0","0"]>
+					<div class="wapPlanHide">
+						<div class="wapCondition wapInsureAgeRange" componentId="wapInsureAgeRange"> <span class="conditionName insureAgeRangeLable">投保年龄</span> <span class="conditionDescription insureAgeRange">30天-9岁</span> </div>
+						<div class="wapCondition wapInsurePeriod" componentId="wapInsurePeriod"> <span class="conditionName insurePeriodLable">投保期间</span> <span class="conditionDescription insurePeriod">3天</span> </div>
+					</div>
+					<div class="wapLiability" componentId="wapLiability" liabilityId="1001">
+						<div><span class="liabilityName">意外身故</span><span class="liabilityAmount">10</span></div>
+						<div class="liabilityDescription">被保险人遭受意外伤害事故（如跌倒、溺水、食物中毒），并自该事故发生之日起180日（含第180日）内因该事故为直接且单独原因导致被保险人身故的，保险人按保险单上载明的保险金额向意外身故保险金受益人给付意外身故保险金。</div>
+					</div>
+					<div class="wapLiability" componentId="wapLiability" liabilityId="1002">
+						<div> <span class="liabilityName">意外残疾</span> <span class="liabilityAmount">10</span> </div>
+						<div class="liabilityDescription">被保险人遭受意外伤害事故（如跌倒、溺水、食物中毒），并自该事故发生之日起180日（含第180日）内因该事故为直接且单独原因导致被保险人发生《人身保险伤残评定标准及代码》所述伤残项目，根据本保险合同及该《伤残评定标准》规定的评定原则对被保险人伤残程度进行评定，并按评定结果所对应该《伤残评定标准》中规定的给付比例乘以保险单上载明的保险金额向意外伤残保险金受益人给付意外伤残保险金。</div>
+					</div>
 				</div>
-				<div class="packageList">
-					<div class="wapPackage" componentId="wapPackage" packageId="001" packagePrice="45" packageFactorList=[ "wapPackageNameList"] packageIndex=[ "0"]>
-						<div class="wapLiability" componentId="wapLiability">
-							<div><span class="liabilityName">意外身故</span><span class="liabilityAmount">10</span></div>
-							<div class="liabilityDescription">被保险人遭受意外伤害事故（如跌倒、溺水、食物中毒），并自该事故发生之日起180日（含第180日）内因该事故为直接且单独原因导致被保险人身故的，保险人按保险单上载明的保险金额向意外身故保险金受益人给付意外身故保险金。</div>
-						</div>
-						<div class="wapLiability" componentId="wapLiability">
-							<div> <span class="liabilityName">公汽、电车、出租车、地铁意外身故、伤残</span> <span class="liabilityAmount">10</span> </div>
-							<div class="liabilityDescription"></div>
-						</div>
+				<div class="wapPlan" componentId="wapPlan" planId="002" planPrice="138" planScore="138" planFactorList=["wapInsureAgeList","wapInsurePeriodList","wapPlanNameList"] planIndex=["0","0","1"]>
+					<div class="wapPlanHide">
+						<div class="wapCondition wapInsureAgeRange" componentId="wapInsureAgeRange"> <span class="conditionName insureAgeRangeLable">投保年龄</span> <span class="conditionDescription insureAgeRange">30天-9岁</span> </div>
+						<div class="wapCondition wapInsurePeriod" componentId="wapInsurePeriod"> <span class="conditionName insurePeriodLable">投保期间</span> <span class="conditionDescription insurePeriod">3天</span> </div>
 					</div>
-					<div class="wapPackage" componentId="wapPackage" packageId="002" packagePrice="149">
-						<div class="wapLiability" componentId="wapLiability">
-							<div><span class="liabilityName">意外身故</span><span class="liabilityAmount">20</span></div>
-							<div class="liabilityDescription">被保险人遭受意外伤害事故（如跌倒、溺水、食物中毒），并自该事故发生之日起180日（含第180日）内因该事故为直接且单独原因导致被保险人身故的，保险人按保险单上载明的保险金额向意外身故保险金受益人给付意外身故保险金。</div>
-						</div>
-						<div class="wapLiability" componentId="wapLiability">
-							<div> <span class="liabilityName">意外残疾</span> <span class="liabilityAmount">2</span> </div>
-							<div class="liabilityDescription">被保险人遭受意外伤害事故（如跌倒、溺水、食物中毒），并自该事故发生之日起180日（含第180日）内因该事故为直接且单独原因导致被保险人发生《人身保险伤残评定标准及代码》所述伤残项目，根据本保险合同及该《伤残评定标准》规定的评定原则对被保险人伤残程度进行评定，并按评定结果所对应该《伤残评定标准》中规定的给付比例乘以保险单上载明的保险金额向意外伤残保险金受益人给付意外伤残保险金。</div>
-						</div>
-						<div class="wapLiability" componentId="wapLiability">
-							<div> <span class="liabilityName">意外医疗</span> <span class="liabilityAmount">1</span> </div>
-							<div class="liabilityDescription">被保险人因在中国境内遭受意外伤害事故（如跌倒、溺水、食物中毒），并因该事故直接导致被保险人需在二级及以上医院接受治疗的，对符合合同约定范围内发生的医疗费用，给付受益人意外医疗赔偿金（扣除100元免赔额）。</div>
-						</div>
-						<div class="wapLiability" componentId="wapLiability">
-							<div> <span class="liabilityName">公汽、电车、出租车、地铁意外身故、伤残</span> <span class="liabilityAmount">20</span> </div>
-							<div class="liabilityDescription"></div>
-						</div>
+					<div class="wapLiability" componentId="wapLiability" liabilityId="1001">
+						<div><span class="liabilityName">意外身故</span><span class="liabilityAmount">20</span></div>
+						<div class="liabilityDescription">被保险人遭受意外伤害事故（如跌倒、溺水、食物中毒），并自该事故发生之日起180日（含第180日）内因该事故为直接且单独原因导致被保险人身故的，保险人按保险单上载明的保险金额向意外身故保险金受益人给付意外身故保险金。</div>
 					</div>
+					<div class="wapLiability" componentId="wapLiability" liabilityId="1002">
+						<div> <span class="liabilityName">意外残疾</span> <span class="liabilityAmount">2</span> </div>
+						<div class="liabilityDescription">被保险人遭受意外伤害事故（如跌倒、溺水、食物中毒），并自该事故发生之日起180日（含第180日）内因该事故为直接且单独原因导致被保险人发生《人身保险伤残评定标准及代码》所述伤残项目，根据本保险合同及该《伤残评定标准》规定的评定原则对被保险人伤残程度进行评定，并按评定结果所对应该《伤残评定标准》中规定的给付比例乘以保险单上载明的保险金额向意外伤残保险金受益人给付意外伤残保险金。</div>
+					</div>
+					<div class="wapLiability" componentId="wapLiability" liabilityId="1003">
+						<div> <span class="liabilityName">意外医疗</span> <span class="liabilityAmount">1</span> </div>
+						<div class="liabilityDescription">被保险人因在中国境内遭受意外伤害事故（如跌倒、溺水、食物中毒），并因该事故直接导致被保险人需在二级及以上医院接受治疗的，对符合合同约定范围内发生的医疗费用，给付受益人意外医疗赔偿金（扣除100元免赔额）。</div>
+					</div>
+					<div class="wapLiability" componentId="wapLiability" liabilityId="1004">
+						<div> <span class="liabilityName">飞机意外身故、伤残</span> <span class="liabilityAmount">30</span> </div>
+						<div class="liabilityDescription"></div>
+					</div>
+				</div>
 
-					<div class="wapPackage" componentId="wapPackage" packageId="003" packagePrice="395">
-						<div class="wapLiability" componentId="wapLiability">
-							<div> <span class="liabilityName">意外身故</span> <span class="liabilityAmount">50</span> </div>
-							<div class="liabilityDescription">被保险人遭受意外伤害事故（如跌倒、溺水、食物中毒），并自该事故发生之日起180日（含第180日）内因该事故为直接且单独原因导致被保险人身故的，保险人按保险单上载明的保险金额向意外身故保险金受益人给付意外身故保险金。</div>
-						</div>
-						<div class="wapLiability" componentId="wapLiability">
-							<div> <span class="liabilityName">意外残疾</span> <span class="liabilityAmount">5</span> </div>
-							<div class="liabilityDescription">被保险人遭受意外伤害事故（如跌倒、溺水、食物中毒），并自该事故发生之日起180日（含第180日）内因该事故为直接且单独原因导致被保险人发生《人身保险伤残评定标准及代码》所述伤残项目，根据本保险合同及该《伤残评定标准》规定的评定原则对被保险人伤残程度进行评定，并按评定结果所对应该《伤残评定标准》中规定的给付比例乘以保险单上载明的保险金额向意外伤残保险金受益人给付意外伤残保险金。</div>
-						</div>
-						<div class="wapLiability" componentId="wapLiability">
-							<div> <span class="liabilityName">意外医疗</span> <span class="liabilityAmount">2</span> </div>
-							<div class="liabilityDescription">被保险人因在中国境内遭受意外伤害事故（如跌倒、溺水、食物中毒），并因该事故直接导致被保险人需在二级及以上医院接受治疗的，对符合合同约定范围内发生的医疗费用，给付受益人意外医疗赔偿金（扣除100元免赔额）。</div>
-						</div>
-						<div class="wapLiability" componentId="wapLiability">
-							<div> <span class="liabilityName">公汽、电车、出租车、地铁意外身故、伤残</span> <span class="liabilityAmount">50</span> </div>
-							<div class="liabilityDescription"></div>
-						</div>
-						<div class="wapLiability" componentId="wapLiability">
-							<div> <span class="liabilityName">火车意外身故、伤残</span> <span class="liabilityAmount">60</span> </div>
-							<div class="liabilityDescription"></div>
-						</div>
-						<div class="wapLiability" componentId="wapLiability">
-							<div> <span class="liabilityName">飞机意外身故、伤残</span> <span class="liabilityAmount">80</span> </div>
-							<div class="liabilityDescription"></div>
-						</div>
+				<div class="wapPlan" componentId="wapPlan" planId="003" planPrice="325" planScore="325" planFactorList=["wapInsureAgeList","wapInsurePeriodList","wapPlanNameList"] planIndex=["0","0","2"]>
+					<div class="wapPlanHide">
+						<div class="wapCondition wapInsureAgeRange" componentId="wapInsureAgeRange"> <span class="conditionName insureAgeRangeLable">投保年龄</span> <span class="conditionDescription insureAgeRange">30天-9岁</span> </div>
+						<div class="wapCondition wapInsurePeriod" componentId="wapInsurePeriod"> <span class="conditionName insurePeriodLable">投保期间</span> <span class="conditionDescription insurePeriod">3天</span> </div>
+					</div>
+					<div class="wapLiability" componentId="wapLiability" liabilityId="1001">
+						<div> <span class="liabilityName">意外身故</span> <span class="liabilityAmount">50</span> </div>
+						<div class="liabilityDescription">被保险人遭受意外伤害事故（如跌倒、溺水、食物中毒），并自该事故发生之日起180日（含第180日）内因该事故为直接且单独原因导致被保险人身故的，保险人按保险单上载明的保险金额向意外身故保险金受益人给付意外身故保险金。</div>
+					</div>
+					<div class="wapLiability" componentId="wapLiability" liabilityId="1002">
+						<div> <span class="liabilityName">意外残疾</span> <span class="liabilityAmount">5</span> </div>
+						<div class="liabilityDescription">被保险人遭受意外伤害事故（如跌倒、溺水、食物中毒），并自该事故发生之日起180日（含第180日）内因该事故为直接且单独原因导致被保险人发生《人身保险伤残评定标准及代码》所述伤残项目，根据本保险合同及该《伤残评定标准》规定的评定原则对被保险人伤残程度进行评定，并按评定结果所对应该《伤残评定标准》中规定的给付比例乘以保险单上载明的保险金额向意外伤残保险金受益人给付意外伤残保险金。</div>
+					</div>
+					<div class="wapLiability" componentId="wapLiability" liabilityId="1003">
+						<div> <span class="liabilityName">意外医疗</span> <span class="liabilityAmount">2</span> </div>
+						<div class="liabilityDescription">被保险人因在中国境内遭受意外伤害事故（如跌倒、溺水、食物中毒），并因该事故直接导致被保险人需在二级及以上医院接受治疗的，对符合合同约定范围内发生的医疗费用，给付受益人意外医疗赔偿金（扣除100元免赔额）。</div>
+					</div>
+					<div class="wapLiability" componentId="wapLiability" liabilityId="1004">
+						<div> <span class="liabilityName">飞机意外身故、伤残</span> <span class="liabilityAmount">50</span> </div>
+						<div class="liabilityDescription"></div>
+					</div>
+				</div>
+
+				<div class="wapPlan" componentId="wapPlan" planId="004" planPrice="45" planScore="45" planFactorList=["wapInsureAgeList","wapInsurePeriodList","wapPlanNameList"] planIndex=["1","0","0"]>
+					<div class="wapPlanHide">
+						<div class="wapCondition wapInsureAgeRange" componentId="wapInsureAgeRange"> <span class="conditionName insureAgeRangeLable">投保年龄</span> <span class="conditionDescription insureAgeRange">10-17岁</span> </div>
+						<div class="wapCondition wapInsurePeriod" componentId="wapInsurePeriod"> <span class="conditionName insurePeriodLable">投保期间</span> <span class="conditionDescription insurePeriod">3天</span> </div>
+					</div>
+					<div class="wapLiability" componentId="wapLiability" liabilityId="1001">
+						<div><span class="liabilityName">意外身故</span><span class="liabilityAmount">10</span></div>
+						<div class="liabilityDescription">被保险人遭受意外伤害事故（如跌倒、溺水、食物中毒），并自该事故发生之日起180日（含第180日）内因该事故为直接且单独原因导致被保险人身故的，保险人按保险单上载明的保险金额向意外身故保险金受益人给付意外身故保险金。</div>
+					</div>
+					<div class="wapLiability" componentId="wapLiability" liabilityId="1002">
+						<div> <span class="liabilityName">意外残疾</span> <span class="liabilityAmount">1</span> </div>
+						<div class="liabilityDescription"></div>
+					</div>
+					<div class="wapLiability" componentId="wapLiability" liabilityId="1003">
+						<div> <span class="liabilityName">市内公共汽、电车+出租车+地铁意外伤害</span> <span class="liabilityAmount">10</span> </div>
+						<div class="liabilityDescription"></div>
+					</div>
+				</div>
+				<div class="wapPlan" componentId="wapPlan" planId="005" planPrice="129" planScore="129" planFactorList=["wapInsureAgeList","wapInsurePeriodList","wapPlanNameList"] planIndex=["1","0","1"]>
+					<div class="wapPlanHide">
+						<div class="wapCondition wapInsureAgeRange" componentId="wapInsureAgeRange"> <span class="conditionName insureAgeRangeLable">投保年龄</span> <span class="conditionDescription insureAgeRange">10-17岁</span> </div>
+						<div class="wapCondition wapInsurePeriod" componentId="wapInsurePeriod"> <span class="conditionName insurePeriodLable">投保期间</span> <span class="conditionDescription insurePeriod">3天</span> </div>
+					</div>
+					<div class="wapLiability" componentId="wapLiability" liabilityId="1001">
+						<div><span class="liabilityName">意外身故</span><span class="liabilityAmount">20</span></div>
+						<div class="liabilityDescription">被保险人遭受意外伤害事故（如跌倒、溺水、食物中毒），并自该事故发生之日起180日（含第180日）内因该事故为直接且单独原因导致被保险人身故的，保险人按保险单上载明的保险金额向意外身故保险金受益人给付意外身故保险金。</div>
+					</div>
+					<div class="wapLiability" componentId="wapLiability" liabilityId="1002">
+						<div> <span class="liabilityName">意外残疾</span> <span class="liabilityAmount">2</span> </div>
+						<div class="liabilityDescription">被保险人遭受意外伤害事故（如跌倒、溺水、食物中毒），并自该事故发生之日起180日（含第180日）内因该事故为直接且单独原因导致被保险人发生《人身保险伤残评定标准及代码》所述伤残项目，根据本保险合同及该《伤残评定标准》规定的评定原则对被保险人伤残程度进行评定，并按评定结果所对应该《伤残评定标准》中规定的给付比例乘以保险单上载明的保险金额向意外伤残保险金受益人给付意外伤残保险金。</div>
+					</div>
+					<div class="wapLiability" componentId="wapLiability" liabilityId="1003">
+						<div> <span class="liabilityName">意外医疗</span> <span class="liabilityAmount">1</span> </div>
+						<div class="liabilityDescription">被保险人因在中国境内遭受意外伤害事故（如跌倒、溺水、食物中毒），并因该事故直接导致被保险人需在二级及以上医院接受治疗的，对符合合同约定范围内发生的医疗费用，给付受益人意外医疗赔偿金（扣除100元免赔额）。</div>
+					</div>
+					<div class="wapLiability" componentId="wapLiability" liabilityId="1004">
+						<div> <span class="liabilityName">市内公汽、电车+出租车+地铁意外身故、伤残</span> <span class="liabilityAmount">20</span> </div>
+						<div class="liabilityDescription"></div>
+					</div>
+				</div>
+
+				<div class="wapPlan" componentId="wapPlan" planId="006" planPrice="325" planScore="325" planFactorList=["wapInsureAgeList","wapInsurePeriodList","wapPlanNameList"] planIndex=["1","0","2"]>
+					<div class="wapPlanHide">
+						<div class="wapCondition wapInsureAgeRange" componentId="wapInsureAgeRange"> <span class="conditionName insureAgeRangeLable">投保年龄</span> <span class="conditionDescription insureAgeRange">10-17岁</span> </div>
+						<div class="wapCondition wapInsurePeriod" componentId="wapInsurePeriod"> <span class="conditionName insurePeriodLable">投保期间</span> <span class="conditionDescription insurePeriod">3天</span> </div>
+					</div>
+					<div class="wapLiability" componentId="wapLiability" liabilityId="1001">
+						<div> <span class="liabilityName">意外身故</span> <span class="liabilityAmount">50</span> </div>
+						<div class="liabilityDescription">被保险人遭受意外伤害事故（如跌倒、溺水、食物中毒），并自该事故发生之日起180日（含第180日）内因该事故为直接且单独原因导致被保险人身故的，保险人按保险单上载明的保险金额向意外身故保险金受益人给付意外身故保险金。</div>
+					</div>
+					<div class="wapLiability" componentId="wapLiability" liabilityId="1002">
+						<div> <span class="liabilityName">意外残疾</span> <span class="liabilityAmount">5</span> </div>
+						<div class="liabilityDescription">被保险人遭受意外伤害事故（如跌倒、溺水、食物中毒），并自该事故发生之日起180日（含第180日）内因该事故为直接且单独原因导致被保险人发生《人身保险伤残评定标准及代码》所述伤残项目，根据本保险合同及该《伤残评定标准》规定的评定原则对被保险人伤残程度进行评定，并按评定结果所对应该《伤残评定标准》中规定的给付比例乘以保险单上载明的保险金额向意外伤残保险金受益人给付意外伤残保险金。</div>
+					</div>
+					<div class="wapLiability" componentId="wapLiability" liabilityId="1003">
+						<div> <span class="liabilityName">意外医疗</span> <span class="liabilityAmount">2</span> </div>
+						<div class="liabilityDescription">被保险人因在中国境内遭受意外伤害事故（如跌倒、溺水、食物中毒），并因该事故直接导致被保险人需在二级及以上医院接受治疗的，对符合合同约定范围内发生的医疗费用，给付受益人意外医疗赔偿金（扣除100元免赔额）。</div>
+					</div>
+					<div class="wapLiability" componentId="wapLiability" liabilityId="1004">
+						<div> <span class="liabilityName">飞机意外身故、伤残</span> <span class="liabilityAmount">80</span> </div>
+						<div class="liabilityDescription"></div>
+					</div>
+				</div>
+
+				<div class="wapPlan" componentId="wapPlan" planId="007" planPrice="45" planScore="45" planFactorList=["wapInsureAgeList","wapInsurePeriodList","wapPlanNameList"] planIndex=["0","1","0"]>
+					<div class="wapPlanHide">
+						<div class="wapCondition wapInsureAgeRange" componentId="wapInsureAgeRange"> <span class="conditionName insureAgeRangeLable">投保年龄</span> <span class="conditionDescription insureAgeRange">30天-9岁</span> </div>
+						<div class="wapCondition wapInsurePeriod" componentId="wapInsurePeriod"> <span class="conditionName insurePeriodLable">投保期间</span> <span class="conditionDescription insurePeriod">7天</span> </div>
+					</div>
+					<div class="wapLiability" componentId="wapLiability" liabilityId="1001">
+						<div><span class="liabilityName">意外身故</span><span class="liabilityAmount">10</span></div>
+						<div class="liabilityDescription">被保险人遭受意外伤害事故（如跌倒、溺水、食物中毒），并自该事故发生之日起180日（含第180日）内因该事故为直接且单独原因导致被保险人身故的，保险人按保险单上载明的保险金额向意外身故保险金受益人给付意外身故保险金。</div>
+					</div>
+					<div class="wapLiability" componentId="wapLiability" liabilityId="1002">
+						<div> <span class="liabilityName">意外残疾</span> <span class="liabilityAmount">10</span> </div>
+						<div class="liabilityDescription">被保险人遭受意外伤害事故（如跌倒、溺水、食物中毒），并自该事故发生之日起180日（含第180日）内因该事故为直接且单独原因导致被保险人发生《人身保险伤残评定标准及代码》所述伤残项目，根据本保险合同及该《伤残评定标准》规定的评定原则对被保险人伤残程度进行评定，并按评定结果所对应该《伤残评定标准》中规定的给付比例乘以保险单上载明的保险金额向意外伤残保险金受益人给付意外伤残保险金。</div>
+					</div>
+				</div>
+				<div class="wapPlan" componentId="wapPlan" planId="008" planPrice="138" planScore="138" planFactorList=["wapInsureAgeList","wapInsurePeriodList","wapPlanNameList"] planIndex=["0","1","1"]>
+					<div class="wapPlanHide">
+						<div class="wapCondition wapInsureAgeRange" componentId="wapInsureAgeRange"> <span class="conditionName insureAgeRangeLable">投保年龄</span> <span class="conditionDescription insureAgeRange">30天-9岁</span> </div>
+						<div class="wapCondition wapInsurePeriod" componentId="wapInsurePeriod"> <span class="conditionName insurePeriodLable">投保期间</span> <span class="conditionDescription insurePeriod">7天</span> </div>
+					</div>
+					<div class="wapLiability" componentId="wapLiability" liabilityId="1001">
+						<div><span class="liabilityName">意外身故</span><span class="liabilityAmount">20</span></div>
+						<div class="liabilityDescription">被保险人遭受意外伤害事故（如跌倒、溺水、食物中毒），并自该事故发生之日起180日（含第180日）内因该事故为直接且单独原因导致被保险人身故的，保险人按保险单上载明的保险金额向意外身故保险金受益人给付意外身故保险金。</div>
+					</div>
+					<div class="wapLiability" componentId="wapLiability" liabilityId="1002">
+						<div> <span class="liabilityName">意外残疾</span> <span class="liabilityAmount">2</span> </div>
+						<div class="liabilityDescription">被保险人遭受意外伤害事故（如跌倒、溺水、食物中毒），并自该事故发生之日起180日（含第180日）内因该事故为直接且单独原因导致被保险人发生《人身保险伤残评定标准及代码》所述伤残项目，根据本保险合同及该《伤残评定标准》规定的评定原则对被保险人伤残程度进行评定，并按评定结果所对应该《伤残评定标准》中规定的给付比例乘以保险单上载明的保险金额向意外伤残保险金受益人给付意外伤残保险金。</div>
+					</div>
+					<div class="wapLiability" componentId="wapLiability" liabilityId="1003">
+						<div> <span class="liabilityName">意外医疗</span> <span class="liabilityAmount">1</span> </div>
+						<div class="liabilityDescription">被保险人因在中国境内遭受意外伤害事故（如跌倒、溺水、食物中毒），并因该事故直接导致被保险人需在二级及以上医院接受治疗的，对符合合同约定范围内发生的医疗费用，给付受益人意外医疗赔偿金（扣除100元免赔额）。</div>
+					</div>
+					<div class="wapLiability" componentId="wapLiability" liabilityId="1004">
+						<div> <span class="liabilityName">飞机意外身故、伤残</span> <span class="liabilityAmount">30</span> </div>
+						<div class="liabilityDescription"></div>
+					</div>
+				</div>
+
+				<div class="wapPlan" componentId="wapPlan" planId="009" planPrice="325" planScore="325" planFactorList=["wapInsureAgeList","wapInsurePeriodList","wapPlanNameList"] planIndex=["0","1","2"]>
+					<div class="wapPlanHide">
+						<div class="wapCondition wapInsureAgeRange" componentId="wapInsureAgeRange"> <span class="conditionName insureAgeRangeLable">投保年龄</span> <span class="conditionDescription insureAgeRange">30天-9岁</span> </div>
+						<div class="wapCondition wapInsurePeriod" componentId="wapInsurePeriod"> <span class="conditionName insurePeriodLable">投保期间</span> <span class="conditionDescription insurePeriod">7天</span> </div>
+					</div>
+					<div class="wapLiability" componentId="wapLiability" liabilityId="1001">
+						<div> <span class="liabilityName">意外身故</span> <span class="liabilityAmount">50</span> </div>
+						<div class="liabilityDescription">被保险人遭受意外伤害事故（如跌倒、溺水、食物中毒），并自该事故发生之日起180日（含第180日）内因该事故为直接且单独原因导致被保险人身故的，保险人按保险单上载明的保险金额向意外身故保险金受益人给付意外身故保险金。</div>
+					</div>
+					<div class="wapLiability" componentId="wapLiability" liabilityId="1002">
+						<div> <span class="liabilityName">意外残疾</span> <span class="liabilityAmount">5</span> </div>
+						<div class="liabilityDescription">被保险人遭受意外伤害事故（如跌倒、溺水、食物中毒），并自该事故发生之日起180日（含第180日）内因该事故为直接且单独原因导致被保险人发生《人身保险伤残评定标准及代码》所述伤残项目，根据本保险合同及该《伤残评定标准》规定的评定原则对被保险人伤残程度进行评定，并按评定结果所对应该《伤残评定标准》中规定的给付比例乘以保险单上载明的保险金额向意外伤残保险金受益人给付意外伤残保险金。</div>
+					</div>
+					<div class="wapLiability" componentId="wapLiability" liabilityId="1003">
+						<div> <span class="liabilityName">意外医疗</span> <span class="liabilityAmount">2</span> </div>
+						<div class="liabilityDescription">被保险人因在中国境内遭受意外伤害事故（如跌倒、溺水、食物中毒），并因该事故直接导致被保险人需在二级及以上医院接受治疗的，对符合合同约定范围内发生的医疗费用，给付受益人意外医疗赔偿金（扣除100元免赔额）。</div>
+					</div>
+					<div class="wapLiability" componentId="wapLiability" liabilityId="1004">
+						<div> <span class="liabilityName">飞机意外身故、伤残</span> <span class="liabilityAmount">50</span> </div>
+						<div class="liabilityDescription"></div>
+					</div>
+				</div>
+
+				<div class="wapPlan" componentId="wapPlan" planId="0010" planPrice="45" planScore="45" planFactorList=["wapInsureAgeList","wapInsurePeriodList","wapPlanNameList"] planIndex=["1","1","0"]>
+					<div class="wapPlanHide">
+						<div class="wapCondition wapInsureAgeRange" componentId="wapInsureAgeRange"> <span class="conditionName insureAgeRangeLable">投保年龄</span> <span class="conditionDescription insureAgeRange">10-17岁</span> </div>
+						<div class="wapCondition wapInsurePeriod" componentId="wapInsurePeriod"> <span class="conditionName insurePeriodLable">投保期间</span> <span class="conditionDescription insurePeriod">7天</span> </div>
+					</div>
+					<div class="wapLiability" componentId="wapLiability" liabilityId="1001">
+						<div><span class="liabilityName">意外身故</span><span class="liabilityAmount">10</span></div>
+						<div class="liabilityDescription">被保险人遭受意外伤害事故（如跌倒、溺水、食物中毒），并自该事故发生之日起180日（含第180日）内因该事故为直接且单独原因导致被保险人身故的，保险人按保险单上载明的保险金额向意外身故保险金受益人给付意外身故保险金。</div>
+					</div>
+					<div class="wapLiability" componentId="wapLiability" liabilityId="1002">
+						<div> <span class="liabilityName">意外残疾</span> <span class="liabilityAmount">1</span> </div>
+						<div class="liabilityDescription"></div>
+					</div>
+					<div class="wapLiability" componentId="wapLiability" liabilityId="1003">
+						<div> <span class="liabilityName">市内公共汽、电车+出租车+地铁意外伤害</span> <span class="liabilityAmount">10</span> </div>
+						<div class="liabilityDescription"></div>
+					</div>
+				</div>
+				<div class="wapPlan" componentId="wapPlan" planId="0011" planPrice="129" planScore="129" planFactorList=["wapInsureAgeList","wapInsurePeriodList","wapPlanNameList"] planIndex=["1","1","1"]>
+					<div class="wapPlanHide">
+						<div class="wapCondition wapInsureAgeRange" componentId="wapInsureAgeRange"> <span class="conditionName insureAgeRangeLable">投保年龄</span> <span class="conditionDescription insureAgeRange">10-17岁</span> </div>
+						<div class="wapCondition wapInsurePeriod" componentId="wapInsurePeriod"> <span class="conditionName insurePeriodLable">投保期间</span> <span class="conditionDescription insurePeriod">7天</span> </div>
+					</div>
+					<div class="wapLiability" componentId="wapLiability" liabilityId="1001">
+						<div><span class="liabilityName">意外身故</span><span class="liabilityAmount">20</span></div>
+						<div class="liabilityDescription">被保险人遭受意外伤害事故（如跌倒、溺水、食物中毒），并自该事故发生之日起180日（含第180日）内因该事故为直接且单独原因导致被保险人身故的，保险人按保险单上载明的保险金额向意外身故保险金受益人给付意外身故保险金。</div>
+					</div>
+					<div class="wapLiability" componentId="wapLiability" liabilityId="1002">
+						<div> <span class="liabilityName">意外残疾</span> <span class="liabilityAmount">2</span> </div>
+						<div class="liabilityDescription">被保险人遭受意外伤害事故（如跌倒、溺水、食物中毒），并自该事故发生之日起180日（含第180日）内因该事故为直接且单独原因导致被保险人发生《人身保险伤残评定标准及代码》所述伤残项目，根据本保险合同及该《伤残评定标准》规定的评定原则对被保险人伤残程度进行评定，并按评定结果所对应该《伤残评定标准》中规定的给付比例乘以保险单上载明的保险金额向意外伤残保险金受益人给付意外伤残保险金。</div>
+					</div>
+					<div class="wapLiability" componentId="wapLiability" liabilityId="1003">
+						<div> <span class="liabilityName">意外医疗</span> <span class="liabilityAmount">1</span> </div>
+						<div class="liabilityDescription">被保险人因在中国境内遭受意外伤害事故（如跌倒、溺水、食物中毒），并因该事故直接导致被保险人需在二级及以上医院接受治疗的，对符合合同约定范围内发生的医疗费用，给付受益人意外医疗赔偿金（扣除100元免赔额）。</div>
+					</div>
+					<div class="wapLiability" componentId="wapLiability" liabilityId="1004">
+						<div> <span class="liabilityName">市内公汽、电车+出租车+地铁意外身故、伤残</span> <span class="liabilityAmount">20</span> </div>
+						<div class="liabilityDescription"></div>
+					</div>
+				</div>
+
+				<div class="wapPlan" componentId="wapPlan" planId="0012" planPrice="325" planScore="325" planFactorList=["wapInsureAgeList","wapInsurePeriodList","wapPlanNameList"] planIndex=["1","1","2"]>
+					<div class="wapPlanHide">
+						<div class="wapCondition wapInsureAgeRange" componentId="wapInsureAgeRange"> <span class="conditionName insureAgeRangeLable">投保年龄</span> <span class="conditionDescription insureAgeRange">10-17岁</span> </div>
+						<div class="wapCondition wapInsurePeriod" componentId="wapInsurePeriod"> <span class="conditionName insurePeriodLable">投保期间</span> <span class="conditionDescription insurePeriod">7天</span> </div>
+					</div>
+					<div class="wapLiability" componentId="wapLiability" liabilityId="1001">
+						<div> <span class="liabilityName">意外身故</span> <span class="liabilityAmount">50</span> </div>
+						<div class="liabilityDescription">被保险人遭受意外伤害事故（如跌倒、溺水、食物中毒），并自该事故发生之日起180日（含第180日）内因该事故为直接且单独原因导致被保险人身故的，保险人按保险单上载明的保险金额向意外身故保险金受益人给付意外身故保险金。</div>
+					</div>
+					<div class="wapLiability" componentId="wapLiability" liabilityId="1002">
+						<div> <span class="liabilityName">意外残疾</span> <span class="liabilityAmount">5</span> </div>
+						<div class="liabilityDescription">被保险人遭受意外伤害事故（如跌倒、溺水、食物中毒），并自该事故发生之日起180日（含第180日）内因该事故为直接且单独原因导致被保险人发生《人身保险伤残评定标准及代码》所述伤残项目，根据本保险合同及该《伤残评定标准》规定的评定原则对被保险人伤残程度进行评定，并按评定结果所对应该《伤残评定标准》中规定的给付比例乘以保险单上载明的保险金额向意外伤残保险金受益人给付意外伤残保险金。</div>
+					</div>
+					<div class="wapLiability" componentId="wapLiability" liabilityId="1003">
+						<div> <span class="liabilityName">意外医疗</span> <span class="liabilityAmount">2</span> </div>
+						<div class="liabilityDescription">被保险人因在中国境内遭受意外伤害事故（如跌倒、溺水、食物中毒），并因该事故直接导致被保险人需在二级及以上医院接受治疗的，对符合合同约定范围内发生的医疗费用，给付受益人意外医疗赔偿金（扣除100元免赔额）。</div>
+					</div>
+					<div class="wapLiability" componentId="wapLiability" liabilityId="1004">
+						<div> <span class="liabilityName">飞机意外身故、伤残</span> <span class="liabilityAmount">80</span> </div>
+						<div class="liabilityDescription"></div>
 					</div>
 				</div>
 			</div>
@@ -112,8 +341,8 @@
 			<div class="wapConditionList" componentId="wapConditionList">
 				<div class="componentTitle">保障说明</div>
 				<div class="conditions">
-					<div class="wapCondition" componentId="wapCondition"> <span class="conditionName">投保年龄</span> <span class="conditionDescription">18-65周岁</span> </div>
-					<div class="wapCondition" componentId="wapCondition"> <span class="conditionName">投保期间</span> <span class="conditionDescription">1年</span> </div>
+					<div class="wapCondition wapInsureAgeRange" componentId="wapInsureAgeRange"> <span class="conditionName insureAgeRangeLable">投保年龄</span> <span class="conditionDescription insureAgeRange"></span> </div>
+					<div class="wapCondition wapInsurePeriod" componentId="wapInsurePeriod"> <span class="conditionName insurePeriodLable">投保期间</span> <span class="conditionDescription insurePeriod"></span> </div>
 				</div>
 			</div>
 
@@ -126,7 +355,7 @@
 				<div class="productDetailsUrl"></div>
 			</div>
 
-			<div class="wapReturnMessage" componentId="wapReturnMessage" returnMessage="packageId,packagePrice">
+			<div class="wapReturnMessage" componentId="wapReturnMessage" returnMessage="planId,planPrice">
 			</div>
 
 			<div class="wapPayment" componentId="wapPayment">

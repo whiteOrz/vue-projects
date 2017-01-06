@@ -1,0 +1,34 @@
+{
+    "platform": "wap",
+    "applicationToken": "",
+    "processHandler": "property",
+    "checkCode": "",
+    "inputs": {
+        "applicantInfo": {
+            "applicantName": "",
+            "applicantIdType": "",
+            "applicantId": "",
+            "applicantGender": "",
+            "applicantBirth": "",
+            "applicantPhone": "",
+            "applicantEmail": "",
+            "applicantProvince": "",
+            "applicantCity": "",
+            "applicantProfession": ""
+        },
+        "insuredInfo": [
+            {
+                "insuredRelationship": "",
+                "insuredName": "",
+                "insuredIdType": "",
+                "insuredId": "",
+                "insuredGender": "",
+                "insuredBirth": "",
+                "insuredPhone": "",
+                "insuredEmail": "",
+                "beneficiaryLegal": true,
+                "beneficiaryInfo": []
+            }
+        ]
+    }
+}

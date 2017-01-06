@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>产品详情</title>
+    <link rel="stylesheet" href="detail_pc.css">
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript" src="detail_pc.js"></script>
+</head>
+<body>
+    <div id="container">
+        <div id="productImg"></div>
+        <div id="pc_detail">
+            <div class="pcProductDesc" componentId="pcProductDesc">
+                <div class="productName">少儿综合意外保障</div>
+                <div class="productDescription mt04">每天低至0.12元起！大小意外全保，勇敢的少年生活必备神器！</div>
+            </div>
+            <div class="pcProductPrice" componentId="pcProductPrice">
+                <div><span class="priceType">会员价</span><span class="productPrice">￥ 1 /年 起</span></div>
+                <div class="mt04"><span class="activityTitle">优惠信息</span><span class="discountInfo">会员购买再送超值积分</span></div>
+            </div>
+
+            <div class="pcInsureAgeRangeList mt1" componentId="pcInsureAgeRangeList">
+                <div class="componentTitle">投保年龄</div>
+                <div class="insureAgeRangeList">
+                    <div class="pcInsureAgeRange" componentId="pcInsureAgeRange" insureAgeRangeIndex="0">30天-9周岁</div>
+                    <div class="pcInsureAgeRange" componentId="pcInsureAgeRange" insureAgeRangeIndex="1">10-17周岁</div>
+                </div>
+            </div>
+
+            <div class="pcInsurePeriodList mt1" componentId="pcInsurePeriodList">
+                <div class="componentTitle">保多久</div>
+                <div class="insurePeriodList">
+                    <div class="insurePeriod" componentId="pcInsurePeriod" insurePeriodIndex="0">1年</div>
+                </div>
+                <div class="insurePeriodMessage">保障时间</div>
+            </div>
+
+            <div class="pcPackageNameList mt1" componentId="pcPackageNameList">
+                <div class="componentTitle">套餐分类</div>
+                <div class="packageNameList">
+                    <div class="pcPackageName" componentId="pcPackageName" packageNameIndex="0">基本款</div>
+                    <div class="pcPackageName" componentId="pcPackageName" packageNameIndex="1">白金款</div>
+                    <div class="pcPackageName" componentId="pcPackageName" packageNameIndex="2">钻石款</div>
+                </div>
+            </div>
+
+            <div class="pcPackageList" componentId="pcPackageList">
+                <div class="componentTitle"></div>
+                <div class="pcPackageContent">
+                    <div class="packageList">
+                        <div class="packageTitle">
+                            <div>保障项目</div>
+                            <div>保额</div>
+                        </div>
+
+                        <div class="pcPackage" componentId="pcPackage" packageId="001" packagePrice="45" packageScore="10" packageFactorList=["pcInsureAgeRangeList","pcPackageNameList"] packageIndex=["0","0"]>
+                            <div class="pcLiability" componentId="pcLiability" liabilityId="001001">
+                                <div class="liabilityName">意外身故</div>
+                                <div class="liabilityAmount">10万元</div>
+                            </div>
+                            <div class="pcLiability" componentId="pcLiability" liabilityId="001002">
+                                <div class="liabilityName">公汽、电车、出租车、地铁意外身故、伤残</div>
+                                <div class="liabilityAmount">10万元</div>
+                            </div>
+                        </div>
+                        <div class="pcPackage" componentId="pcPackage" packageId="002" packagePrice="138" packageScore="10" packageFactorList=["pcInsureAgeRangeList","pcPackageNameList"] packageIndex=["0","1"]>
+                            <div class="pcLiability" componentId="pcLiability" liabilityId="001001">
+                                <div class="liabilityName">意外身故</div>
+                                <div class="liabilityAmount">20万元</div>
+                            </div>
+                            <div class="pcLiability" componentId="pcLiability" liabilityId="001002">
+                                <div class="liabilityName">意外残疾</div>
+                                <div class="liabilityAmount">2万元</div>
+                            </div>
+                            <div class="pcLiability" componentId="pcLiability" liabilityId="001003">
+                                <div class="liabilityName">意外医疗</div>
+                                <div class="liabilityAmount">1万元</div>
+                            </div>
+                            <div class="pcLiability" componentId="pcLiability" liabilityId="001004">
+                                <div class="liabilityName">飞机意外身故、伤残</div>
+                                <div class="liabilityAmount">30万元</div>
+                            </div>
+                        </div>
+                        <div class="pcPackage" componentId="pcPackage" packageId="003" packagePrice="215" packageScore="10" packageFactorList=["pcInsureAgeRangeList","pcPackageNameList"] packageIndex=["0","2"]>
+                            <div class="pcLiability" componentId="pcLiability" liabilityId="001001">
+                                <div class="liabilityName">意外身故</div>
+                                <div class="liabilityAmount">50万元</div>
+                            </div>
+                            <div class="pcLiability" componentId="pcLiability" liabilityId="001002">
+                                <div class="liabilityName">意外残疾</div>
+                                <div class="liabilityAmount">5万元</div>
+                            </div>
+                            <div class="pcLiability" componentId="pcLiability" liabilityId="001003">
+                                <div class="liabilityName">意外医疗</div>
+                                <div class="liabilityAmount">2万元</div>
+                            </div>
+                            <div class="pcLiability" componentId="pcLiability" liabilityId="001004">
+                                <div class="liabilityName">飞机意外身故、伤残</div>
+                                <div class="liabilityAmount">60万元</div>
+                            </div>
+                        </div>
+                        <div class="pcPackage" componentId="pcPackage" packageId="004" packagePrice="45" packageScore="10" packageFactorList=["pcInsureAgeRangeList","pcPackageNameList"] packageIndex=["1","0"]>
+                            <div class="pcLiability" componentId="pcLiability" liabilityId="001001">
+                                <div class="liabilityName">意外身故</div>
+                                <div class="liabilityAmount">10万元</div>
+                            </div>
+                            <div class="pcLiability" componentId="pcLiability" liabilityId="001002">
+                                <div class="liabilityName">意外残疾</div>
+                                <div class="liabilityAmount">1万元</div>
+                            </div>
+                            <div class="pcLiability" componentId="pcLiability" liabilityId="001003">
+                                <div class="liabilityName">市内公共汽、电车+出租车+地铁意外伤害</div>
+                                <div class="liabilityAmount">10万元</div>
+                            </div>
+                        </div>
+                        <div class="pcPackage" componentId="pcPackage" packageId="005" packagePrice="129" packageScore="10" packageFactorList=["pcInsureAgeRangeList","pcPackageNameList"] packageIndex=["1","1"]>
+                            <div class="pcLiability" componentId="pcLiability" liabilityId="001001">
+                                <div class="liabilityName">意外身故</div>
+                                <div class="liabilityAmount">20万元</div>
+                            </div>
+                            <div class="pcLiability" componentId="pcLiability" liabilityId="001002">
+                                <div class="liabilityName">意外残疾</div>
+                                <div class="liabilityAmount">2万元</div>
+                            </div>
+                            <div class="pcLiability" componentId="pcLiability" liabilityId="001003">
+                                <div class="liabilityName">意外医疗</div>
+                                <div class="liabilityAmount">1万元</div>
+                            </div>
+                            <div class="pcLiability" componentId="pcLiability" liabilityId="001004">
+                                <div class="liabilityName">市内公共汽、电车+出租车+地铁意外伤害</div>
+                                <div class="liabilityAmount">20万元</div>
+                            </div>
+                        </div>
+                        <div class="pcPackage" componentId="pcPackage" packageId="006" packagePrice="325" packageScore="10" packageFactorList=["pcInsureAgeRangeList","pcPackageNameList"] packageIndex=["1","2"]>
+                            <div class="pcLiability" componentId="pcLiability" liabilityId="001001">
+                                <div class="liabilityName">意外身故</div>
+                                <div class="liabilityAmount">50万元</div>
+                            </div>
+                            <div class="pcLiability" componentId="pcLiability" liabilityId="001002">
+                                <div class="liabilityName">意外残疾</div>
+                                <div class="liabilityAmount">5万元</div>
+                            </div>
+                            <div class="pcLiability" componentId="pcLiability" liabilityId="001003">
+                                <div class="liabilityName">意外医疗</div>
+                                <div class="liabilityAmount">2万元</div>
+                            </div>
+                            <div class="pcLiability" componentId="pcLiability" liabilityId="001004">
+                                <div class="liabilityName">市内公共汽、电车+出租车+地铁意外伤害</div>
+                                <div class="liabilityAmount">50万元</div>
+                            </div>
+                            <div class="pcLiability" componentId="pcLiability" liabilityId="001003">
+                                <div class="liabilityName">火车意外伤害</div>
+                                <div class="liabilityAmount">60万元</div>
+                            </div>
+                            <div class="pcLiability" componentId="pcLiability" liabilityId="001004">
+                                <div class="liabilityName">飞机意外伤害</div>
+                                <div class="liabilityAmount">80万元</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pcReturnMessage" componentId="pcReturnMessage" returnMessage="packageId,packagePrice">
+            </div>
+
+            <div class="pcPayment" componentId="pcPayment">
+                <div>
+                    <div class="quickBuy payBtn">快速投保</div>
+                    <div class="payBtnExplan">无须注册，快速购买</div>
+                </div>
+                <div>
+                    <div class="login payBtn">会员投保</div>
+                    <div class="payBtnExplan">会员购买，赚积分兑换礼品</div>
+                </div>
+                <div></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,130 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>『选择支付方式』-泰康在线移动官网</title>
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,target-densitydpi=medium-dpi">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <link href="css/m_style.css" rel="stylesheet" type="text/css">
+</head>
+<body class="bg-g">
+    <header class="header">
+        <a id="goBack" class="icon-back"></a>
+        <h2>选择支付方式</h2>
+        <span></span>
+    </header>
+    <section class="container">
+        <h2 class="title">订单详情</h2>
+        <article class="list detaillist">
+            <p><span>保险名称：</span><span class="productName" style="color:#000;">喜临门家庭财产损失保障</span></p>
+            <p><span>保障责任：</span><span class="liabilitys" style="color:#000;">房屋及室内附属设备保障  20万<br>财产保障  5万</span></p>
+            <p><span>投保人：</span><span id="applicantName" style="color:#000;">田文奇</span></p>
+            <p><span>被保人：</span><span id="insurantName" style="color:#000;">田文奇</span></p>
+            <p><span>保　费：</span>
+                <mark class="c3 price">￥50</mark>
+            </p>
+        </article>
+    </section>
+    <div class="cover_bg back_tips" style="display:none;">
+        <div id="dialogbox" class="dialogbox2" style="display:none;">
+            <article>
+                <h2>温馨提示</h2>
+                <p style="text-align: center;">是否支付完成？</p>
+            </article>
+            <div class="btnarea">
+                <input id="paySuccess" onctype="button" value="完成" class="cancel tips_button">
+                <a id="payFail" class="assign smallamount tips_button">未完成</a>
+            </div>
+        </div>
+        <div id="dialogbox2" class="healthWaitting" style="display:none;">
+            <img src="images/tker_hb.gif" /> 正在查询支付状态...
+        </div>
+    </div>
+    <nav class="fixnav">
+        <div>
+            <div id="payStyle">支付宝支付</div>
+            <span class="price" style="font-size: 1.6rem;">￥50</span>
+        </div>
+        <p class="btn">
+            <input type="button" value="确认支付" class="btn1" id="payBtn">
+        </p>
+    </nav>
+    <div id="leaveMasker" class="leaveMasker" style="display:none;opacity:0;">
+        <div class="leave">
+            <article>
+                <h2></h2>
+                <p>是否放弃支付？</p>
+            </article>
+            <div class="leaveBtn">
+                <div class="btnGo">是</div>
+                <div class="btnStay">否</div>
+            </div>
+        </div>
+    </div>
+    <div class="leaveMasker" style="display:none;">
+        <div class="healthWaitting">
+            <img src="images/tker_hb.gif" /> 正在支付中...
+        </div>
+    </div>
+    <div id="alertBox" class="leaveMasker" style="display:none;opacity:0;">
+        <div class="alertBox" style="width:70%;">
+            <div class="alertBoxContent" style="text-align:center;padding:2rem;">
+                <p></p>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/lstorage.js"></script>
+    <script src="js/common1.js"></script>
+    <script src="js/wap_pay.js"></script>
+    <script>
+    $(function() {
+        $("#goBack").click(function() {
+            $("#leaveMasker").show();
+            $("#leaveMasker").animate({
+                "opacity": "1"
+            }, 400);
+
+            $(".leave").addClass("leave1");
+            $("body").addClass("lockBody");
+        });
+
+        $(".btnStay").click(function() {
+            $("#leaveMasker").animate({
+                "opacity": "0"
+            }, 400, function() {
+                $(".leave").removeClass("leave1");
+                $("#leaveMasker").hide();
+            });
+            $("body").removeClass("lockBody");
+        });
+
+        $(".btnGo").click(function() {
+            $("#leaveMasker").animate({
+                "opacity": "0"
+            }, 400, function() {
+                $(".leave").removeClass("leave1");
+                $("#leaveMasker").hide();
+                gotoIndexPage();
+            });
+            $("body").removeClass("lockBody");
+        });
+
+        var productName = getLocVal("productName");
+        TKTrack({
+            "event": "支付页面",
+            "subType": "财险_" + productName
+        });
+    });
+
+    function gotoIndexPage() {
+        var productId = getLocVal("productId");
+        location.href = "http://" + location.host + "/product/wap/" + productId + ".html";
+    }
+    </script>
+    <script src="js/tkTrack.js"></script>
+    <script src="http://m.tk.cn/js/reference.js"></script>
+</body>
+</html>

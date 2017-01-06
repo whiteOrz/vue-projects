@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>产品详情</title>
+    <link rel="stylesheet" href="../src/css/insure.css">
+    <link rel="stylesheet" href="../src/css/detail_pc.css">
+    <script type="text/javascript" src="../src/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../dist/detail_pc.js"></script>
+    <script type="text/javascript" src="../dist/details_operation.js"></script>
+</head>
+
+<body style="background:#fff;">
+    <div id="container">
+        <div id="productImg"></div>
+        <div id="pc_detail">
+            <div class="pcProductDesc" componentId="pcProductDesc">
+                <div class="productName">老年恶性肿瘤医疗保险</div>
+                <div class="productDescription mt04">80岁也可投保！超高性价比</div>
+            </div>
+            <div class="pcProductPrice clearfix" componentId="pcProductPrice"><span class="priceType">会员价</span><span class="productPrice"><span class="priceData">￥100元</span></span>
+            </div>
+            <div class="pcInsuredAgeRangeHidden" componentId="pcInsuredAgeRangeHidden"><span id="minAge" age="18"></span><span id="maxAge" age="80"></span></div>
+            <div class="pcCalculateHidden" componentId="pcCalculateHidden"></div>
+            <div class="pcRecentSales clearfix " componentId="pcRecentSales">
+                <div class="componentTitle">近期销量</div>
+                <div class="recentSales">98</div>
+            </div>
+            <div class="insureAge clearfix" componentId="pcPremiumFactor">
+                <div class="componentTitle">投保年龄</div>
+                <div class="insureAgeList">
+                    <div class="insureAge item w110" factorIndex="51" value="51">50周岁-55周岁</div>
+                    <div class="insureAge item w110" factorIndex="57" value="57">56周岁-60周岁</div>
+                    <div class="insureAge item w110" factorIndex="62" value="62">61周岁-65周岁</div>
+                    <div class="insureAge item w110" factorIndex="67" value="67">66周岁-70周岁</div>
+                    <div class="insureAge item w110" factorIndex="72" value="72">71周岁-75周岁</div>
+                    <div class="insureAge item w110" factorIndex="77" value="77">76周岁-80周岁</div>
+                </div>
+            </div>
+            <div class="insurePeriod clearfix" componentId="pcPremiumFactor">
+                <div class="componentTitle">保多久</div>
+                <div class="insureAgeList">
+                    <div class="insurePeriod item" factorIndex="Y1" value="Y1">1年</div>
+                    <div class="insurePeriodMessage"></div>
+                </div>
+            </div>
+            <div class="pcPackageNameList mt1 clearfix" componentId="pcPlanNameList">
+                <div class="componentTitle">套餐分类</div>
+                <div class="packageNameList packageNameList ">
+                    <div class="pcPackageName" componentId="pcPlanName" planNameIndex="0">老年恶性肿瘤医疗保险</div>
+                </div>
+            </div>
+            <div class="pcPackageList clearfix" componentId="pcPlanList">
+                <div class="componentTitle"></div>
+                <div class="pcPackageContent clearfix">
+                    <div class="packageList">
+                        <div class="pcPackage" componentId="pcPlan" planId="1010A00001" planPrice="" planScore="" planIndex="0">
+                            <div class="pcLiability clearfix" componentId="pcLiability" liabilityId="1010001">
+                                <div class="liabilityName">老年恶性肿瘤医疗保险金</div>
+                                <div class="liabilityAmount">20万</div>
+                                <div class="liabilityDesc">
+                                    具体包含恶性肿瘤住院医疗费用、恶性肿瘤特殊门诊医疗费用恶性肿瘤住院医疗费用包含：
+                                    <br/> 床位费和膳食费、诊疗费、治疗费、材料费、检查化验费、手术费、器官移植费、重症监护室床位费
+                                    <br/> 恶性肿瘤特殊门诊医疗费用包含：
+                                    <br/> 1.门诊恶性肿瘤放化疗
+                                    <br/> 2.因恶性肿瘤治疗导致的器官移植后的门诊抗排异治疗
+                                    <br/> 保额：20万
+                                    <br/> 免赔额：1万
+                                    <br/> 赔付比例：社保范围内：100%；社保范围外：80%
+                                    <br/> 以上内容为摘要，仅供参考，详细内容请以条款约定为准。
+                                    <br/>
+                                </div><span class="liabilityImg"></span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pcReturnMessage" componentId="pcReturnMessage" returnMessage="planId,planPrice"></div>
+            <div class="pcPayment clearfix" componentId="pcPayment">
+                <div class="paymentbtn">
+                    <div class="quickBuy payBtn" id="quickBuy ">快速投保</div>
+                    <div class="payBtnExplan">无须注册，快速购买</div>
+                </div>
+                <div class="paymentbtn">
+                    <div class="login payBtn" id="login ">会员投保</div>
+                    <div class="payBtnExplan">会员购买，赚积分兑换礼品</div>
+                </div>
+                <div class="payQRCode"><span>手机购买更便捷</span><img src="../src/image/erweima.png" /></div>
+            </div>
+            <div class="pcServiceList" componentId="pcServiceList">
+                <div class="componentTitle">服务承诺</div>
+                <div class="serviceList">
+                    <div class="pcService"><span class="serviceKeyword">快</span><span class="serviceDesc">极速生效</span></div>
+                    <div class="pcService"><span class="serviceKeyword">赔</span><span class="serviceDesc">透明理赔</span></div>
+                    <div class="pcService"><span class="serviceKeyword">预</span><span class="serviceDesc">预约专家</span></div>
+                </div>
+            </div>
+            <div class="pcPayStyleList" componentId="pcPayStyleList">
+                <div class="componentTitle">支付方式</div>
+                <div class="payStyleList">
+                    <div class="pcPayStyle"><span class="payStyleDesc">支付宝</span></div>
+                    <div class="pcPayStyle"><span class="payStyleDesc">银联储蓄卡</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="../src/js/jquery.cookie.js"></script>
+<script src="../src/js/layer/layer.js"></script>
+<script src="../src/js/json.js"></script>
+<script src="../src/js/sessionStorage.js"></script>
+<script src="../src/js/o_code.js"></script>
+<script src="http://cdnmaster.com/sitemaster/collect.js"></script>
+<script src="../src/js/pushCode.js"></script>
+<script src="../src/js/count.js"></script>
+<script src="../src/js/jquery.base64.js"></script>
+<script src="../src/js/tkTrack.js"></script>
+
+</html>

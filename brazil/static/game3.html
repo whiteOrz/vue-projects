@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="utf-8">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <script src="js/flexible.debug.js"></script>
+    <link rel="apple-touch-icon" href="favicon.png">
+    <link rel="Shortcut Icon" href="favicon.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="css/base.css">
+    <link rel="stylesheet" type="text/css" href="css/game.css">
+    <title>奔跑吧巴西</title>
+</head>
+<body>
+<div class="game_wrapper game3_wrapper">
+    <img class="game3_zq" src="images/zq/zq1.png"/>
+    <img class="game3_smy hideDiv" src="images/zq/1.png"/>
+    <img class="game3_start hideDiv" src="images/zq/2.png"/>
+    <img class="game3_ing hideDiv" src="images/zq/3.png"/>
+    <img class="game3_end hideDiv" src="images/zq/4.png"/>
+    <img class="game3_success hideDiv" src="images/zq/success.png"/>
+    <img class="game3_fail hideDiv" src="images/zq/failT.png"/>
+    <div class="layout">
+        <div class="help_main">
+            <img class="role_title" src="images/jz/bsgz.png"/>
+            <div class="role_txt">
+                <p>点球射门。玩家左右移动足球，瞄准进行射门，每位玩家只有1次射门机会，球进即可获得相应奖励。</p>
+            </div>
+            <img class="start_btn" src="images/jz/ks.png"/>
+        </div>
+    </div>
+</div>
+</body>
+<script type="text/javascript" src="js/zepto.min.js"></script>
+<script type="text/javascript">
+window.onload = function(){
+    document.addEventListener("touchmove",function(e){
+        e.preventDefault();
+    });
+    $(".layout").on("tap",function(){
+       $(this).addClass("hideDiv");
+        $(".game3_smy").removeClass("hideDiv");
+
+        var page = { x:0, y:0 };
+        $("body").on("touchstart",function(e){
+            page.x = e.changedTouches[0].pageX;
+            page.y = e.changedTouches[0].pageY;
+        });
+        var LX;
+        $("body").on("touchmove",function(e){
+            var pageX = e.changedTouches[0].pageX-page.x;
+            var pageY = e.changedTouches[0].pageY-page.y;
+            $(".game3_zq").css({"left":(4+pageX/500)+"rem"});
+            LX = pageX;
+        });
+        $("body").on("touchend",function(){
+            console.log("LX:"+LX);
+            if(LX > 0){//右射门
+                var ran = parseInt(10*Math.random());console.log(ran);
+                if(ran < 3){
+                    $(".game3_zq").addClass("rightt");
+                    setTimeout(function(){
+                        $(".game3_success").removeClass("hideDiv");
+                    },1000);
+                }else{
+                    $(".game3_zq").addClass("srt");
+                    setTimeout(function(){
+                        $(".game3_fail").removeClass("hideDiv");
+                    },1000);
+                };
+                $(".game3_smy").addClass("hideDiv");
+                $(".game3_start").removeClass("hideDiv");
+                setTimeout(function(){
+                    $(".game3_start").addClass("hideDiv");
+                    $(".game3_ing").removeClass("hideDiv");
+                },200);
+                setTimeout(function(){
+                    $(".game3_ing").addClass("hideDiv");
+                    $(".game3_end").removeClass("hideDiv");
+                },400);
+                setTimeout(function(){
+                    $(".game3_ing").addClass("hideDiv");
+                    $(".game3_end").removeClass("hideDiv");
+                },400);
+            }else{//左射门
+                var ran = parseInt(10*Math.random());console.log("ran:"+ran);
+                if(ran < 3){
+                    $(".game3_zq").addClass("zt");
+                    setTimeout(function(){
+                        $(".game3_success").removeClass("hideDiv");
+                    },1000);
+                }else{
+                    $(".game3_zq").addClass("slt");
+                    setTimeout(function(){
+                        $(".game3_fail").removeClass("hideDiv");
+                    },1000);
+                };
+                $(".game3_smy").addClass("hideDiv");
+                $(".game3_start").addClass("game3_startL").removeClass("hideDiv");
+                setTimeout(function(){
+                    $(".game3_start").addClass("hideDiv");
+                    $(".game3_ing").addClass("game3_ingL").removeClass("hideDiv");
+                },200);
+                setTimeout(function(){
+                    $(".game3_ing").addClass("hideDiv");
+                    $(".game3_end").addClass("game3_endL").removeClass("hideDiv");
+                },400);
+            }
+            $("body").off("touchstart touchmove touchend")
+        });
+
+        function shemen(){
+
+        }
+    });
+}
+</script>
+</html>

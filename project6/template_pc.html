@@ -6,47 +6,84 @@
 </head>
 
 <body>
+
 <div class="pcProductDesc" componentId="pcProductDesc">
     <div class="productName">$!data.pcProductDesc.productName</div>
-    <div class="productDescription mt04">$!data.pcProductDesc.productDescription</div>
+    <div class="productDescription mt04">$!data.pcProductDesc.productDesc</div>
 </div>
 
 <div class="pcProductPrice" componentId="pcProductPrice">
-    <div><span class="priceType">$!data.pcProductPrice.priceType</span><span class="productPrice">￥ $!data.pcProductPrice.productPrice /年 起</span></div>
-    <div class="mt04"><span class="activityTitle">$!data.pcProductPrice.activityTitle</span><span class="discountInfo">$!data.pcProductPrice.discountInfo</span></div>
+    <div><span class="priceType">$!data.pcProductPrice.priceType</span><span class="productPrice"><span class="priceData">￥ $!data.pcProductPrice.productPrice</span>  /年 起</span></div>
 </div>
 
-<div class="pcConditionList" componentId="pcConditionList">
-    <div class="conditions">
-        #foreach($pcCondition in $data.pcConditionList.conditions)
-        <div class="pcCondition" componentId="pcCondition">
-            <span class="conditionName">$!pcCondition.conditionName</span>
-            <span class="conditionDescription">$!pcCondition.conditionDescription</span>
-        </div>
+<div class="pcInsuredAgeRangeHidden" componentId="pcInsuredAgeRangeHidden">
+	<span id="minAge" age="$!data.pcInsuredAgeRangeHidden.min"></span>
+	<span id="maxAge" age="$!data.pcInsuredAgeRangeHidden.max"></span>
+</div>
+
+<div class="pcCalculateHidden" componentId="pcCalculateHidden"></div>
+
+<div class="pcDiscountInfoList" componentId="pcDiscountInfoList">
+    <div class="componentTitle">$!data.pcDiscountInfoList.componentTitle</div>
+    <div class="discountInfoList">
+        #foreach($pcDiscountInfo in $data.pcDiscountInfoList.discountInfoList)
+        <div><span class="discountTitle">$!pcDiscountInfo.discountTitle</span><a class="discountDesc" href="$!pcDiscountInfo.discountURL">$!pcDiscountInfo.discountDesc</a></div>
         #end
     </div>
 </div>
 
-<div class="pcPackageList" componentId="pcPackageList">
+<div class="pcDiscountInfoList" componentId="pcRecentSales">
+    <div class="componentTitle">$!data.pcRecentSales.componentTitle</div>
+    <div class="discountInfoList">
+        <div>$!data.pcRecentSales.recentSales</div>
+    </div>
+</div>
+
+<div class="pcOrderImg" componentId="pcOrderImg">
+    <div>$!data.pcOrderImg.orderImgUrl</div>
+</div>
+
+<div class="pcConditionList" componentId="pcConditionList">
+    #foreach($pcCondition in $data.pcConditionList.conditionList)
+    <div><span class="conditionName">$!pcCondition.conditionName</span><span class="conditionDesc">$!pcCondition.conditionDesc</span></div>
+    #end
+</div>
+
+<div class="$!data.pcPremiumFactor.premiumFactorId" componentId="pcPremiumFactor">
+    <div class="componentTitle">$!data.pcPremiumFactor.componentTitle</div>
+    <div class="insureAgeList">
+        #foreach($pcFactor in $data.pcPremiumFactor.factorList)
+        <div class="$!data.pcPremiumFactor.premiumFactorId item" factorIndex="$!pcFactor.factorValue" value="$!pcFactor.factorValue">$!pcFactor.factorKey</div>
+        #end
+    </div>
+</div>
+
+<div class="pcPackageNameList mt1" componentId="pcPlanNameList">
     <div class="componentTitle">套餐分类</div>
+    <div class="packageNameList">
+        #foreach($pcPlanName in $data.pcPlanNameList.planNameList)
+        <div class="pcPackageName" componentId="pcPlanName" planNameIndex="$!pcPlanName.planNameIndex">$!pcPlanName.planName</div>
+        #end
+    </div>
+</div>
+
+<div class="pcPackageList" componentId="pcPlanList">
+    <div class="componentTitle">保障责任</div>
     <div class="pcPackageContent">
-        <div class="packageNameList">
-            #foreach($pcPackageName in $data.pcPackageList.packageNameList)
-            <div class="pcPackageName" componentId="pcPackageName">$!pcPackageName.packageName</div>
-            #end
-        </div>
         <div class="packageList">
             <div class="packageTitle">
                 <div>保障项目</div>
                 <div>保额</div>
             </div>
 
-            #foreach($pcPackage in $data.pcPackageList.packageList)
-            <div class="pcPackage" componentId="pcPackage" packageId="$!pcPackage.packageId" packagePrice="$!pcPackage.packagePrice" onclick="returnMessage(this,['packageId','packagePrice']);">
-                #foreach($pcLiability in $pcPackage.packageLiabilityList)
+            #foreach($pcPlan in $data.pcPlanList.planList)
+            <div class="pcPackage" componentId="pcPlan" planId="$!pcPlan.planId" planPrice="$!pcPlan.planPrice" planScore="$!pcPlan.planScore" planIndex="$!pcPlan.planIndex">
+                #foreach($pcLiability in $pcPlan.planLiabilityList)
                 <div class="pcLiability" componentId="pcLiability" liabilityId="$!pcLiability.liabilityId">
                     <div class="liabilityName">$!pcLiability.liabilityName</div>
                     <div class="liabilityAmount">$!pcLiability.liabilityAmount</div>
+                    <div class="liabilityDesc">$!pcLiability.liabilityDesc</div>
+                    <span class="liabilityImg"></span>
                 </div>
                 #end
             </div>
@@ -55,10 +92,7 @@
     </div>
 </div>
 
-<div class="pcReturnMessage" componentId="pcReturnMessage">
-    #foreach($returnMessage in $data.pcReturnMessage.returnMessageList)
-    <input type="hidden" id="$!returnMessage.messageName" value="" />
-    #end
+<div class="pcReturnMessage" componentId="pcReturnMessage" returnMessage="$!data.pcReturnMessage.returnMessage">
 </div>
 
 <div class="pcPayment" componentId="pcPayment">
@@ -70,8 +104,34 @@
         <div class="login payBtn">会员投保</div>
         <div class="payBtnExplan">会员购买，赚积分兑换礼品</div>
     </div>
-    <div></div>
+    <div class="payQRCode">
+        <span>手机购买更便捷</span>
+        <img src="$!data.pcPayment.qrCodeUrl" />
+    </div>
 </div>
-</body>
 
+<div class="pcServiceList" componentId="pcServiceList">
+    <div class="componentTitle">$!data.pcServiceList.componentTitle</div>
+    <div class="serviceList">
+        #foreach($pcService in $data.pcServiceList.serviceList)
+        <div class="pcService">
+            <span class="serviceKeyword">$!pcService.serviceKeyword</span>
+            <span class="serviceDesc">$!pcService.serviceDesc</span>
+        </div>
+        #end
+    </div>
+</div>
+
+<div class="pcPayStyleList" componentId="pcPayStyleList">
+    <div class="componentTitle">$!data.pcPayStyleList.componentTitle</div>
+    <div class="payStyleList">
+        #foreach($pcPayStyle in $data.pcPayStyleList.payStyleList)
+        <div class="pcPayStyle">
+            <span class="payStyleDesc">$!pcPayStyle.payStyleDesc</span>
+        </div>
+        #end
+    </div>
+</div>
+
+</body>
 </html>

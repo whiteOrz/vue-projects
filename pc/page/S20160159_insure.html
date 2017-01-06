@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>产品详情</title>
+		<link rel="stylesheet" href="../src/css/insure.css">
+		<link rel="stylesheet" href="../src/css/detail_pc.css">
+		<script type="text/javascript" src="../src/js/jquery.min.js"></script>
+		<script type="text/javascript" src="../dist/detail_pc.js"></script>
+		<script type="text/javascript" src="../dist/details_operation.js"></script>
+	</head>
+
+	<body style="background:#fff;">
+		<div id="container">
+			<div id="productImg"></div>
+			<div id="pc_detail">
+				<div class="pcProductDesc" componentId="pcProductDesc">
+					<div class="productName">少儿重大疾病保险</div>
+					<div class="productDescription mt04">针对未成年人，重症+轻症保额最高达60万，最低每天仅需0.18元起</div>
+				</div>
+				<div class="pcProductPrice clearfix" componentId="pcProductPrice"><span class="priceType">会员价</span><span class="productPrice"><span class="priceData">￥100元</span></span>
+				</div>
+				<div class="pcInsuredAgeRangeHidden" componentId="pcInsuredAgeRangeHidden"><span id="minAge" age="18"></span><span id="maxAge" age="65"></span></div>
+				<div class="pcProductPrice clearfix" componentId="pcProductPrice">
+					
+					<span class="priceType">会员价</span>
+					<span class="productPrice">
+						<span class="priceData">￥100元</span>
+					</span>
+					<span class="priceSaleType">原价</span>
+					<span class="productSalePrice">
+						<span class="priceData" id="oPrice">￥100元</span>
+					</span>
+					
+				</div>
+				<div class="pcRecentSales clearfix " componentId="pcRecentSales">
+					<div class="componentTitle">近期销量</div>
+					<div class="recentSales">35</div>
+				</div>
+				<div class="pcCalculate" componentId="pcCalculate"></div><span></span>
+				<div class="insureAge clearfix" componentId="pcPremiumFactor">
+					<div class="componentTitle">投保年龄</div>
+					<div class="insureAgeList">
+						<div class="insureAge item" factorIndex="1" value="1">出生30天-17周岁</div>
+					</div>
+				</div>
+				<div class="insurePeriod clearfix" componentId="pcPremiumFactor">
+					<div class="componentTitle">保多久</div>
+					<div class="insureAgeList">
+						<div class="insurePeriod item" factorIndex="0" value="Y1">1年</div>
+						<div class="insurePeriodMessage"></div>
+					</div>
+				</div>
+				<div class="pcPackageNameList mt1 clearfix" componentId="pcPlanNameList">
+					<div class="componentTitle">套餐分类</div>
+					<div class="packageNameList packageNameList ">
+						<div class="pcPackageName" componentId="pcPlanName" planNameIndex="0"> 基本款</div>
+						<div class="pcPackageName" componentId="pcPlanName" planNameIndex="1">白银款</div>
+						<div class="pcPackageName" componentId="pcPlanName" planNameIndex="2">白金款</div>
+						<div class="pcPackageName" componentId="pcPlanName" planNameIndex="3">钻石款</div>
+						<div class="pcPackageName" componentId="pcPlanName" planNameIndex="4">全面款</div>
+					</div>
+				</div>
+				<div class="pcPackageList clearfix" componentId="pcPlanList">
+					<div class="componentTitle"></div>
+					<div class="pcPackageContent clearfix">
+						<div class="packageList">
+							<div class="pcPackage" componentId="pcPlan" planId="1007B101" planPrice="45" planScore="" planIndex="0">
+								<div class="pcLiability clearfix" componentId="pcLiability" liabilityId="1007001">
+									<div class="liabilityName">重大疾病保险金</div>
+									<div class="liabilityAmount">10万</div>
+									<div class="liabilityDesc">白血病、癌症、急性心肌梗塞、尿毒症、严重III度烧伤等42种重大疾病，一经确诊，立即赔付（42种重大疾病描述详见重疾条款）</div><span class="liabilityImg"></span></div>
+							</div>
+							<div class="pcPackage" componentId="pcPlan" planId="1007B101" planPrice="132" planScore="" planIndex="1">
+								<div class="pcLiability clearfix" componentId="pcLiability" liabilityId="1007001">
+									<div class="liabilityName">重大疾病保险金</div>
+									<div class="liabilityAmount">20万</div>
+									<div class="liabilityDesc">白血病、癌症、急性心肌梗塞、尿毒症、严重III度烧伤等42种重大疾病，一经确诊，立即赔付（42种重大疾病描述详见重疾条款）</div><span class="liabilityImg"></span></div>
+							</div>
+							<div class="pcPackage" componentId="pcPlan" planId="1007B101" planPrice="198" planScore="" planIndex="2">
+								<div class="pcLiability clearfix" componentId="pcLiability" liabilityId="1007001">
+									<div class="liabilityName">重大疾病保险金</div>
+									<div class="liabilityAmount">30万</div>
+									<div class="liabilityDesc">白血病、癌症、急性心肌梗塞、尿毒症、严重III度烧伤等42种重大疾病，一经确诊，立即赔付（42种重大疾病描述详见重疾条款）</div><span class="liabilityImg"></span></div>
+							</div>
+							<div class="pcPackage" componentId="pcPlan" planId="1007B101" planPrice="264" planScore="" planIndex="3">
+								<div class="pcLiability clearfix" componentId="pcLiability" liabilityId="1007001">
+									<div class="liabilityName">重大疾病保险金</div>
+									<div class="liabilityAmount">40万</div>
+									<div class="liabilityDesc">白血病、癌症、急性心肌梗塞、尿毒症、严重III度烧伤等42种重大疾病，一经确诊，立即赔付（42种重大疾病描述详见重疾条款）</div><span class="liabilityImg"></span></div>
+							</div>
+							<div class="pcPackage" componentId="pcPlan" planId="1007B101" planPrice="364" planScore="" planIndex="4">
+								<div class="pcLiability clearfix" componentId="pcLiability" liabilityId="1007001">
+									<div class="liabilityName">重大疾病保险金</div>
+									<div class="liabilityAmount">40万</div>
+									<div class="liabilityDesc">白血病、癌症、急性心肌梗塞、尿毒症、严重III度烧伤等42种重大疾病，一经确诊，立即赔付（42种重大疾病描述详见重疾条款）</div><span class="liabilityImg"></span></div>
+								<div class="pcLiability clearfix" componentId="pcLiability" liabilityId="1007002">
+									<div class="liabilityName">轻症疾病保险金</div>
+									<div class="liabilityAmount">20万</div>
+									<div class="liabilityDesc">【轻症疾病】指由专科医生明确诊断的下列疾病：
+                        <br/> (一) 极早期恶性肿瘤或者恶性病变
+                        <br/> (二) 不典型的急性心肌梗塞
+                        <br/> (三) 轻微脑中风后遗症:
+                        <br/> (四) 冠状动脉介入手术（非开胸手术）
+                        <br/> (五) 心脏瓣膜介入手术（非开胸手术）
+                        <br/> (六) 视力严重受损（三周岁始理赔）
+                        <br/> (七) 主动脉内手术（非开胸手术）
+                        <br/> (八) 脑垂体瘤、脑囊肿、脑动脉瘤及脑血管瘤
+                        <br/> (九) 较小面积Ⅲ度烧伤
+                        <br/> (十) 轻度颅脑手术
+                        <br/> 详见条款。</div><span class="liabilityImg"></span></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="pcReturnMessage" componentId="pcReturnMessage" returnMessage="planId,planPrice"></div>
+				<div class="pcPayment clearfix" componentId="pcPayment">
+					<div class="paymentbtn">
+						<div class="quickBuy payBtn" id="quickBuy">快速投保</div>
+						<div class="payBtnExplan">无须注册，快速购买</div>
+					</div>
+					<div class="paymentbtn">
+						<div class="login payBtn"  id="login">会员投保</div>
+						<div class="payBtnExplan">会员购买，赚积分兑换礼品</div>
+					</div>
+					<div class="payQRCode"><span>手机购买更便捷</span><img src="../src/image/erweima.png" /></div>
+				</div>
+				<div class="pcServiceList" componentId="pcServiceList">
+					<div class="componentTitle">服务承诺</div>
+					<div class="serviceList">
+						<div class="pcService"><span class="serviceKeyword">保</span><span class="serviceDesc">保证续保</span></div>
+						<div class="pcService"><span class="serviceKeyword">快</span><span class="serviceDesc">极速生效</span></div>
+						<div class="pcService"><span class="serviceKeyword">赔</span><span class="serviceDesc">透明理赔</span></div>
+					</div>
+				</div>
+				<div class="pcPayStyleList" componentId="pcPayStyleList">
+					<div class="componentTitle">支付方式</div>
+					<div class="payStyleList">
+						<div class="pcPayStyle"><span class="payStyleDesc">支付宝</span></div>
+						<div class="pcPayStyle"><span class="payStyleDesc">银联储蓄卡</span></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+<script src="../src/js/jquery.cookie.js"></script>
+<script src="../src/js/layer/layer.js"></script>
+<script src="../src/js/json.js"></script>
+<script src="../src/js/sessionStorage.js"></script>
+<script src="../src/js/o_code.js"></script>
+<!--script src="http://cdnmaster.com/sitemaster/collect.js"></script>
+<script src="../src/js/pushCode.js"></script-->
+<script src="../src/js/tkTrack.js"></script>
+<script src="../src/js/count.js"></script>
+<script src="../src/js/jquery.base64.js"></script>
+<script>
+	var originalPrice = [66,132,198,264,364];
+
+        $(".pcPlanName").click(function() {
+            var i = parseInt($(this).attr("planNameIndex"));
+            $("#oPrice").text("￥" + originalPrice[i] + ".00");
+        });
+</script>
+</html>

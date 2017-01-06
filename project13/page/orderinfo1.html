@@ -1,0 +1,251 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>个人信息</title>
+
+		<link rel="stylesheet" href="../src/css/insure.css" type="text/css" />
+
+	</head>
+
+	<body>
+		<!-- header start-->
+		<div id="header_widely">
+			<div id="header" class="clearfix"> <img class="logo" src="../src/image/在线logo.png" /> <img class="call" src="../src/image/call4.jpg" /> </div>
+		</div>
+		<!-- header end-->
+		<!--导航 star-->
+		<div class="nav">
+			<ul class="steps clearfix">
+				<li class="steps2 fl pos_rel">
+					<div class="line steps_current"></div>
+					<p class="t_red ">1.填写投保信息</p>
+					<img src="../src/image/circle.png" class="steps_img2" />
+				</li>
+				<li class="steps2 fl pos_rel">
+					<div class="line steps_color"></div>
+					<p class="t_6">2.健康告知</p>
+					<img src="../src/image/circle02.png" class="steps_img2" />
+				</li>
+				<li class="steps2 fl pos_rel">
+					<div class="line steps_color"></div>
+					<p class="t_6">3.支付</p>
+					<img src="../src/image/circle02.png" class="steps_img2" />
+				</li>
+				<li class="steps2 fl pos_rel">
+					<div class="line steps_color"></div>
+					<p class="t_6">4.成功</p>
+					<img src="../src/image/circle02.png" class="steps_img2" />
+				</li>
+			</ul>
+		</div>
+		<!--导航 end-->
+		<div class="" id="main">
+			<h1 class="insurd_tit">泰康e顺（2014）综合意外保障计划</h1>
+			<div class="applicant insure2_main">
+				<h4 id="pal_perInfo">投保人信息</h4>
+				<div class='rowElem clearfix'>
+					<label class='label1 label11'><span class="color_red">*</span> 姓名：</label>
+					<input type='text' class="main_inpt4" />
+					<label class='label2'>投保人是指购买该保单的人，也是付款人（必须是成年人） </label>
+				</div>
+			</div>
+			<div class="insured insure2_main">
+				<h4 id="pal_perInfo">被保人信息</h4>
+				<div class='rowElem clearfix'>
+					<label class='label1 label11'><span class="color_red">*</span> 姓名：</label>
+					<input type='text' class="main_inpt4" />
+					<label class='label2'>投保人是指购买该保单的人，也是付款人（必须是成年人） </label>
+				</div>
+			</div>
+			<div class="beneficiary insure2_main">
+				<h4 id="pal_perInfo">被保人信息</h4>
+				<div class='rowElem clearfix'>
+					<label class='label1 label11'><span class="color_red">*</span> 姓名：</label>
+					<input type='text' class="main_inpt4" />
+					<label class='label2'>投保人是指购买该保单的人，也是付款人（必须是成年人） </label>
+				</div>
+			</div>
+		</div>
+
+		<!-- footer start-->
+		<div class="footer">
+			<div class="footer-inner">
+				<p>泰康在线财产保险股份有限公司 版权所有Copyright © Tk.cn Insurance CO.,LTD. All Rights Reserved | 京ICP备09074081号-19</p>
+			</div>
+			
+		</div>
+		<!-- footer end-->
+
+	</body>
+	<script src="../src/js/jquery.min.js"></script>
+	<script src="../src/js/checkFn.js"></script>
+	<script src="../src/js/phContaine.js"></script>
+	<script src="../src/js/area_pc1.js"></script>
+	<script src="../src/js/profess_pc1.js"></script>
+	<script src="../src/js/json.js"></script>
+	<script src="../src/js/sessionStorage.js"></script>
+	<script src="../dist/orderinfo_operaton.js"></script>
+	<script>
+		//排序
+		function Sorts(a, b) {
+			return a.code - b.code;
+		}
+		//证件类型
+		function applicantType(arr) {
+			var str = "";
+			var cardIdArr = [];
+			var applicantInfo = arr.applicantInfo;
+			$.each(applicantInfo, function(index, item) {
+
+				if(item["componentId"] == "tkApplicantIdType") {
+
+					if($.isEmptyObject(item["tkOptions"])) {
+						str += '<option  value="01">居民身份证</option>'
+					} else {
+						$.each(item["tkOptions"], function(key, value) {
+							var item = {
+								"code": value, //证件代码
+								"value": key //证件名称
+							};
+							cardIdArr.push(item);
+						});
+						cardIdArr.sort(Sorts);
+						$.each(cardIdArr, function(key, value) {
+							str += '<option  value="' + value.code + '">' + value.value + '</option>'
+						});
+
+					}
+
+				}
+			})
+
+			$("#applicantcard-type").append(str);
+		}
+		//投保地区
+		function area(arr) {
+			var applicantInfo = arr.applicantInfo;
+			var opt;
+			$.each(applicantInfo, function(index, item) {
+				if(item["componentId"] == "tkApplicantArea") {
+					opt = item.tkOptions;
+				}
+			})
+
+			if($.isEmptyObject(opt)) {
+				return;
+			}
+
+			var prm = {
+				el: '#applicant-area',
+				areaJson: opt,
+				provinceId: "#provinceId",
+				cityId: "#cityId"
+			}
+			areaPc.person_area(prm)
+		}
+		//职业
+		function profess(arr) {
+			var applicantInfo = arr.applicantInfo;
+			var opt;
+			$.each(applicantInfo, function(index, item) {
+				if(item["componentId"] == "tkApplicantProfession") {
+					opt = item.tkOptions;
+				}
+			})
+
+			if($.isEmptyObject(opt)) {
+				return;
+			}
+
+			var prm = {
+				el: '#pal_profession',
+				professJson: opt,
+				worktypeid: '#ph_worktype'
+
+			}
+
+			professPc.person_profession(prm)
+
+		}
+
+		var insure = "http://insure.test.hera.tk.cn";
+		var deluat = "http://deluat.taikang.com";
+		var storage = new Storage('session');
+		var getMessage = JSON.parse(storage.get("returnMessage")) || {};
+		var plan = getMessage.plan || "",
+			applicationId = getMessage.applicationId || "",
+			productId = getMessage.productId || 1702,
+			channelId = getMessage.channelId || "",
+			applicationToken = getMessage.applicationToken || "",
+			openId = getMessage.openId || "",
+			memberId = getMessage.memberId || "",
+			memberToken = getMessage.memberToken || "",
+
+			metadata_scope = "pc",
+			metadata_platform = "pc",
+			platform = "pc";
+		//产品价格	
+		var planPrice = getMessage.details.planPrice || "";
+		//产品积分
+		var planScore = getMessage.details.planScore || "";
+		//产品名称		
+		var productName = storage.get("productName");
+		if(planPrice.toString().indexOf(".") == -1) {
+			planPrice = planPrice + ".00";
+		}
+		$("#planPrice").text(planPrice);
+		$(".insurd_tit").text(productName);
+		$("#planDesc").text(planDesc);
+		var duties = "";
+		var dutiesArr = [];
+		if(!$.isEmptyObject(getMessage)) {
+			$.each(getMessage.details.planLiabilityList, function(key, value) {
+				dutiesArr.push(value.liabilityId);
+			})
+			duties = dutiesArr.join(",");
+			//sessionStorage.setItem("duties", duties);
+			storage.set("duties", duties);
+		}
+
+		$(function() {
+			$.ajax({
+				type: "get",
+				url: deluat + "/hera_insure/api/insure/v1/productMetadata/" + productId + "/" + metadata_platform + "/inputs?duties=" + duties,
+				dataType: "json",
+				async: false,
+				success: function(msg) {
+					if(msg.code == "0") {
+						var pcInput = msg.pcInputs;
+						var applicantInfo = pcInput[0],
+							insuredInfo = pcInput[1],
+							BeneficiaryInfo = pcInput[2],
+							OtherInfo = pcInput[3];
+
+						applicantType(applicantInfo);
+						area(applicantInfo);
+						profess(applicantInfo);
+					} else {
+						alert(msg.message);
+					}
+				},
+				error: function(msg) {
+					alert("网络异常");
+
+				}
+			});
+			$("#applicant-gender").hide();
+			$("#applicant-birth").hide();
+			$("#applicantcard-type").change(function() {
+				var value = $(this).find("option:selected").val();
+				if(value != "01") {
+					$("#applicant-gender").show();
+					$("#applicant-birth").show();
+				}
+			})
+
+		});
+	</script>
+
+</html>

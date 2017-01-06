@@ -1,0 +1,350 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>『填写订单信息』-泰康在线移动官网</title>
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,target-densitydpi=medium-dpi">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <link href="css/m_style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/dialog.min.css">
+    <link rel="stylesheet" href="css/mobile-select-area.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.base64.js"></script>
+    <script src="js/dialog.js"></script>
+    <script src="js/mobile-select-area.js"></script>
+    <script src="js/mobile-select-area2.js"></script>
+    <script src="js/mobile-select-date.js"></script>
+    <link href="css/email.css" rel="stylesheet" type="text/css">
+    <script src="js/wap_orderInfoNormal.js"></script>
+    <style>
+        .auto-tip {
+            -webkit-border-radius: 0.5rem;
+            -moz-border-radius: 0.5rem;
+            border-radius: 1rem;
+            padding-right: 0.25rem;
+        }
+
+        #autoEmail li {
+            width: 100%;
+            height: 2.2rem !important;
+            min-height: 2rem !important;
+            line-height: 2.2rem;
+            font-size: 1.4rem;
+            padding: 0 .5rem;
+        }
+
+        #autoEmail li:nth-child(odd) {
+            background: #fff
+        }
+
+        #autoEmail li:nth-child(even) {
+            background: #e6e6fa
+        }
+
+        #autoEmail li.hoverBg {
+            background: #ff602f;
+            cursor: pointer;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .text_r {
+            text-align: right;
+            color: #999;
+        }
+
+        .ib {
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body class="bg-g">
+    <header class="header" style="position:relative;">
+        <a class="icon-back goBack"></a>
+        <h2>填写订单信息</h2>
+        <span></span>
+    </header>
+    <section class="container" style="padding-top:0;">
+        <section class="tab2">
+            <ul id="insureTab" class="tab-tit">
+                <li>快速投保</li>
+                <li>会员投保
+                    <br /><span>免填写用户信息</span></li>
+            </ul>
+            <div class="tab-con tm10">
+                <article id="content">
+                    <div id="wap_inputs">
+                    </div>
+                    <p class="checkment">
+                        <label>
+                            <input id="readNotice" type="checkbox"><em></em>我已阅读并认可</span>
+                        </label>
+                        <span class="c1 showNotice">重要声明
+                    </p>
+                    <p class="btn">
+                        <input type="button" value="确认无误,购买" class="btn2 wapInsure">
+                    </p>
+                </article>
+                <article id="loginContent">
+                    <p class="txt">登录后投保即可获得积分奖励哦，超值礼品等你兑换~</p>
+                    <div class="list loglist">
+                        <ul class="item">
+                            <li>
+                                <span class="icon-log icon-log1"></span>
+                        <input id="longinName" type="email" placeholder="用户名/邮箱/证件号/手机" />
+                        </li>
+                        <li>
+                            <span class="icon-log icon-log2"></span>
+                            <input id="loginPassword" type="password" placeholder="请填写密码" />
+                        </li>
+                        <li>
+                            <span class="icon-log icon-log3"></span>
+                            <input id="loginCode" type="tel" placeholder="请填写验证码" />
+                            <div class="code"></div>
+                        </li>
+                        </ul>
+            </div>
+            <p class="btn">
+                <input type="button" value="登 录" class="btn-log">
+            </p>
+            <p class="forget"><a href="#" class="btn-forget">忘记密码？</a></p>
+            <p class="btn"><a href="#" class="btn-reg">免费注册</a></p>
+            </article>
+            </div>
+        </section>
+    </section>
+
+    <div id="profession" class="bg-g" style="width:100%;height:100%;position:fixed;left:0;top:0;z-index:1000;display:none;">
+        <header class="header">
+            <a class="icon-back"></a>
+            <h2>职业类别选择</h2>
+        </header>
+        <section class="tab4 h100">
+            <ul id="professionList" class="tab-tit h100" style="overflow-x:hidden;">
+            </ul>
+            <section id="professionInformList" class="tab-con h100">
+            </section>
+        </section>
+        <div class="occup-btn btn">
+            <input type="button" value="取消" class="btn3">
+            <input type="button" value="确定" class="btn1">
+        </div>
+    </div>
+
+    <div id="noticeMasker" class="noticeMasker" style="display:none;opacity:0;">
+        <div class="notice">
+            <h2>投保须知及声明</h2>
+            <div class="noticeContent">
+                <h3>一、投保须知</h3>
+                <p>1、投保地区
+                    <br>本计划仅限在中国大陆有固定居住地的人士投保。</p>
+                <p>2、保单形式
+                    <br>网上投保为您提供电子保单，根据《中华人民共和国合同法》第十一条规定，数据电文是合法的合同表现形式，电子保单与纸质保单具有同等法律效力。您可以登录www.tk.cn自助查询对电子保单的真实性进行验证。
+                </p>
+                <p>3、如实告知
+                    <br>您应如实填写投保信息，并就我们提出的询问据实告知,否则我们有权根据《中华人民共和国保险法》第十六条的规定解除保险合同且不承担赔偿责任：
+                    <br>（1）订立保险合同时，保险公司就保险标的或者被保险人的有关情况提出询问的，投保人应当如实告知。
+                    <br>（2）投保人故意或者因重大过失未履行前款规定的如实告知义务，足以影响保险公司决定是否同意承保或者提高保险费率 的，保险公司有权解除合同。
+                    <br>（3）投保人故意不履行如实告知义务的，保险公司对于合同解除前发生的保险事故，不承担赔偿责任，并不退还保险费。
+                    <br>（4）投保人因重大过失未履行如实告知义务，对保险事故的发生有严重影响的，保险公司对于合同解除前发生的保险事故，不承担赔偿责任，但退还保险费。
+                </p>
+                <p>4、信息变更
+                    <br>如果您的邮件地址、通信地址、邮编、联系电话发生变化，请与本公司客户服务电话40000-95522联系，办理变更事宜。</p>
+                <h3>二、投保声明</h3>
+                <p>
+                    1、本人已完整阅读并了解以上投保须知及投保险种的保险条款。
+                    <br>2、投保单中所填写的内容均属实，如有隐瞒或不实告知，你公司有权解除保险合同，对于合同解除前发生的任何事故，你公司可不承担任何责任。
+                    <br>3、本人已知晓本产品在网上投保申请日后次日零时即生效；
+                    <br>4、本人已知晓本产品仅可购买一份，多投超出部分无效。
+                    <br>5、本人同意你公司通过手机（包括手机短信）、E-mail适时提供保险信息服务。
+                </p>
+            </div>
+            <div class="noticeBtn">我知道了</div>
+        </div>
+    </div>
+
+    <div id="leaveMasker" class="leaveMasker" style="display:none;opacity:0;">
+        <div class="leave">
+            <article>
+                <h2></h2>
+                <p>保障相伴生活无忧,请三思~</p>
+            </article>
+            <div class="leaveBtn">
+                <div class="btnGo">去意已决</div>
+                <div class="btnStay">我再想想</div>
+            </div>
+        </div>
+    </div>
+
+    <div id="alertBoxMasker" class="leaveMasker" style="display:none;opacity:0;">
+        <div class="alertBox">
+            <div class="alertBoxContent">
+                <h2>温馨提示</h2>
+                <p></p>
+            </div>
+            <div class="alertBoxBtn">我知道了</div>
+        </div>
+    </div>
+
+    <div id="alertBox" class="leaveMasker" style="display:none;opacity:0;">
+        <div class="alertBox" style="width:70%;">
+            <div class="alertBoxContent" style="text-align:center;padding:2rem;">
+                <p></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var server = "http://" + location.host;
+        $(function() {
+            $(".btn-reg").click(function() {
+                location.href = server + "/phoneCheck.html";
+            });
+
+            $(".btn-forget").click(function() {
+                location.href = server + "/passBack.html";
+            });
+
+            $(".wapInsure").prop("unSubmit", true);
+            $("#readNotice").change(function() {
+                if (this.checked) {
+                    $(".wapInsure").prop("unSubmit", false);
+                } else {
+                    $(".wapInsure").prop("unSubmit", true);
+                }
+            });
+
+            $(".goBack").click(function() {
+                $("#leaveMasker").show();
+                $("#leaveMasker").animate({
+                    "opacity": "1"
+                }, 400);
+
+                $(".leave").addClass("leave1");
+                $("body").addClass("lockBody");
+            });
+
+            $(".btnStay").click(function() {
+                $("#leaveMasker").animate({
+                    "opacity": "0"
+                }, 400, function() {
+                    $(".leave").removeClass("leave1");
+                    $("#leaveMasker").hide();
+                });
+                $("body").removeClass("lockBody");
+            });
+
+            $(".btnGo").click(function() {
+                $("#leaveMasker").animate({
+                    "opacity": "0"
+                }, 400, function() {
+                    $(".leave").removeClass("leave1");
+                    $("#leaveMasker").hide();
+                    history.go(-1);
+                });
+                $("body").removeClass("lockBody");
+            });
+
+            $(".alertBoxBtn").click(function() {
+                $("#alertBoxMasker").animate({
+                    "opacity": "0"
+                }, 400, function() {
+                    $("#alertBoxMasker").hide();
+                });
+                $("body").removeClass("lockBody");
+            });
+
+            $(".showNotice").click(function() {
+                $("#noticeMasker").show();
+                $("#noticeMasker").animate({
+                    "opacity": "1"
+                }, 400);
+                $("body").addClass("lockBody");
+            });
+
+            $(".noticeBtn").click(function() {
+                $("#noticeMasker").animate({
+                    "opacity": "0"
+                }, 400, function() {
+                    $("#noticeMasker").hide();
+                });
+                $("body").removeClass("lockBody");
+            });
+
+            var productId = getLocVal("productId");
+            var surl = "http://" + location.host + "/hera_insure/api/insure/v2/";
+
+            $.ajax({
+                url: surl + "productMetadata/" + productId + "/wap/notice",
+                type: "get",
+                dataType: "json",
+                success: function(data) {
+                    if (data.code == 0) {
+                        if (data.data && data.data.wapNotice) {
+                            var noticeStr = $.base64.atob(data.data.wapNotice, true);
+                            notice(noticeStr);
+                        }
+                    }
+                }
+            });
+
+            function notice(noticeStr) {
+                var $notice = $(noticeStr);
+                var html = "";
+                $notice.each(function(index, el) {
+                    if (index) {
+                        var text = $(el).text();
+                        html += "<p>" + text + "</p>";
+                    }
+                });
+                $("#noticeMasker .noticeContent").html(html);
+            }
+
+            var productName = getLocVal("productName");
+            TKTrack({
+                "event": "投保流程_填写个人信息",
+                "subType": "财险_" + productName
+            });
+        });
+    </script>
+    <script src="/product/wap/insure/js/tkTrack.js"></script>
+    <script src="http://m.tk.cn/js/reference.js"></script>
+    <script src="js/lstorage.js"></script>
+    <script>
+        var productName = getLocVal("productName");
+        function _smq1(data1, data2) {
+            try {
+                var p = getLocVal("yonghuxinxi") ? "" : "【免登录】";
+                _smq.push(['custom', p + data1, data2, '财险_' + productName]);
+            } catch (e) {
+
+            }
+        }
+
+        function _smq2(data) {
+            try {
+                var options = {
+                    "event": data,
+                    "subType": '财险_' + productName
+                }
+                var memberId = getLocVal("memberid");
+                if(memberId){
+                    options.userId = memberId;
+                }
+                var openId = getLocVal("openId");
+                if (openId) {
+                    options.userId = openId;
+                }
+                TKTrack(options);
+            } catch (e) {
+
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>健康告知</title>
+
+		<link rel="stylesheet" type="text/css" href="../src/css/insure.css" />
+		
+	</head>
+
+	<body>
+		<div id="header_widely">
+			<div id="header" class="clearfix">
+				<img class="logo" src="../src/image/在线logo.png" />
+				<img class="call" src="../src/image/call4.jpg" />
+			</div>
+		</div>
+		<div class="nav-step">
+			<ul class="steps clearfix">
+				<li class="steps2 fl">
+					<div class="line steps_current"></div>
+					<p class="t_red ">1.填写投保信息</p>
+					<img src="../src/image/circle.png" class="steps_img2" />
+				</li>
+				<li class="steps2 fl">
+					<div class="line steps_current"></div>
+					<p class="t_red">2.健康告知</p>
+					<img src="../src/image/circle.png" class="steps_img2" />
+				</li>
+				<li class="steps2 fl">
+					<div class="line steps_color"></div>
+					<p class="t_6">3.支付</p>
+					<img src="../src/image/circle02.png" class="steps_img2" />
+				</li>
+				<li class="steps2 fl">
+					<div class="line steps_color"></div>
+					<p class="t_6">4.成功</p>
+					<img src="../src/image/circle02.png" class="steps_img2" />
+				</li>
+			</ul>
+
+		</div>
+		<div class="health_main" id="wrap">
+			<tk-health-info></tk-health-info>
+		</div>
+		<!-- 底部代码-->
+		<div class="footer ">
+			<p>泰康在线财产保险股份有限公司 版权所有Copyright © Tk.cn Insurance CO.,LTD. All Rights Reserved | 京ICP备09074081号-19</p>
+			<div style="clear:both"></div>
+		</div>
+	</body>
+	<script src="../src/js/jquery.min.js"></script>
+	<script src="../src/js/json.js"></script>
+	<script src="../src/js/sessionStorage.js"></script>
+	<script src="../dist/healthinfo.js"></script>
+	
+</html>

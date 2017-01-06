@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="../js/vue_2.js"></script>
+    <style>
+    .clock {
+        margin-top: 20px;
+        margin-left: 20px;
+        position: relative;
+    }
+    
+    .clock ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        border: 2px solid blue;
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        position: relative;
+    }
+    
+    .clock li {
+        margin: 0;
+        padding: 0;
+        width: 4px;
+        position: absolute;
+        background: #000;
+        -webkit-transform-origin: 2px 150px;
+    }
+    
+    .center {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: #000;
+        position: absolute;
+        left: 147px;
+        top: 147px;
+    }
+    
+    .second {
+        width: 4px;
+        height: 150px;
+        background: red;
+        position: absolute;
+        left: 150px;
+        top: 30px;
+        -webkit-transform-origin: 2px 120px;
+    }
+    
+    .minute {
+        width: 4px;
+        height: 100px;
+        background: #000;
+        position: absolute;
+        left: 150px;
+        top: 50px;
+        -webkit-transform-origin: 2px 100px;
+    }
+    
+    .hour {
+        width: 4px;
+        height: 80px;
+        background: #000;
+        position: absolute;
+        left: 150px;
+        top: 70px;
+        -webkit-transform-origin: 2px 80px;
+    }
+    </style>
+</head>
+
+<body>
+    <div id="clock" class="clock">
+        <ul>
+            <li v-for="item in list" v-bind:style="item"></li>
+        </ul>
+        <div class="center"></div>
+        <div class="second" v-bind:style="s"></div>
+        <div class="minute" v-bind:style="m"></div>
+        <div class="hour" v-bind:style="h"></div>
+    </div>
+    <script>
+    new Vue({
+        el: "#clock",
+        data: function() {
+            var clockObj = {
+                list: [],
+                h: "",
+                m: "",
+                s: ""
+            }
+
+            var num = 60;
+            var list = [];
+
+            for (var i = 0; i < num; i++) {
+                var deg = (360 / num) * i;
+                var height = i % 5 == 0 ? "20px" : "10px";
+                clockObj.list.push({
+                    "height": height,
+                    "-webkit-transform": "translate(148px,0) rotate(" + deg + "deg)"
+                });
+            }
+
+            var _this = this;
+            var timeObj = _this.getTimeDegObj();
+            clockObj.s = timeObj.s;
+            clockObj.m = timeObj.m;
+            clockObj.h = timeObj.h;
+
+            setInterval(function() {
+                timeObj = _this.getTimeDegObj();
+                clockObj.s = timeObj.s;
+                clockObj.m = timeObj.m;
+                clockObj.h = timeObj.h;
+
+            }, 1000);
+
+            return clockObj;
+        },
+        methods: {
+            getTimeDegObj() {
+                var date = new Date();
+                var second = date.getSeconds(),
+                    minute = date.getMinutes(),
+                    hour = date.getHours();
+                var s = second / 60 * 360;
+                var m = minute / 60 * 360 + second / 60 * 6;
+                var h = hour / 12 * 360 + minute / 60 * 30 + second / 60 * 6;
+
+                return {
+                    s: {
+                        "-webkit-transform": "rotate(" + s + "deg)"
+                    },
+                    m: {
+                        "-webkit-transform": "rotate(" + m + "deg)"
+                    },
+                    h: {
+                        "-webkit-transform": "rotate(" + h + "deg)"
+                    }
+                }
+            }
+        }
+    });
+    </script>
+</body>
+
+</html>

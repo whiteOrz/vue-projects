@@ -1,0 +1,56 @@
+{
+    "wapPayment": [
+        {
+            "componentId": "wapTradeDetailList",
+            "tradeDetailList": [
+                {
+                    "componentId": "wapTradeDetail",
+                    "detailKey": "保险名称",
+                    "detailValue": "$wapProductDesc.productName"
+                },
+                {
+                    "componentId": "wapTradeDetail",
+                    "detailKey": "生效日期",
+                    "detailValue": "$today"
+                },
+                {
+                    "componentId": "wapTradeDetail",
+                    "detailKey": "终止日期",
+                    "detailValue": "$today+365"
+                },
+                {
+                    "componentId": "wapTradeDetail",
+                    "detailKey": "投保人利益",
+                    "detailValue": "$wapPackage.packageLiabilityList"
+                },
+                {
+                    "componentId": "wapTradeDetail",
+                    "detailKey": "投保人",
+                    "detailValue": "$applicantName.value"
+                },
+                {
+                    "componentId": "wapTradeDetail",
+                    "detailKey": "投保人",
+                    "detailValue": "$wapInsurancePremium.insurancePremium"
+                }
+            ]
+        },
+        {
+            "componentId": "wapPaymentList",
+            "paymentList": [
+                {
+                    "componentId": "wapPayment",
+                    "paywayId": "",
+                    "paymentImageURL": "",
+                    "paymentDesction": "支付宝"
+                },
+                {
+                    "componentId": "wapPayment",
+                    "paywayId": "",
+                    "paymentImageURL": "",
+                    "paymentDesction": "微信"
+                }
+            ]
+        }
+    ]
+}

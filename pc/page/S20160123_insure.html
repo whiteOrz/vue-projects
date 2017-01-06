@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>产品详情</title>
+    <link rel="stylesheet" href="../src/css/insure.css">
+    <link rel="stylesheet" href="../src/css/detail_pc.css">
+    <script type="text/javascript" src="../src/js/jquery.min.js"></script>
+    <script type="text/javascript" src="../dist/detail_pc.js"></script>
+    <script type="text/javascript" src="../dist/details_operation.js"></script>
+</head>
+<body style="background:#fff;">
+    <div id="container">
+        <div id="productImg"></div>
+        <div id="pc_detail">
+            <div class="pcProductDesc" componentId="pcProductDesc">
+                <div class="productName">意保顺综合意外保障</div>
+                <div class="productDescription mt04">每天低至1.5元！大小意外全保，工作生活、居家旅行必备！</div>
+            </div>
+            <div class="pcProductPrice clearfix" componentId="pcProductPrice"><span class="priceType">会员价</span><span class="productPrice"><span class="priceData">￥100元以下,100元-300元,300元-800元</span></span>
+            </div>
+            <div class="pcInsuredAgeRange" componentId="pcInsuredAgeRange"><span id="minAge" age="18"></span><span id="maxAge" age="65"></span></div>
+            <div class="pcDiscountInfoList" componentId="pcDiscountInfoList">
+                <div class="componentTitle">优惠信息</div>
+                <div class="discountInfoList">
+                    <div><span class="discountTitle">新品首发 </span><span class="discountDesc"> 投保即送20%保费积分（活动时间2016.9.1-2016.10.31）</span><a class="discountLink" href="http://www.tk.cn/sales/201610dx1/" target="_blank">查看详情</a></div>
+                </div>
+            </div>
+            <div class="pcCalculateHidden" componentId="pcCalculateHidden"></div>
+            <div class="pcRecentSales clearfix " componentId="pcRecentSales">
+                <div class="componentTitle">近期销量</div>
+                <div class="recentSales">1200</div>
+            </div><span></span>
+            <div class="insureAge clearfix" componentId="pcPremiumFactor">
+                <div class="componentTitle">投保年龄</div>
+                <div class="insureAgeList">
+                    <div class="insureAge item" factorIndex="0" value="19">18-65周岁</div>
+                </div>
+            </div>
+            <div class="insurePeriod clearfix" componentId="pcPremiumFactor">
+                <div class="componentTitle">保多久</div>
+                <div class="insureAgeList">
+                    <div class="insurePeriod item" factorIndex="0" value="Y1">1年</div>
+                    <div class="insurePeriodMessage"></div>
+                </div>
+            </div>
+            <div class="pcPackageNameList mt1 clearfix" componentId="pcPlanNameList">
+                <div class="componentTitle">套餐分类</div>
+                <div class="packageNameList packageNameList ">
+                    <div class="pcPackageName" componentId="pcPlanName" planNameIndex="0">意保顺综合意外保障</div>
+                </div>
+            </div>
+            <div class="pcPackageList clearfix" componentId="pcPlanList">
+                <div class="componentTitle"></div>
+                <div class="pcPackageContent clearfix">
+                    <div class="packageList">
+                        <div class="pcPackage" componentId="pcPlan" planId="1108H101" planPrice="550" planScore="" planIndex="0">
+                            <div class="pcLiability clearfix" componentId="pcLiability" liabilityId="1108001">
+                                <div class="liabilityName">意外身故</div>
+                                <div class="liabilityAmount">50万</div>
+                                <div class="liabilityDesc">被保险人遭受意外伤害事故（如跌倒、溺水、食物中毒），并自该事故发生之日起180日（含第180日）内因该事故为直接且单独原因导致被保险人身故的，泰康在线按保险单上载明的保险金额向意外身故保险金受益人给付意外身故保险金。</div><span class="liabilityImg"></span></div>
+                            <div class="pcLiability clearfix" componentId="pcLiability" liabilityId="1108002">
+                                <div class="liabilityName">意外伤残</div>
+                                <div class="liabilityAmount">50万</div>
+                                <div class="liabilityDesc">被保险人遭受意外伤害事故（如跌倒、溺水、食物中毒），并自该事故发生之日起180日（含第180日）内因该事故为直接且单独原因导致被保险人发生《人身保险伤残评定标准及代码》所述伤残项目，根据本保险合同及该《伤残评定标准》规定的评定原则对被保险人伤残程度进行评定，并按评定结果所对应该《伤残评定标准》中规定的给付比例乘以保险单上载明的保险金额向意外伤残保险金受益人给付意外伤残保险金。</div><span class="liabilityImg"></span></div>
+                            <div class="pcLiability clearfix" componentId="pcLiability" liabilityId="1108003">
+                                <div class="liabilityName">意外伤害医疗</div>
+                                <div class="liabilityAmount">2万</div>
+                                <div class="liabilityDesc">被保险人因在中国境内遭受意外伤害事故（如跌倒、溺水、食物中毒），并因该事故直接导致被保险人需在二级及以上医院接受治疗的，对符合合同约定范围内发生的医疗费用，给付受益人意外医疗赔偿金（扣除100元免赔额）。</div><span class="liabilityImg"></span></div>
+                            <div class="pcLiability clearfix" componentId="pcLiability" liabilityId="1108004">
+                                <div class="liabilityName">意外住院津贴</div>
+                                <div class="liabilityAmount" value="18000">100元/天，累计180天</div>
+                                <div class="liabilityDesc">被保险人因在中国境内遭受意外伤害事故，并因该事故为直接且单独原因导致在二级及以上医院经诊断必须住院治疗的，泰康在线按被保险人每次在二级及以上医院的实际住院天数和本附加合同约定的意外住院津贴保险金日额给付意外住院津贴保险金</div><span class="liabilityImg"></span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pcReturnMessage" componentId="pcReturnMessage" returnMessage="planId,planPrice"></div>
+            <div class="pcPayment clearfix" componentId="pcPayment">
+                <div class="paymentbtn">
+                    <div class="quickBuy payBtn" id="quickBuy">快速投保</div>
+                    <div class="payBtnExplan">无须注册，快速购买</div>
+                </div>
+                <div class="paymentbtn">
+                    <div class="login payBtn" id="login">会员投保</div>
+                    <div class="payBtnExplan">会员购买，赚积分兑换礼品</div>
+                </div>
+                <div class="payQRCode"><span>手机购买更便捷</span><img src="../src/image/erweima.png" /></div>
+            </div>
+            <div class="pcServiceList" componentId="pcServiceList">
+                <div class="componentTitle">服务承诺</div>
+                <div class="serviceList">
+                    <div class="pcService"><span class="serviceKeyword">保</span><span class="serviceDesc">保证续保</span></div>
+                    <div class="pcService"><span class="serviceKeyword">快</span><span class="serviceDesc">极速生效</span></div>
+                    <div class="pcService"><span class="serviceKeyword">赔</span><span class="serviceDesc">透明理赔</span></div>
+                </div>
+            </div>
+            <div class="pcPayStyleList" componentId="pcPayStyleList">
+                <div class="componentTitle">支付方式</div>
+                <div class="payStyleList">
+                    <div class="pcPayStyle"><span class="payStyleDesc">支付宝</span></div>
+                    <div class="pcPayStyle"><span class="payStyleDesc">银联储蓄卡</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="../src/js/jquery.cookie.js"></script>
+<script src="../src/js/layer/layer.js"></script>
+<script src="../src/js/json.js"></script>
+<script src="../src/js/sessionStorage.js"></script>
+<script src="../src/js/o_code.js"></script>
+<!--script src="http://cdnmaster.com/sitemaster/collect.js"></script>
+<script src="../src/js/pushCode.js"></script-->
+<script src="../src/js/tkTrack.js"></script>
+<script src="../src/js/count.js"></script>
+</html>

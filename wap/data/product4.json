@@ -1,0 +1,332 @@
+{
+    "wapDetails": [
+        {
+            "componentId": "wapBanner",
+            "bannerImgUrl": "/product/wap/insure/images/products/banner_S20160001.jpg"
+        },
+        {
+            "componentId": "wapProductDesc",
+            "productName": "成人重大疾病保险",
+            "productDesc": "针对成年人，全面覆盖42种常见重大疾病，无需体检，最低每天仅需0.2元起",
+            "productInfoUrl": "/product/S20160001/wap/presentation/S20160001_details.html"
+        },
+        {
+            "componentId": "wapProductPrice",
+            "priceType": "价格",
+            "productPrice": "80"
+        },
+        {
+            "componentId": "wapInsuredAgeRangeHidden",
+            "min": "18",
+            "max": "65"
+        },
+        {
+            "componentId": "wapIdentityList",
+            "identityList": [
+                {
+                    "componentId": "wapIdentity",
+                    "identityURL": "images/adv1.png",
+                    "identityDesc": "透明理赔"
+                },
+                {
+                    "componentId": "wapIdentity",
+                    "identityURL": "images/adv2.png",
+                    "identityDesc": "超值低价"
+                },
+                {
+                    "componentId": "wapIdentity",
+                    "identityURL": "images/adv3.png",
+                    "identityDesc": "热销爆款"
+                }
+            ]
+        },
+        {
+            "componentId": "wapCalculateHidden",
+            "type": "post",
+            "url": "",
+            "pop": "true"
+        },
+        {
+            "componentId": "wapPremiumFactor",
+            "componentTitle": "为谁投保",
+            "premiumFactorId": "insurePerson",
+            "premiumFactorCode": "person",
+            "premiumFactorType": "tile",
+            "premiumDataType": "",
+            "factorList": [
+                {
+                    "componentId": "wapInsurePerson",
+                    "factorKey": "为自己",
+                    "factorValue": "0"
+                },
+                {
+                    "componentId": "wapInsurePerson",
+                    "factorKey": "为子女（<18周岁）",
+                    "factorValue": "1"
+                }
+            ]
+        },
+        {
+            "componentId": "wapPremiumFactor",
+            "componentTitle": "子女生日",
+            "premiumFactorId": "insureChildBirth",
+            "premiumFactorCode": "childBirth",
+            "premiumFactorType": "select",
+            "premiumDataType": "date",
+            "factorList": [
+                {
+                    "componentId": "",
+                    "factorKey": "请选择",
+                    "factorValue": ""
+                }
+            ]
+        },
+        {
+            "componentId": "wapPremiumFactor",
+            "componentTitle": "子女性别",
+            "premiumFactorId": "insureChildGender",
+            "premiumFactorCode": "childGender",
+            "premiumFactorType": "select",
+            "premiumDataType": "",
+            "factorList": [
+                {
+                    "componentId": "wapInsureChildGender",
+                    "factorKey": "请选择",
+                    "factorValue": "0"
+                },
+                {
+                    "componentId": "wapInsureChildGender",
+                    "factorKey": "男",
+                    "factorValue": "1"
+                },
+                {
+                    "componentId": "wapInsureChildGender",
+                    "factorKey": "女",
+                    "factorValue": "2"
+                }
+            ]
+        },
+        {
+            "componentId": "wapPremiumFactor",
+            "componentTitle": "我是子女的",
+            "premiumFactorId": "insureRelationship",
+            "premiumFactorCode": "relationship",
+            "premiumFactorType": "tile",
+            "premiumDataType": "",
+            "factorList": [
+                {
+                    "componentId": "wapInsureRelationship",
+                    "factorKey": "爸爸",
+                    "factorValue": "0"
+                },
+                {
+                    "componentId": "wapInsureRelationship",
+                    "factorKey": "妈妈",
+                    "factorValue": "1"
+                }
+            ]
+        },
+        {
+            "componentId": "wapPremiumFactor",
+            "componentTitle": "我的生日",
+            "premiumFactorId": "insureBirth",
+            "premiumFactorCode": "birth",
+            "premiumFactorType": "select",
+            "premiumDataType": "date",
+            "factorList": [
+                {
+                    "componentId": "",
+                    "factorKey": "请选择",
+                    "factorValue": ""
+                }
+            ]
+        },
+        {
+            "componentId": "wapPremiumFactor",
+            "componentTitle": "居住地区",
+            "premiumFactorId": "insureArea",
+            "premiumFactorCode": "area",
+            "premiumFactorType": "select",
+            "premiumDataType": "area",
+            "factorList": [
+                {
+                    "componentId": "",
+                    "factorKey": "请选择",
+                    "factorValue": ""
+                }
+            ]
+        },
+        {
+            "componentId": "wapPremiumFactor",
+            "componentTitle": "保额",
+            "premiumFactorId": "insureSum",
+            "premiumFactorCode": "sum",
+            "premiumFactorType": "input",
+            "premiumDataType": "number",
+            "premiumUnit" : "万",
+            "factorList": [
+                {
+                    "componentId": "",
+                    "factorKey": "请输入1-10间的整数",
+                    "factorValue": ""
+                }
+            ]
+        },
+        {
+            "componentId": "wapPremiumFactor",
+            "componentTitle": "保障期限",
+            "premiumFactorId": "insurePeriod",
+            "premiumFactorCode": "period",
+            "premiumFactorType": "tile",
+            "premiumDataType": "",
+            "factorList": [
+                {
+                    "componentId": "wapInsurePeriod",
+                    "factorKey": "30年",
+                    "factorValue": "30"
+                },
+                {
+                    "componentId": "wapInsurePeriod",
+                    "factorKey": "至75周岁",
+                    "factorValue": "75"
+                }
+            ]
+        },
+        {
+            "componentId": "wapPremiumFactor",
+            "componentTitle": "交费方式",
+            "premiumFactorId": "insurePayWay",
+            "premiumFactorCode": "payWay",
+            "premiumFactorType": "tile",
+            "premiumDataType": "",
+            "factorList": [
+                {
+                    "componentId": "wapInsurePayWay",
+                    "factorKey": "一次性缴纳",
+                    "factorValue": "0"
+                },
+                {
+                    "componentId": "wapInsurePayWay",
+                    "factorKey": "5年交",
+                    "factorValue": "5"
+                },
+                {
+                    "componentId": "wapInsurePayWay",
+                    "factorKey": "10年交",
+                    "factorValue": "10"
+                },
+                {
+                    "componentId": "wapInsurePayWay",
+                    "factorKey": "15年交",
+                    "factorValue": "15"
+                },
+                {
+                    "componentId": "wapInsurePayWay",
+                    "factorKey": "20年交",
+                    "factorValue": "20"
+                }
+            ]
+        },
+        {
+            "componentId": "wapPremiumFactor",
+            "componentTitle": "交费频率",
+            "premiumFactorId": "insurePayFrequency",
+            "premiumFactorCode": "frequency",
+            "premiumFactorType": "tile",
+            "factorList": [
+                {
+                    "componentId": "wapInsurePayFrequency",
+                    "factorKey": "年交",
+                    "factorValue": "y"
+                },
+                {
+                    "componentId": "wapInsurePayFrequency",
+                    "factorKey": "月交",
+                    "factorValue": "m"
+                }
+            ]
+        },
+        {
+            "componentId": "wapPlanNameList",
+            "componentTitle": "保障责任",
+            "planNameList": [
+                {
+                    "componentId": "wapPlanName",
+                    "planName": "白金款",
+                    "planNameIndex": 0
+                },
+                {
+                    "componentId": "wapPlanName",
+                    "planName": "钻石款",
+                    "planNameIndex": 1
+                }
+            ]
+        },
+        {
+            "componentId": "wapPlanList",
+            "planList": [
+                {
+                    "componentId": "wapPlan",
+                    "planId": "1007A101",
+                    "planIndex": "1",
+                    "planName": "白金款",
+                    "planPrice": "45",
+                    "planScore": "",
+                    "planLiabilityList": [
+                        {
+                            "componentId": "wapLiability",
+                            "liabilityId": "1108001",
+                            "liabilityName": "重大疾病保险金",
+                            "liabilityAmount": "20万",
+                            "liabilityDesc": "白血病、癌症、急性心肌梗塞、尿毒症、严重III度烧伤等42种重大疾病，一经确诊，立即赔付（42种重大疾病描述详见重疾条款）"
+                        }
+                    ]
+                },
+                {
+                    "componentId": "wapPlan",
+                    "planId": "1007A101",
+                    "planIndex": "2",
+                    "planName": "钻石款",
+                    "planPrice": "138",
+                    "planScore": "",
+                    "planLiabilityList": [
+                        {
+                            "componentId": "wapLiability",
+                            "liabilityId": "1108001",
+                            "liabilityName": "重大疾病保险金",
+                            "liabilityAmount": "30万",
+                            "liabilityDesc": "白血病、癌症、急性心肌梗塞、尿毒症、严重III度烧伤等42种重大疾病，一经确诊，立即赔付（42种重大疾病描述详见重疾条款）"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "componentId": "wapConditionList",
+            "componentTitle": "保障说明",
+            "conditionList": [
+                {
+                    "componentId": "wapCondition",
+                    "conditionName": "保障期限",
+                    "conditionBrief": "保障期限",
+                    "conditionDesc": "1年",
+                    "conditionUrl": ""
+                },
+                {
+                    "componentId": "wapCondition",
+                    "conditionName": "投保年龄",
+                    "conditionBrief": "投保年龄",
+                    "conditionDesc": "18-50周岁",
+                    "conditionUrl": ""
+                }
+            ]
+        },
+        {
+            "componentId": "wapReturnMessage",
+            "returnMessage": "planId,planPrice"
+        },
+        {
+            "componentId": "wapPayment"
+        }
+    ]
+}

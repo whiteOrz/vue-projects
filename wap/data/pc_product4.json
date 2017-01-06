@@ -1,0 +1,327 @@
+{
+    "pcDetails": [
+        {
+            "componentId": "pcProductDesc",
+            "productName": "少儿重大疾病保险",
+            "productDesc": "针对未成年人，重症+轻症保额最高达60万，最低每天仅需0.18元起"
+        },
+        {
+            "componentId": "pcProductPrice",
+            "priceType": "会员价",
+            "productPrice": "100元"
+        },
+        {
+            "componentId": "pcInsuredAgeRangeHidden",
+            "min": "18",
+            "max": "65"
+        },
+        {
+            "componentId": "pcRecentSales",
+            "componentTitle": "近期销量",
+            "recentSales": "35"
+        },
+        {
+            "componentId": "pcCalculateHidden",
+            "type": "post",
+            "url": ""
+        },
+        {
+            "componentId": "pcConditionList",
+            "componentTitle": "保障说明",
+            "conditionList": [
+                {
+                    "componentId": "pcCondition",
+                    "conditionName": "投保年龄",
+                    "conditionBrief": "投保年龄",
+                    "conditionDesc": "18-65周岁",
+                    "conditionUrl": ""
+                },
+                {
+                    "componentId": "pcCondition",
+                    "conditionName": "保障期限",
+                    "conditionBrief": "保障期限",
+                    "conditionDesc": "1年",
+                    "conditionUrl": ""
+                }
+            ]
+        },
+        {
+            "componentId": "pcPremiumFactor",
+            "componentTitle": "为谁投保",
+            "premiumFactorId": "insurePerson",
+            "premiumFactorCode": "person",
+            "premiumFactorType": "tile",
+            "premiumDataType": "",
+            "factorList": [
+                {
+                    "componentId": "pcInsurePerson",
+                    "factorKey": "为自己",
+                    "factorValue": "0"
+                },
+                {
+                    "componentId": "pcInsurePerson",
+                    "factorKey": "为子女（<18周岁）",
+                    "factorValue": "1"
+                }
+            ]
+        },
+        {
+            "componentId": "pcPremiumFactor",
+            "componentTitle": "保障责任",
+            "premiumFactorId": "insureLiability",
+            "premiumFactorCode": "liability",
+            "premiumFactorType": "tile",
+            "premiumDataType": "",
+            "factorList": [
+                {
+                    "componentId": "pcInsureLiability",
+                    "factorKey": "返本重疾保障",
+                    "factorValue": "0"
+                },
+                {
+                    "componentId": "pcInsureLiability",
+                    "factorKey": "返本重疾保障 + 豁免保障",
+                    "factorValue": "1"
+                }
+            ]
+        },
+        {
+            "componentId": "pcPremiumFactor",
+            "componentTitle": "保额",
+            "premiumFactorId": "insureSum",
+            "premiumFactorCode": "sum",
+            "premiumFactorType": "input",
+            "premiumDataType": "number",
+            "premiumUnit": "份",
+            "premiumRemarks": "1万/份  最高*份",
+            "factorList": [
+                {
+                    "componentId": "",
+                    "factorKey": "请输入1-10间的整数",
+                    "factorValue": ""
+                }
+            ]
+        },
+        {
+            "componentId": "pcPremiumFactor",
+            "componentTitle": "宝贝性别",
+            "premiumFactorId": "insureChildGender",
+            "premiumFactorCode": "childGender",
+            "premiumFactorType": "select",
+            "premiumDataType": "",
+            "factorList": [
+                {
+                    "componentId": "pcInsureChildGender",
+                    "factorKey": "男孩",
+                    "factorValue": "1"
+                },
+                {
+                    "componentId": "pcInsureChildGender",
+                    "factorKey": "女孩",
+                    "factorValue": "2"
+                }
+            ]
+        },
+        {
+            "componentId": "pcPremiumFactor",
+            "componentTitle": "宝贝生日",
+            "premiumFactorId": "insureChildBirth",
+            "premiumFactorCode": "childBirth",
+            "premiumFactorType": "select",
+            "premiumDataType": "date",
+            "factorList": [
+                {
+                    "componentId": "",
+                    "factorKey": "请选择",
+                    "factorValue": ""
+                }
+            ]
+        },
+        {
+            "componentId": "pcPremiumFactor",
+            "componentTitle": "您是宝贝的",
+            "premiumFactorId": "insureRelationship",
+            "premiumFactorCode": "relationship",
+            "premiumFactorType": "tile",
+            "premiumDataType": "",
+            "factorList": [
+                {
+                    "componentId": "pcInsureRelationship",
+                    "factorKey": "爸爸",
+                    "factorValue": "0"
+                },
+                {
+                    "componentId": "pcInsureRelationship",
+                    "factorKey": "妈妈",
+                    "factorValue": "1"
+                }
+            ]
+        },
+        {
+            "componentId": "pcPremiumFactor",
+            "componentTitle": "您的生日",
+            "premiumFactorId": "insureBirth",
+            "premiumFactorCode": "birth",
+            "premiumFactorType": "select",
+            "premiumDataType": "date",
+            "factorList": [
+                {
+                    "componentId": "",
+                    "factorKey": "请选择",
+                    "factorValue": ""
+                }
+            ]
+        },
+        {
+            "componentId": "pcPremiumFactor",
+            "componentTitle": "居住地",
+            "premiumFactorId": "insureArea",
+            "premiumFactorCode": "area",
+            "premiumFactorType": "select",
+            "premiumDataType": "area",
+            "factorList": [
+                {
+                    "componentId": "",
+                    "factorKey": "请选择",
+                    "factorValue": ""
+                }
+            ]
+        },
+        {
+            "componentId": "pcPremiumFactor",
+            "componentTitle": "保至",
+            "premiumFactorId": "insurePeriod",
+            "premiumFactorCode": "period",
+            "premiumFactorType": "tile",
+            "premiumDataType": "",
+            "factorList": [
+                {
+                    "componentId": "pcInsurePeriod",
+                    "factorKey": "30年",
+                    "factorValue": "30"
+                },
+                {
+                    "componentId": "pcInsurePeriod",
+                    "factorKey": "75周岁",
+                    "factorValue": "75"
+                }
+            ]
+        },
+        {
+            "componentId": "pcPremiumFactor",
+            "componentTitle": "交费方式",
+            "premiumFactorId": "insurePayWay",
+            "premiumFactorCode": "payWay",
+            "premiumFactorType": "tile",
+            "premiumDataType": "",
+            "factorList": [
+                {
+                    "componentId": "pcInsurePayWay",
+                    "factorKey": "一次性缴纳",
+                    "factorValue": "0"
+                },
+                {
+                    "componentId": "pcInsurePayWay",
+                    "factorKey": "5年交",
+                    "factorValue": "5"
+                },
+                {
+                    "componentId": "pcInsurePayWay",
+                    "factorKey": "10年交",
+                    "factorValue": "10"
+                },
+                {
+                    "componentId": "pcInsurePayWay",
+                    "factorKey": "15年交",
+                    "factorValue": "15"
+                },
+                {
+                    "componentId": "pcInsurePayWay",
+                    "factorKey": "20年交",
+                    "factorValue": "20"
+                }
+            ]
+        },
+        {
+            "componentId": "pcPremiumFactor",
+            "componentTitle": "交费频率",
+            "premiumFactorId": "insurePayFrequency",
+            "premiumFactorCode": "frequency",
+            "premiumFactorType": "tile",
+            "factorList": [
+                {
+                    "componentId": "pcInsurePayFrequency",
+                    "factorKey": "年交",
+                    "factorValue": "y"
+                },
+                {
+                    "componentId": "pcInsurePayFrequency",
+                    "factorKey": "月交",
+                    "factorValue": "m"
+                }
+            ]
+        },
+        {
+            "componentId": "pcPremiumFactor",
+            "componentTitle": "手机号码",
+            "premiumFactorId": "insurePhone",
+            "premiumFactorCode": "phone",
+            "premiumFactorType": "input",
+            "factorList": [
+                {
+                    "componentId": "pcInsurePhone",
+                    "factorKey": "填写正确手机号码获得保费信息",
+                    "factorValue": ""
+                }
+            ]
+        },
+        {
+            "componentId": "pcReturnMessage",
+            "returnMessage": "planId,planPrice"
+        },
+        {
+            "componentId": "pcPayment",
+            "qrCodeUrl": ""
+        },
+        {
+            "componentId": "pcServiceList",
+            "componentTitle": "服务承诺",
+            "serviceList": [
+                {
+                    "componentId": "pcService",
+                    "serviceURL": "",
+                    "serviceDesc": "保证续保",
+                    "serviceKeyword": "保"
+                },
+                {
+                    "componentId": "pcService",
+                    "serviceURL": "",
+                    "serviceDesc": "极速生效",
+                    "serviceKeyword": "快"
+                },
+                {
+                    "componentId": "pcService",
+                    "serviceURL": "",
+                    "serviceDesc": "透明理赔",
+                    "serviceKeyword": "赔"
+                }
+            ]
+        },
+        {
+            "componentId": "pcPayStyleList",
+            "componentTitle": "支付方式",
+            "payStyleList": [
+                {
+                    "componentId": "pcPayStyle",
+                    "payStyleURL": "",
+                    "payStyleDesc": "支付宝"
+                },
+                {
+                    "componentId": "pcPayStyle",
+                    "payStyleURL": "",
+                    "payStyleDesc": "银联储蓄卡"
+                }
+            ]
+        }
+    ]
+}

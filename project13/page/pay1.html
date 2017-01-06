@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>选择支付方式</title>
+    <link rel="stylesheet" href="../src/css/insure.css" type="text/css" />
+	
+	
+</head>
+<body class="bg-g">
+	<div class="wrap">
+		<div class="header">
+			<div class="inner clearfix"> 
+				<img class="logo" src="../src/image/在线logo.png" />
+				<img class="call" src="../src/image/call4.jpg" />
+			</div> 
+		</div>
+		<div id="main_widely">
+			<div id="main" >
+				<ul class="steps clearfix">
+					<li class="steps2 fl">
+						<div class="line steps_current"></div>
+						<p class="t_red ">1.填写投保信息</p>
+						<img src="../src/image/circle.png" class="steps_img2"/>
+					</li>
+					<li class="steps2 fl">
+						<div class="line steps_current"></div>
+						<p class="t_red">2.健康告知</p>
+						<img src="../src/image/circle.png" class="steps_img2"/>
+					</li>
+					<li class="steps2 fl">
+						<div class="line steps_current"></div>
+						<p class="t_red">3.支付</p>
+						<img src="../src/image/circle.png" class="steps_img2"/>
+					</li>
+					<li class="steps2 fl">
+						<div class="line steps_color"></div>
+						<p class="t_6">4.成功</p>
+						<img src="../src/image/circle02.png" class="steps_img2"/>
+					</li>
+				</ul>
+					
+					
+				<tk-pay></tk-pay>
+			
+			</div>
+			
+			<div  class="footer cleafix">
+				<p>泰康在线财产保险股份有限公司 版权所有Copyright © Tk.cn Insurance CO.,LTD. All Rights Reserved | 京ICP备09074081号-19</p>
+			</div>
+		</div>
+	</div>
+	
+	<div class="layer" id="layer" > </div>
+	<div class="layer-content" id="layer-conent" >
+		<div class="layer-content-head cleafix">
+			<h3>支付<span class="planPrice"></span>元</h3>
+			<a class="layer-close" id="layer-close" href="javascript:;"></a>
+		</div>
+		<div class="layer-img">
+			<div class="wx-img" ></div>
+			<p class="wx-finish" id="wx-finish">
+				<span>我已支付完成</span>
+				
+			</p>
+				
+		</div>	
+		
+	</div>
+	
+	
+	<script src="../src/js/jquery.min.js"></script>
+	<script src="../src/js/json.js"></script>
+	<script src="../src/js/sessionStorage.js"></script>
+	<script src="../dist/pay_operation.js"></script>
+	<script src="../dist/pay.js"></script>
+</body>
+</html>

@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>投保信息配置</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/my_style.css" />
+    <style>
+        .comfim3 {
+            width: 580px;
+            position: absolute;
+            top: 100px;
+            left: 100px;
+            z-index: 999;
+            background: #fff;
+            border: 1px solid #ccc;
+            overflow: auto;
+        }
+
+        .comfim4 {
+            width: 300px;
+            position: absolute;
+            z-index: 999;
+            background: #fff;
+            border: 1px solid #ccc;
+            overflow: auto;
+        }
+
+        .comfim4 table {
+            border: 1px solid #ccc;
+            border-collapse: collapse;
+        }
+
+        .comfim4 table td {
+            border: 1px solid #ccc;
+        }
+
+        .comfim5 {
+            width: 300px;
+            position: absolute;
+            z-index: 999;
+            background: #fff;
+            border: 1px solid #ccc;
+            overflow: auto;
+        }
+
+        .comfim5 table {
+            border: 1px solid #ccc;
+            border-collapse: collapse;
+        }
+
+        .comfim5 table td {
+            border: 1px solid #ccc;
+        }
+
+        .comfim6 {
+            width: 50%;
+            position: absolute;
+            z-index: 999;
+            background: #fff;
+            border: 1px solid #ccc;
+            overflow: auto;
+        }
+
+        .comfim6 table {
+            border: 1px solid #ccc;
+            border-collapse: collapse;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .comfim6 table td {
+            border: 1px solid #ccc;
+        }
+
+        .comfim7 {
+            width: 300px;
+            position: absolute;
+            z-index: 999;
+            background: #fff;
+            border: 1px solid #ccc;
+            overflow: auto;
+        }
+
+        .comfim7 table {
+            border: 1px solid #ccc;
+            border-collapse: collapse;
+        }
+
+        .comfim7 table td {
+            border: 1px solid #ccc;
+        }
+
+        .comfim8 {
+            width: 300px;
+            position: absolute;
+            z-index: 999;
+            background: #fff;
+            border: 1px solid #ccc;
+            overflow: auto;
+        }
+
+        .comfim8 table {
+            border: 1px solid #ccc;
+            border-collapse: collapse;
+        }
+
+        .comfim8 table td {
+            border: 1px solid #ccc;
+        }
+
+        .comfim9 {
+            width: 300px;
+            position: absolute;
+            z-index: 999;
+            background: #fff;
+            border: 1px solid #ccc;
+            overflow: auto;
+            max-height: 500px;
+        }
+
+        .comfim9 table {
+            border: 1px solid #ccc;
+            border-collapse: collapse;
+        }
+
+        .comfim9 table td {
+            border: 1px solid #ccc;
+        }
+
+        .comfim10 {
+            width: 300px;
+            position: absolute;
+            z-index: 999;
+            background: #fff;
+            border: 1px solid #ccc;
+            overflow: auto;
+            max-height: 500px;
+        }
+
+        .comfim10 table {
+            border: 1px solid #ccc;
+            border-collapse: collapse;
+        }
+
+        .comfim10 table td {
+            border: 1px solid #ccc;
+        }
+
+        .col-sort {
+            cursor: move;
+        }
+
+        .comfim-profession {
+            display: none;
+            width: 600px;
+            position: absolute;
+            overflow: auto;
+            background: #fff;
+            z-index: 1000;
+            border: 2px solid #666;
+        }
+
+        .comfim-profession input {
+            margin-left: 150px;
+        }
+    </style>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/page3.js"></script>
+</head>
+
+<body>
+    <div><a class="color-00c fw7" href="#">《 返回产品列表</a></div>
+    <div class="mt1">
+        <a href="javascript:;">1.基本信息</a>->
+        <a href="page2.html">2.试算信息</a>->
+        <a class="color-00c fw7" href="javascript:;">3.投保流程</a>->
+        <a href="javascript:;">4.投保声明</a>->
+        <a href="javascript:;">5.支付方式</a>
+    </div>
+    <div class="border-ccc row mt06" style="width:30rem; ">
+        <div class="col padding06 tab">pc</div>
+        <div class="col border-left-ccc padding06 tab">wap</div>
+        <div class="col border-left-ccc padding06 tab">app</div>
+        <div class="col border-left-ccc padding06 tab">wechat</div>
+        <div class="col border-left-ccc padding06 tab">cps</div>
+    </div>
+    <input type="button" value="修改配置" id="modify-btn" />
+    <div class="mt06 content_table">
+        <div id="table1" class="table4">
+            <div class="bg-th">投保人信息</div>
+            <div class="border-ccc">
+                <div class="row">
+                    <div class="col-id fw7">ID</div>
+                    <div class="col-name fw7">字段名称</div>
+                    <div class="col-initValue fw7">初始值</div>
+                    <div class="col-dataDict fw7">数据字典（以，分开）</div>
+                    <div class="col-require fw7">必填</div>
+                    <div class="col-tipText fw7">提示文字</div>
+                    <div class="col-desc fw7">错误提示</div>
+                    <div class="col-sort fw7">排序</div>
+                </div>
+                <div class="tableContent table-applicant" id="table-applicant">
+                </div>
+            </div>
+        </div>
+        <div id="table2" class="mt06 table4">
+            <div class="bg-th">被保人信息
+            </div>
+            <div class="border-ccc">
+                <div class="row">
+                    <div class="col-id fw7">ID</div>
+                    <div class="col-name fw7">字段名称</div>
+                    <div class="col-initValue fw7">初始值</div>
+                    <div class="col-dataDict fw7">数据字典（以，分开）</div>
+                    <div class="col-require fw7">必填</div>
+                    <div class="col-tipText fw7">提示文字</div>
+                    <div class="col-desc fw7">错误提示</div>
+                    <div class="col-sort fw7">排序</div>
+                </div>
+                <div class="tableContent table-insured" id="table-insured"></div>
+            </div>
+        </div>
+        <div id="table3" class="mt06 table4">
+            <div class="bg-th">受益人信息
+            </div>
+            <div class="border-ccc">
+                <div class="row">
+                    <div class="col-id fw7">ID</div>
+                    <div class="col-name fw7">字段名称</div>
+                    <div class="col-initValue fw7">初始值</div>
+                    <div class="col-dataDict fw7">数据字典（以，分开）</div>
+                    <div class="col-require fw7">必填</div>
+                    <div class="col-tipText fw7">提示文字</div>
+                    <div class="col-desc fw7">错误提示</div>
+                    <div class="col-sort fw7">排序</div>
+                </div>
+                <div class="tableContent table-beneficiary" id="table-beneficiary"></div>
+            </div>
+        </div>
+        <div id="table4" class="mt06 table4">
+            <div class="bg-th">其他信息</div>
+            <div class="border-ccc">
+                <div class="row">
+                    <div class="col-id fw7">ID</div>
+                    <div class="col-name fw7">字段名称</div>
+                    <div class="col-initValue fw7">初始值</div>
+                    <div class="col-dataDict fw7">数据字典（以，分开）</div>
+                    <div class="col-require fw7">必填</div>
+                    <div class="col-tipText fw7">提示文字</div>
+                    <div class="col-desc fw7">错误提示</div>
+                    <div class="col-sort fw7">排序</div>
+                </div>
+                <div class="tableContent table-other" id="table-other"></div>
+            </div>
+        </div>
+    </div>
+    <div></div>
+    <div class="mt5">
+        <a class="btn2">暂存</a>
+        <a class="btn2" id="next-btn" href="javascript:;">下一步</a>
+    </div>
+    <div class="comfim3" id="comfim3" style="display:none;">
+        <select id="options">
+        </select>
+        <input type="checkbox" class="product-all">全选
+        <div class="msg" id="applicant">
+            <table width="100%">
+                <tbody></tbody>
+            </table>
+        </div>
+        <input type="button" value="确定" id="ok-btn" />
+        <input type="button" value="取消" id="cancal-btn" class="cancal-btn" />
+    </div>
+    <!--证件类型-->
+    <div class="comfim4" id="comfim4" style="display:none">
+        <table width="100%">
+            <tr>
+                <td>
+                    <input type="checkbox" class="all">全选</td>
+                <td>名称</td>
+                <td>编码</td>
+                <td>显示顺序</td>
+            </tr>
+
+        </table>
+        <input type="button" value="确定" id="comfim4-ok-btn" class="ok-btn">
+        <input type="button" value="取消" id="comfim4-cancal-btn" class="cancal-btn">
+    </div>
+    <!--性别-->
+
+    <div class="comfim5" id="comfim5" style="display:none;">
+        <table width="100%">
+            <tr>
+                <td>
+                    <input type="checkbox" class="all">全选</td>
+                <td>名称</td>
+                <td>编码</td>
+                <td>显示顺序</td>
+            </tr>
+
+        </table>
+        <input type="button" value="确定" id="comfim5-ok-btn" class="ok-btn">
+        <input type="button" value="取消" id="comfim5-cancal-btn" class="cancal-btn">
+    </div>
+    <!-- 职业 -->
+    <div class="comfim6" id="comfim6" style="display:none;">
+        <table width="100%">
+            <tr>
+                <td>
+                    <input type="checkbox" class="all">全选</td>
+                <td>名称</td>
+                <td>编码</td>
+                <td>描述</td>
+            </tr>
+        </table>
+        <input type="button" value="确定" id="comfim6-ok-btn" style="margin-left:150px">
+        <input type="button" value="取消" id="comfim6-cancal-btn" class="cancal-btn" style="margin-left:150px">
+    </div>
+    <div class="comfim-profession">
+        <div>
+            您的要求是？
+            <br />
+            <br />
+            <input name="radio" type="radio" value="仅限" />仅限
+            <input name="radio" type="radio" value="不含" />不含
+            <input name="radio" type="radio" value="不限" />不限
+            <br /> 每行一个
+        </div>
+        <textarea name="text" wrap="off" style="overflow: auto;border:1px solid #ccc;width: 480px;height: 150px;"></textarea>
+        <input type="button" value="确定" class="comfim-ok-btn">
+        <input type="button" value="取消" class="comfim-cancal-btn cancal-btn">
+    </div>
+
+    <!-- 受益人法定还是指定 -->
+    <div class="comfim7" id="comfim7" style="display:none;">
+        <table width="100%">
+            <tr>
+                <td>
+                    <input type="checkbox" class="all">全选</td>
+                <td>名称</td>
+                <td>编码</td>
+                <td>显示顺序</td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" value="01" class="chk">
+                </td>
+                <td class="relationship-name">法定</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" value="02" class="chk">
+                </td>
+                <td class="relationship-name">指定</td>
+                <td></td>
+                <td></td>
+            </tr>
+
+        </table>
+        <input type="button" value="确定" id="comfim7-ok-btn" class="ok-btn">
+        <input type="button" value="取消" id="comfim7-cancal-btn" class="cancal-btn">
+    </div>
+    <!--与投保人关系-->
+    <div class="comfim8" id="comfim8" style="display:none;">
+        <table width="100%">
+            <tr>
+                <td>
+                    <input type="checkbox" class="all">全选</td>
+                <td>名称</td>
+                <td>编码</td>
+                <td>显示顺序</td>
+            </tr>
+        </table>
+        <input type="button" value="确定" id="comfim8-ok-btn" class="ok-btn">
+        <input type="button" value="取消" id="comfim8-cancal-btn" class="cancal-btn">
+    </div>
+    <!--投保地区-->
+    <div class="comfim9" id="comfim9" style="display:none;">
+        <table width="100%">
+            <tr>
+                <td>
+                    <input type="checkbox" class="all">全选</td>
+                <td>名称</td>
+                <td>数据字典（以，分开）</td>
+            </tr>
+        </table>
+        <input type="button" value="确定" id="comfim9-ok-btn">
+        <input type="button" value="取消" id="comfim9-cancal-btn" class="cancal-btn">
+    </div>
+    <div class="comfim10" id="comfim10" style="display:none;">
+        <table width="100%">
+            <tr>
+                <td>
+                    <input type="checkbox" class="all" checked>全选</td>
+                <td>名称</td>
+                <td>编码</td>
+                <td>显示顺序</td>
+            </tr>
+        </table>
+        <input type="button" value="确定" id="comfim10-ok-btn">
+        <input type="button" value="取消" id="comfim10-cancal-btn" class="cancal-btn">
+    </div>
+</body>
+</html

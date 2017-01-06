@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="vue2.0.js"></script>
+</head>
+
+<body>
+    <input type="text" id="subject" />
+    <div id="observer1"></div>
+    <div id="observer2"></div>
+
+    <script>
+    subject.observerList = [];
+    subject.observerList.push(observer1);
+    subject.observerList.push(observer2);
+
+    observer1.update = function(val) {
+        this.innerHTML = "observer1:" + val;
+    }
+
+    observer2.update = function(val) {
+        this.innerHTML = "observer2:" + val;
+    }
+
+    subject.onchange = function(){
+        var val = this.value;
+        this.observerList.forEach(function(el,index){
+            el.update(val);
+        });
+    }
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,80 @@
+{
+    "wechatDetails": [
+        {
+            "componentId": "wechatBanner",
+            "bannerImgUrl": "$!{json.communityProductId}_bannerImgUrl.jpg"
+        },
+        {
+            "componentId": "wechatServiceInfoList",
+            "serviceInfoList": [
+                {
+                    "componentId": "wechatServiceType",
+                    "componentTitle": "服务类型",
+                    "componentDesc": "$!json.serviceClassifyName"
+                },
+                {
+                    "componentId": "wechatServiceProject",
+                    "componentTitle": "服务项目",
+                    "componentDesc": "$!json.serviceItemName"
+                },
+                {
+                    "componentId": "wechatServiceName",
+                    "componentTitle": "服务名称",
+                    "componentDesc": "$!json.productName"
+                },
+                {
+                    "componentId": "wechatServiceTerm",
+                    "componentTitle": "服务期限",
+                    "componentDesc": "$!json.startDate至$!json.endDate"
+                },
+                {
+                    "componentId": "wechatBuyAge",
+                    "componentTitle": "购买年龄",
+                    "componentDesc": "#if($!json.minAge == 0 && $!json.maxAge == 100)不限年龄#else $!json.minAge 至$!json.endAge #end"
+                }
+            ]
+        },
+        {
+            "componentId": "wechatProductDetails",
+            "productDetails": [
+                {
+                    "componentId": "wechatProductDetail",
+                    "componentTitle": "产品介绍",
+                    "componentDesc": "$!{json.communityProductId}_wechatProductDetail.jpg"
+                },
+                {
+                    "componentId": "wechatProductUse",
+                    "componentTitle": "如何使用",
+                    "componentDesc": "$!{json.communityProductId}_wechatProductUse.jpg"
+                }
+            ]
+        },
+        {
+            "componentId": "wechatPlanList",
+            "planList": [
+                {
+                    "componentId": "wechatPlan",
+                    "planId": "1007A101",
+                    "planIndex": "",
+                    "planName": "",
+                    "planPrice": "",
+                    "planScore": "",
+                    "planLiabilityList": [
+                        {
+                            "componentId": "wechatLiability",
+                            "liabilityId": "",
+                            "liabilityName": "",
+                            "liabilityAmount": "",
+                            "liabilityDesc": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "componentId": "wechatPrice",
+            "componentTitle": "价格",
+            "componentDesc": "$json.premium"
+        }
+    ]
+}

@@ -1,0 +1,37 @@
+{
+    "subjectList": {
+        "insureAge": [
+            "aa"
+        ],
+        "insurePeriod": [
+            "bb"
+        ]
+    },
+    "aa": {
+        "type": "text",
+        "subjectList": {
+            "insureAge": {
+                "10岁": {},
+                "20岁": {},
+                "30岁": {}
+            }
+        }
+    },
+    "bb": {
+        "type": "select",
+        "subjectList": {
+            "insurePeriod": {
+                "1": {
+                    "action": "setvalue",
+                    "factorList": [{
+                        "componentId": "wapInsureAge",
+                        "factorKey": "18-65周岁",
+                        "factorValue": 0
+                    }]
+                },
+                "2": {},
+                "3": {}
+            }
+        }
+    }
+}

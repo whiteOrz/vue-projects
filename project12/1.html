@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+    #container{
+        width: 200px;
+        height: 200px;
+        border: 1px solid #ccc;
+        position: relative;
+    }
+
+    #container2{
+        width: 200px;
+        height: 200px;
+        position: relative;    	
+    }
+    
+    .point {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        position: absolute;
+        left: 95px;
+        top: 95px;
+        background: red;
+        -webkit-transform-origin: 5px 100px;
+    }
+    
+    @-webkit-keyframes t {
+        0% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
+        }
+    }
+
+    @-webkit-keyframes t2 {
+        0% {
+            -webkit-transform: rotate(0);
+        }
+        100% {
+            -webkit-transform: rotate(360deg);
+        }
+    }
+    </style>
+</head>
+
+<body>
+    <div id="container"></div>
+    <div id="container2"></div>
+    <script>
+    var num = 30;
+    var innerHTML = '';
+    for (var i = 0; i < num; i++) {
+        var styleStr = '-webkit-transform:translateY(-95px) rotate(' + (i * 360 / num) + 'deg);';
+        styleStr += '-webkit-animation : t 300ms ' + i * 10 + 'ms linear infinite';
+
+        innerHTML += '<div class="point" style="' + styleStr + '"></div>';
+    }
+    container.innerHTML = innerHTML;
+
+    var innerHTML2 = '';
+	for (var i = 0; i < num; i++) {
+		innerHTML2 += '<div class="point" style="-webkit-transform:translateY(-95px) rotate(' + (i * 360 / num) + 'deg);"></div>';
+	}
+	container2.innerHTML = innerHTML2;
+	container2.style.WebkitAnimation="t2 600ms linear infinite";
+    </script>
+</body>
+</html>

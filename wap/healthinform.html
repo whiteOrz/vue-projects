@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>『健康告知』-泰康在线移动官网</title>
+	<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,target-densitydpi=medium-dpi">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<meta name="format-detection" content="telephone=no" />
+	<link href="css/m_style.css" rel="stylesheet" type="text/css">
+	<style>
+		.liabilityMasker {width: 100%;height: 100%;position: fixed;left: 0;top: 0;z-index: 1001;background: rgba(0, 0, 0, 0.7);}
+		.liabilityBox {width: 90%;position: absolute;left: 50%;top: 50%;-webkit-transform: translate(-50%, -100%);background: #fff;border-radius: 1rem;}
+		.liabilityBox article {padding: 0 1.5rem 1.5rem 1.5rem;max-height: 20rem;overflow-y: auto;}
+		.liabilityBox h2 {font-size: 1.5rem;text-align: center;margin: 1rem 0;}
+		.liabilityBox p {font-size: 1.2rem;color: #666;line-height: 1.8rem;}
+		.liabilityBtnArea {height: 4.5rem;border-top: 1px solid #ddd;}
+		.liabilityBtnArea input {display: block;width: 100%;height: 100%;font: 1.8rem/4.5rem microsoft Yahei;text-align: center;border: none;color: #2081F7;background: #fff;border-radius: 0 0 1rem 1rem;}
+		@keyframes ldown {
+			0% {-webkit-transform: translate(-50%, -100%);}
+			100% {-webkit-transform: translate(-50%, -50%);}
+		}
+		.ldown {-webkit-animation: .4s ldown;animation: .4s ldown;-webkit-animation-fill-mode: forwards;animation-fill-mode: forwards;}
+	</style>
+</head>
+<body>
+	<header class="header">
+		<a href="javascript:history.go(-1)" class="icon-back"></a>
+		<h2>被保险人健康告知</h2>
+	</header>
+	<section class="index-wrap">
+		<p class="txt">请确认您是否存在以下情况(以下选项默认为否)</p>
+		<article class="questionlist">
+			<ul id="valueListCont"></ul>
+		</article>
+	</section>
+	<nav class="fixnav">
+		<div>支付:<span>￥<mark id="formTotal">55.00</mark></span></div>
+		<p class="btn">
+			<input type="button" value="下一步" class="btn1" id="paysubmit">
+		</p>
+	</nav>
+	<div id="leaveMasker" class="leaveMasker" style="display:none;">
+		<div class="healthWaitting">
+			<img src="images/tker_hb.gif" /> 奋力核保中...
+		</div>
+	</div>
+	<div id="liabilityMasker" class="liabilityMasker" style="display:none;">
+		<div class="liabilityBox">
+			<h2></h2>
+			<article><p class="liabilityContent"></p></article>
+			<div class="liabilityBtnArea">
+				<input type="button" value="我知道了" class="cancel">
+			</div>
+		</div>
+	</div>
+	<div id="alertBox" class="leaveMasker" style="display:none;opacity:0;">
+		<div class="alertBox" style="width:70%;">
+			<div class="alertBoxContent" style="text-align:center;padding:2rem;">
+				<p></p>
+			</div>
+		</div>
+	</div>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/lstorage.js"></script>
+	<script src="js/common1.js"></script>
+	<script src="js/wap_healthInform.js"></script>
+	<script src="js/tkTrack.js"></script>
+	<script src="http://m.tk.cn/js/reference.js"></script>
+</body>
+</html>

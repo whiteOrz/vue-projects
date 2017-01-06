@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>选择支付方式</title>
+		<link rel="stylesheet" href="../src/css/insure.css" type="text/css" />
+
+	</head>
+
+	<body class="bg-g">
+		<!-- header start-->
+		<div id="header_widely">
+			<div id="header" class="clearfix">
+				<img class="logo" src="../src/image/tklogo.png" />
+				<img class="call" src="../src/image/call4.jpg" />
+			</div>
+		</div>
+		<!--导航 star-->
+		<div class="nav">
+			<ul class="steps clearfix">
+				<li class="steps2 fl">
+					<div class="line steps_current"></div>
+					<p class="t_red ">1.填写投保信息</p>
+					<img src="../src/image/circle.png" class="steps_img2" />
+				</li>
+				<li class="steps2 fl">
+					<div class="line steps_current"></div>
+					<p class="t_red">2.健康告知</p>
+					<img src="../src/image/circle.png" class="steps_img2" />
+				</li>
+				<li class="steps2 fl">
+					<div class="line steps_current"></div>
+					<p class="t_red">3.支付</p>
+					<img src="../src/image/circle.png" class="steps_img2" />
+				</li>
+				<li class="steps2 fl">
+					<div class="line steps_color"></div>
+					<p class="t_6">4.成功</p>
+					<img src="../src/image/circle02.png" class="steps_img2" />
+				</li>
+			</ul>
+		</div>
+		<!--导航 end-->
+		<div class="main">
+			<div class="ord_suc cleafix">
+				<div class="ord_sucin ">
+					<img src="../src/image/sucess.png" />
+					<h5>订单提交成功,请您尽快付款！订单号：<span id="proposalNo"></span>  |  应付：￥<span id="planPrice"></span></h5>
+					<p id="underWTip">请您在提交订单后<span>24小时</span>内完成支付，否则订单会自动取消。</p>
+				</div>
+			</div>
+
+			<!--
+				在用的支付方式
+				<div class="pay_method cleafix">
+				<h5>选择支付方式</h5>
+				<div class="other_tab clearfix" id="pay"></div>
+			</div>-->
+
+			<div class="pay_method">
+				<h5>选择支付方式</h5>
+				<div class="other_tab">
+					<div class="other-payway-c" >
+						<div id="pay" class="clearfix">
+							<!--<div class="bank_part"><input type="radio" name="payway-list" :="" checked="checked" paywayid="73"><img src="../src/image/pay/pay2.png" width="45" height="45"><p class="pay-icon">微信支付</p></div>-->
+							
+							
+						<!--<div class="otherPay-tab-c clearfix">
+							<p class="tab-hd current">储蓄卡</p>
+							<p class="tab-hd">信用卡</p>
+							<p class="tab-hd">支付平台</p>
+						</div>-->
+						<!--储蓄卡 start-->
+						<!--<div class="other-card-c clearfix" style="display:block">
+							
+							<p class="noIntbacktTitle">快捷支付：无需开通网上银行，有卡就能付，方便快捷</p>
+							<div class="noIntbackb-c clearfix">
+								<div class="noIntbackimg-c clearfix">
+									<input type="radio" name="back-c" id="cmb" />
+									<label class="backimgbox" for="">
+									<img src="../src/image/bank1/bank_cmb.png" alt="" />
+								</label>
+								</div>
+							</div>
+	
+							
+						</div>-->
+						<!--储蓄卡 end-->
+						<!--信用卡 start-->
+						<!--<div class="other-card-c clearfix" style="display:none">
+							<p class="noIntbacktTitle">快捷支付：无需开通网上银行，有卡就能付，方便快捷</p>
+							
+							
+							<div class="noIntbackb-c clearfix">
+								<div class="noIntbackimg-c">
+									<input type="radio" name="back-int" id="aa" />
+									<label class="backimgbox" for="aa">
+									<img src="../src/image/bank1/bank_icbc.png" alt="" />
+								</label>
+								</div>
+							</div>
+							
+	
+						</div>-->
+						<!--信用卡 end-->
+						<!--第三方start-->
+						<!--<div class="other-card-c clearfix" style="display:none">
+							<p class="noIntbacktTitle">快捷支付：无需开通网上银行，有卡就能付，方便快捷</p>
+							
+							<div class="noIntbackb-c clearfix">
+								<div class="noIntbackimg-c clearfix">
+									<input type="radio" name="back-c" />
+									<label class="backimgbox backimgborder">
+									<img src="../src/image/bank/clip_image_zfb.jpg" alt="" />
+								</label>
+								</div>
+							</div>
+						</div>-->
+						</div>
+	
+						<!--身份验证 start-->
+						<div id="payFirstBind" class="payFirstBind">
+							<div class="otherPay-msg-c" >
+								<p>为保证您的账户安全，请输入如下信息并与银行账户信息验证，验证成功后，方能及时完成扣款</p>
+								<div class="other-num-c clearfix">
+									<p>账号:</p>
+									<input type="text" id="applicantBank" />
+									<p class="otherbg-c clearfix"></p>
+								</div>
+								<div class="other-num-c clearfix">
+									<p>账户名:</p>
+									<p id="applicantName"><!-- 投保人姓名 --></p>
+									<p class="otherbg-c clearfix"></p>
+								</div>
+								<div class="other-num-c clearfix">
+									<p>有效证件:</p>
+									<p><span id="applicantType"><!-- 身份证 --> </span> <span class="numidcard-c" id="applicantId"><!-- 220813*********3592 --></span></p>
+								</div>
+							</div>
+							<!--身份验证 end-->
+		
+							<!--保存 start-->
+							<div class="msg-save-c" id="payFirstBindSave">保存</div>
+							<!--保存 end-->
+						</div>
+						
+					</div>
+					<div class="payRenewalMethod" id="payRenewalMethod" >
+						<div class="pay_b_a cleafix">
+							<input type="checkbox" id="aaa-c" />
+							<p><label for="aaa-c">留存续期账号（续保有<a href="#">惊喜优惠</a>）</label></p>
+						</div>
+						<!-- <div class="seesaveid" style="display:none">
+							<p>查看留存续期账号</p>
+						</div> -->
+						<!-- 通过留存续期账号查看 -->
+						<div class="saveIdenty"  id="saveIdenty" style="display:none">
+							<div class="bank_list saveid-c" id="saveFirst">
+								<input type="radio" name="bank-c" class="ipt " id="sameRenewal"/>
+								<label class="saveidspan " for="sameRenewal">续期账号同首期</label>
+							</div>
+							<div class="bank_list saveid-c" >
+								<a class="othermethod " for="">选择其他支付方式</a>
+							</div>
+						<!-- <div class="bank_list saveid-c clearfix">
+							<div class="fl clearfix">
+								<input id="continue_expect2" type="radio" name="tong" class="fl" />
+								<label class="left-c saveimgbox-c">
+								<img src="../src/image/bank1/bank_cmb.png" class="clip_image">
+							</label>
+							</div>
+							<span>*2833</span>
+							<span class="bg_card">储蓄卡</span>
+							<a href="#" class="pay_link paysee_link2_c">查看支付限额</a>
+							<div class="pay_money2_c" style="display:none">
+								<table>
+									<tr class="tr">
+										<td width="120">单笔限额（元）</td>
+										<td width="120">每日限额（元）</td>
+										<td width="120">每月限额（元）</td>
+										<td colspan="2">备注</td>
+									</tr>
+									<tr>
+										<td width="120">10万</td>
+										<td width="120">10万</td>
+										<td width="120">40万</td>
+										<td colspan="2">无</td>
+									</tr>
+								</table>
+							</div>
+						</div> -->
+						<div id="payRenewalBox" style="display:none">
+							<div class="saveBackwri-c clearfix">
+								<p class="saveBcakwri-p1-c">
+									请选择以下银行机构支付续期保费（不接受信用卡支付）；
+								</p>
+								<p class="saveBackwri-p2-c">
+									<a href="###">[现在正确填写续期交费账户有什么好处？] </a> &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="###">[使用帮助]	</a>
+								</p>
+							</div>
+							<div class="noIntbackt-c clearfix" id="payRenewal" >
+
+							<!--续期银行-->	
+
+							</div>
+						</div>
+						<div id="otherPayBox" style="display:none">
+						<div class="otherPay-msg-c" >
+							<p>为保证您的账户安全，请输入如下信息并与银行账户信息验证，验证成功后，方能及时完成扣款</p>
+							<div class="other-num-c clearfix">
+								<p>账号:</p>
+								<input type="text" id="renewalBank"/>
+								<p class="otherbg-c"></p>
+							</div>
+							<div class="other-num-c clearfix">
+								<p>账户名:</p>
+								<p id="renewalName"><!-- 投保人姓名 --></p>
+								<p class="otherbg-c"></p>
+							</div>
+							<div class="other-num-c clearfix">
+								<p>有效证件:</p>
+								<p><span id="renewalIdType"><!-- 身份证 --></span> <span class="numidcard-c" id="renewalId"><!-- 220813*********3592 --></span></p>
+							</div>
+						</div>
+						<div class="msg-save-c" >保存</div>
+						</div>	
+				
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		
+		<div class="sure">
+			<div class="sure-inner w300">
+				<input type="checkbox" id="agrChk" class="">
+				<label for="agrChk">我已阅读并同意</label>
+				<p class="statement" id="statement">保费自动转账授权声明</p>
+			</div>
+		</div>
+		<div class="continue_expect">
+			<div class="  order clearfix">
+				<div class="btn_left fl">
+					<!-- <div class="btn_step fl">上一步</div> -->
+					<div class="width50 fl">
+						<p class="p2">应交保费：</p>
+						<p class="p3">
+							<span>￥</span>
+							<font id="price"></font>
+						</p>
+					</div>
+				</div>
+				<div class="rowElem fr">
+					<input type="button" value="同意以上声明，下一步" class="next-btn" id="payBtn" />
+				</div>
+			</div>
+		</div>
+
+		<!-- 底部代码-->
+		<div class="footer ">
+			<div class="footer-inner">
+				<p>泰康在线财产保险股份有限公司 版权所有Copyright © Tk.cn Insurance CO.,LTD. All Rights Reserved | 京ICP备09074081号-19</p>
+			</div>
+		</div>
+		
+		<!--微信扫码支付-->
+		<div class="layer" id="layer"> </div>
+		<div class="layer-content" id="layer-conent">
+			<div class="layer-content-head cleafix">
+				<h3>支付<span class="planPrice"></span>元</h3>
+				<a class="layer-close" id="layer-close" href="javascript:;"></a>
+			</div>
+			<div class="layer-img">
+				<div class="wx-img"></div>
+				<div class="wx-finish" id="wx-finish">
+					<p class="wx-txt">我已支付完成</p>
+
+				</div>
+			</div>
+		</div>
+		<!--微信扫码支付-->
+		
+
+		
+
+		<script src="../src/js/jquery.min.js"></script>
+		<script src="../dist/siteUrl.js"></script>
+		<script src="../src/js/json.js"></script>
+		<script src="../src/js/sessionStorage.js"></script>
+		<script src="../src/js/jquery.cookie.js"></script>
+
+		<script src="http://cdnmaster.com/sitemaster/collect.js"></script>
+		<script src="../src/js/pushCode.js"></script>
+		<script src="../src/js/o_code.js"></script>
+		<script src="../src/js/tkTrack.js"></script>
+		<script src="../src/js/count.js"></script>
+		
+		<script src="../dist/pay_operation2.js" ></script>
+	</body>
+
+</html>

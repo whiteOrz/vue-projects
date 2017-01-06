@@ -1,12 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no,minimum-scale=1.0,maximum-scale=1.0">
     <title>project1</title>
+    <script src="../js/vue.js"></script>
 </head>
+
 <body>
-    <app></app>
-    <script src="build.js"></script>
+    <div id="div1"></div>
+    <div id="div2" style="border:1px solid #ccc;display:-webkit-box;padding:5px;float:left;">
+        <div style="width:100px;border:1px solid #ccc;">11</div>
+        <div style="width:100px;border:1px solid #ccc;">22</div>
+    </div>
+    <script>
+    var a = [1, 2, 3, 4];
+
+    a.forEach(function(el, i) {
+        if (el == 2) {
+            return null;
+        }
+        console.log(el);
+    });
+    </script>
 </body>
+
 </html>

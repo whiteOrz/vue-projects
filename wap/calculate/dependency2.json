@@ -1,0 +1,59 @@
+{
+    "subjectList": {
+        "insureAge": [
+            "factor_sumInsured",
+            "liability_001"
+        ],
+        "insureArea":[
+            "liability_001"
+        ]
+    },
+    "liabilityList": {
+        "001": {
+            "type": "liability",
+            "subjectList": {
+                "insureAge": {
+                    "10岁": {
+                        "action": "hidden",
+                        "liabilityAmount": "0,10,20"
+                    }
+                },
+                "insureArea":{
+                    "北京": {
+                        "action": "hidden",
+                        "liabilityAmount": "0,10,20"
+                    }
+                }
+            }
+        }
+    },
+    "factorList": {
+        "sumInsured": {
+            "type": "text",
+            "subjectList": {
+                "insureAge": {
+                    "10岁": {
+                        "action": "setvalue",
+                        "factorList": [
+                            {
+                                "componentId": "wapInsureAge",
+                                "factorKey": "保额",
+                                "factorValue": "10万"
+                            }
+                        ]
+                    },
+                    "20岁": {
+                        "action": "hidden",
+                        "factorList": [
+                            {
+                                "componentId": "wapInsureAge",
+                                "factorKey": "保额",
+                                "factorValue": "20万"
+                            }
+                        ]
+                    }
+                }
+            }
+        }
+    }
+}

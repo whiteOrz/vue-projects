@@ -1,69 +1,244 @@
-*{padding:0;margin:0;outline:none;word-break:break-all;-webkit-tap-highlight-color:rgba(0,0,0,0);}
-html{font-size:62.5%;font-family:"microsoft yahei";color:#000;}
-body{font-size:12px;font-size:1.2rem;overflow-x:hidden;}
-ul,li{list-style:none;}
-mark{background:none;}
-table{border-collapse:collapse;border-spacing:0;}
-input,select,input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{ -webkit-appearance:none; margin:0; border:none; font-family:microsoft Yahei;}
-.clearfix{zoom:1;}
-.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden;}
-a{text-decoration:none;color:#000;}
+#container {
+	width: 998px;
+	height: auto;
+	margin: 0px auto;
+	border: 1px #eeeff1 solid;
+	box-sizing: border-box;
+	display: table;
+	content: '.';
+	font-family: "微软雅黑";
+}
 
-#container{display: box;display: -webkit-box;margin:4rem;}
-#productImg{width:30%;}
-#pc_detail{flex: 1;-webkit-box-flex:1;border:1px solid #ccc;padding:1rem;font-size:1rem;}
+#productImg {
+	width: 300px;
+	float: left;
+	padding: 15px 19px 0 19px;
+	_padding: 15px 16px 0 16px;
+	overflow: hidden;
+}
 
-.mt04{margin-top:0.4rem;}
-.productName{font-size: 1.2rem;}
-.pcProductPrice{border-bottom: 1px solid #ccc;padding:1rem 0;}
-.pcProductPrice > div {display: flex;display: -webkit-box;}
-.priceType,.activityTitle{width:6rem;display: block;color:#666;}
-.productPrice,.discountInfo{flex:1;-webkit-box-flex:1;display: block;}
-.pcConditionList{margin-top:1rem;}
-.pcCondition{display: flex;display: -webkit-box;}
-.conditionName{width:6rem;display: block;color:#666;}
-.conditionDescription{flex:1;-webkit-box-flex:1;display: block;}
-.pcPackageList{display: flex;display: -webkit-box;margin-top:1rem;}
-.componentTitle{width:6rem;color:#666;}
-.pcPackageContent{flex:1;-webkit-box-flex:1;}
-.packageNameList{display: flex;display: -webkit-box;}
-.pcPackageName{flex:1;-webkit-box-flex:1;text-align: center;border:1px solid #ccc;padding:0.2rem;}
-.pcPackageName:not(:first-child){margin-left:1.2rem;}
-.pcPackageName.active{background:rgb(255,132,51);color:#fff;}
-.packageList{margin-top:0.8rem;}
-.packageTitle{display: flex;display: -webkit-box;text-align: center;background:rgb(255,255,153);}
-.packageTitle > div:nth-child(1){flex:1;-webkit-box-flex:1;}
-.packageTitle > div:nth-child(2){width:30%;}
-.pcPackage{margin-top:0.2rem;display:none;}
-.pcPackage.active{display: block;}
-.pcLiability{display: flex;display: -webkit-box;text-align: center;}
-.liabilityName{flex:1;-webkit-box-flex:1;}
-.liabilityAmount{width:30%;}
-.pcPayment{display: flex;display: -webkit-box;text-align: center;margin:2rem 6rem 0 6rem;}
-.pcPayment > div {width:8rem;}
-.pcPayment > div:not(:first-child){margin-left: 2rem;}
-.quickBuy,.login{padding:0.2rem;background:rgb(255,132,51);color:#fff;}
-.payBtnExplan{font-size: 0.8rem;}
+#pc_detail {
+	width: 657px;
+	float: right;
+	padding-bottom: 12px;
+	border-left: 1px #eeeff1 solid;
+}
 
+.productName,
+.productDescription {
+	width: 624px;
+	padding-left: 7px;
+	position: relative;
+	box-sizing: border-box;
+	color: #404040;
+}
 
+.productName {
+	margin-top: 10px;
+	margin-left: 18px;
+	font-size: 18px;
+}
 
+.productDescription {
+	margin-left: 18px;
+	font-size: 12px;
+	margin-top: 10px;
+	padding-bottom: 10px;
+	border-bottom: 1px #d7d7d7 dashed;
+}
 
+.pcProductPrice {
+	width: 624px;
+	margin-left: 18px;
+	padding-left: 7px;
+	color: #404040;
+	border-bottom: 1px #d7d7d7 dashed;
+	box-sizing: border-box;
+}
 
+.pcProductPrice div:after {
+	display: block;
+	content: "";
+	clear: both;
+}
 
+.priceType,
+.activityTitle {
+	width: 65px;
+	height: 32px;
+	font-size: 12px;
+	padding-right: 15px;
+	float: left;
+	line-height: 32px;
+}
 
+.productPrice,
+.discountInfo {
+	width: 524px;
+	font-size: 12px;
+	color: #999;
+	float: left;
+	height: 32px;
+	line-height: 32px;
+}
 
+.insureAge,
+.insurePeriod,
+.pcInsureAgeRangeList,
+.pcInsurePeriodList,
+.pcPackageNameList,
+.pcPackageList {
+	margin-left: 18px;
+	width: 624px;
+	padding-left: 7px;
+	color: #404040;
+	box-sizing: border-box;
+}
 
+.pcPackageList {
+	margin-top: 15px;
+}
 
+.insureAge:after,
+.insureAge div:after,
+.insurePeriod:after,
+.insurePeriod div:after,
+.pcPackageNameList:after,
+.pcPackageNameList div:after,
+.pcPackageList:after,
+.pcPackageList div:after {
+	display: block;
+	content: "";
+	clear: both;
+}
 
+.componentTitle {
+	width: 65px;
+	height: 32px;
+	font-size: 12px;
+	padding-right: 15px;
+	float: left;
+	line-height: 32px;
+}
 
+.insureAgeList,
+.packageNameList,
+.insurePeriodList,
+.pcPackageContent {
+	width: 524px;
+	font-size: 12px;
+	color: #999;
+	float: left;
+	display: table;
+	content: '.';
+	height: 32px;
+	line-height: 32px;
+}
 
-@media screen and ( min-width: 320px){html{font-size:10px}}
-@media screen and ( min-width: 360px){html{font-size:11.25px}}
-@media screen and ( min-width: 375px){html{font-size:11.71875px}}
-@media screen and ( min-width: 384px){html{font-size:12px}}
-@media screen and ( min-width: 400px){html{font-size:12.5px}}
-@media screen and ( min-width: 414px){html{font-size:12.9375px}}
-@media screen and ( min-width: 424px){html{font-size:13.25px}}
-@media screen and ( min-width: 480px){html{font-size:15px}}
-@media screen and ( min-width: 540px){html{font-size:16.875px}}
-@media screen and ( min-width: 640px){html{font-size:20px}}
+.insureAge .insureAgeList .insureAge,
+.insurePeriod .insureAgeList .insurePeriod,
+.pcPackageName {
+	width: 50px;
+	min-width: 50px;
+	height: 26px;
+	border: 1px #cecece solid;
+	text-align: center;
+	line-height: 26px;
+	float: left;
+	cursor: pointer;
+	color: #333;
+	margin: 5px 9px 0 0;
+	padding-left: 0px;
+}
+
+.insureAge .insureAgeList .insureAge.active,
+.insurePeriod .insureAgeList .insurePeriod.active,
+.pcPackageName.active {
+	color: #ff6600;
+	border: 1px solid #ff5500;
+	background: url("../image/current.png") no-repeat right bottom;
+}
+
+.packageTitle {
+	display: flex;
+	display: -webkit-box;
+	text-align: center;
+	background: #fff2c0;
+}
+
+.packageTitle > div:nth-child(1) {
+	flex: 1;
+	-webkit-box-flex: 1;
+}
+
+.packageTitle > div:nth-child(2) {
+	width: 30%;
+}
+
+.pcPackage {
+	margin-top: 0.2rem;
+	display: none;
+}
+
+.pcPackage.active {
+	display: block;
+}
+
+.pcLiability {
+	display: flex;
+	display: -webkit-box;
+	text-align: center;
+}
+
+.liabilityName {
+	flex: 1;
+	-webkit-box-flex: 1;
+}
+
+.liabilityAmount {
+	width: 30%;
+	background: url(../image/wh.png) no-repeat right center;
+}
+
+.pcPayment {
+	display: flex;
+	display: -webkit-box;
+	text-align: center;
+	margin: 2rem 6rem 0 6rem;
+}
+
+.pcPayment > div {
+	/*width: 8rem;*/
+}
+
+.pcPayment > div:not(:first-child) {
+	/*margin-left: 2rem;*/
+}
+.quickBuy,
+.login{
+	text-align: center;
+	font-family: '微软雅黑';
+	font-size: 18px;
+}
+.quickBuy {
+	width: 185px;
+	line-height: 46px;
+	cursor: pointer;
+	height: 46px;
+	background: #ffeee3;
+	border: 1px #ff992b solid;
+	color: #ff5500;
+	margin-right: 15px;
+}
+
+.login {
+	width: 187px;
+	line-height: 48px;
+	cursor: pointer;
+	background: #ff992b;
+	color: #fff;
+	
+}
+.payBtnExplan {
+	font-size: 12px;
+}

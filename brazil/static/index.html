@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta content="yes" name="apple-touch-fullscreen">
+	<meta content="telephone=no,email=no" name="format-detection">
+	<script src="js/flexible.debug.js"></script>
+	<link rel="apple-touch-icon" href="favicon.png">
+	<link rel="Shortcut Icon" href="favicon.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="css/base.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/animate.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<script type="text/javascript" src="js/zepto.min.js"></script>
+	<script type="text/javascript" src="js/zepto.ext.touchEvents.js"></script>
+	<script type="text/javascript" src="js/zepto.ext.fx.js"></script>
+	<title>奔跑吧巴西</title>
+	<script>
+		//监听加载状态改变
+		document.onreadystatechange = completeLoading;
+
+		//加载状态为complete时移除loading效果
+		function completeLoading() {
+			if (document.readyState == "complete") {
+				$.getJSON("data/step.json",function(r){
+					var step = r[0];
+					$(".all_step").html(step);
+					var loadingMask = document.getElementById('loadingDiv');
+					loadingMask.parentNode.removeChild(loadingMask);
+					$(".page1_txt").addClass("left");
+					$(".page1_xin").addClass("bigger");
+				});
+
+			}
+		}
+	</script>
+</head>
+<body>
+<!--loading-->
+<div id="loadingDiv" class="loading">
+	<div class="main">
+		<div class="img"><img src="images/loading2.png" /></div>
+		<div class="loader-inner ball-pulse">
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
+	</div>
+</div>
+
+<div class="wrapper">
+	<!--信封-->
+	<div class="page page1 hideDiv">
+		<div class="stage">
+			<img class="page1_xin" src="images/xin2.png"/>
+			<img class="page1_txt" src="images/wen.png"/>
+		</div>
+		<div class="stage2">
+			<img class="page2_xin" src="images/xin.png"/>
+			<img class="page1_wen" src="images/jiang.png"/>
+			<img class="page1_wen2" src="images/look.png"/>
+			<img class="page1_btn" src="images/btn.png"/>
+		</div>
+	</div>
+
+	<!--站点-->
+	<div class="page page2">
+		<div class="page2_top clearfix">
+			<div class="top_left fl">
+				<div class="step">
+					<p class="step_title">今日步数</p>
+					<img class="step_img" src="images/icon4.png"/>
+					<div class="num">
+						<p class="nums step_num">2356</p>
+					</div>
+				</div>
+				<div class="step">
+					<p class="step_title">距下一站</p>
+					<img class="step_img" src="images/icon4.png"/>
+					<div class="num">
+						<p class="nums next_num">3333333</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="awards fl">
+				<img src="images/icon5.png"/>
+				<img src="images/icon6.png"/>
+				<img src="images/icon7.png"/>
+			</div>
+		</div>
+
+		<div class="map">
+			<!--<img class="yadian" src="images/ydz.png"/>-->
+			<p class="yadian canC"></p>
+			<p class="yate noC"></p>
+			<p class="beij  noC"></p>
+			<p class="liyue noC"></p>
+			<p class="taikh noC"></p>
+			<!--<img class="yadian" src="images/yate.png"/>
+			<img class="yadian" src="images/bj.png"/>
+			<img class="yadian" src="images/icon8.png"/>
+			<img class="yadian" src="images/icon8.png"/>-->
+			<img class="jishi" src="images/jishi.png"/>
+			<img class="help" src="images/help.png"/>
+		</div>
+
+		<div class="page2_bottom">
+			<div class="person_img">
+				<img class="picture" src="images/icon11.png"/>
+			</div>
+			<div class="page2_main clearfix">
+				<div class="main_left power fl">
+					<img class="page2_wen" src="images/power.png" />
+					<div class="main_step">
+						<p class="my_step">0</p>
+						<p>/</p>
+						<p class="all_step">50000</p>
+					</div>
+					<div class="shanxian">
+						<img src="images/icon9.png"/>
+						<div class="shanxian_main">
+							<p class="shan_pross"><span class="shan_pross_ju"></span></p>
+						</div>
+					</div>
+					<img class="add_btn go_power" src="images/btn6.png"/>
+				</div>
+				<div class="main_left save fl">
+					<img class="page2_wen2" src="images/save.png" />
+					<div class="main_step">
+						<p class="my_step">0</p>
+						<p>/</p>
+						<p class="all_baoe">150000</p>
+					</div>
+					<div class="baodun">
+						<img src="images/icon10.png"/>
+						<div class="baodun_main">
+							<p class="bao_pross"><span class="bao_pross_ju"></span></p>
+						</div>
+					</div>
+					<img class="add_btn go_save" src="images/btn6.png"/>
+				</div>
+			</div>
+		</div>
+
+		<div class="layout hideDiv">
+			<img class="layout_bg" src="images/bg7.jpg"/>
+			<img class="layout_close" src="images/close.png"/>
+		</div>
+	</div>
+
+	<!--雅典-->
+	<div class="page page3 hideDiv">
+		<div class="page2_top page2_top clearfix">
+			<div class="top_left fl">
+				<div class="step">
+					<p class="step_title">今日步数</p>
+					<img class="step_img" src="images/icon4.png"/>
+					<div class="num">
+						<p class="nums step_num">2356</p>
+					</div>
+				</div>
+				<div class="step">
+					<p class="step_title">距下一站</p>
+					<img class="step_img" src="images/icon4.png"/>
+					<div class="num">
+						<p class="nums next_num">3333333</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="awards fl">
+				<img src="images/icon5.png"/>
+				<img src="images/icon6.png"/>
+				<img src="images/icon7.png"/>
+			</div>
+		</div>
+		<img class="pages_click" src="images/zhan.png"/>
+		<img class="cai_click shan" src="images/cai.png"/>
+		<div class="page2_bottom">
+			<div class="person_img">
+				<img class="picture" src="images/icon11.png"/>
+			</div>
+			<div class="page2_main clearfix">
+				<div class="main_left power fl">
+					<img class="page2_wen" src="images/power.png" />
+					<div class="main_step">
+						<p class="my_step">0</p>
+						<p>/</p>
+						<p class="all_step">50000</p>
+					</div>
+					<div class="shanxian">
+						<img src="images/icon9.png"/>
+						<div class="shanxian_main">
+							<p class="shan_pross"><span class="shan_pross_ju"></span></p>
+						</div>
+					</div>
+					<img class="add_btn go_power" src="images/btn6.png"/>
+				</div>
+				<div class="main_left save fl">
+					<img class="page2_wen2" src="images/save.png" />
+					<div class="main_step">
+						<p class="my_step">0</p>
+						<p>/</p>
+						<p class="all_step">50000</p>
+					</div>
+					<div class="baodun">
+						<img src="images/icon10.png"/>
+						<div class="baodun_main">
+							<p class="bao_pross"><span class="bao_pross_ju"></span></p>
+						</div>
+					</div>
+					<img class="add_btn go_save" src="images/btn6.png"/>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!--亚特兰大-->
+	<div class="page page4 hideDiv">
+		<div class="page2_top page2_top clearfix">
+			<div class="top_left fl">
+				<div class="step">
+					<p class="step_title">今日步数</p>
+					<img class="step_img" src="images/icon4.png"/>
+					<div class="num">
+						<p class="nums step_num">2356</p>
+					</div>
+				</div>
+				<div class="step">
+					<p class="step_title">距下一站</p>
+					<img class="step_img" src="images/icon4.png"/>
+					<div class="num">
+						<p class="nums next_num">3333333</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="awards fl">
+				<img src="images/icon5.png"/>
+				<img src="images/icon6.png"/>
+				<img src="images/icon7.png"/>
+			</div>
+		</div>
+		<img class="pages_click" src="images/zhan.png"/>
+		<img class="page4_txt" src="images/wen5.png"/>
+		<img class="page4_btn" src="images/jin_btn.png"/>
+		<div class="page2_bottom">
+			<div class="person_img">
+				<img class="picture" src="images/icon11.png"/>
+			</div>
+			<div class="page2_main clearfix">
+				<div class="main_left power fl">
+					<img class="page2_wen" src="images/power.png" />
+					<div class="main_step">
+						<p class="my_step">1200</p>
+						<p>/</p>
+						<p class="all_step">50000</p>
+					</div>
+					<div class="shanxian">
+						<img src="images/icon9.png"/>
+						<div class="shanxian_main">
+							<p class="shan_pross"><span class="shan_pross_ju"></span></p>
+						</div>
+					</div>
+					<img class="add_btn go_power" src="images/btn6.png"/>
+				</div>
+				<div class="main_left save fl">
+					<img class="page2_wen2" src="images/save.png" />
+					<div class="main_step">
+						<p class="my_step">1200</p>
+						<p>/</p>
+						<p class="all_step">50000</p>
+					</div>
+					<div class="baodun">
+						<img src="images/icon10.png"/>
+						<div class="baodun_main">
+							<p class="bao_pross"><span class="bao_pross_ju"></span></p>
+						</div>
+					</div>
+					<img class="add_btn go_save" src="images/btn6.png"/>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!--北京-->
+	<div class="page page5 hideDiv">
+		<div class="page2_top page2_top clearfix">
+			<div class="top_left fl">
+				<div class="step">
+					<p class="step_title">今日步数</p>
+					<img class="step_img" src="images/icon4.png"/>
+					<div class="num">
+						<p class="nums step_num">2356</p>
+					</div>
+				</div>
+				<div class="step">
+					<p class="step_title">距下一站</p>
+					<img class="step_img" src="images/icon4.png"/>
+					<div class="num">
+						<p class="nums next_num">3333333</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="awards fl">
+				<img src="images/icon5.png"/>
+				<img src="images/icon6.png"/>
+				<img src="images/icon7.png"/>
+			</div>
+		</div>
+		<img class="pages_click" src="images/zhan.png"/>
+		<img class="page4_txt page5_txt" src="images/wen6.png"/>
+		<img class="page4_btn page5_btn" src="images/jin_btn.png"/>
+		<div class="page2_bottom">
+			<div class="person_img">
+				<img class="picture" src="images/icon11.png"/>
+			</div>
+			<div class="page2_main clearfix">
+				<div class="main_left power fl">
+					<img class="page2_wen" src="images/power.png" />
+					<div class="main_step">
+						<p class="my_step">1200</p>
+						<p>/</p>
+						<p class="all_step">50000</p>
+					</div>
+					<div class="shanxian">
+						<img src="images/icon9.png"/>
+						<div class="shanxian_main">
+							<p class="shan_pross"><span class="shan_pross_ju"></span></p>
+						</div>
+					</div>
+					<img class="add_btn go_power" src="images/btn6.png"/>
+				</div>
+				<div class="main_left save fl">
+					<img class="page2_wen2" src="images/save.png" />
+					<div class="main_step">
+						<p class="my_step">1200</p>
+						<p>/</p>
+						<p class="all_step">50000</p>
+					</div>
+					<div class="baodun">
+						<img src="images/icon10.png"/>
+						<div class="baodun_main">
+							<p class="bao_pross"><span class="bao_pross_ju"></span></p>
+						</div>
+					</div>
+					<img class="add_btn go_save" src="images/btn6.png"/>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!--里约-->
+	<div class="page page6 hideDiv">
+		<div class="page2_top page2_top clearfix">
+			<div class="top_left fl">
+				<div class="step">
+					<p class="step_title">今日步数</p>
+					<img class="step_img" src="images/icon4.png"/>
+					<div class="num">
+						<p class="nums step_num">2356</p>
+					</div>
+				</div>
+				<div class="step">
+					<p class="step_title">距下一站</p>
+					<img class="step_img" src="images/icon4.png"/>
+					<div class="num">
+						<p class="nums next_num">3333333</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="awards fl">
+				<img src="images/icon5.png"/>
+				<img src="images/icon6.png"/>
+				<img src="images/icon7.png"/>
+			</div>
+		</div>
+		<img class="page4_txt page6_txt" src="images/wen7.png"/>
+		<div class="page2_bottom">
+			<div class="person_img">
+				<img class="picture" src="images/icon11.png"/>
+			</div>
+			<div class="page2_main clearfix">
+				<div class="main_left power fl">
+					<img class="page2_wen" src="images/power.png" />
+					<div class="main_step">
+						<p class="my_step">1200</p>
+						<p>/</p>
+						<p class="all_step">50000</p>
+					</div>
+					<div class="shanxian">
+						<img src="images/icon9.png"/>
+						<div class="shanxian_main">
+							<p class="shan_pross"><span class="shan_pross_ju"></span></p>
+						</div>
+					</div>
+					<img class="add_btn go_power" src="images/btn6.png"/>
+				</div>
+				<div class="main_left save fl">
+					<img class="page2_wen2" src="images/save.png" />
+					<div class="main_step">
+						<p class="my_step">1200</p>
+						<p>/</p>
+						<p class="all_step">50000</p>
+					</div>
+					<div class="baodun">
+						<img src="images/icon10.png"/>
+						<div class="baodun_main">
+							<p class="bao_pross"><span class="bao_pross_ju"></span></p>
+						</div>
+					</div>
+					<img class="add_btn go_save" src="images/btn6.png"/>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!--泰康-->
+	<div class="page page7 hideDiv">
+		<div class="page2_top page2_top clearfix">
+			<div class="top_left fl">
+				<div class="step">
+					<p class="step_title">今日步数</p>
+					<img class="step_img" src="images/icon4.png"/>
+					<div class="num">
+						<p class="nums step_num">2356</p>
+					</div>
+				</div>
+				<div class="step">
+					<p class="step_title">距下一站</p>
+					<img class="step_img" src="images/icon4.png"/>
+					<div class="num">
+						<p class="nums next_num">3333333</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="awards fl">
+				<img src="images/icon5.png"/>
+				<img src="images/icon6.png"/>
+				<img src="images/icon7.png"/>
+			</div>
+		</div>
+		<img class="pages_click" src="images/zhan.png"/>
+		<img class="page4_txt page7_txt" src="images/wen8.png"/>
+		<div class="page2_bottom">
+			<div class="person_img">
+				<img class="picture" src="images/icon11.png"/>
+			</div>
+			<div class="page2_main clearfix">
+				<div class="main_left power fl">
+					<img class="page2_wen" src="images/power.png" />
+					<div class="main_step">
+						<p class="my_step">1200</p>
+						<p>/</p>
+						<p class="all_step">50000</p>
+					</div>
+					<div class="shanxian">
+						<img src="images/icon9.png"/>
+						<div class="shanxian_main">
+							<p class="shan_pross"><span class="shan_pross_ju"></span></p>
+						</div>
+					</div>
+					<img class="add_btn go_power" src="images/btn6.png"/>
+				</div>
+				<div class="main_left save fl">
+					<img class="page2_wen2" src="images/save.png" />
+					<div class="main_step">
+						<p class="my_step">1200</p>
+						<p>/</p>
+						<p class="all_step">50000</p>
+					</div>
+					<div class="baodun">
+						<img src="images/icon10.png"/>
+						<div class="baodun_main">
+							<p class="bao_pross"><span class="bao_pross_ju"></span></p>
+						</div>
+					</div>
+					<img class="add_btn go_save" src="images/btn6.png"/>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!--<div class="layout2 hideDiv">
+		<img class="page3_kuang" src="images/kuang1.png">
+		<img class="page3_close" src="images/x2.png">
+	</div>-->
+
+</div>
+<div id="aa"></div>
+<div>
+</div>
+</body>
+<script type="text/javascript" src="js/main.js"></script>
+</html>

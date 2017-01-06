@@ -1,0 +1,52 @@
+html{font-size:62.5%;font-family:"microsoft yahei";color:#000;}
+body{font-size:1.4rem;overflow-x:hidden;padding:1rem;}
+a{text-decoration:none;color:#000;}
+
+.mt06{margin-top: 0.6rem;}
+.mt1{margin-top: 1rem;}
+.mt2{margin-top: 2rem;}
+.mt5{margin-top: 5rem;}
+.ml1{margin-left: 1rem;}
+.ml5{margin-left: 5rem;}
+.color-00c{color:#00c;}
+.color-red{color:red;}
+.fw7{font-weight: 700;}
+.flex{display: flex;}
+.border-ccc{border:1px solid #ccc;}
+.textr{text-align: right;}
+.textc{text-align: center;}
+.row{display: flex;text-align:center;align-items:center;}
+.row:not(:last-child){border-bottom:1px solid #ccc;}
+.col{flex: 1;}
+.col2{flex:2;}
+.col3{flex:3;}
+.col4{flex:4;}
+.border-left-ccc{border-left: 1px solid #ccc;}
+.border-right-ccc{border-right: 1px solid #ccc;}
+.bg-th{background:rgb(224,236,255);}
+
+.padding06{padding:0.6rem;}
+.padding1{padding:1rem;}
+.table1{width:45rem;}
+.table2{width:60rem;}
+.table3{width:50rem;}
+.table4{width:110rem;}
+
+a.btn1{display:block;width:8rem;text-align:center;padding:0.6rem 0;background:rgb(224,236,255);border-radius: 5px;font-weight: 700;cursor: pointer;}
+a.btn2{display:inline-block;width:10rem;text-align:center;padding:0.6rem 0;background:rgb(224,236,255);border-radius: 5px;font-weight: 700;cursor: pointer;margin-left:10rem;}
+a.btn3{display:inline-block;text-align:center;padding:0.6rem 1rem;background:rgb(255,100,5);border-radius: 5px;font-weight: 700;cursor: pointer;color:#fff;}
+
+.col-id{width:10rem;max-height: 100px;overflow: auto;}
+.col-name{width:15rem;border-left: 1px solid #ccc;max-height: 100px;overflow: auto;}
+.col-initValue{width:10rem;border-left: 1px solid #ccc;max-height: 100px;overflow: auto;}
+.col-dataDict{width:19rem;border-left: 1px solid #ccc;max-height: 100px;overflow: auto;}
+.col-require{width:9rem;border-left: 1px solid #ccc;max-height: 100px;overflow: auto;}
+.col-tipText{width:20rem;border-left: 1px solid #ccc;max-height: 100px;overflow: auto;}
+.col-desc{width: 20rem;border-left: 1px solid #ccc;max-height: 100px;overflow: auto;}
+/*.col-delete{width:10rem;border-left: 1px solid #ccc;}*/
+.col-sort{flex: 1;border-left: 1px solid #ccc;cursor: pointer;}
+.row div:empty{height:2rem;}
+.dataConfig1{position:absolute;left:50rem;top:20rem;background:#fff;padding:1rem 2rem;border: 1px solid #ccc;display:none;}
+.dataConfig2{position:absolute;left:50rem;top:20rem;background:#fff;border: 1px solid #ccc;display:none;}
+.dataConfig2 .title{background:rgb(242,242,242);}
+.dataConfig2 textarea{width:25rem;height:25rem;resize:none;}

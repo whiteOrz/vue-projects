@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>产品详情</title>
+		<link rel="stylesheet" href="../src/css/insure.css">
+		<link rel="stylesheet" href="../src/css/detail_pc.css">
+		<script type="text/javascript" src="../src/js/jquery.min.js"></script>
+		<script type="text/javascript" src="../dist/detail_pc.js"></script>
+		<script type="text/javascript" src="../dist/details_operation.js"></script>
+
+	</head>
+
+	<body style="background:#fff;">
+
+		<div id="container">
+			<div id="productImg"></div>
+			<div id="pc_detail">
+				<div class="pcProductDesc" componentId="pcProductDesc">
+					<div class="productName">泰康在线住院保</div>
+					<div class="productDescription mt04">疾病、意外全面保障，有效补充社保不足！</div>
+				</div>
+				<div class="pcProductPrice clearfix" componentId="pcProductPrice"><span class="priceType">会员价</span><span class="productPrice"><span class="priceData">￥100元</span></span>
+				</div>
+				<div class="pcInsuredAgeRangeHidden" componentId="pcInsuredAgeRangeHidden"><span id="minAge" age="18"></span><span id="maxAge" age="65"></span></div>
+				<div class="pcCalculateHidden" componentId="pcCalculateHidden"></div>
+				<div class="pcRecentSales clearfix " componentId="pcRecentSales">
+					<div class="componentTitle">近期销量</div>
+					<div class="recentSales">68</div>
+				</div>
+				<div class="insureAge clearfix" componentId="pcPremiumFactor">
+					<div class="componentTitle">投保年龄</div>
+					<div class="insureAgeList">
+						<div class="insureAge item" factorIndex="19" value="19" data-type="01" payMoney="100">18-49周岁</div>
+						<div class="insureAge item" factorIndex="51" value="51" data-type="01" payMoney="500">50-65周岁</div>
+						<div class="insureAge item" factorIndex="1" value="1" data-type="40" payMoney="300">满30天-17周岁</div>
+					</div>
+				</div>
+				<div class="insurePeriod clearfix" componentId="pcPremiumFactor">
+					<div class="componentTitle">保多久</div>
+					<div class="insureAgeList">
+						<div class="insurePeriod item" factorIndex="Y1" value="Y1">1年</div>
+						<div class="insurePeriodMessage"></div>
+					</div>
+				</div>
+				<div class="pcPackageNameList mt1 clearfix" componentId="pcPlanNameList">
+					<div class="componentTitle">套餐分类</div>
+					<div class="packageNameList packageNameList ">
+						<div class="pcPackageName" componentId="pcPlanName" planNameIndex="0">基础款</div>
+						<div class="pcPackageName" componentId="pcPlanName" planNameIndex="1">白金款</div>
+						<div class="pcPackageName" componentId="pcPlanName" planNameIndex="2">钻石款</div>
+					</div>
+				</div>
+				<div class="pcPackageList clearfix" componentId="pcPlanList">
+					<div class="componentTitle"></div>
+					<div class="pcPackageContent clearfix">
+						<div class="packageList">
+							<div class="pcPackage" componentId="pcPlan" planId="1109A00601" planPrice="" planScore="" planIndex="0">
+								<div class="pcLiability clearfix" componentId="pcLiability" liabilityId="1109001">
+									<div class="liabilityName">意外身故</div>
+									<div class="liabilityAmount">10万</div>
+									<div class="liabilityDesc">被保险人遭受意外伤害事故（如跌倒、溺水、食物中毒），并自该事故发生之日起180日（含第180日）内因该事故为直接且单独原因导致被保险人身故的，保险人按保险单上载明的保险金额向意外身故保险金受益人给付意外身故保险金。</div><span class="liabilityImg"></span></div>
+								<div class="pcLiability clearfix" componentId="pcLiability" liabilityId="1109002">
+									<div class="liabilityName">意外伤残</div>
+									<div class="liabilityAmount">10万</div>
+									<div class="liabilityDesc">被保险人遭受意外伤害事故（如跌倒、溺水、食物中毒），并自该事故发生之日起180日（含第180日）内因该事故为直接且单独原因导致被保险人发生《人身保险伤残评定标准及代码》所述伤残项目，根据本保险合同及该《伤残评定标准》规定的评定原则对被保险人伤残程度进行评定，并按评定结果所对应该《伤残评定标准》中规定的给付比例乘以保险单上载明的保险金额向意外伤残保险金受益人给付意外伤残保险金。</div><span class="liabilityImg"></span></div>
+								<div class="pcLiability clearfix" componentId="pcLiability" liabilityId="1109003">
+									<div class="liabilityName">意外门急诊医疗</div>
+									<div class="liabilityAmount">5000</div>
+									<div class="liabilityDesc">在保单有效期内，被保险人因在中国境内遭受意外伤害事故，并因该事故为直接且单独原因导致在二级及以上医院接受治疗((除了北京平谷区所有医院))，对被保险人实际支出的符合当地社会基本医疗保险支付范围的医疗费用：<br/>①若被保险人已从社保、公费医疗或其他商业保险渠道获得医药费用补偿，泰康在线在扣除100元免赔额及前述述渠道获得的补偿后，对其余额按100％比例给付保险金；<br/>②若被保险人未从社保、公费医疗或其他商业保险渠道获得医药费用补偿，泰康在线在扣除100元免赔额后，对其余额按80％比例给付保险金。</div><span class="liabilityImg"></span></div>
+								<div class="pcLiability clearfix" componentId="pcLiability" liabilityId="1109004">
+									<div class="liabilityName">疾病住院医疗</div>
+									<div class="liabilityAmount">5000</div>
+									<div class="liabilityDesc">在保单有效期内，被保险人在合同生效90日后因疾病在二级以上（含二级）公立医院诊疗(除了北京平谷区所有医院)，对被保险人实际支出的符合当地社会基本医疗保险支付范围的住院医疗费用：<br/>
+                        ①若被保险人已从社保、公费医疗或其他商业保险渠道获得医药费用补偿，泰康在线在扣除免赔额及前述述渠道获得的补偿后，对其余额按100％比例给付保险金；<br/>
+                        ②若被保险人未从社保、公费医疗或其他商业保险渠道获得医药费用补偿，泰康在线在扣除免赔额后，对其余额按80％比例给付保险金。<br/>
+                        免赔额：<br/>
+                        0-17岁。疾病住院医疗，免赔额300元/次<br/>
+                        18-49岁。疾病住院医疗，免赔额100元/次<br/>
+                        50-65岁。疾病住院医疗，免赔额500元/次<br/></div><span class="liabilityImg"></span></div>
+							</div>
+							<div class="pcPackage" componentId="pcPlan" planId="1109A00601" planPrice="" planScore="" planIndex="1">
+								<div class="pcLiability clearfix" componentId="pcLiability" liabilityId="1109001">
+									<div class="liabilityName">意外身故</div>
+									<div class="liabilityAmount">10万</div>
+									<div class="liabilityDesc">被保险人遭受意外伤害事故（如跌倒、溺水、食物中毒），并自该事故发生之日起180日（含第180日）内因该事故为直接且单独原因导致被保险人身故的，保险人按保险单上载明的保险金额向意外身故保险金受益人给付意外身故保险金。</div><span class="liabilityImg"></span></div>
+								<div class="pcLiability clearfix" componentId="pcLiability" liabilityId="1109002">
+									<div class="liabilityName">意外伤残</div>
+									<div class="liabilityAmount">10万</div>
+									<div class="liabilityDesc">被保险人遭受意外伤害事故（如跌倒、溺水、食物中毒），并自该事故发生之日起180日（含第180日）内因该事故为直接且单独原因导致被保险人发生《人身保险伤残评定标准及代码》所述伤残项目，根据本保险合同及该《伤残评定标准》规定的评定原则对被保险人伤残程度进行评定，并按评定结果所对应该《伤残评定标准》中规定的给付比例乘以保险单上载明的保险金额向意外伤残保险金受益人给付意外伤残保险金。</div><span class="liabilityImg"></span></div>
+								<div class="pcLiability clearfix" componentId="pcLiability" liabilityId="1109003">
+									<div class="liabilityName">意外门急诊医疗</div>
+									<div class="liabilityAmount">1万</div>
+									<div class="liabilityDesc">在保单有效期内，被保险人因在中国境内遭受意外伤害事故，并因该事故为直接且单独原因导致在二级及以上医院接受治疗((除了北京平谷区所有医院))，对被保险人实际支出的符合当地社会基本医疗保险支付范围的医疗费用：<br/>①若被保险人已从社保、公费医疗或其他商业保险渠道获得医药费用补偿，泰康在线在扣除100元免赔额及前述述渠道获得的补偿后，对其余额按100％比例给付保险金；<br/>②若被保险人未从社保、公费医疗或其他商业保险渠道获得医药费用补偿，泰康在线在扣除100元免赔额后，对其余额按80％比例给付保险金。</div><span class="liabilityImg"></span></div>
+								<div class="pcLiability clearfix" componentId="pcLiability" liabilityId="1109004">
+									<div class="liabilityName">疾病住院医疗</div>
+									<div class="liabilityAmount">1万</div>
+									<div class="liabilityDesc">在保单有效期内，被保险人在合同生效90日后因疾病在二级以上（含二级）公立医院诊疗(除了北京平谷区所有医院)，对被保险人实际支出的符合当地社会基本医疗保险支付范围的住院医疗费用：<br/>
+                        ①若被保险人已从社保、公费医疗或其他商业保险渠道获得医药费用补偿，泰康在线在扣除免赔额及前述述渠道获得的补偿后，对其余额按100％比例给付保险金；<br/>
+                        ②若被保险人未从社保、公费医疗或其他商业保险渠道获得医药费用补偿，泰康在线在扣除免赔额后，对其余额按80％比例给付保险金。<br/>
+                        免赔额：<br/>
+                        0-17岁。疾病住院医疗，免赔额300元/次<br/>
+                        18-49岁。疾病住院医疗，免赔额100元/次<br/>
+                        50-65岁。疾病住院医疗，免赔额500元/次<br/></div><span class="liabilityImg"></span></div>
+							</div>
+							<div class="pcPackage" componentId="pcPlan" planId="1109A00601" planPrice="" planScore="" planIndex="2">
+								<div class="pcLiability clearfix" componentId="pcLiability" liabilityId="1109001">
+									<div class="liabilityName">意外身故</div>
+									<div class="liabilityAmount">20万</div>
+									<div class="liabilityDesc">被保险人遭受意外伤害事故（如跌倒、溺水、食物中毒），并自该事故发生之日起180日（含第180日）内因该事故为直接且单独原因导致被保险人身故的，保险人按保险单上载明的保险金额向意外身故保险金受益人给付意外身故保险金。</div><span class="liabilityImg"></span></div>
+								<div class="pcLiability clearfix" componentId="pcLiability" liabilityId="1109002">
+									<div class="liabilityName">意外伤残</div>
+									<div class="liabilityAmount">20万</div>
+									<div class="liabilityDesc">被保险人遭受意外伤害事故（如跌倒、溺水、食物中毒），并自该事故发生之日起180日（含第180日）内因该事故为直接且单独原因导致被保险人发生《人身保险伤残评定标准及代码》所述伤残项目，根据本保险合同及该《伤残评定标准》规定的评定原则对被保险人伤残程度进行评定，并按评定结果所对应该《伤残评定标准》中规定的给付比例乘以保险单上载明的保险金额向意外伤残保险金受益人给付意外伤残保险金。</div><span class="liabilityImg"></span></div>
+								<div class="pcLiability clearfix" componentId="pcLiability" liabilityId="1109003">
+									<div class="liabilityName">意外门急诊医疗</div>
+									<div class="liabilityAmount">2万</div>
+									<div class="liabilityDesc">在保单有效期内，被保险人因在中国境内遭受意外伤害事故，并因该事故为直接且单独原因导致在二级及以上医院接受治疗((除了北京平谷区所有医院))，对被保险人实际支出的符合当地社会基本医疗保险支付范围的医疗费用：<br/>①若被保险人已从社保、公费医疗或其他商业保险渠道获得医药费用补偿，泰康在线在扣除100元免赔额及前述述渠道获得的补偿后，对其余额按100％比例给付保险金；<br/>②若被保险人未从社保、公费医疗或其他商业保险渠道获得医药费用补偿，泰康在线在扣除100元免赔额后，对其余额按80％比例给付保险金。</div><span class="liabilityImg"></span></div>
+								<div class="pcLiability clearfix" componentId="pcLiability" liabilityId="1109004">
+									<div class="liabilityName">疾病住院医疗</div>
+									<div class="liabilityAmount">2万</div>
+									<div class="liabilityDesc">在保单有效期内，被保险人在合同生效90日后因疾病在二级以上（含二级）公立医院诊疗(除了北京平谷区所有医院)，对被保险人实际支出的符合当地社会基本医疗保险支付范围的住院医疗费用：<br/>
+                        ①若被保险人已从社保、公费医疗或其他商业保险渠道获得医药费用补偿，泰康在线在扣除免赔额及前述述渠道获得的补偿后，对其余额按100％比例给付保险金；<br/>
+                        ②若被保险人未从社保、公费医疗或其他商业保险渠道获得医药费用补偿，泰康在线在扣除免赔额后，对其余额按80％比例给付保险金。<br/>
+                        免赔额：<br/>
+                        0-17岁。疾病住院医疗，免赔额300元/次<br/>
+                        18-49岁。疾病住院医疗，免赔额100元/次<br/>
+                        50-65岁。疾病住院医疗，免赔额500元/次<br/></div><span class="liabilityImg"></span></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="pcReturnMessage" componentId="pcReturnMessage" returnMessage="planId,planPrice"></div>
+				<div class="pcPayment clearfix" componentId="pcPayment">
+					<div class="paymentbtn">
+						<div class="quickBuy payBtn" id="quickBuy ">快速投保</div>
+						<div class="payBtnExplan">无须注册，快速购买</div>
+					</div>
+					<div class="paymentbtn">
+						<div class="login payBtn" id="login ">会员投保</div>
+						<div class="payBtnExplan">会员购买，赚积分兑换礼品</div>
+					</div>
+					<div class="payQRCode"><span>手机购买更便捷</span><img src="../src/image/erweima.png" /></div>
+				</div>
+				<div class="pcServiceList" componentId="pcServiceList">
+					<div class="componentTitle">服务承诺</div>
+					<div class="serviceList">
+						<div class="pcService"><span class="serviceKeyword">快</span><span class="serviceDesc">极速生效</span></div>
+						<div class="pcService"><span class="serviceKeyword">赔</span><span class="serviceDesc">透明理赔</span></div>
+					</div>
+				</div>
+				<div class="pcPayStyleList" componentId="pcPayStyleList">
+					<div class="componentTitle">支付方式</div>
+					<div class="payStyleList">
+						<div class="pcPayStyle"><span class="payStyleDesc"></span></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+
+	<script src="../src/js/jquery.cookie.js"></script>
+	<script src="../src/js/layer/layer.js"></script>
+	<script src="../src/js/json.js"></script>
+	<script src="../src/js/sessionStorage.js"></script>
+	<script src="../src/js/o_code.js"></script>
+	<script src="http://cdnmaster.com/sitemaster/collect.js"></script>
+	<script src="../src/js/pushCode.js"></script>
+	<script src="../src/js/count.js"></script>
+	<script src="../src/js/jquery.base64.js"></script>
+	<script src="../src/js/tkTrack.js"></script>
+
+	
+</html>

@@ -1,0 +1,507 @@
+{
+	"pcInputs": [
+		{
+			"componentId": "tkApplicantInfo",
+			"componentTitle": "投保人信息",
+			"applicantInfo": [
+				{
+					"componentId": "tkApplicantName",
+					"tkId": "applicantName",
+					"tkLable": "姓名",
+					"tkTip": "投保人姓名",
+					"tkDesc": "请输入投保人姓名",
+					"tkRequired": "true",
+					"tkDefaultValue": "",
+					"tkType": "",
+					"tkOptions": ""
+				}, {
+					"componentId": "tkApplicantIdType",
+					"tkId": "applicantIdType",
+					"tkLable": "证件类型",
+					"tkTip": "投保人证件类型",
+					"tkDesc": "请选择投保人证件类型",
+					"tkRequired": "true",
+					"tkDefaultValue": "",
+					"tkType": "",
+					"tkOptions": {
+
+						"护照": "02",
+						"身份证": "01"
+					}
+				}, {
+					"componentId": "tkApplicantId",
+					"tkId": "applicantId",
+					"tkLable": "证件号码",
+					"tkTip": "投保人证件号码",
+					"tkDesc": "请输入投保人证件号码",
+					"tkRequired": "true",
+					"tkDefaultValue": "",
+					"tkType": "",
+					"tkOptions": ""
+				}, {
+					"componentId": "tkApplicantGender",
+					"tkId": "applicantGender",
+					"tkLable": "性别",
+					"tkTip": "投保人性别",
+					"tkDesc": "请输入投保性别",
+					"tkRequired": "true",
+					"tkDefaultValue": "",
+					"tkType": "",
+					"tkOptions": ""
+				}, {
+					"componentId": "tkApplicantBirth",
+					"tkId": "applicantBirth",
+					"tkLable": "出生日期",
+					"tkTip": "投保人出生日期",
+					"tkDesc": "请输入投保人出生日期",
+					"tkRequired": "true",
+					"tkDefaultValue": "",
+					"tkType": "",
+					"tkOptions": ""
+				}, {
+					"componentId": "tkApplicantPhone",
+					"tkId": "applicantPhone",
+					"tkLable": "手机号",
+					"tkTip": "投保人手机号",
+					"tkDesc": "请输入投保人手机号",
+					"tkRequired": "true",
+					"tkDefaultValue": "",
+					"tkType": "",
+					"tkOptions": ""
+				}, {
+					"componentId": "tkApplicantEmail",
+					"tkId": "applicantEmail",
+					"tkLable": "电子邮箱",
+					"tkTip": "投保人电子邮箱",
+					"tkDesc": "请输入投保人电子邮箱",
+					"tkRequired": "true",
+					"tkDefaultValue": "",
+					"tkType": "",
+					"tkOptions": ""
+				}, {
+					"componentId": "tkApplicantArea",
+					"tkId": "applicantArea",
+					"tkLable": "投保地区",
+					"tkTip": "投保人投保地区",
+					"tkDesc": "请输入投保人投保地区",
+					"tkRequired": "true",
+					"tkDefaultValue": "",
+					"tkType": "",
+					"tkOptions": {
+						"province": {
+							"辽宁省": "210000",
+							"吉林省": "220000",
+							"黑龙江省": "230000",
+							"上海市": "310000",
+							"江苏省": "320000",
+							"浙江省": "330000"
+						},
+						"city": {
+							"C210000": {
+								"210100": "沈阳市",
+								"210200": "大连市"
+							},
+							"C220000": {
+								"220100": "长春市",
+								"220200": "吉林市",
+								"220300": "四平市"
+							},
+							"C230000": {
+								"230100": "哈尔滨市",
+								"230200": "齐齐哈尔市",
+								"230300": "鸡西市",
+								"230400": "鹤岗市",
+								"230500": "双鸭山市",
+								"230600": "大庆市",
+								"230700": "伊春市",
+								"230800": "佳木斯市",
+								"230900": "七台河市",
+								"231000": "牡丹江市",
+								"231100": "黑河市",
+								"231200": "绥化市",
+								"232700": "大兴安岭地区"
+							},
+							"C310000": {
+								"310000": "上海市"
+							},
+							"C320000": {
+								"320100": "南京市",
+								"320200": "无锡市",
+								"320300": "徐州市",
+								"320400": "常州市",
+								"320500": "苏州市",
+								"320600": "南通市",
+								"320700": "连云港市",
+								"320800": "淮安市",
+								"320900": "盐城市",
+								"321000": "扬州市",
+								"321100": "镇江市",
+								"321200": "泰州市",
+								"321300": "宿迁市"
+							},
+							"C330000": {
+								"330100": "杭州市",
+								"330200": "宁波市",
+								"330300": "温州市",
+								"330400": "嘉兴市",
+								"330500": "湖州市",
+								"330600": "绍兴市",
+								"330700": "金华市",
+								"330800": "衢州市",
+								"330900": "舟山市",
+								"331000": "台州市",
+								"331100": "丽水市"
+							}
+						}
+					}
+				}, {
+					"componentId": "tkApplicantProfession",
+					"tkId": "applicantProfession",
+					"tkLable": "职业类别",
+					"tkTip": "投保人职业类别",
+					"tkDesc": "请输入投保人职业类别",
+					"tkRequired": "true",
+					"tkDefaultValue": "",
+					"tkType": "",
+					"tkOptions": {
+						"value": {
+							"学生": "1201002",
+							"家庭主妇": "1700001",
+							"警察": "1800002",
+							"现役军人": "1900005",
+							"学龄前儿童": "2147001",
+							"离休人员": "2147003",
+							"机关团体、企事业单位、公司内勤人员": "2201001",
+							"金融/法律/IT/租赁": "2202002",
+							"文教/卫生/新闻/出版/广告/印刷/商业/服务业": "2203002",
+							"邮政/电信/水利/电力": "2204003",
+							"轻工业从业人员": "2205003",
+							"重工业从业人员：如钢铁业、机械/机电制造与装配、化学工业、建材业、造纸业、军工制造业": "2206003",
+							"运输业（陆运/水运/空运）": "2207003",
+							"建筑/工程施工": "2208002",
+							"体育": "2209003",
+							"地质矿产业": "2211002",
+							"治安保卫人员": "2215004",
+							"农副牧渔业": "0101002"
+						},
+						"desc": {
+							"1201002": "",
+							"1700001": "",
+							"1800002": "刑警、交通警察、消防队队员、防暴警察、缉毒警察",
+							"1900005": "特种兵、空军飞行官兵海军舰艇官兵潜艇官兵、前线军人",
+							"2147001": "",
+							"2147003": "",
+							"2201001": "",
+							"2202002": "",
+							"2203002": "军/警学生或教员、飞行教官或学员、救生员、占地记者、特技/武打演员、驯兽师及动物饲养员、广告/霓虹灯架设工作人员、高空作业工人、锅炉工、烟囱清洁工、有毒、有害物品的买卖工作、医院工作人员",
+							"2204003": "快递（摩托车运送）、电台天线维修、电力设施架设/检修/维护人员、高压电工程设施人员、高压线路带电检修工人、送/配电工人、牵引电力线路安装维护工人、变电站值班人员、河道修防工人",
+							"2205003": "电子业、电线/电缆业、塑胶/橡胶业、纺织/服装制造业、食品/饮料制造业、玻璃/陶瓷/搪瓷制造业、烟草加工业、医疗用品/制药业、工艺美术品/文体用品制造业",
+							"2206003": "行政/管理人员、工程师、质检人员、监工/领班，且无需去工作现场操作",
+							"2207003": "水上运输业、摩托车/货车/卡车/油罐车/液化气车/拖拉机/三轮车驾驶、货车/卡车/油罐车/液化气车随车工人、直升机驾驶、飞机洗刷（外）、航空摄影",
+							"2208002": "行政/管理人员、工程师，且不去施工现场",
+							"2209003": "曲棍球/冰上曲棍球/橄榄球/角力/摔跤/柔道/空手道/跆拳道/武术运动员；拳击/潜水/滑冰/滑雪/马术/特技表演/雪车/滑翔/跳伞/赛车教练及运动员",
+							"2211002": "行政/管理人员、工程师、测绘人员，且不去海上、井下等危险工作现场",
+							"2215004": "消防灭火员、防毒防化防核抢险人员、事故抢险人员",
+							"0101002": "沿海/近海/远洋作业渔民或船员、山核桃采摘人员、沼气工程施工人员"
+						},
+						"desc_type": {
+							"1201002": "不限",
+							"1700001": "不限",
+							"1800002": "不含",
+							"1900005": "不含",
+							"2147001": "不限",
+							"2147003": "不限",
+							"2201001": "不限",
+							"2202002": "不限",
+							"2203002": "不含",
+							"2204003": "不含",
+							"2205003": "仅限",
+							"2206003": "仅限",
+							"2207003": "不含",
+							"2208002": "仅限",
+							"2209003": "不含",
+							"2211002": "仅限",
+							"2215004": "不含",
+							"0101002": "不含"
+						}
+					}
+				}, {
+					"componentId": "tkApplicantAddress",
+					"tkId": "applicantAddress",
+					"tkLable": "通讯地址",
+					"tkTip": "投保人通讯地址",
+					"tkDesc": "请输入投保人通讯地址",
+					"tkRequired": "true",
+					"tkDefaultValue": "",
+					"tkType": "",
+					"tkOptions": ""
+				}, {
+					"componentId": "tkApplicantHealth",
+					"tkId": "applicantHealth",
+					"tkLable": "健康告知",
+					"tkTip": "健康告知",
+					"tkDesc": "有无健康告知",
+					"tkRequired": true,
+					"tkDefaultValue": false,
+					"tkType": "",
+					"tkOptions": ""
+				}
+			]
+		}, {
+			"componentId": "tkInsuredInfo",
+			"componentTitle": "被保险人信息",
+			"insuredInfo": [
+
+				{
+					"componentId": "tkInsuredRelationship",
+					"tkId": "insuredRelationship",
+					"tkLable": "与投保人的关系",
+					"tkTip": "被保险人与投保人的关系",
+					"tkDesc": "被保险人与投保人的关系",
+					"tkRequired": "true",
+					"tkDefaultValue": "",
+					"tkType": "",
+					"tkOptions": {
+						"本人": "01",
+						"妻子": "02"
+					}
+				}, {
+					"componentId": "tkInsuredName",
+					"tkId": "insuredName",
+					"tkLable": "姓名",
+					"tkTip": "被保险人姓名",
+					"tkDesc": "请输入被保险人姓名",
+					"tkRequired": "true",
+					"tkDefaultValue": "",
+					"tkType": "",
+					"tkOptions": ""
+				}, {
+					"componentId": "tkInsuredIdType",
+					"tkId": "insuredIdType",
+					"tkLable": "证件类型",
+					"tkTip": "被保险人证件类型",
+					"tkDesc": "请输入被保险人证件类型",
+					"tkRequired": true,
+					"tkDefaultValue": "",
+					"tkType": "",
+					"tkOptions": {
+						"居民身份证":"01",
+						"护照":"02"
+					}
+				}, {
+					"componentId": "tkInsuredId",
+					"tkId": "insuredId",
+					"tkLable": "证件号码",
+					"tkTip": "被保险人证件号码",
+					"tkDesc": "请输入被保险人证件号码",
+					"tkRequired": true,
+					"tkDefaultValue": "",
+					"tkType": "",
+					"tkOptions": ""
+				}, {
+					"componentId": "tkInsuredGender",
+					"tkId": "insuredGender",
+					"tkLable": "性别",
+					"tkTip": "被保险人性别",
+					"tkDesc": "请输入被保险人性别",
+					"tkRequired": true,
+					"tkDefaultValue": "",
+					"tkType": "",
+					"tkOptions": {
+						"男":"01",
+						"女":"02"
+					}
+				}, {
+					"componentId": "tkInsuredBirth",
+					"tkId": "insuredBirth",
+					"tkLable": "出生日期",
+					"tkTip": "被保险人出生日期",
+					"tkDesc": "请输入被保险人出生日期",
+					"tkRequired": true,
+					"tkDefaultValue": "",
+					"tkType": "",
+					"tkOptions": ""
+				}, {
+					"componentId": "tkInsuredPersonCount",
+					"tkId": "insuredPersonCount",
+					"tkLable": "被保险人数",
+					"tkTip": "最多被保险人数",
+					"tkDesc": "请输入被保险人数",
+					"tkRequired": true,
+					"tkDefaultValue": "",
+					"tkType": "",
+					"tkOptions": ""
+				}
+			]
+		}, {
+			"componentId": "tkBeneficiaryInfo",
+			"componentTitle": "受益人信息",
+			"beneficiaryInfo": [
+				{
+					"componentId": "tkBeneficiaryPerson",
+					"tkId": "beneficiaryPerson",
+					"tkLable": "受益人",
+					"tkTip": "受益人是谁(本人还是其它)",
+					"tkDesc": "请选择受益人",
+					"tkRequired": true,
+					"tkDefaultValue": "",
+					"tkType": "",
+					"tkOptions": {
+						"法定": "01",
+						"指定": "02"
+					}
+				}, {
+					"componentId": "tkBeneficiaryRelationship",
+					"tkId": "beneficiaryRelationship",
+					"tkLable": "受益人",
+					"tkTip": "与投保人关系",
+					"tkDesc": "请选择受益人和投保人关系",
+					"tkRequired": true,
+					"tkDefaultValue": "",
+					"tkType": "",
+					"tkOptions": {
+						"本人": "01",
+						"妻子": "02"
+					}
+				}, {
+					"componentId": "tkBeneficiaryPercent",
+					"tkId": "beneficiaryPercent",
+					"tkLable": "受益比例",
+					"tkTip": "受益比例",
+					"tkDesc": "请输入受益比例",
+					"tkRequired": true,
+					"tkDefaultValue": "",
+					"tkType": "",
+					"tkOptions": ""
+				}, {
+					"componentId": "tkBeneficiaryName",
+					"tkId": "beneficiaryName",
+					"tkLable": "姓名",
+					"tkTip": "受益人姓名",
+					"tkDesc": "请输入受益人姓名",
+					"tkRequired": true,
+					"tkDefaultValue": "",
+					"tkType": "",
+					"tkOptions": ""
+				}, {
+					"componentId": "tkBeneficiaryIdType",
+					"tkId": "beneficiaryIdType",
+					"tkLable": "证件类型",
+					"tkTip": "受益人证件类型",
+					"tkDesc": "请选择受益人证件类型",
+					"tkRequired": true,
+					"tkDefaultValue": "",
+					"tkType": "",
+					"tkOptions": {
+						"居民身份证":"01",
+						"护照":"02"
+					}
+				}, {
+					"componentId": "tkBeneficiaryId",
+					"tkId": "beneficiaryId",
+					"tkLable": "证件号码",
+					"tkTip": "受益人证件号码",
+					"tkDesc": "请选择受益人证件号码",
+					"tkRequired": true,
+					"tkDefaultValue": "",
+					"tkType": "",
+					"tkOptions": {
+						"居民身份证": "01",
+						"护照": "02"
+					}
+				}, 
+				{
+					"componentId": "tkBeneficiaryBirth",
+					"tkId": "beneficiaryBirth",
+					"tkLable": "出生日期",
+					"tkTip": "出生日期",
+					"tkDesc": "出生日期",
+					"tkRequired": true,
+					"tkDefaultValue": "",
+					"tkType": "",
+					"tkOptions": ""
+				}, 
+				{
+					"componentId": "tkBeneficiaryGender",
+					"tkId": "beneficiaryGender",
+					"tkLable": "性别",
+					"tkTip": "性别",
+					"tkDesc": "性别",
+					"tkRequired": true,
+					"tkDefaultValue": "",
+					"tkType": "",
+					"tkOptions": {
+						"男": "01",
+						"女": "02"
+					}
+				}, {
+					"componentId": "tkBeneficiaryPersonCount",
+					"tkId": "beneficiaryPersonCount",
+					"tkLable": "受益人数",
+					"tkTip": "最多受益人数",
+					"tkDesc": "请输入最多受益人数",
+					"tkRequired": true,
+					"tkDefaultValue": "",
+					"tkType": "",
+					"tkOptions": ""
+				}
+			]
+		}, {
+			"componentId": "tkOtherInfo",
+			"componentTitle": "其它信息",
+			"otherInfo": [
+				{
+					"componentId": "tkOtherPerson",
+					"tkId": "otherPerson",
+					"tkLable": "推荐人信息",
+					"tkTip": "推荐人是谁",
+					"tkDesc": "请选择推荐人",
+					"tkRequired": true,
+					"tkDefaultValue": "",
+					"tkType": "",
+					"tkOptions": ""
+				}, {
+					"componentId": "tkOtherInvoice",
+					"tkId": "otherInvoice",
+					"tkLable": "是否需要发票",
+					"tkTip": "是否需要发票",
+					"tkDesc": "请选择是否需要发票",
+					"tkRequired": true,
+					"tkDefaultValue": "",
+					"tkType": "",
+					"tkOptions": ""
+				}, {
+					"componentId": "tkOtherPolicy",
+					"tkId": "otherPolicy",
+					"tkLable": "保单传达",
+					"tkTip": "保单传达",
+					"tkDesc": "请选择保单传达",
+					"tkRequired": true,
+					"tkDefaultValue": "",
+					"tkType": "",
+					"tkOptions": ""
+				}, {
+					"componentId": "tkOtherIntegral",
+					"tkId": "otherIntegral",
+					"tkLable": "使用积分",
+					"tkTip": "使用积分",
+					"tkDesc": "请选择使用积分",
+					"tkRequired": true,
+					"tkDefaultValue": "",
+					"tkType": "",
+					"tkOptions": ""
+				}, {
+					"componentId": "tkOtherDiscount",
+					"tkId": "otherDiscount",
+					"tkLable": "使用优惠",
+					"tkTip": "使用优惠",
+					"tkDesc": "请选择使用优惠",
+					"tkRequired": true,
+					"tkDefaultValue": "",
+					"tkType": "",
+					"tkOptions": ""
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<link href="css/reset.css" type="text/css" rel="stylesheet" />
+	<link href="css/product.css" type="text/css" rel="stylesheet" />
+	<link href="css/my_style.css" rel="stylesheet"  />
+	<script src="js/jquery.min.js"></script>
+</head>
+<body style="padding:10px;">
+	<div><a class="color-00c fw7" href="#">《 返回产品列表</a></div>
+	<div class="mt1">
+		<a href="javascript:;">1.基本信息</a>->
+		<a href="javascript:;">2.试算信息</a>->
+		<a href="javascript:;">3.投保流程</a>->
+		<a href="javascript:;">4.投保声明</a>->
+		<a class="color-00c fw7" href="javascript:;">5.支付方式</a>
+	</div>
+
+	<div class="pay-list" id="pc">
+		<p>pc</p>
+		<p>
+			<input type="checkbox" class="chk" value="71" id="pc1" data-text="微信公众号" />
+			<label for="pc1">微信公众号</label>
+			<input type="checkbox" class="chk" value="33" id="pc2" data-text="支付宝" />
+			<label for="pc2">支付宝pc</label>
+			<input type="checkbox" class="chk" value="73" id="pc3" data-text="微信支付" />
+			<label for="pc3">微信扫码支付</label>
+		</p>
+	</div>
+	<div class="pay-list" id="wap">
+		<p>wap</p>
+		<p>
+			<!-- <input type="checkbox" class="chk" value="71" id="wap1" data-text="微信公众号" />
+			<label for="wap1">微信公众号</label> -->
+			<input type="checkbox" class="chk" value="32" id="wap2" data-text="支付宝" />
+			<label for="wap2">支付宝wap</label>
+			<input type="checkbox" class="chk" value="72" id="wap3" data-text="微信支付" />
+			<label for="wap3">微信支付</label>
+		</p>
+	</div>
+	<div class="pay-list" id="app">
+		<p>app</p>
+		<p>
+			<input type="checkbox" class="chk" value="71" id="app1" data-text="微信公众号" />
+			<label for="app1">微信公众号</label>
+			<input type="checkbox" class="chk" value="32" id="app2" data-text="支付宝" />
+			<label for="app2">支付宝</label>
+			<input type="checkbox" class="chk" value="72" id="app3" data-text="微信支付" />
+			<label for="app3">微信支付</label>
+		</p>
+	</div>
+	<div class="pay-list" id="cps">
+		<p>cps</p>
+		<p>
+			<input type="checkbox" class="chk" value="71" id="cps1" data-text="微信公众号" />
+			<label for="cps1">微信公众号</label>
+			<input type="checkbox" class="chk" value="32" id="cps2" data-text="支付宝" />
+			<label for="cps2">支付宝wap</label>
+			<input type="checkbox" class="chk" value="72" id="cps3" data-text="微信支付" />
+			<label for="cps3">微信支付</label>
+		</p>
+	</div>
+	<div class="btn-box">
+		<input type="button" value="保存" class="btn btn-save" id="btn-save" />
+	</div>
+</body>
+
+<script>
+	var productId = sessionStorage.getItem("productId") || 1702;
+	var platSlected = sessionStorage.getItem("returnMessage");
+	if (platSlected) {
+		platSlected = JSON.parse(platSlected);
+	} else {
+		platSlected = {}
+	}
+
+	$(function() {
+		$.each(platSlected, function(key, val) {
+			if (!val) {
+				$("#" + key).hide();
+			}
+		});
+
+		$("#btn-save").click(function() {
+			$(".pay-list").each(function(index, el) {
+				var obj = getPaymentObj(el.id);
+				console.log(obj);
+				uploadPayment(obj, el.id);
+			});
+
+			updateLoad();
+		});
+	});
+
+	function uploadPayment(payObj, dataType) {
+		$.ajax({
+			type: "post",
+			url: "http://insure.test.hera.tk.cn/hera_center/rest/product/v1/metadata/" + productId + "/" + dataType + "/payment",
+			data: JSON.stringify(payObj),
+			dataType: "json"
+		}).done(function() {
+			alert(dataType + "Payment upload success!");
+		}).fail(function() {
+			alert(dataType + "Payment upload fail!");
+		});
+	}
+
+	function getPaymentObj(dataType) {
+		var checkList = $("#" + dataType).find("input:checked");
+		var payArr = [];
+
+		checkList.each(function(index, el) {
+			payArr[index] = {
+				"componentId": "tkPayment",
+				"paywayId": $(el).val(),
+				"paymentImgURL": "",
+				"paymentDesc": $(el).attr("data-text")
+			};
+		});
+
+		var payment = {};
+		payment[dataType + "Payment"] = [{
+			"componentId": "tkTradeDetailList",
+			"tradeDetailList": []
+		}, {
+			"componentId": "tkPaymentList",
+			"paymentList": payArr
+		}];
+
+		return payment;
+	}
+
+	function updateLoad() {
+		var details = sessionStorage.getItem("details");
+		if (!details) {
+			return;
+		}
+
+		details = JSON.parse(details);
+		var condtionConfig = sessionStorage.getItem("condtionConfig") || "";
+		if (condtionConfig) {
+			condtionConfig = JSON.parse(condtionConfig);
+		}
+
+		if (details.wapDetails) {
+			var wapData = details.wapDetails;
+			if (condtionConfig.wap) {
+				wapData[wapData.length] = condtionConfig.wap;
+			}
+
+			wapData[wapData.length] = {
+				"componentId": "wapReturnMessage",
+				"returnMessage": "planId,planPrice"
+			};
+
+			wapData[wapData.length] = {
+				"componentId": "wapPayment",
+				"productId": productId
+			};
+
+			//上传details
+			uploadDetails(wapData, "wap");
+		}
+
+		if (details.appDetails) {
+			var appData = details.appDetails;
+			if (condtionConfig.app) {
+				appData[appData.length] = condtionConfig.app;
+			}
+			var appLink = sessionStorage.getItem("appLink");
+			if (appLink) {
+				appLink = JSON.parse(appLink);
+				$.each(appLink.list, function(index, el) {
+					appData[appData.length] = el;
+				});
+			}
+
+			appData[appData.length] = {
+				"componentId": "appReturnMessage",
+				"returnMessage": "planId,planPrice,plan.liabilityId"
+			};
+
+			appData[appData.length] = {
+				"componentId": "appPayment"
+			};
+
+			//上传details
+			uploadDetails(appData, "app");
+		}
+
+		if (details.pcDetails) {
+			var pcData = details.pcDetails;
+			pcData[pcData.length] = {
+				"componentId": "pcReturnMessage",
+				"returnMessage": "planId,planPrice"
+			};
+
+			var pcDetailsSave = JSON.parse(sessionStorage.getItem("pcDetailsSave"));
+			pcData[pcData.length] = {
+				"componentId": "pcPayment",
+				"qrCodeUrl": pcDetailsSave.qrCode
+			};
+
+			pcData[pcData.length] = pcDetailsSave.pcServiceList;
+			pcData[pcData.length] = pcDetailsSave.pcPayStyleList;
+
+			//上传details
+			uploadDetails(pcData, "pc");
+		}
+	}
+
+	function uploadDetails(obj, dataType) {
+		var data = {};
+		data[dataType + "Details"] = obj;
+
+		$.ajax({
+			type: "post",
+			url: "http://insure.test.hera.tk.cn/hera_center/rest/product/v1/metadata/" + productId + "/" + dataType + "/details",
+			data: JSON.stringify(data),
+			dataType: "json"
+		}).done(function() {
+			alert(dataType + "Details upload success!");
+		}).fail(function() {
+			alert(dataType + "Details upload fail!");
+		});
+	}
+</script>
+</html>

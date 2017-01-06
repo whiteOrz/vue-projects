@@ -1,8 +1,11 @@
 module.exports = {
-    entry: "./project10/src/index.js",
+    entry: {
+        build : "./project10/src/index.js",
+        test : "./project10/src/test1.js"
+    },
     output: {
         path: __dirname,
-        filename: "js/build.js"
+        filename: "js/[name].js"
     },
     module: {
         loaders: [{

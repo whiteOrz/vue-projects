@@ -1,0 +1,131 @@
+{
+    "pcInputs": [
+        {
+            "componentId": "pcApplicantInfo",
+            "templateId":"applicant",
+            "componentTitle": "投保人信息",
+            "applicantInfo": [
+                {
+                    "componentId": "pcApplicantName",
+                    "id": "applicantName",
+                    "lable": "姓名",
+                    "tip": "投保人姓名",
+                    "description": "请输入投保人姓名",
+                    "required": "true",
+                    "defaultValue": "",
+                    "type": "",
+                    "options": ""
+                },
+                {
+                    "componentId": "pcApplicantId",
+                    "id": "applicantId",
+                    "lable": "证件号码",
+                    "tip": "投保人证件号码",
+                    "description": "请输入投保人证件号码",
+                    "required": "true",
+                    "defaultValue": "",
+                    "type": "",
+                    "options": [
+						{
+							"key":"01",
+							"value":"身份证"
+						},
+						{
+							"key":"02",
+							"value":"护照"
+						},
+						{
+							"key":"03",
+							"value":"军官证"
+						},
+						{
+							"key":"05",
+							"value":"港台同胞证"
+						}				
+					]
+                },
+				
+				
+				{
+                    "componentId": "pcApplicantGender",
+                    "id": "pcApplicantGender",
+                    "lable": "性别",
+                    "tip": "投保人性别",
+                    "description": "请输入投保人性别",
+                    "required": "false",
+                    "defaultValue": "",
+                    "type": "",
+                    "options":[
+						{
+							"key":"   ",
+							"value":"男"
+						},
+						{
+							"key":"   ",
+							"value":"女"
+						}
+					]
+                },
+				{
+                    "componentId": "pcApplicantBirth",
+                    "id": "pcApplicantBirth",
+                    "lable": "出生日期",
+                    "tip": "投保人出生日期",
+                    "description": "请输入投保人出生日期",
+                    "required": "false",
+                    "defaultValue": "",
+                    "type": "",
+                    "options":""
+                },
+				
+				
+                {
+                    "componentId": "pcApplicantPhone",
+                    "id": "applicantPhone",
+                    "lable": "手机号码",
+                    "tip": "投保人手机号",
+                    "description": "请输入投保人手机号",
+                    "required": "true",
+                    "defaultValue": "",
+                    "type": "",
+                    "options": ""
+                },
+                {
+                    "componentId": "pcApplicantEmail",
+                    "id": "applicantEmail",
+                    "lable": "邮箱",
+                    "tip": "投保人邮箱",
+                    "description": "请输入投保人邮箱",
+                    "required": "true",
+                    "defaultValue": "",
+                    "type": "",
+                    "options": ""
+                },
+				{
+                    "componentId": "pcApplicantAddress",
+                    "id": "applicantAddress",
+                    "lable": "投保地区",
+                    "tip": "投保地区",
+                    "description": "请输入投保地区",
+                    "required": "true",
+                    "defaultValue": "",
+                    "type": "",
+                    "options": ""
+                },
+				{
+                    "componentId": "pcApplicantProfession",
+                    "id": "applicantProfession",
+                    "lable": "职业分类",
+                    "tip": "职业分类",
+                    "description": "请选择职业",
+                    "required": "true",
+                    "defaultValue": "",
+                    "type": "",
+                    "options": ""
+                }
+            ]
+        }
+       
+       
+    ]
+}

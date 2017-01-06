@@ -41,9 +41,11 @@
         "pro5": "webpack-dev-server --config ./project5/webpack.config.js --inline --hot --content-base ./project5",
         "pro7": "webpack-dev-server --config ./project7/webpack.config.js --inline --hot --content-base ./project7",
         "pro7b": "webpack -p --config ./project7/webpack.config.js",
-        "pro8": "webpack-dev-server --config ./project8/webpack.config.js --inline --hot --content-base ./project8",
+        "pro8": "webpack-dev-server --config ./project8/webpack.config.js --port 8888 --inline --hot --content-base ./project8",
         "pro8b": "webpack -p --config ./project8/webpack.config.js",
         "pro9": "webpack --config ./project9/webpack.config.js",
-        "pro10": "webpack-dev-server --config ./project10/webpack.config.js --inline --hot --content-base ./project10"
+        "pro10": "webpack-dev-server --config ./project10/webpack.config.js --inline --hot --content-base ./project10",
+        "pro10p" : "webpack -p --config ./project10/webpack.config.js",
+        "wap" : "webpack --config ./wap/webpack.config.js"
     }
 }

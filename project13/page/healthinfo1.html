@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>健康告知</title>
+
+		<link rel="stylesheet" type="text/css" href="../src/css/insure.css" />
+
+	</head>
+
+	<body>
+		<div id="header_widely">
+			<div id="header" class="clearfix">
+				<img class="logo" src="../src/image/在线logo.png" />
+				<img class="call" src="../src/image/call4.jpg" />
+			</div>
+		</div>
+		<div class="nav-step">
+			<ul class="steps clearfix">
+				<li class="steps2 fl">
+					<div class="line steps_current"></div>
+					<p class="t_red ">1.填写投保信息</p>
+					<img src="../src/image/circle.png" class="steps_img2" />
+				</li>
+				<li class="steps2 fl">
+					<div class="line steps_current"></div>
+					<p class="t_red">2.健康告知</p>
+					<img src="../src/image/circle.png" class="steps_img2" />
+				</li>
+				<li class="steps2 fl">
+					<div class="line steps_color"></div>
+					<p class="t_6">3.支付</p>
+					<img src="../src/image/circle02.png" class="steps_img2" />
+				</li>
+				<li class="steps2 fl">
+					<div class="line steps_color"></div>
+					<p class="t_6">4.成功</p>
+					<img src="../src/image/circle02.png" class="steps_img2" />
+				</li>
+			</ul>
+
+		</div>
+		<div class="health_main" id="wrap">
+			<h1 class="insurd_tit">{{productName}}</h1>
+			<div class="heal_txt " id="content">
+				<h4>健康信息告知</h4>
+
+				<div class="health-con">
+					<div class="health-title">请您确认您是否存在以下情况：</div>
+					<div class="health-list clearfix" id="health-list" v-for="list in data.valueList">
+
+					</div>
+				</div>
+			</div>
+			<!-- 按钮代码-->
+			<div class="continue_expect clearfix">
+				<div class="order clearfix">
+					<div class="p1 fl">
+						<a class="" id="back" style="display: none;">返回上一步</a>
+
+					</div>
+					<div class="rowElem fr">
+						<input type="button" value="确认无误，下一步" id="check-form" />
+					</div>
+				</div>
+
+			</div>
+			<!-- 按钮代码-->
+		</div>
+		<!-- 底部代码-->
+		<div class="footer ">
+			<p>泰康在线财产保险股份有限公司 版权所有Copyright © Tk.cn Insurance CO.,LTD. All Rights Reserved | 京ICP备09074081号-19</p>
+			<div style="clear:both"></div>
+		</div>
+	</body>
+	<script src="../src/js/jquery.min.js"></script>
+	<script src="../src/js/json.js"></script>
+	<script src="../src/js/sessionStorage.js"></script>
+
+	<script>
+		function initList(data) {
+			var str = "";
+			$.each(data, function(index, item) {
+
+				str += '<div class="health-q" data-informID="' + item.itemId + '">' + item.content + '</div>' +
+					'<div class="health-option">' +
+					'<label><input type="radio" name="' + item.itemId + '" value="yes" class="rad">是</label>' +
+					'<label><input type="radio" name="' + item.itemId + '" vlaue="" checked="checked" class="rad">否</label>' +
+					'</div>'
+			});
+			$("#health-list").append(str);
+
+		}
+		$(function() {
+			var insure = "http://insure.test.hera.tk.cn";
+			var deluat = "http://deluat.taikang.com";
+			var data = {};
+			//兼容ie6的sessionStorage
+			var storage = new Storage('session');
+			//2016-07-20
+			//var getMessage=JSON.parse(sessionStorage.getItem("returnMessage"))||{};
+			var getMessage = JSON.parse(storage.get("returnMessage")) || {};
+			var plan = getMessage.plan || "",
+				applicationId = getMessage.applicationId || "",
+				productId = getMessage.productId || 1702,
+				channelId = getMessage.channelId || "",
+				applicationToken = getMessage.applicationToken || "",
+				openId = getMessage.openId || "",
+				memberId = getMessage.memberId || "",
+				memberToken = getMessage.memberToken || "",
+
+				proposalNo = storage.get("proposalNo") || "",
+				proposalToken = storage.get("proposalToken") || "",
+
+				duties = storage.get("duties") || "",
+
+				metadata_scope = "pc",
+				metadata_platform = "pc",
+				platform = "pc";
+
+			//产品价格	
+			var planPrice = getMessage.details.planPrice || "";
+			//产品积分
+			var planScore = getMessage.details.planScore || "";
+			//产品名称
+			var productName = storage.get("productName");
+
+			//用于渲染健康告知页面
+			var sendMessage = {
+				"applicationId": applicationId,
+				"applicationToken": applicationToken
+			}
+
+			$.ajax({
+				url: deluat + "/hera_insure/api/insure/v1/productMetadata/" + productId + "/" + metadata_scope + "/healthinfo",
+				type: "post",
+				data: JSON.stringify(sendMessage),
+				dataType: "json",
+				async: false,
+				success: function(msg) {
+					if(msg.code == "0") {
+						data = msg.data;
+						initList(data);
+					} else {
+						alert(msg.message);
+					}
+				},
+				error: function() {
+					alert("网络异常");
+				}
+			});
+			//保存健康告知
+			var returnMessage = {
+				"applicationToken": applicationToken,
+				"processHandler": "property",
+				"healthinfo": {
+					"informList": []
+				}
+
+			};
+
+			$("#check-form").click(function() {
+				var healthList = $(".health-list");
+				var chk = healthList.find("input:checked[value=yes]");
+
+				if(chk.length) {
+					alert("不能通过");
+					return false;
+				}
+
+				healthList.each(function(index, el) {
+					var informID = $(el).find(".health-q").attr("data-informID");
+
+					var option = {
+						"informAnswer": "否",
+						"informID": informID
+					}
+					returnMessage.healthinfo.informList.push(option);
+				});
+
+				//保存健康告知
+				$.ajax({
+					url: deluat + "/hera_insure/api/insure/v1/application/" + applicationId + "/healthinfo",
+					type: "post",
+					dataType: "json",
+					data: JSON.stringify(returnMessage),
+					success: function(msg) {
+						if(msg.code == "0") {
+							var proposalNo = msg.data.proposalNo;
+							var proposalToken = msg.data.proposalToken;
+							storage.set("proposalNo", JSON.stringify(proposalNo));
+							storage.set("proposalToken", JSON.stringify(proposalToken));
+							window.location.href = "pay.html";
+						} else {
+							alert(msg.message);
+						}
+					},
+					error: function() {
+						alert("网络异常");
+					}
+				});
+			});
+		});
+	</script>
+
+</html>
